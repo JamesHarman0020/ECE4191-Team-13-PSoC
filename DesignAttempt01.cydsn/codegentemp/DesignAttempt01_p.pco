@@ -1,0 +1,24 @@
+dont_use_io iocell 3 2
+dont_use_io iocell 3 3
+set_location "\PWM:PWMUDB:genblk8:stsreg\" statusicell 0 0 4 
+set_location "Net_202" macrocell 0 0 0 2
+set_location "\PWM:PWMUDB:sP16:pwmdp:u1\" datapathcell 0 0 2 
+set_location "\PWM:PWMUDB:status_0\" macrocell 1 0 1 0
+set_location "\PWM:PWMUDB:prevCompare1\" macrocell 1 0 0 0
+set_location "\PWM:PWMUDB:sP16:pwmdp:u0\" datapathcell 1 0 2 
+set_location "\PWM:PWMUDB:runmode_enable\" macrocell 1 0 0 3
+set_location "\PWM:PWMUDB:status_2\" macrocell 0 0 0 1
+set_io "Pin_1(0)" iocell 3 1
+set_io "Pin_3(0)" iocell 3 5
+set_io "Pin_4(0)" iocell 2 7
+set_location "\I2C_1:SCB\" m0s8scbcell -1 -1 0
+set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_location "\I2C_1:SCB_IRQ\" interrupt -1 -1 8
+set_location "ClockBlock" m0s8clockblockcell -1 -1 0
+set_io "Pin_2(0)" iocell 3 4
+set_io "\I2C_1:sda(0)\" iocell 1 1
+set_location "\PWM:PWMUDB:genblk1:ctrlreg\" controlcell 1 0 6 
+set_io "Pin_0(0)" iocell 3 0
+set_io "\UART:tx(0)\" iocell 7 1
+set_io "\I2C_1:scl(0)\" iocell 1 0
+set_location "\StepperDriver:Sync:ctrl_reg\" controlcell 0 0 6 

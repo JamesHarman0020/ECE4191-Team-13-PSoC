@@ -1,0 +1,27 @@
+--------------- Build Started: 08/04/2022 13:19:21 Project: DesignAttempt01, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+The code generation step is up to date.
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
+main.c: In function 'main':
+main.c:40:15: warning: unused variable 'ctrlReg' [-Wunused-variable]
+         uint8 ctrlReg[10]; 
+               ^
+main.c:39:15: warning: unused variable 'headingS' [-Wunused-variable]
+         int16 headingS = (int16)heading;
+               ^
+main.c:37:15: warning: unused variable 'rdBuffer' [-Wunused-variable]
+         uint8 rdBuffer, rdPtrL, rdPtrH;
+               ^
+main.c:39:15: warning: 'heading' is used uninitialized in this function [-Wuninitialized]
+         int16 headingS = (int16)heading;
+               ^
+arm-none-eabi-ar.exe -rs .\CortexM0\ARM_GCC_541\Debug\DesignAttempt01.a .\CortexM0\ARM_GCC_541\Debug\CyFlash.o .\CortexM0\ARM_GCC_541\Debug\CyLib.o .\CortexM0\ARM_GCC_541\Debug\cyPm.o .\CortexM0\ARM_GCC_541\Debug\cyutils.o .\CortexM0\ARM_GCC_541\Debug\CyDMA.o .\CortexM0\ARM_GCC_541\Debug\CyLFClk.o .\CortexM0\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM0\ARM_GCC_541\Debug\UART.o .\CortexM0\ARM_GCC_541\Debug\Pin_1.o .\CortexM0\ARM_GCC_541\Debug\Pin_1_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_0.o .\CortexM0\ARM_GCC_541\Debug\Pin_0_PM.o .\CortexM0\ARM_GCC_541\Debug\StepperDriver.o .\CortexM0\ARM_GCC_541\Debug\StepperDriver_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_2.o .\CortexM0\ARM_GCC_541\Debug\Pin_2_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_3.o .\CortexM0\ARM_GCC_541\Debug\Pin_3_PM.o .\CortexM0\ARM_GCC_541\Debug\I2C_1.o .\CortexM0\ARM_GCC_541\Debug\I2C_1_I2C_INT.o .\CortexM0\ARM_GCC_541\Debug\I2C_1_I2C.o .\CortexM0\ARM_GCC_541\Debug\I2C_1_I2C_BOOT.o .\CortexM0\ARM_GCC_541\Debug\I2C_1_I2C_MASTER.o .\CortexM0\ARM_GCC_541\Debug\I2C_1_PM.o .\CortexM0\ARM_GCC_541\Debug\I2C_1_BOOT.o .\CortexM0\ARM_GCC_541\Debug\I2C_1_SCBCLK.o .\CortexM0\ARM_GCC_541\Debug\I2C_1_sda.o .\CortexM0\ARM_GCC_541\Debug\I2C_1_sda_PM.o .\CortexM0\ARM_GCC_541\Debug\I2C_1_scl.o .\CortexM0\ARM_GCC_541\Debug\I2C_1_scl_PM.o .\CortexM0\ARM_GCC_541\Debug\I2C_1_SCB_IRQ.o .\CortexM0\ARM_GCC_541\Debug\PWM.o .\CortexM0\ARM_GCC_541\Debug\PWM_PM.o .\CortexM0\ARM_GCC_541\Debug\Pin_4.o .\CortexM0\ARM_GCC_541\Debug\Pin_4_PM.o .\CortexM0\ARM_GCC_541\Debug\Clock_1.o .\CortexM0\ARM_GCC_541\Debug\CyBootAsmGnu.o .\CortexM0\ARM_GCC_541\Debug\UART_AsmGnu.o
+arm-none-eabi-ar.exe: creating .\CortexM0\ARM_GCC_541\Debug\DesignAttempt01.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o "C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn\CortexM0\ARM_GCC_541\Debug\DesignAttempt01.elf" .\CortexM0\ARM_GCC_541\Debug\main.o .\CortexM0\ARM_GCC_541\Debug\SBT0811.o .\CortexM0\ARM_GCC_541\Debug\IMU.o .\CortexM0\ARM_GCC_541\Debug\SG90.o .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM0\ARM_GCC_541\Debug\cymetadata.o .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o .\CortexM0\ARM_GCC_541\Debug\DesignAttempt01.a -mcpu=cortex-m0 -mthumb -l m -L Generated_Source\PSoC4 -Wl,-Map,.\CortexM0\ARM_GCC_541\Debug/DesignAttempt01.map -T Generated_Source\PSoC4\cm0gcc.ld -specs=nano.specs -u _printf_float -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C "C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn\CortexM0\ARM_GCC_541\Debug\DesignAttempt01.elf" --flash_row_size 128 --flash_size 131072 --flash_offset 0x00000000
+No ELF section .cychecksum found, creating one
+Application checksum calculated and stored in ELF section .cychecksum
+Checksum calculated and stored in ELF section .cymeta
+cyelftool.exe -S "C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn\CortexM0\ARM_GCC_541\Debug\DesignAttempt01.elf"
+Flash used: 26512 of 131072 bytes (20.2%).
+SRAM used: 3600 of 16384 bytes (22.0%). Stack: 2048 bytes. Heap: 1024 bytes.
+--------------- Build Succeeded: 08/04/2022 13:19:22 ---------------
