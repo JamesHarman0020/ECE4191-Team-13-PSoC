@@ -105,7 +105,7 @@ void LSM6DS3_Begin() {
     
     I2C_1_Start(); //Enable I2C In PSOC
     
-    // Pre start up calibration, MUST BE PERFORMED IN POWER DOWN MODE
+    // TO-DO: Pre start up calibration, MUST BE PERFORMED IN POWER DOWN MODE
     /*I2C_1_I2CMasterSendStart(LSM6DS3_I2CADD,I2C_1_I2C_WRITE_XFER_MODE,100);    // Initialize a transaction for writing
     I2C_1_I2CMasterWriteByte(LSM6DS3_REG_CTRL1_XL,100);                       // Indicate which register you want to write to
     I2C_1_I2CMasterWriteByte(0x00,100);                                        // Write to register
