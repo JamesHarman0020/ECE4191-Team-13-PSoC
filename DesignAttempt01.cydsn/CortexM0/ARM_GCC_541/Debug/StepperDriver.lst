@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 1
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cch2r1b4.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 1
   28:Generated_Source\PSoC4/StepperDriver.c **** *  Write a byte to the Control Register.
   29:Generated_Source\PSoC4/StepperDriver.c **** *
   30:Generated_Source\PSoC4/StepperDriver.c **** * Parameters:
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 2
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cch2r1b4.s 			page 2
 
 
   31:Generated_Source\PSoC4/StepperDriver.c **** *  control:  The value to be assigned to the Control Register.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 1
   58:Generated_Source\PSoC4/StepperDriver.c **** {
   55              		.loc 1 58 0
   56              		.cfi_startproc
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 3
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cch2r1b4.s 			page 3
 
 
   57              		@ args = 0, pretend = 0, frame = 0
@@ -150,48 +150,48 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 1
   81 0006 00000000 		.4byte	.Ldebug_abbrev0
   82 000a 04       		.byte	0x4
   83 000b 01       		.uleb128 0x1
-  84 000c 38010000 		.4byte	.LASF14
+  84 000c 02010000 		.4byte	.LASF14
   85 0010 0C       		.byte	0xc
-  86 0011 27000000 		.4byte	.LASF15
-  87 0015 94000000 		.4byte	.LASF16
+  86 0011 57000000 		.4byte	.LASF15
+  87 0015 14000000 		.4byte	.LASF16
   88 0019 00000000 		.4byte	.Ldebug_ranges0+0
   89 001d 00000000 		.4byte	0
   90 0021 00000000 		.4byte	.Ldebug_line0
   91 0025 02       		.uleb128 0x2
   92 0026 01       		.byte	0x1
   93 0027 06       		.byte	0x6
-  94 0028 F2010000 		.4byte	.LASF0
+  94 0028 BC010000 		.4byte	.LASF0
   95 002c 02       		.uleb128 0x2
   96 002d 01       		.byte	0x1
   97 002e 08       		.byte	0x8
-  98 002f 54000000 		.4byte	.LASF1
+  98 002f 84000000 		.4byte	.LASF1
   99 0033 02       		.uleb128 0x2
  100 0034 02       		.byte	0x2
  101 0035 05       		.byte	0x5
- 102 0036 D9010000 		.4byte	.LASF2
+ 102 0036 A3010000 		.4byte	.LASF2
  103 003a 02       		.uleb128 0x2
  104 003b 02       		.byte	0x2
  105 003c 07       		.byte	0x7
- 106 003d 79000000 		.4byte	.LASF3
+ 106 003d A9000000 		.4byte	.LASF3
  107 0041 02       		.uleb128 0x2
  108 0042 04       		.byte	0x4
  109 0043 05       		.byte	0x5
- 110 0044 E9010000 		.4byte	.LASF4
+ 110 0044 B3010000 		.4byte	.LASF4
  111 0048 02       		.uleb128 0x2
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 4
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cch2r1b4.s 			page 4
 
 
  112 0049 04       		.byte	0x4
  113 004a 07       		.byte	0x7
- 114 004b 67000000 		.4byte	.LASF5
+ 114 004b 97000000 		.4byte	.LASF5
  115 004f 02       		.uleb128 0x2
  116 0050 08       		.byte	0x8
  117 0051 05       		.byte	0x5
- 118 0052 C6010000 		.4byte	.LASF6
+ 118 0052 90010000 		.4byte	.LASF6
  119 0056 02       		.uleb128 0x2
  120 0057 08       		.byte	0x8
  121 0058 07       		.byte	0x7
- 122 0059 21010000 		.4byte	.LASF7
+ 122 0059 EB000000 		.4byte	.LASF7
  123 005d 03       		.uleb128 0x3
  124 005e 04       		.byte	0x4
  125 005f 05       		.byte	0x5
@@ -199,26 +199,26 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 1
  127 0064 02       		.uleb128 0x2
  128 0065 04       		.byte	0x4
  129 0066 07       		.byte	0x7
- 130 0067 14010000 		.4byte	.LASF8
+ 130 0067 DE000000 		.4byte	.LASF8
  131 006b 04       		.uleb128 0x4
- 132 006c E3010000 		.4byte	.LASF12
+ 132 006c AD010000 		.4byte	.LASF12
  133 0070 02       		.byte	0x2
  134 0071 FB01     		.2byte	0x1fb
  135 0073 2C000000 		.4byte	0x2c
  136 0077 02       		.uleb128 0x2
  137 0078 04       		.byte	0x4
  138 0079 04       		.byte	0x4
- 139 007a 4E000000 		.4byte	.LASF9
+ 139 007a 7E000000 		.4byte	.LASF9
  140 007e 02       		.uleb128 0x2
  141 007f 08       		.byte	0x8
  142 0080 04       		.byte	0x4
- 143 0081 0D010000 		.4byte	.LASF10
+ 143 0081 D7000000 		.4byte	.LASF10
  144 0085 02       		.uleb128 0x2
  145 0086 01       		.byte	0x1
  146 0087 08       		.byte	0x8
- 147 0088 D4010000 		.4byte	.LASF11
+ 147 0088 9E010000 		.4byte	.LASF11
  148 008c 04       		.uleb128 0x4
- 149 008d 62000000 		.4byte	.LASF13
+ 149 008d 92000000 		.4byte	.LASF13
  150 0091 02       		.byte	0x2
  151 0092 A502     		.2byte	0x2a5
  152 0094 98000000 		.4byte	0x98
@@ -234,18 +234,18 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 1
  162 00ad 9C       		.byte	0x9c
  163 00ae C0000000 		.4byte	0xc0
  164 00b2 07       		.uleb128 0x7
- 165 00b3 8C000000 		.4byte	.LASF18
+ 165 00b3 BC000000 		.4byte	.LASF18
  166 00b7 01       		.byte	0x1
  167 00b8 25       		.byte	0x25
  168 00b9 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 5
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cch2r1b4.s 			page 5
 
 
  169 00bd 01       		.uleb128 0x1
  170 00be 50       		.byte	0x50
  171 00bf 00       		.byte	0
  172 00c0 08       		.uleb128 0x8
- 173 00c1 14000000 		.4byte	.LASF19
+ 173 00c1 C4000000 		.4byte	.LASF19
  174 00c5 01       		.byte	0x1
  175 00c6 39       		.byte	0x39
  176 00c7 6B000000 		.4byte	0x6b
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 1
  223 0027 00       		.byte	0
  224 0028 00       		.byte	0
  225 0029 04       		.uleb128 0x4
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 6
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cch2r1b4.s 			page 6
 
 
  226 002a 16       		.uleb128 0x16
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 1
  280 0061 13       		.uleb128 0x13
  281 0062 02       		.uleb128 0x2
  282 0063 18       		.uleb128 0x18
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 7
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cch2r1b4.s 			page 7
 
 
  283 0064 00       		.byte	0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 1
  335      00000201 
  335      FB0E0D00 
  335      01010101 
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 8
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cch2r1b4.s 			page 8
 
 
  336              	.LASF17:
@@ -427,117 +427,109 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 1
  337      72697665 
  337      725F5772 
  337      69746500 
- 338              	.LASF19:
- 339 0014 53746570 		.ascii	"StepperDriver_Read\000"
- 339      70657244 
- 339      72697665 
- 339      725F5265 
- 339      616400
- 340              	.LASF15:
- 341 0027 47656E65 		.ascii	"Generated_Source\\PSoC4\\StepperDriver.c\000"
- 341      72617465 
- 341      645F536F 
- 341      75726365 
- 341      5C50536F 
- 342              	.LASF9:
- 343 004e 666C6F61 		.ascii	"float\000"
- 343      7400
- 344              	.LASF1:
- 345 0054 756E7369 		.ascii	"unsigned char\000"
- 345      676E6564 
- 345      20636861 
- 345      7200
- 346              	.LASF13:
- 347 0062 72656738 		.ascii	"reg8\000"
- 347      00
- 348              	.LASF5:
- 349 0067 6C6F6E67 		.ascii	"long unsigned int\000"
- 349      20756E73 
- 349      69676E65 
- 349      6420696E 
- 349      7400
- 350              	.LASF3:
- 351 0079 73686F72 		.ascii	"short unsigned int\000"
- 351      7420756E 
- 351      7369676E 
- 351      65642069 
- 351      6E7400
- 352              	.LASF18:
- 353 008c 636F6E74 		.ascii	"control\000"
- 353      726F6C00 
- 354              	.LASF16:
- 355 0094 433A5C55 		.ascii	"C:\\Users\\JamesH\\OneDrive - Monash University\\MO"
- 355      73657273 
- 355      5C4A616D 
- 355      6573485C 
- 355      4F6E6544 
- 356 00c3 4E415348 		.ascii	"NASH\\2022\\ECE4191\\Project\\PSOC\\Project1\\Works"
- 356      5C323032 
- 356      325C4543 
- 356      45343139 
- 356      315C5072 
- 357 00f0 70616365 		.ascii	"pace01\\DesignAttempt01.cydsn\000"
- 357      30315C44 
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 9
+ 338              	.LASF16:
+ 339 0014 433A5C55 		.ascii	"C:\\Users\\JamesH\\Desktop\\ECE4191-Team-13-PSoC\\D"
+ 339      73657273 
+ 339      5C4A616D 
+ 339      6573485C 
+ 339      4465736B 
+ 340 0042 65736967 		.ascii	"esignAttempt01.cydsn\000"
+ 340      6E417474 
+ 340      656D7074 
+ 340      30312E63 
+ 340      7964736E 
+ 341              	.LASF15:
+ 342 0057 47656E65 		.ascii	"Generated_Source\\PSoC4\\StepperDriver.c\000"
+ 342      72617465 
+ 342      645F536F 
+ 342      75726365 
+ 342      5C50536F 
+ 343              	.LASF9:
+ 344 007e 666C6F61 		.ascii	"float\000"
+ 344      7400
+ 345              	.LASF1:
+ 346 0084 756E7369 		.ascii	"unsigned char\000"
+ 346      676E6564 
+ 346      20636861 
+ 346      7200
+ 347              	.LASF13:
+ 348 0092 72656738 		.ascii	"reg8\000"
+ 348      00
+ 349              	.LASF5:
+ 350 0097 6C6F6E67 		.ascii	"long unsigned int\000"
+ 350      20756E73 
+ 350      69676E65 
+ 350      6420696E 
+ 350      7400
+ 351              	.LASF3:
+ 352 00a9 73686F72 		.ascii	"short unsigned int\000"
+ 352      7420756E 
+ 352      7369676E 
+ 352      65642069 
+ 352      6E7400
+ 353              	.LASF18:
+ 354 00bc 636F6E74 		.ascii	"control\000"
+ 354      726F6C00 
+ 355              	.LASF19:
+ 356 00c4 53746570 		.ascii	"StepperDriver_Read\000"
+ 356      70657244 
+ 356      72697665 
+ 356      725F5265 
+ 356      616400
+ 357              	.LASF10:
+ 358 00d7 646F7562 		.ascii	"double\000"
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cch2r1b4.s 			page 9
 
 
- 357      65736967 
- 357      6E417474 
- 357      656D7074 
- 358              	.LASF10:
- 359 010d 646F7562 		.ascii	"double\000"
- 359      6C6500
- 360              	.LASF8:
- 361 0114 756E7369 		.ascii	"unsigned int\000"
- 361      676E6564 
- 361      20696E74 
- 361      00
- 362              	.LASF7:
- 363 0121 6C6F6E67 		.ascii	"long long unsigned int\000"
- 363      206C6F6E 
- 363      6720756E 
- 363      7369676E 
- 363      65642069 
- 364              	.LASF14:
- 365 0138 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 365      43313120 
- 365      352E342E 
- 365      31203230 
- 365      31363036 
- 366 016b 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 366      20726576 
- 366      6973696F 
- 366      6E203233 
- 366      37373135 
- 367 019e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 367      66756E63 
- 367      74696F6E 
- 367      2D736563 
- 367      74696F6E 
- 368              	.LASF6:
- 369 01c6 6C6F6E67 		.ascii	"long long int\000"
- 369      206C6F6E 
- 369      6720696E 
- 369      7400
- 370              	.LASF11:
- 371 01d4 63686172 		.ascii	"char\000"
- 371      00
- 372              	.LASF2:
- 373 01d9 73686F72 		.ascii	"short int\000"
- 373      7420696E 
- 373      7400
- 374              	.LASF12:
- 375 01e3 75696E74 		.ascii	"uint8\000"
- 375      3800
- 376              	.LASF4:
- 377 01e9 6C6F6E67 		.ascii	"long int\000"
- 377      20696E74 
- 377      00
- 378              	.LASF0:
- 379 01f2 7369676E 		.ascii	"signed char\000"
- 379      65642063 
- 379      68617200 
- 380              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccDV5HNk.s 			page 10
-
-
+ 358      6C6500
+ 359              	.LASF8:
+ 360 00de 756E7369 		.ascii	"unsigned int\000"
+ 360      676E6564 
+ 360      20696E74 
+ 360      00
+ 361              	.LASF7:
+ 362 00eb 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 362      206C6F6E 
+ 362      6720756E 
+ 362      7369676E 
+ 362      65642069 
+ 363              	.LASF14:
+ 364 0102 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 364      43313120 
+ 364      352E342E 
+ 364      31203230 
+ 364      31363036 
+ 365 0135 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 365      20726576 
+ 365      6973696F 
+ 365      6E203233 
+ 365      37373135 
+ 366 0168 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 366      66756E63 
+ 366      74696F6E 
+ 366      2D736563 
+ 366      74696F6E 
+ 367              	.LASF6:
+ 368 0190 6C6F6E67 		.ascii	"long long int\000"
+ 368      206C6F6E 
+ 368      6720696E 
+ 368      7400
+ 369              	.LASF11:
+ 370 019e 63686172 		.ascii	"char\000"
+ 370      00
+ 371              	.LASF2:
+ 372 01a3 73686F72 		.ascii	"short int\000"
+ 372      7420696E 
+ 372      7400
+ 373              	.LASF12:
+ 374 01ad 75696E74 		.ascii	"uint8\000"
+ 374      3800
+ 375              	.LASF4:
+ 376 01b3 6C6F6E67 		.ascii	"long int\000"
+ 376      20696E74 
+ 376      00
+ 377              	.LASF0:
+ 378 01bc 7369676E 		.ascii	"signed char\000"
+ 378      65642063 
+ 378      68617200 
+ 379              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,6 +1,9 @@
-C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn\DesignAttempt01.cyprj|d430834d-ee4c-47b5-9cc5-46267876cf57
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|c6be5b34-0cfe-4ac7-b582-df5872418ab8
-C:\Users\JamesH\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|74b71c6d-d7aa-4258-aa8e-1a87b1ec8f0d
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|cb50baef-dc0e-46f4-8b52-1edbe924c800
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|7356d3c4-aadb-4c23-b063-11cc4c8c16a5
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|8e03957e-c735-44b4-935f-38e7e0240a9a
+C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\DesignAttempt01.cyprj|4d546ec4-d505-40ec-b1a3-c1405d850892
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|eadf99ad-484c-4a6c-a361-195d1830616d
+C:\Users\JamesH\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|ba8d4979-0b92-432f-a4ab-ea387f8d0dad
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|52cb6ec6-6248-4c0b-b0fb-e2655905d161
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|672a0224-ff2b-4de6-bcf2-0d3546a2ba11
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|48d933db-aecf-4a32-a2a3-364a6a13cc1b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4\PSoC4AnalogDevice\psoc4arch.cydsn\psoc4arch.cyprj|8beed35b-c274-4d4e-b161-0d535a706ac1
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|bcaaec71-afe5-4847-a792-bcd7177afa46
+C:\Users\JamesH\Downloads\Quad_PWM\Quad PWM\Quad PWM.cydsn\Quad PWM.cyprj|f2b5d530-ca4e-4b7b-aab2-7c6ef968ccfb

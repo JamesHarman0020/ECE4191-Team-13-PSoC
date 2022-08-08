@@ -182,6 +182,7 @@ void LSM6DS3_ReadAxisDeg(uint16 * heading) {
     uint8 rdPtrHS = rdPtrH;
     uint8 rdPtrLS = rdPtrL;
     *heading = (uint16)rdPtrHS << 8 | rdPtrLS; 
+    // Convert this heading to degrees.
     // TO-DO: Calibration script for magnetometer
 }
 

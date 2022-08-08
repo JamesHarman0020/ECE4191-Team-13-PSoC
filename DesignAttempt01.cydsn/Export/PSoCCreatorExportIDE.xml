@@ -25,7 +25,7 @@
       <Tool Name="postbuild" Command="" Options="" />
     </Toolchain>
   </Toolchains>
-  <Project Name="DesignAttempt01" Path="C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn" Version="6.0" Type="Normal">
+  <Project Name="DesignAttempt01" Path="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn" Version="6.0" Type="Normal">
     <CMSIS_SVD_File>DesignAttempt01.svd</CMSIS_SVD_File>
     <Datasheet />
     <LinkerFiles>
@@ -34,20 +34,22 @@
       <LinkerFile Toolchain="ARM IAR Generic">.\Generated_Source\PSoC4\Cm0Iar.icf</LinkerFile>
     </LinkerFiles>
     <Folders>
-      <Folder BuildType="STRICT" Path="C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn">
-        <Files Root="C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn">
+        <Files Root="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
           <File BuildType="BUILD" Toolchain="">SBT0811.c</File>
           <File BuildType="BUILD" Toolchain="">IMU.c</File>
           <File BuildType="BUILD" Toolchain="">SG90.c</File>
+          <File BuildType="BUILD" Toolchain="">TB9051.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">SBT0811.h</File>
           <File BuildType="BUILD" Toolchain="">IMU.h</File>
           <File BuildType="BUILD" Toolchain="">SG90.h</File>
+          <File BuildType="BUILD" Toolchain="">TB9051.h</File>
         </Files>
       </Folder>
-      <Folder BuildType="STRICT" Path="C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn\Generated_Source\PSoC4">
-        <Files Root="C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn">
+      <Folder BuildType="STRICT" Path="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\Generated_Source\PSoC4">
+        <Files Root="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn">
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cyfitter_cfg.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\cymetadata.c</File>
@@ -152,37 +154,66 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_4_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Clock_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_5.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_5.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_5_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_5_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_6.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_6.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_6_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_6_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\TB9051_EN.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\TB9051_EN.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\TB9051_EN_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_7.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_7.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_7_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_7_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_8.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_8.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_8_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_8_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\QuadPWM.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\QuadPWM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_9.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_9.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_9_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_9_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_10.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_10.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_10_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_10_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
-        <Files Root="C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn" />
+        <Files Root="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_441">
-        <Files Root="C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn" />
+        <Files Root="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\ARM_GCC_473">
-        <Files Root="C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn" />
+        <Files Root="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051_Keil_952">
-        <Files Root="C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn" />
+        <Files Root="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\DP8051">
-        <Files Root="C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn" />
+        <Files Root="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0">
-        <Files Root="C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn" />
+        <Files Root="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM0p">
-        <Files Root="C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn" />
+        <Files Root="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM3">
-        <Files Root="C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn" />
+        <Files Root="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM4">
-        <Files Root="C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn" />
+        <Files Root="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn" />
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\CortexM7">
-        <Files Root="C:\Users\JamesH\OneDrive - Monash University\MONASH\2022\ECE4191\Project\PSOC\Project1\Workspace01\DesignAttempt01.cydsn" />
+        <Files Root="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn" />
       </Folder>
     </Folders>
   </Project>
