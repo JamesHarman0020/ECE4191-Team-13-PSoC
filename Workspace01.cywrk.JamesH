@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\DesignAttempt01\Source Files\main.c">
 <ExpandedNodeIds>
 <v>Workspace01</v>
 <v>Workspace01\DesignAttempt01</v>
@@ -34,6 +34,7 @@
 <v>Workspace01\DesignAttempt01\Header Files\SG90.h</v>
 <v>Workspace01\DesignAttempt01\Header Files\TB9051.h</v>
 <v>Workspace01\DesignAttempt01\Source Files</v>
+<v>Workspace01\DesignAttempt01\Source Files\FnCall.c</v>
 <v>Workspace01\DesignAttempt01\Source Files\IMU.c</v>
 <v>Workspace01\DesignAttempt01\Source Files\main.c</v>
 <v>Workspace01\DesignAttempt01\Source Files\SBT0811.c</v>
@@ -64,6 +65,7 @@
 <v>Workspace01\DesignAttempt01\Header Files\SG90.h</v>
 <v>Workspace01\DesignAttempt01\Header Files\TB9051.h</v>
 <v>Workspace01\DesignAttempt01\Source Files</v>
+<v>Workspace01\DesignAttempt01\Source Files\FnCall.c</v>
 <v>Workspace01\DesignAttempt01\Source Files\IMU.c</v>
 <v>Workspace01\DesignAttempt01\Source Files\main.c</v>
 <v>Workspace01\DesignAttempt01\Source Files\SBT0811.c</v>
@@ -91,7 +93,6 @@
 <v>Workspace01\DesignAttempt01\Generated_Source\PSoC4\Pin_6</v>
 <v>Workspace01\DesignAttempt01\Generated_Source\PSoC4\Pin_7</v>
 <v>Workspace01\DesignAttempt01\Generated_Source\PSoC4\Pin_8</v>
-<v>Workspace01\DesignAttempt01\Generated_Source\PSoC4\Pin_9</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\DesignAttempt01">
@@ -177,6 +178,19 @@
 <v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\TB9051_EN_PM.lst</v>
 <v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
 <v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_AsmGnu.lst</v>
+<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_RPi.lst</v>
+<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_RPi_BOOT.lst</v>
+<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_RPi_PM.lst</v>
+<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_RPi_rx.lst</v>
+<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_RPi_rx_PM.lst</v>
+<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_RPi_SCB_IRQ.lst</v>
+<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_RPi_SCBCLK.lst</v>
+<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_RPi_SPI_UART.lst</v>
+<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_RPi_SPI_UART_INT.lst</v>
+<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_RPi_tx.lst</v>
+<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_RPi_tx_PM.lst</v>
+<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_RPi_UART.lst</v>
+<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_RPi_UART_BOOT.lst</v>
 <v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\DesignAttempt01.elf</v>
 <v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\DesignAttempt01.hex</v>
 <v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\DesignAttempt01.map</v>
@@ -256,7 +270,8 @@
 <v>Workspace01\DesignAttempt01\CyControlReg_v1_80\CyControlReg_v1_80.pdf</v>
 <v>Workspace01\DesignAttempt01\PWM_v3_30.pdf</v>
 <v>Workspace01\DesignAttempt01\QuadPWM_v1_0.pdf</v>
-<v>Workspace01\DesignAttempt01\SCB_P4_v4_0.pdf</v>
+<v>Workspace01\DesignAttempt01\SCB_P4_v4_0</v>
+<v>Workspace01\DesignAttempt01\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
 <v>Workspace01\DesignAttempt01\SW_Tx_UART_v1_50.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
@@ -275,7 +290,8 @@
 <v>Workspace01\DesignAttempt01\CyControlReg_v1_80\CyControlReg_v1_80.pdf</v>
 <v>Workspace01\DesignAttempt01\PWM_v3_30.pdf</v>
 <v>Workspace01\DesignAttempt01\QuadPWM_v1_0.pdf</v>
-<v>Workspace01\DesignAttempt01\SCB_P4_v4_0.pdf</v>
+<v>Workspace01\DesignAttempt01\SCB_P4_v4_0</v>
+<v>Workspace01\DesignAttempt01\SCB_P4_v4_0\SCB_P4_v4_0.pdf</v>
 <v>Workspace01\DesignAttempt01\SW_Tx_UART_v1_50.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
@@ -298,16 +314,8 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
+<name v=".\DesignAttempt01.cydsn\FnCall.c" />
 <name v=".\DesignAttempt01.cydsn\main.c" />
-<name v=".\DesignAttempt01.cydsn\TB9051.h" />
-<name v=".\DesignAttempt01.cydsn\TB9051.c" />
-<name v=".\DesignAttempt01.cydsn\SG90.h" />
-<name v=".\DesignAttempt01.cydsn\SBT0811.h" />
-<name v=".\DesignAttempt01.cydsn\SBT0811.c" />
-<name v=".\DesignAttempt01.cydsn\DesignAttempt01.cydwr" />
-<name v=".\DesignAttempt01.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\DesignAttempt01.cydsn\Generated_Source\PSoC4\QuadPWM.c" />
-<name v=".\DesignAttempt01.cydsn\Generated_Source\PSoC4\CyLib.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -315,7 +323,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1349, 703" SelectedTabbedMdiWindow="2c7996c1-dd61-4adf-bb76-a60cf76240f3"><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\main.c" Guid="a75c89d5-65a0-4c4b-9488-235b8121e9cb" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\TB9051.h" Guid="5f02d221-41ea-4688-8a0c-8a40da840ce1" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\TB9051.c" Guid="02f6d406-4df9-4a06-bbdb-413e4e2a0b33" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\SG90.h" Guid="a47c88b1-f64d-4602-b8b9-7ac369cd6cdd" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\SBT0811.h" Guid="77dcd1e0-cdf9-45b8-86c1-1f50c850f85b" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\SBT0811.c" Guid="2c2a617e-5140-4778-993d-74857c8240fd" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\DesignAttempt01.cydwr" Guid="52c38889-87ab-4621-a1c6-0d15a3f244e5" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\TopDesign\TopDesign.cysch" Guid="2c7996c1-dd61-4adf-bb76-a60cf76240f3" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\Generated_Source\PSoC4\QuadPWM.c" Guid="e4d96c38-fb05-4410-9f66-111d51ffc91b" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\Generated_Source\PSoC4\CyLib.c" Guid="b4151abb-bfce-400d-bbfc-dc1ac3f8f7bc" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1408, 703" SelectedTabbedMdiWindow="43dce5e1-89e9-4bb4-88db-526ab2c2f4e1"><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\FnCall.c" Guid="43dce5e1-89e9-4bb4-88db-526ab2c2f4e1" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\main.c" Guid="7bace818-f54e-44fa-97f9-82b9257898cd" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

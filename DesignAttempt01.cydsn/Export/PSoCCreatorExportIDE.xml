@@ -183,6 +183,31 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_10.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_10_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\Pin_10_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_SPI_UART.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_SPI_UART.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_SPI_UART_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_UART.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_UART_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_PINS.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_SPI_UART_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_PVT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_BOOT.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_SCBCLK.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_SCBCLK.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_tx.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_tx.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_tx_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_tx_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_rx.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_rx.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_rx_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_rx_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_SCB_IRQ.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC4\UART_RPi_SCB_IRQ.h</File>
         </Files>
       </Folder>
       <Folder BuildType="EXCLUDE" Path=".\codegentemp">
