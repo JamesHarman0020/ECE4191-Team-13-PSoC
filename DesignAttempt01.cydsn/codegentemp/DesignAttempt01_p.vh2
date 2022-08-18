@@ -1,5 +1,5 @@
 -- Project:   DesignAttempt01
--- Generated: 08/11/2022 13:49:40
+-- Generated: 08/18/2022 18:17:51
 -- PSoC Creator  4.4
 
 ENTITY DesignAttempt01 IS
@@ -597,8 +597,8 @@ BEGIN
             wco => ClockBlock_WCO,
             dsi_in_0 => ClockBlock_Routed1,
             ff_div_2 => \I2C_1:Net_847_ff2\,
-            udb_div_0 => dclk_to_genclk,
-            ff_div_3 => \UART_RPi:Net_847_ff3\);
+            ff_div_3 => \UART_RPi:Net_847_ff3\,
+            udb_div_0 => dclk_to_genclk);
 
     Pin_0:logicalport
         GENERIC MAP(

@@ -20,6 +20,7 @@ void TB9051_Brake();
 void TB9051_VehForward(int speed);
 void TB9051_VehReverse(int speed);
 void TB9051_VehBrake();
+void TB9051_VehMoveTo(float x, float y); // TO-DO
 #endif
 
 /* [] END OF FILE */

@@ -26,27 +26,10 @@ char rxString[30] = {0};
 int rxCount = 0;
 char comString[30] = {0};
 
-// User Functions
-void onRx() 
-{   
-    uint32 rxByte = UART_RPi_UartGetByte();
-    char rxChar = (char)rxByte;
-    rxString[rxCount] = rxChar;
-    rxCount++;
-    
-    if (rxChar == '\n')
-    {
-        strcpy(comString, rxString);
-        UART_PutString(comString);
-        memset(rxString,0,sizeof(rxString));  
-        rxCount = 0;
-        UART_PutString(rxString);
-    }
-   
-    
-}
+//Functions
+void onRx();
 
-// Main
+
 int main(void) // THIS SHOULD BE FREERTOS 
 {
     CyGlobalIntEnable;
@@ -67,3 +50,20 @@ int main(void) // THIS SHOULD BE FREERTOS
     }
 }
 
+// User Functions
+void onRx() 
+{   
+    uint32 rxByte = UART_RPi_UartGetByte();
+    char rxChar = (char)rxByte; 
+    rxString[rxCount] = rxChar;
+    rxCount++;
+
+    if (rxChar == '\n')                         //Terminate all functions with a new line
+    {
+        strcpy(comString, rxString);            // copy received string into complete string
+        UART_PutString(comString);
+        RunFn(&comString);
+        memset(rxString,0,sizeof(rxString));    // "Empty" rxString
+        rxCount = 0;                            // Reset Counter          
+    }
+}

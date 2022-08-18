@@ -2,7 +2,7 @@
 --	Conversion of DesignAttempt01.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Aug 11 13:49:39 2022
+--	Thu Aug 18 18:17:50 2022
 --
 
 USE cypress.cypress.all;
@@ -2344,7 +2344,7 @@ Pin_10:cy_psoc3_pins_v1_10
 		id=>"43ec2fa1-bf22-4b71-9477-b6ca7b97f0b0/2dc2d7a8-ce2b-43c7-af4a-821c8cd73ccf",
 		source_clock_id=>"",
 		divisor=>0,
-		period=>"8680555555.55556",
+		period=>"723379629.62963",
 		is_direct=>'0',
 		is_digital=>'0')
 	PORT MAP(clock_out=>\UART_RPi:Net_847\,
