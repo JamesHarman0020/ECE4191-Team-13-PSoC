@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\DesignAttempt01\Source Files\fnReceive.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\DesignAttempt01\Source Files\TB9051.c">
 <ExpandedNodeIds>
 <v>Workspace01</v>
 <v>Workspace01\DesignAttempt01</v>
@@ -26,13 +26,13 @@
 <v>Workspace01\DesignAttempt01\DesignAttempt01.cydwr\System</v>
 <v>Workspace01\DesignAttempt01\DesignAttempt01.cydwr\Directives</v>
 <v>Workspace01\DesignAttempt01\DesignAttempt01.cydwr\Flash Security</v>
+<v>Workspace01\DesignAttempt01\Header Files</v>
 <v>Workspace01\DesignAttempt01\Header Files\cyapicallbacks.h</v>
 <v>Workspace01\DesignAttempt01\Header Files\IMU.h</v>
 <v>Workspace01\DesignAttempt01\Header Files\SBT0811.h</v>
 <v>Workspace01\DesignAttempt01\Header Files\SG90.h</v>
 <v>Workspace01\DesignAttempt01\Header Files\TB9051.h</v>
 <v>Workspace01\DesignAttempt01\Source Files</v>
-<v>Workspace01\DesignAttempt01\Source Files\FnCall.c</v>
 <v>Workspace01\DesignAttempt01\Source Files\fnReceive.c</v>
 <v>Workspace01\DesignAttempt01\Source Files\IMU.c</v>
 <v>Workspace01\DesignAttempt01\Source Files\main.c</v>
@@ -66,8 +66,12 @@
 <v>Workspace01\DesignAttempt01\TopDesign</v>
 <v>Workspace01\DesignAttempt01\DesignAttempt01.cydwr</v>
 <v>Workspace01\DesignAttempt01\Header Files</v>
+<v>Workspace01\DesignAttempt01\Header Files\cyapicallbacks.h</v>
+<v>Workspace01\DesignAttempt01\Header Files\IMU.h</v>
+<v>Workspace01\DesignAttempt01\Header Files\SBT0811.h</v>
+<v>Workspace01\DesignAttempt01\Header Files\SG90.h</v>
+<v>Workspace01\DesignAttempt01\Header Files\TB9051.h</v>
 <v>Workspace01\DesignAttempt01\Source Files</v>
-<v>Workspace01\DesignAttempt01\Source Files\FnCall.c</v>
 <v>Workspace01\DesignAttempt01\Source Files\fnReceive.c</v>
 <v>Workspace01\DesignAttempt01\Source Files\IMU.c</v>
 <v>Workspace01\DesignAttempt01\Source Files\main.c</v>
@@ -119,7 +123,6 @@
 <v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
 <v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\FnCall.lst</v>
 <v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\fnReceive.lst</v>
 <v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
 <v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
@@ -216,51 +219,6 @@
 <VisibleNodeIds>
 <v>Workspace01</v>
 <v>Workspace01\DesignAttempt01</v>
-<v>Workspace01\DesignAttempt01\CortexM0</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\Cm0Start.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\CyDMA.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLFClk.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\FnCall.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\fnReceive.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C_BOOT.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C_INT.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_I2C_MASTER.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_PM.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_SCB_IRQ.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_SCBCLK.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_scl.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_scl_PM.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_sda.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\I2C_1_sda_PM.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\IMU.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_0.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_0_PM.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_1_PM.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_10.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_10_PM.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_2_PM.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_3.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_3_PM.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_4.lst</v>
-<v>Workspace01\DesignAttempt01\CortexM0\ARM_GCC_541\Debug\Listing Files\Pin_4_PM.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -339,15 +297,13 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\DesignAttempt01.cydsn\FnCall.c" />
+<name v=".\DesignAttempt01.cydsn\fnReceive.c" />
 <name v=".\DesignAttempt01.cydsn\main.c" />
 <name v=".\DesignAttempt01.cydsn\DesignAttempt01.cydwr" />
-<name v=".\DesignAttempt01.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\DesignAttempt01.cydsn\IMU.h" />
-<name v=".\DesignAttempt01.cydsn\SBT0811.h" />
 <name v=".\DesignAttempt01.cydsn\SBT0811.c" />
-<name v=".\DesignAttempt01.cydsn\SG90.h" />
+<name v=".\DesignAttempt01.cydsn\Generated_Source\PSoC4\Cm0Start.c" />
 <name v=".\DesignAttempt01.cydsn\TB9051.h" />
+<name v=".\DesignAttempt01.cydsn\TB9051.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -355,7 +311,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1016, 487" SelectedTabbedMdiWindow="c56f32ba-4c1f-4666-8605-f2ae6ad63985"><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\FnCall.c" Guid="43dce5e1-89e9-4bb4-88db-526ab2c2f4e1" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\main.c" Guid="7bace818-f54e-44fa-97f9-82b9257898cd" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="444932ab-19a8-4908-bc87-a1702d023f26" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\DesignAttempt01.cydwr" Guid="8e49907a-5f60-4951-8e8c-9dc58c168396" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\TopDesign\TopDesign.cysch" Guid="97dd0fc2-7bbc-40da-8c31-c87077999fcc" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\IMU.h" Guid="5d053382-98d0-45a4-a543-07e9518250ad" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\SBT0811.h" Guid="f97237a5-03ec-4606-9c96-215420843f6d" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\SBT0811.c" Guid="5151ff9b-0940-4fbe-aae7-c0bd50a0fe10" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\SG90.h" Guid="8fd32d2e-7303-4928-ad0f-24d95b35b0f9" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\TB9051.h" Guid="c56f32ba-4c1f-4666-8605-f2ae6ad63985" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1016, 487" SelectedTabbedMdiWindow="53b15ec7-b878-4069-9542-813b01a1ca18"><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\fnReceive.c" Guid="53b15ec7-b878-4069-9542-813b01a1ca18" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\main.c" Guid="1381f1f6-94ed-4866-ba17-f179bd4b8dad" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\DesignAttempt01.cydwr" Guid="6f0f752d-ef14-4c98-b100-7b082c5708f4" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\SBT0811.c" Guid="678f7de8-d0b9-4837-8880-a380fae30db1" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\Generated_Source\PSoC4\Cm0Start.c" Guid="5e8ed18c-c3b9-4c28-a7cb-cd0e39b96be7" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\TB9051.h" Guid="e3de5a1c-a394-47c4-bf9f-f26e5508c067" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\TB9051.c" Guid="5767f8a6-48d4-4860-ba2a-62ffa58e004f" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="444932ab-19a8-4908-bc87-a1702d023f26" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

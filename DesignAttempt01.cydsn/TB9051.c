@@ -97,4 +97,8 @@ void TB9051_Brake(int motor)
     // TO-DO: ADD non-blocking delay here so that the short brake is applied for a suitable period of time (e.g. 100ms)
     CyDelay(100);
 }
+
+void TB9051_VehMoveTo(float x, float y){
+
+};
 /* [] END OF FILE */

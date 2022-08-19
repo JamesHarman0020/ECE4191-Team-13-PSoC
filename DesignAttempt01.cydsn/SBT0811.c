@@ -58,7 +58,7 @@ void oneStepCW(int speed) // One step in the clockwise direction
 
 void moveAngle(float angle){ //angle taken in degrees
     float steps = angle * STEPS_PER_REV / 360;
-    int stepsRound = round(steps); //number of steps to turn that number of degrees
+    int stepsRound = (int)steps; //number of steps to turn that number of degrees
     char string[40];
     sprintf(string, "steps = %d error = %f\n", stepsRound, (float)(steps-stepsRound));
     UART_PutString(string);

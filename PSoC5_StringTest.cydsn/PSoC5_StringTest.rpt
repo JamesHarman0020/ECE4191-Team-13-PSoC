@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.142ms
+Loading plugins phase: Elapsed time ==> 0s.155ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_StringTest.cydsn\PSoC5_StringTest.cyprj -d CY8C5888LTI-LP097 -s C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_StringTest.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 0s.788ms
+Elaboration phase: Elapsed time ==> 0s.750ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.003ms
+HDL generation phase: Elapsed time ==> 0s.002ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\James
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Thu Aug 18 18:42:24 2022
+Fri Aug 19 12:38:32 2022
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 PSoC5_StringTest.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Thu Aug 18 18:42:24 2022
+Fri Aug 19 12:38:32 2022
 
 
 vpp:  No errors.
@@ -80,7 +80,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\James
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Thu Aug 18 18:42:24 2022
+Fri Aug 19 12:38:33 2022
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -103,7 +103,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\James
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Thu Aug 18 18:42:24 2022
+Fri Aug 19 12:38:33 2022
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -151,14 +151,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_StringTest.cydsn\PSoC5_StringTest.cyprj -dcpsoc3 PSoC5_StringTest.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.467ms
+Warp synthesis phase: Elapsed time ==> 0s.458ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Thursday, 18 August 2022 18:42:25
+cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Friday, 19 August 2022 12:38:33
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_StringTest.cydsn\PSoC5_StringTest.cyprj -d CY8C5888LTI-LP097 PSoC5_StringTest.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.005ms
+Design parsing phase: Elapsed time ==> 0s.007ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -234,11 +234,11 @@ DAC                           :      :      :      :
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
 Technology Mapping: Elapsed time ==> 0s.005ms
-Tech Mapping phase: Elapsed time ==> 0s.063ms
+Tech Mapping phase: Elapsed time ==> 0s.078ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
-Analog Placement phase: Elapsed time ==> 0s.034ms
+Analog Placement phase: Elapsed time ==> 0s.020ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 Analog Routing phase: Elapsed time ==> 0s.000ms
@@ -256,12 +256,12 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.278ms
+Analog Code Generation phase: Elapsed time ==> 0s.272ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
 I2659: No Constrained paths were found. The placer will run in non-timing driven mode.
-I2076: Total run-time: 0.4 sec.
+I2076: Total run-time: 0.5 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -275,7 +275,7 @@ PLD Packing: Elapsed time ==> 0s.000ms
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.006ms
+Partitioning: Elapsed time ==> 0s.009ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -381,32 +381,32 @@ Port | Pin | Fixed |      Type |       Drive Mode | Name | Connections
 </CYPRESSTAG>
 </CYPRESSTAG>
 Digital component placer commit/Report: Elapsed time ==> 0s.001ms
-Digital Placement phase: Elapsed time ==> 0s.622ms
+Digital Placement phase: Elapsed time ==> 0s.692ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "PSoC5_StringTest_r.vh2" --pcf-path "PSoC5_StringTest.pco" --des-name "PSoC5_StringTest" --dsf-path "PSoC5_StringTest.dsf" --sdc-path "PSoC5_StringTest.sdc" --lib-path "PSoC5_StringTest_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 0s.926ms
+Digital Routing phase: Elapsed time ==> 0s.973ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.149ms
+Bitstream Generation phase: Elapsed time ==> 0s.151ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.028ms
+Bitstream Verification phase: Elapsed time ==> 0s.032ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in PSoC5_StringTest_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.180ms
+Static timing analysis phase: Elapsed time ==> 0s.206ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.130ms
+Design database save phase: Elapsed time ==> 0s.132ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 2s.458ms
+cydsfit: Elapsed time ==> 2s.606ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 2s.459ms
-API generation phase: Elapsed time ==> 0s.847ms
-Dependency generation phase: Elapsed time ==> 0s.006ms
-Cleanup phase: Elapsed time ==> 0s.000ms
+Fitter phase: Elapsed time ==> 2s.609ms
+API generation phase: Elapsed time ==> 1s.217ms
+Dependency generation phase: Elapsed time ==> 0s.011ms
+Cleanup phase: Elapsed time ==> 0s.001ms

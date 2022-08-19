@@ -42,10 +42,17 @@ int main(void) // THIS SHOULD BE FREERTOS
     //float angle = 0;
     //SG90_ToAngle(angle);
     UART_RPi_SetCustomInterruptHandler(&onRx);
-    //TB9051_Begin();
+    TB9051_Begin();
         
     for(;;)
     {  
+        /* // MOTOR TEST
+        CyDelay(5000);
+        TB9051_VehBrake();
+        CyDelay(2000);
+        TB9051_VehReverse(125); */
+        
+        
        //char string[20]; sprintf(string, "Main\n"); UART_PutString(string);
     }
 }
@@ -58,10 +65,9 @@ void onRx()
     rxString[rxCount] = rxChar;
     rxCount++;
 
-    if (rxChar == '\n')                         //Terminate all functions with a new line
+    if (rxChar == '\n')                         // TO-DO: Terminate all functions after 9 bytes
     {
         strcpy(comString, rxString);            // copy received string into complete string
-        UART_PutString(comString);
         RunFn(&comString);
         memset(rxString,0,sizeof(rxString));    // "Empty" rxString
         rxCount = 0;                            // Reset Counter          
