@@ -10,7 +10,6 @@
  * ========================================
 */
 // This file will interpret function calls that come over serial
-// To-DO: Integrate Jingwei's code
 
 #include "project.h"
 #include "string.h"
@@ -21,10 +20,11 @@
 #include "SG90.h"
 #include "TB9051.h"
 
-void fnCall(float para1, float para2, float para3);
+void fnCall(int fn, float para2, float para3);
 
 void RunFn(char * comString){
-    char *pEnd;
+    ///// This interprets incoming serial as strings, trying to bypass that /////
+    /*char *pEnd;
     
     int b = strlen(comString);
     for (int i = 0 ; i<b-1; i++) 
@@ -36,16 +36,15 @@ void RunFn(char * comString){
     float para1 = strtof(comString, &pEnd);
     float para2 = strtof(pEnd, &pEnd);
     float para3 = strtof(pEnd, &pEnd);
-    fnCall(para1, para2, para3);
+    fnCall(para1, para2, para3);*/
     
     //char string[20]; sprintf(string, "%f, ", para1); UART_PutString(string);
     //sprintf(string, "%f, ", para2); UART_PutString(string);
     //sprintf(string, "%f\n", para3); UART_PutString(string);
 }
 
-void fnCall(float para1, float para2, float para3) {
-    int paraInt1 =(int)para1;
-    switch (paraInt1) { 
+void fnCall(int fn, float para2, float para3) {
+    switch (fn) { 
         case 0: TB9051_VehMoveTo(para2,para3);          break; // Motor Commands
         case 1: TB9051_Begin();                         break;
         case 2: TB9051_Forward((int)para2,(int)para3);  break;

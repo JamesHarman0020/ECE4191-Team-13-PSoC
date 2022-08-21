@@ -25,6 +25,11 @@
 char rxString[30] = {0};
 int rxCount = 0;
 char comString[30] = {0};
+int fn; 
+float prm1, prm2;
+unsigned char *B1, *B2;
+int mask = 0xff;
+int startFlag = 0;
 
 //Functions
 void onRx();
@@ -39,11 +44,14 @@ int main(void) // THIS SHOULD BE FREERTOS
     //LIS3MDL_Begin();
     //LSM6DS3_Begin();
     //SG90_Begin();
-    //float angle = 0;
-    //SG90_ToAngle(angle);
-    UART_RPi_SetCustomInterruptHandler(&onRx);
     TB9051_Begin();
-        
+    UART_RPi_SetCustomInterruptHandler(&onRx);
+    
+    // Setup the floats for serial receive
+    // by putting data at the address of the floats
+    B1 = (unsigned char *)&prm1;
+    B2 = (unsigned char *)&prm2;
+    
     for(;;)
     {  
         /* // MOTOR TEST
@@ -51,8 +59,6 @@ int main(void) // THIS SHOULD BE FREERTOS
         TB9051_VehBrake();
         CyDelay(2000);
         TB9051_VehReverse(125); */
-        
-        
        //char string[20]; sprintf(string, "Main\n"); UART_PutString(string);
     }
 }
@@ -61,15 +67,30 @@ int main(void) // THIS SHOULD BE FREERTOS
 void onRx() 
 {   
     uint32 rxByte = UART_RPi_UartGetByte();
-    char rxChar = (char)rxByte; 
-    rxString[rxCount] = rxChar;
-    rxCount++;
-
-    if (rxChar == '\n')                         // TO-DO: Terminate all functions after 9 bytes
-    {
-        strcpy(comString, rxString);            // copy received string into complete string
-        RunFn(&comString);
-        memset(rxString,0,sizeof(rxString));    // "Empty" rxString
-        rxCount = 0;                            // Reset Counter          
+    rxByte = rxByte & mask;                 // rxByte only contains data in bits 7-0       
+    if (rxByte == 0xff) {                   // Start byte
+        startFlag = 1;
+    }
+    
+    if (startFlag) {
+        char string[10]; sprintf(string,"%lx ",rxByte); UART_PutString(string);
+        switch (rxCount) {
+            case 1: fn = (char)rxByte;      //fn byte
+            case 2: B1[0] = (char)rxByte;   //float 1 [4 bytes]
+            case 3: B1[1] = (char)rxByte;
+            case 4: B1[2] = (char)rxByte;
+            case 5: B1[3] = (char)rxByte;
+            case 6: B2[0] = (char)rxByte;   //float 2 [4 bytes]
+            case 7: B2[1] = (char)rxByte;
+            case 8: B2[2] = (char)rxByte;
+            case 9: B2[3] = (char)rxByte;
+        }
+    }
+       
+    if (rxCount < 9) rxCount++; 
+    else {
+        rxCount = 0; startFlag = 0;         // Reset and wait for start bit
+        char string[40]; sprintf(string,": %i %0.6f %0.6f \n",fn,prm1,prm2); UART_PutString(string);
     }
 }
+

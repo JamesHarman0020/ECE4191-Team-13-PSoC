@@ -6,7 +6,7 @@
 
 #Build Date:         Sep  9 2019 11:47:43
 
-#File Generated:     Aug 19 2022 09:39:22
+#File Generated:     Aug 21 2022 11:14:16
 
 #Purpose:            
 
@@ -86,8 +86,8 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
 Clock: I2C_1_SCBCLK         | Frequency: N/A       | Target:   8.0 MHz
 Clock: I2C_1_SCBCLK(FFB)    | Frequency: N/A       | Target:   8.0 MHz
-Clock: UART_RPi_SCBCLK      | Frequency: N/A       | Target:   1.4 MHz
-Clock: UART_RPi_SCBCLK(FFB) | Frequency: N/A       | Target:   1.4 MHz
+Clock: UART_RPi_SCBCLK      | Frequency: N/A       | Target:   0.7 MHz
+Clock: UART_RPi_SCBCLK(FFB) | Frequency: N/A       | Target:   0.7 MHz
 
 ======================================================================
                      End of Clock Summary
@@ -109,13 +109,13 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
 Clock: I2C_1_SCBCLK         | Frequency: N/A       | Target:   8.0 MHz
 Clock: I2C_1_SCBCLK(FFB)    | Frequency: N/A       | Target:   8.0 MHz
-Clock: UART_RPi_SCBCLK      | Frequency: N/A       | Target:   1.4 MHz
-Clock: UART_RPi_SCBCLK(FFB) | Frequency: N/A       | Target:   1.4 MHz
+Clock: UART_RPi_SCBCLK      | Frequency: N/A       | Target:   0.7 MHz
+Clock: UART_RPi_SCBCLK(FFB) | Frequency: N/A       | Target:   0.7 MHz
 
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.1 (sec)
+D2088: Phase 7, elapsed time : 0.2 (sec)
 
 Final Design Statistics
     Number of Combinational MCs 	:	1
@@ -155,8 +155,8 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
 Clock: I2C_1_SCBCLK         | Frequency: N/A       | Target:   8.0 MHz
 Clock: I2C_1_SCBCLK(FFB)    | Frequency: N/A       | Target:   8.0 MHz
-Clock: UART_RPi_SCBCLK      | Frequency: N/A       | Target:   1.4 MHz
-Clock: UART_RPi_SCBCLK(FFB) | Frequency: N/A       | Target:   1.4 MHz
+Clock: UART_RPi_SCBCLK      | Frequency: N/A       | Target:   0.7 MHz
+Clock: UART_RPi_SCBCLK(FFB) | Frequency: N/A       | Target:   0.7 MHz
 
 ======================================================================
                      End of Clock Summary
@@ -185,8 +185,8 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
 Clock: I2C_1_SCBCLK         | Frequency: N/A       | Target:   8.0 MHz
 Clock: I2C_1_SCBCLK(FFB)    | Frequency: N/A       | Target:   8.0 MHz
-Clock: UART_RPi_SCBCLK      | Frequency: N/A       | Target:   1.4 MHz
-Clock: UART_RPi_SCBCLK(FFB) | Frequency: N/A       | Target:   1.4 MHz
+Clock: UART_RPi_SCBCLK      | Frequency: N/A       | Target:   0.7 MHz
+Clock: UART_RPi_SCBCLK(FFB) | Frequency: N/A       | Target:   0.7 MHz
 
 ======================================================================
                      End of Clock Summary
@@ -208,13 +208,13 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
 Clock: I2C_1_SCBCLK         | Frequency: N/A       | Target:   8.0 MHz
 Clock: I2C_1_SCBCLK(FFB)    | Frequency: N/A       | Target:   8.0 MHz
-Clock: UART_RPi_SCBCLK      | Frequency: N/A       | Target:   1.4 MHz
-Clock: UART_RPi_SCBCLK(FFB) | Frequency: N/A       | Target:   1.4 MHz
+Clock: UART_RPi_SCBCLK      | Frequency: N/A       | Target:   0.7 MHz
+Clock: UART_RPi_SCBCLK(FFB) | Frequency: N/A       | Target:   0.7 MHz
 
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.1 (sec)
+D2088: Phase 7, elapsed time : 0.2 (sec)
 
 Final Design Statistics
     Number of Combinational MCs 	:	1
@@ -254,8 +254,8 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
 Clock: I2C_1_SCBCLK         | Frequency: N/A       | Target:   8.0 MHz
 Clock: I2C_1_SCBCLK(FFB)    | Frequency: N/A       | Target:   8.0 MHz
-Clock: UART_RPi_SCBCLK      | Frequency: N/A       | Target:   1.4 MHz
-Clock: UART_RPi_SCBCLK(FFB) | Frequency: N/A       | Target:   1.4 MHz
+Clock: UART_RPi_SCBCLK      | Frequency: N/A       | Target:   0.7 MHz
+Clock: UART_RPi_SCBCLK(FFB) | Frequency: N/A       | Target:   0.7 MHz
 
 ======================================================================
                      End of Clock Summary
@@ -266,5 +266,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.5 sec.
+I2076: Total run-time: 1.4 sec.
 

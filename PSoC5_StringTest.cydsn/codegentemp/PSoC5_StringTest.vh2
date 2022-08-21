@@ -2,7 +2,7 @@
 --	Conversion of PSoC5_StringTest.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Aug 19 12:38:33 2022
+--	Sun Aug 21 11:13:45 2022
 --
 
 USE cypress.cypress.all;
