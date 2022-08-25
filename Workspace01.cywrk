@@ -3,10 +3,11 @@
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
 <CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="Workspace01" persistent="Workspace01.cywrk" platform="NOT_USED">
-<current_project name=".\DesignAttempt01.cydsn\DesignAttempt01.cyprj" />
+<current_project name=".\PSoC5_Team13Project.cydsn\PSoC5_Team13Project.cyprj" />
 <wrkspc_folders />
 <files />
 <projects>
+<v>.\PSoC5_Team13Project.cydsn\PSoC5_Team13Project.cyprj</v>
 <v>.\DesignAttempt01.cydsn\DesignAttempt01.cyprj</v>
 </projects>
 <workspace_id v="6c956238-de31-4a7e-964b-8a5f92fbfa3d" />
@@ -15,6 +16,7 @@
 <CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize+CyPrjDependencyList" version="4">
 <wrkspc_dependencies>
 <wrkspc_dependency project="DesignAttempt01.cydsn\DesignAttempt01.cyprj" dependency="..\..\Downloads\Quad_PWM\Quad PWM\Quad PWM.cydsn\Quad PWM.cyprj" />
+<wrkspc_dependency project="PSoC5_Team13Project.cydsn\PSoC5_Team13Project.cyprj" dependency="Quad_PWM\Quad PWM\Quad PWM.cydsn\Quad PWM.cyprj" />
 </wrkspc_dependencies>
 </CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316>
 <CyGuid_63b68103-67f5-4406-8da6-5c8625765b82 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize+CyIgnoredSystemDepsList" version="1">

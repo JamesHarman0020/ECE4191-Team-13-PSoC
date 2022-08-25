@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 1
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccomXCxt.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 1
   28:Generated_Source\PSoC4/QuadPWM.c **** *
   29:Generated_Source\PSoC4/QuadPWM.c **** *******************************************************************************/
   30:Generated_Source\PSoC4/QuadPWM.c **** void QuadPWM_Init(void)
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 2
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccomXCxt.s 			page 2
 
 
   31:Generated_Source\PSoC4/QuadPWM.c **** {
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 1
   72              		.type	QuadPWM_SetDutyCycle, %function
   73              	QuadPWM_SetDutyCycle:
   74              	.LFB1:
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 3
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccomXCxt.s 			page 3
 
 
   41:Generated_Source\PSoC4/QuadPWM.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 1
  105              	.L6:
   65:Generated_Source\PSoC4/QuadPWM.c ****         case QuadPWM_PWM_2:
   66:Generated_Source\PSoC4/QuadPWM.c ****             QuadPWM_REG_D1 = QuadPWM_MAX_DUTY_CYCLE - (uint8) dutyCycle;
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 4
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccomXCxt.s 			page 4
 
 
  106              		.loc 1 66 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 1
  149              		.text
  150              	.Letext0:
  151              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 5
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccomXCxt.s 			page 5
 
 
  152              		.section	.debug_info,"",%progbits
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 1
  206 006b 04       		.uleb128 0x4
  207 006c AB010000 		.4byte	.LASF9
  208 0070 02       		.byte	0x2
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 6
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccomXCxt.s 			page 6
 
 
  209 0071 FB01     		.2byte	0x1fb
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 1
  263 00e3 00000000 		.4byte	.LLST0
  264 00e7 00       		.byte	0
  265 00e8 00       		.byte	0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 7
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccomXCxt.s 			page 7
 
 
  266              		.section	.debug_abbrev,"",%progbits
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 1
  320 0034 00       		.byte	0
  321 0035 00       		.byte	0
  322 0036 05       		.uleb128 0x5
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 8
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccomXCxt.s 			page 8
 
 
  323 0037 35       		.uleb128 0x35
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 1
  377 006f 00       		.byte	0
  378 0070 03       		.uleb128 0x3
  379 0071 08       		.uleb128 0x8
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 9
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccomXCxt.s 			page 9
 
 
  380 0072 3A       		.uleb128 0x3a
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 1
  434 003c 71       		.byte	0x71
  435 003d 00       		.sleb128 0
  436 003e 20       		.byte	0x20
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 10
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccomXCxt.s 			page 10
 
 
  437 003f 9F       		.byte	0x9f
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 1
  491 0010 00000000 		.4byte	.LFB0
  492 0014 34000000 		.4byte	.LFE0-.LFB0
  493 0018 00000000 		.4byte	.LFB1
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 11
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccomXCxt.s 			page 11
 
 
  494 001c 50000000 		.4byte	.LFE1-.LFB1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 1
  522      69676E65 
  522      6420696E 
  522      7400
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 12
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccomXCxt.s 			page 12
 
 
  523              	.LASF3:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 1
  544 0197 64757479 		.ascii	"dutyCycle\000"
  544      4379636C 
  544      6500
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccWdwAzD.s 			page 13
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccomXCxt.s 			page 13
 
 
  545              	.LASF2:

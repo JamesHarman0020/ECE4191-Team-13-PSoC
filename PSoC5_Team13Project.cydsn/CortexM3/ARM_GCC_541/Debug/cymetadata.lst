@@ -1,0 +1,3237 @@
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 2596
+  28              	cy_meta_configecc:
+  29 0000 08       		.byte	8
+  30 0001 52       		.byte	82
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 09       		.byte	9
+  34 0005 64       		.byte	100
+  35 0006 00       		.byte	0
+  36 0007 40       		.byte	64
+  37 0008 01       		.byte	1
+  38 0009 65       		.byte	101
+  39 000a 00       		.byte	0
+  40 000b 40       		.byte	64
+  41 000c 5E       		.byte	94
+  42 000d 00       		.byte	0
+  43 000e 01       		.byte	1
+  44 000f 40       		.byte	64
+  45 0010 2D       		.byte	45
+  46 0011 01       		.byte	1
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 4C       		.byte	76
+  50 0015 02       		.byte	2
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 2F       		.byte	47
+  54 0019 03       		.byte	3
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 4A       		.byte	74
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 2
+
+
+  58 001d 04       		.byte	4
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 3E       		.byte	62
+  62 0021 05       		.byte	5
+  63 0022 01       		.byte	1
+  64 0023 40       		.byte	64
+  65 0024 0B       		.byte	11
+  66 0025 07       		.byte	7
+  67 0026 01       		.byte	1
+  68 0027 40       		.byte	64
+  69 0028 39       		.byte	57
+  70 0029 08       		.byte	8
+  71 002a 01       		.byte	1
+  72 002b 40       		.byte	64
+  73 002c 42       		.byte	66
+  74 002d 09       		.byte	9
+  75 002e 01       		.byte	1
+  76 002f 40       		.byte	64
+  77 0030 4D       		.byte	77
+  78 0031 0A       		.byte	10
+  79 0032 01       		.byte	1
+  80 0033 40       		.byte	64
+  81 0034 3B       		.byte	59
+  82 0035 0B       		.byte	11
+  83 0036 01       		.byte	1
+  84 0037 40       		.byte	64
+  85 0038 4B       		.byte	75
+  86 0039 0C       		.byte	12
+  87 003a 01       		.byte	1
+  88 003b 40       		.byte	64
+  89 003c 30       		.byte	48
+  90 003d 0D       		.byte	13
+  91 003e 01       		.byte	1
+  92 003f 40       		.byte	64
+  93 0040 01       		.byte	1
+  94 0041 0F       		.byte	15
+  95 0042 01       		.byte	1
+  96 0043 40       		.byte	64
+  97 0044 50       		.byte	80
+  98 0045 14       		.byte	20
+  99 0046 01       		.byte	1
+ 100 0047 40       		.byte	64
+ 101 0048 3E       		.byte	62
+ 102 0049 15       		.byte	21
+ 103 004a 01       		.byte	1
+ 104 004b 40       		.byte	64
+ 105 004c 4A       		.byte	74
+ 106 004d 16       		.byte	22
+ 107 004e 01       		.byte	1
+ 108 004f 40       		.byte	64
+ 109 0050 34       		.byte	52
+ 110 0051 17       		.byte	23
+ 111 0052 01       		.byte	1
+ 112 0053 40       		.byte	64
+ 113 0054 02       		.byte	2
+ 114 0055 19       		.byte	25
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 3
+
+
+ 115 0056 01       		.byte	1
+ 116 0057 40       		.byte	64
+ 117 0058 01       		.byte	1
+ 118 0059 1B       		.byte	27
+ 119 005a 01       		.byte	1
+ 120 005b 40       		.byte	64
+ 121 005c 06       		.byte	6
+ 122 005d 40       		.byte	64
+ 123 005e 01       		.byte	1
+ 124 005f 40       		.byte	64
+ 125 0060 12       		.byte	18
+ 126 0061 41       		.byte	65
+ 127 0062 01       		.byte	1
+ 128 0063 40       		.byte	64
+ 129 0064 0C       		.byte	12
+ 130 0065 42       		.byte	66
+ 131 0066 01       		.byte	1
+ 132 0067 40       		.byte	64
+ 133 0068 04       		.byte	4
+ 134 0069 43       		.byte	67
+ 135 006a 01       		.byte	1
+ 136 006b 40       		.byte	64
+ 137 006c 03       		.byte	3
+ 138 006d 44       		.byte	68
+ 139 006e 01       		.byte	1
+ 140 006f 40       		.byte	64
+ 141 0070 06       		.byte	6
+ 142 0071 45       		.byte	69
+ 143 0072 01       		.byte	1
+ 144 0073 40       		.byte	64
+ 145 0074 07       		.byte	7
+ 146 0075 46       		.byte	70
+ 147 0076 01       		.byte	1
+ 148 0077 40       		.byte	64
+ 149 0078 04       		.byte	4
+ 150 0079 47       		.byte	71
+ 151 007a 01       		.byte	1
+ 152 007b 40       		.byte	64
+ 153 007c 03       		.byte	3
+ 154 007d 48       		.byte	72
+ 155 007e 01       		.byte	1
+ 156 007f 40       		.byte	64
+ 157 0080 10       		.byte	16
+ 158 0081 49       		.byte	73
+ 159 0082 01       		.byte	1
+ 160 0083 40       		.byte	64
+ 161 0084 0F       		.byte	15
+ 162 0085 4C       		.byte	76
+ 163 0086 01       		.byte	1
+ 164 0087 40       		.byte	64
+ 165 0088 06       		.byte	6
+ 166 0089 4D       		.byte	77
+ 167 008a 01       		.byte	1
+ 168 008b 40       		.byte	64
+ 169 008c 04       		.byte	4
+ 170 008d 50       		.byte	80
+ 171 008e 01       		.byte	1
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 4
+
+
+ 172 008f 40       		.byte	64
+ 173 0090 02       		.byte	2
+ 174 0091 51       		.byte	81
+ 175 0092 01       		.byte	1
+ 176 0093 40       		.byte	64
+ 177 0094 00       		.byte	0
+ 178 0095 48       		.byte	72
+ 179 0096 01       		.byte	1
+ 180 0097 40       		.byte	64
+ 181 0098 08       		.byte	8
+ 182 0099 10       		.byte	16
+ 183 009a 09       		.byte	9
+ 184 009b 20       		.byte	32
+ 185 009c 10       		.byte	16
+ 186 009d 01       		.byte	1
+ 187 009e 14       		.byte	20
+ 188 009f 08       		.byte	8
+ 189 00a0 18       		.byte	24
+ 190 00a1 05       		.byte	5
+ 191 00a2 19       		.byte	25
+ 192 00a3 0C       		.byte	12
+ 193 00a4 0A       		.byte	10
+ 194 00a5 FF       		.byte	-1
+ 195 00a6 1A       		.byte	26
+ 196 00a7 FF       		.byte	-1
+ 197 00a8 2A       		.byte	42
+ 198 00a9 FF       		.byte	-1
+ 199 00aa 3A       		.byte	58
+ 200 00ab FF       		.byte	-1
+ 201 00ac 81       		.byte	-127
+ 202 00ad 0D       		.byte	13
+ 203 00ae 83       		.byte	-125
+ 204 00af 0F       		.byte	15
+ 205 00b0 84       		.byte	-124
+ 206 00b1 0F       		.byte	15
+ 207 00b2 88       		.byte	-120
+ 208 00b3 72       		.byte	114
+ 209 00b4 8C       		.byte	-116
+ 210 00b5 38       		.byte	56
+ 211 00b6 86       		.byte	-122
+ 212 00b7 0F       		.byte	15
+ 213 00b8 04       		.byte	4
+ 214 00b9 10       		.byte	16
+ 215 00ba 06       		.byte	6
+ 216 00bb 04       		.byte	4
+ 217 00bc 10       		.byte	16
+ 218 00bd 18       		.byte	24
+ 219 00be 12       		.byte	18
+ 220 00bf 03       		.byte	3
+ 221 00c0 24       		.byte	36
+ 222 00c1 07       		.byte	7
+ 223 00c2 26       		.byte	38
+ 224 00c3 08       		.byte	8
+ 225 00c4 28       		.byte	40
+ 226 00c5 01       		.byte	1
+ 227 00c6 2A       		.byte	42
+ 228 00c7 12       		.byte	18
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 5
+
+
+ 229 00c8 2C       		.byte	44
+ 230 00c9 06       		.byte	6
+ 231 00ca 2E       		.byte	46
+ 232 00cb 11       		.byte	17
+ 233 00cc 36       		.byte	54
+ 234 00cd 1F       		.byte	31
+ 235 00ce 40       		.byte	64
+ 236 00cf 30       		.byte	48
+ 237 00d0 41       		.byte	65
+ 238 00d1 02       		.byte	2
+ 239 00d2 49       		.byte	73
+ 240 00d3 FF       		.byte	-1
+ 241 00d4 4A       		.byte	74
+ 242 00d5 FF       		.byte	-1
+ 243 00d6 4B       		.byte	75
+ 244 00d7 FF       		.byte	-1
+ 245 00d8 4D       		.byte	77
+ 246 00d9 A0       		.byte	-96
+ 247 00da 4F       		.byte	79
+ 248 00db 04       		.byte	4
+ 249 00dc 50       		.byte	80
+ 250 00dd 18       		.byte	24
+ 251 00de 58       		.byte	88
+ 252 00df 04       		.byte	4
+ 253 00e0 5A       		.byte	90
+ 254 00e1 04       		.byte	4
+ 255 00e2 5C       		.byte	92
+ 256 00e3 01       		.byte	1
+ 257 00e4 5D       		.byte	93
+ 258 00e5 01       		.byte	1
+ 259 00e6 5F       		.byte	95
+ 260 00e7 01       		.byte	1
+ 261 00e8 60       		.byte	96
+ 262 00e9 40       		.byte	64
+ 263 00ea 62       		.byte	98
+ 264 00eb C0       		.byte	-64
+ 265 00ec 64       		.byte	100
+ 266 00ed 40       		.byte	64
+ 267 00ee 65       		.byte	101
+ 268 00ef 40       		.byte	64
+ 269 00f0 66       		.byte	102
+ 270 00f1 C0       		.byte	-64
+ 271 00f2 68       		.byte	104
+ 272 00f3 C0       		.byte	-64
+ 273 00f4 6A       		.byte	106
+ 274 00f5 C0       		.byte	-64
+ 275 00f6 6C       		.byte	108
+ 276 00f7 C0       		.byte	-64
+ 277 00f8 6E       		.byte	110
+ 278 00f9 C0       		.byte	-64
+ 279 00fa 81       		.byte	-127
+ 280 00fb 30       		.byte	48
+ 281 00fc 82       		.byte	-126
+ 282 00fd 01       		.byte	1
+ 283 00fe 83       		.byte	-125
+ 284 00ff 06       		.byte	6
+ 285 0100 85       		.byte	-123
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 6
+
+
+ 286 0101 0E       		.byte	14
+ 287 0102 87       		.byte	-121
+ 288 0103 10       		.byte	16
+ 289 0104 88       		.byte	-120
+ 290 0105 20       		.byte	32
+ 291 0106 89       		.byte	-119
+ 292 0107 02       		.byte	2
+ 293 0108 8A       		.byte	-118
+ 294 0109 08       		.byte	8
+ 295 010a 8B       		.byte	-117
+ 296 010b 24       		.byte	36
+ 297 010c 91       		.byte	-111
+ 298 010d 0C       		.byte	12
+ 299 010e 93       		.byte	-109
+ 300 010f 22       		.byte	34
+ 301 0110 96       		.byte	-106
+ 302 0111 3E       		.byte	62
+ 303 0112 99       		.byte	-103
+ 304 0113 20       		.byte	32
+ 305 0114 9B       		.byte	-101
+ 306 0115 08       		.byte	8
+ 307 0116 9C       		.byte	-100
+ 308 0117 30       		.byte	48
+ 309 0118 9E       		.byte	-98
+ 310 0119 06       		.byte	6
+ 311 011a A4       		.byte	-92
+ 312 011b 02       		.byte	2
+ 313 011c A6       		.byte	-90
+ 314 011d 24       		.byte	36
+ 315 011e A7       		.byte	-89
+ 316 011f 01       		.byte	1
+ 317 0120 A8       		.byte	-88
+ 318 0121 0E       		.byte	14
+ 319 0122 AA       		.byte	-86
+ 320 0123 10       		.byte	16
+ 321 0124 AB       		.byte	-85
+ 322 0125 01       		.byte	1
+ 323 0126 AC       		.byte	-84
+ 324 0127 0C       		.byte	12
+ 325 0128 AD       		.byte	-83
+ 326 0129 3E       		.byte	62
+ 327 012a AE       		.byte	-82
+ 328 012b 22       		.byte	34
+ 329 012c B1       		.byte	-79
+ 330 012d 3E       		.byte	62
+ 331 012e B2       		.byte	-78
+ 332 012f 01       		.byte	1
+ 333 0130 B4       		.byte	-76
+ 334 0131 3E       		.byte	62
+ 335 0132 B5       		.byte	-75
+ 336 0133 01       		.byte	1
+ 337 0134 BF       		.byte	-65
+ 338 0135 10       		.byte	16
+ 339 0136 C0       		.byte	-64
+ 340 0137 30       		.byte	48
+ 341 0138 C1       		.byte	-63
+ 342 0139 02       		.byte	2
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 7
+
+
+ 343 013a C5       		.byte	-59
+ 344 013b D0       		.byte	-48
+ 345 013c C6       		.byte	-58
+ 346 013d 20       		.byte	32
+ 347 013e C7       		.byte	-57
+ 348 013f 10       		.byte	16
+ 349 0140 C8       		.byte	-56
+ 350 0141 3A       		.byte	58
+ 351 0142 C9       		.byte	-55
+ 352 0143 FF       		.byte	-1
+ 353 0144 CA       		.byte	-54
+ 354 0145 FF       		.byte	-1
+ 355 0146 CB       		.byte	-53
+ 356 0147 FF       		.byte	-1
+ 357 0148 CD       		.byte	-51
+ 358 0149 AF       		.byte	-81
+ 359 014a CE       		.byte	-50
+ 360 014b 0F       		.byte	15
+ 361 014c CF       		.byte	-49
+ 362 014d 04       		.byte	4
+ 363 014e D0       		.byte	-48
+ 364 014f 18       		.byte	24
+ 365 0150 D2       		.byte	-46
+ 366 0151 87       		.byte	-121
+ 367 0152 D4       		.byte	-44
+ 368 0153 05       		.byte	5
+ 369 0154 D8       		.byte	-40
+ 370 0155 04       		.byte	4
+ 371 0156 D9       		.byte	-39
+ 372 0157 04       		.byte	4
+ 373 0158 DA       		.byte	-38
+ 374 0159 04       		.byte	4
+ 375 015a DB       		.byte	-37
+ 376 015b 04       		.byte	4
+ 377 015c DC       		.byte	-36
+ 378 015d 11       		.byte	17
+ 379 015e DD       		.byte	-35
+ 380 015f 11       		.byte	17
+ 381 0160 DF       		.byte	-33
+ 382 0161 01       		.byte	1
+ 383 0162 E0       		.byte	-32
+ 384 0163 40       		.byte	64
+ 385 0164 E2       		.byte	-30
+ 386 0165 C0       		.byte	-64
+ 387 0166 E4       		.byte	-28
+ 388 0167 40       		.byte	64
+ 389 0168 E5       		.byte	-27
+ 390 0169 40       		.byte	64
+ 391 016a E6       		.byte	-26
+ 392 016b C0       		.byte	-64
+ 393 016c E8       		.byte	-24
+ 394 016d C0       		.byte	-64
+ 395 016e EA       		.byte	-22
+ 396 016f C0       		.byte	-64
+ 397 0170 EC       		.byte	-20
+ 398 0171 C0       		.byte	-64
+ 399 0172 EE       		.byte	-18
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 8
+
+
+ 400 0173 C0       		.byte	-64
+ 401 0174 00       		.byte	0
+ 402 0175 08       		.byte	8
+ 403 0176 05       		.byte	5
+ 404 0177 10       		.byte	16
+ 405 0178 06       		.byte	6
+ 406 0179 04       		.byte	4
+ 407 017a 07       		.byte	7
+ 408 017b 40       		.byte	64
+ 409 017c 09       		.byte	9
+ 410 017d 01       		.byte	1
+ 411 017e 0E       		.byte	14
+ 412 017f 10       		.byte	16
+ 413 0180 0F       		.byte	15
+ 414 0181 02       		.byte	2
+ 415 0182 10       		.byte	16
+ 416 0183 2A       		.byte	42
+ 417 0184 15       		.byte	21
+ 418 0185 40       		.byte	64
+ 419 0186 17       		.byte	23
+ 420 0187 14       		.byte	20
+ 421 0188 19       		.byte	25
+ 422 0189 80       		.byte	-128
+ 423 018a 1C       		.byte	28
+ 424 018b 14       		.byte	20
+ 425 018c 1D       		.byte	29
+ 426 018d 08       		.byte	8
+ 427 018e 1E       		.byte	30
+ 428 018f 10       		.byte	16
+ 429 0190 27       		.byte	39
+ 430 0191 88       		.byte	-120
+ 431 0192 2D       		.byte	45
+ 432 0193 80       		.byte	-128
+ 433 0194 2E       		.byte	46
+ 434 0195 10       		.byte	16
+ 435 0196 2F       		.byte	47
+ 436 0197 20       		.byte	32
+ 437 0198 35       		.byte	53
+ 438 0199 10       		.byte	16
+ 439 019a 37       		.byte	55
+ 440 019b 01       		.byte	1
+ 441 019c 3D       		.byte	61
+ 442 019d 28       		.byte	40
+ 443 019e 3F       		.byte	63
+ 444 019f 02       		.byte	2
+ 445 01a0 40       		.byte	64
+ 446 01a1 10       		.byte	16
+ 447 01a2 41       		.byte	65
+ 448 01a3 20       		.byte	32
+ 449 01a4 45       		.byte	69
+ 450 01a5 28       		.byte	40
+ 451 01a6 4D       		.byte	77
+ 452 01a7 01       		.byte	1
+ 453 01a8 54       		.byte	84
+ 454 01a9 04       		.byte	4
+ 455 01aa 55       		.byte	85
+ 456 01ab 21       		.byte	33
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 9
+
+
+ 457 01ac 56       		.byte	86
+ 458 01ad 04       		.byte	4
+ 459 01ae 57       		.byte	87
+ 460 01af 21       		.byte	33
+ 461 01b0 5D       		.byte	93
+ 462 01b1 01       		.byte	1
+ 463 01b2 5F       		.byte	95
+ 464 01b3 88       		.byte	-120
+ 465 01b4 6C       		.byte	108
+ 466 01b5 2A       		.byte	42
+ 467 01b6 6D       		.byte	109
+ 468 01b7 68       		.byte	104
+ 469 01b8 6F       		.byte	111
+ 470 01b9 15       		.byte	21
+ 471 01ba 77       		.byte	119
+ 472 01bb 40       		.byte	64
+ 473 01bc C0       		.byte	-64
+ 474 01bd 54       		.byte	84
+ 475 01be C2       		.byte	-62
+ 476 01bf A8       		.byte	-88
+ 477 01c0 C4       		.byte	-60
+ 478 01c1 E7       		.byte	-25
+ 479 01c2 CA       		.byte	-54
+ 480 01c3 70       		.byte	112
+ 481 01c4 CC       		.byte	-52
+ 482 01c5 A0       		.byte	-96
+ 483 01c6 CE       		.byte	-50
+ 484 01c7 E0       		.byte	-32
+ 485 01c8 D0       		.byte	-48
+ 486 01c9 66       		.byte	102
+ 487 01ca D6       		.byte	-42
+ 488 01cb D0       		.byte	-48
+ 489 01cc E2       		.byte	-30
+ 490 01cd 08       		.byte	8
+ 491 01ce 11       		.byte	17
+ 492 01cf 01       		.byte	1
+ 493 01d0 1A       		.byte	26
+ 494 01d1 01       		.byte	1
+ 495 01d2 1D       		.byte	29
+ 496 01d3 01       		.byte	1
+ 497 01d4 25       		.byte	37
+ 498 01d5 01       		.byte	1
+ 499 01d6 30       		.byte	48
+ 500 01d7 01       		.byte	1
+ 501 01d8 33       		.byte	51
+ 502 01d9 01       		.byte	1
+ 503 01da 39       		.byte	57
+ 504 01db 08       		.byte	8
+ 505 01dc 40       		.byte	64
+ 506 01dd 41       		.byte	65
+ 507 01de 41       		.byte	65
+ 508 01df 02       		.byte	2
+ 509 01e0 42       		.byte	66
+ 510 01e1 06       		.byte	6
+ 511 01e2 49       		.byte	73
+ 512 01e3 FF       		.byte	-1
+ 513 01e4 4A       		.byte	74
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 10
+
+
+ 514 01e5 FF       		.byte	-1
+ 515 01e6 4B       		.byte	75
+ 516 01e7 FF       		.byte	-1
+ 517 01e8 4F       		.byte	79
+ 518 01e9 01       		.byte	1
+ 519 01ea 50       		.byte	80
+ 520 01eb 18       		.byte	24
+ 521 01ec 58       		.byte	88
+ 522 01ed 04       		.byte	4
+ 523 01ee 59       		.byte	89
+ 524 01ef 04       		.byte	4
+ 525 01f0 5A       		.byte	90
+ 526 01f1 04       		.byte	4
+ 527 01f2 5B       		.byte	91
+ 528 01f3 04       		.byte	4
+ 529 01f4 5C       		.byte	92
+ 530 01f5 09       		.byte	9
+ 531 01f6 5D       		.byte	93
+ 532 01f7 09       		.byte	9
+ 533 01f8 5F       		.byte	95
+ 534 01f9 01       		.byte	1
+ 535 01fa 60       		.byte	96
+ 536 01fb 40       		.byte	64
+ 537 01fc 62       		.byte	98
+ 538 01fd 40       		.byte	64
+ 539 01fe 64       		.byte	100
+ 540 01ff 40       		.byte	64
+ 541 0200 65       		.byte	101
+ 542 0201 40       		.byte	64
+ 543 0202 66       		.byte	102
+ 544 0203 80       		.byte	-128
+ 545 0204 68       		.byte	104
+ 546 0205 80       		.byte	-128
+ 547 0206 6A       		.byte	106
+ 548 0207 80       		.byte	-128
+ 549 0208 6C       		.byte	108
+ 550 0209 80       		.byte	-128
+ 551 020a 6E       		.byte	110
+ 552 020b 80       		.byte	-128
+ 553 020c 87       		.byte	-121
+ 554 020d 01       		.byte	1
+ 555 020e 8E       		.byte	-114
+ 556 020f 01       		.byte	1
+ 557 0210 8F       		.byte	-113
+ 558 0211 02       		.byte	2
+ 559 0212 91       		.byte	-111
+ 560 0213 01       		.byte	1
+ 561 0214 92       		.byte	-110
+ 562 0215 01       		.byte	1
+ 563 0216 94       		.byte	-108
+ 564 0217 02       		.byte	2
+ 565 0218 97       		.byte	-105
+ 566 0219 01       		.byte	1
+ 567 021a 99       		.byte	-103
+ 568 021b 02       		.byte	2
+ 569 021c 9F       		.byte	-97
+ 570 021d 01       		.byte	1
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 11
+
+
+ 571 021e A4       		.byte	-92
+ 572 021f 01       		.byte	1
+ 573 0220 A5       		.byte	-91
+ 574 0221 01       		.byte	1
+ 575 0222 AF       		.byte	-81
+ 576 0223 02       		.byte	2
+ 577 0224 B2       		.byte	-78
+ 578 0225 02       		.byte	2
+ 579 0226 B3       		.byte	-77
+ 580 0227 02       		.byte	2
+ 581 0228 B6       		.byte	-74
+ 582 0229 01       		.byte	1
+ 583 022a B7       		.byte	-73
+ 584 022b 01       		.byte	1
+ 585 022c BE       		.byte	-66
+ 586 022d 04       		.byte	4
+ 587 022e BF       		.byte	-65
+ 588 022f 44       		.byte	68
+ 589 0230 C0       		.byte	-64
+ 590 0231 54       		.byte	84
+ 591 0232 C1       		.byte	-63
+ 592 0233 02       		.byte	2
+ 593 0234 C2       		.byte	-62
+ 594 0235 06       		.byte	6
+ 595 0236 C9       		.byte	-55
+ 596 0237 FF       		.byte	-1
+ 597 0238 CA       		.byte	-54
+ 598 0239 FF       		.byte	-1
+ 599 023a CB       		.byte	-53
+ 600 023b FF       		.byte	-1
+ 601 023c CD       		.byte	-51
+ 602 023d 83       		.byte	-125
+ 603 023e CE       		.byte	-50
+ 604 023f 03       		.byte	3
+ 605 0240 CF       		.byte	-49
+ 606 0241 01       		.byte	1
+ 607 0242 D0       		.byte	-48
+ 608 0243 18       		.byte	24
+ 609 0244 D4       		.byte	-44
+ 610 0245 01       		.byte	1
+ 611 0246 D8       		.byte	-40
+ 612 0247 04       		.byte	4
+ 613 0248 D9       		.byte	-39
+ 614 0249 04       		.byte	4
+ 615 024a DA       		.byte	-38
+ 616 024b 04       		.byte	4
+ 617 024c DB       		.byte	-37
+ 618 024d 04       		.byte	4
+ 619 024e DC       		.byte	-36
+ 620 024f 09       		.byte	9
+ 621 0250 DD       		.byte	-35
+ 622 0251 09       		.byte	9
+ 623 0252 DF       		.byte	-33
+ 624 0253 01       		.byte	1
+ 625 0254 E0       		.byte	-32
+ 626 0255 40       		.byte	64
+ 627 0256 E2       		.byte	-30
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 12
+
+
+ 628 0257 40       		.byte	64
+ 629 0258 E4       		.byte	-28
+ 630 0259 40       		.byte	64
+ 631 025a E5       		.byte	-27
+ 632 025b 40       		.byte	64
+ 633 025c E6       		.byte	-26
+ 634 025d 80       		.byte	-128
+ 635 025e E8       		.byte	-24
+ 636 025f 80       		.byte	-128
+ 637 0260 EA       		.byte	-22
+ 638 0261 80       		.byte	-128
+ 639 0262 EC       		.byte	-20
+ 640 0263 80       		.byte	-128
+ 641 0264 EE       		.byte	-18
+ 642 0265 80       		.byte	-128
+ 643 0266 03       		.byte	3
+ 644 0267 02       		.byte	2
+ 645 0268 0B       		.byte	11
+ 646 0269 60       		.byte	96
+ 647 026a 0C       		.byte	12
+ 648 026b 28       		.byte	40
+ 649 026c 0E       		.byte	14
+ 650 026d 10       		.byte	16
+ 651 026e 10       		.byte	16
+ 652 026f 20       		.byte	32
+ 653 0270 19       		.byte	25
+ 654 0271 04       		.byte	4
+ 655 0272 1A       		.byte	26
+ 656 0273 02       		.byte	2
+ 657 0274 1F       		.byte	31
+ 658 0275 02       		.byte	2
+ 659 0276 22       		.byte	34
+ 660 0277 48       		.byte	72
+ 661 0278 23       		.byte	35
+ 662 0279 20       		.byte	32
+ 663 027a 27       		.byte	39
+ 664 027b 10       		.byte	16
+ 665 027c 29       		.byte	41
+ 666 027d 08       		.byte	8
+ 667 027e 2B       		.byte	43
+ 668 027f 02       		.byte	2
+ 669 0280 2D       		.byte	45
+ 670 0281 08       		.byte	8
+ 671 0282 30       		.byte	48
+ 672 0283 29       		.byte	41
+ 673 0284 33       		.byte	51
+ 674 0285 40       		.byte	64
+ 675 0286 34       		.byte	52
+ 676 0287 01       		.byte	1
+ 677 0288 37       		.byte	55
+ 678 0289 40       		.byte	64
+ 679 028a 3A       		.byte	58
+ 680 028b 80       		.byte	-128
+ 681 028c 3B       		.byte	59
+ 682 028d 04       		.byte	4
+ 683 028e 41       		.byte	65
+ 684 028f 21       		.byte	33
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 13
+
+
+ 685 0290 45       		.byte	69
+ 686 0291 30       		.byte	48
+ 687 0292 46       		.byte	70
+ 688 0293 81       		.byte	-127
+ 689 0294 4A       		.byte	74
+ 690 0295 08       		.byte	8
+ 691 0296 4B       		.byte	75
+ 692 0297 40       		.byte	64
+ 693 0298 4E       		.byte	78
+ 694 0299 08       		.byte	8
+ 695 029a 59       		.byte	89
+ 696 029b 04       		.byte	4
+ 697 029c 5A       		.byte	90
+ 698 029d 90       		.byte	-112
+ 699 029e 5B       		.byte	91
+ 700 029f 02       		.byte	2
+ 701 02a0 69       		.byte	105
+ 702 02a1 80       		.byte	-128
+ 703 02a2 6C       		.byte	108
+ 704 02a3 02       		.byte	2
+ 705 02a4 80       		.byte	-128
+ 706 02a5 02       		.byte	2
+ 707 02a6 8C       		.byte	-116
+ 708 02a7 20       		.byte	32
+ 709 02a8 8F       		.byte	-113
+ 710 02a9 10       		.byte	16
+ 711 02aa B4       		.byte	-76
+ 712 02ab 04       		.byte	4
+ 713 02ac C0       		.byte	-64
+ 714 02ad 01       		.byte	1
+ 715 02ae C2       		.byte	-62
+ 716 02af 4C       		.byte	76
+ 717 02b0 C4       		.byte	-60
+ 718 02b1 04       		.byte	4
+ 719 02b2 CA       		.byte	-54
+ 720 02b3 4A       		.byte	74
+ 721 02b4 CC       		.byte	-52
+ 722 02b5 9F       		.byte	-97
+ 723 02b6 CE       		.byte	-50
+ 724 02b7 0A       		.byte	10
+ 725 02b8 D0       		.byte	-48
+ 726 02b9 B5       		.byte	-75
+ 727 02ba D2       		.byte	-46
+ 728 02bb 2C       		.byte	44
+ 729 02bc D6       		.byte	-42
+ 730 02bd 0F       		.byte	15
+ 731 02be E4       		.byte	-28
+ 732 02bf 10       		.byte	16
+ 733 02c0 E6       		.byte	-26
+ 734 02c1 40       		.byte	64
+ 735 02c2 EE       		.byte	-18
+ 736 02c3 40       		.byte	64
+ 737 02c4 12       		.byte	18
+ 738 02c5 02       		.byte	2
+ 739 02c6 18       		.byte	24
+ 740 02c7 01       		.byte	1
+ 741 02c8 27       		.byte	39
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 14
+
+
+ 742 02c9 01       		.byte	1
+ 743 02ca 2E       		.byte	46
+ 744 02cb 02       		.byte	2
+ 745 02cc 32       		.byte	50
+ 746 02cd 01       		.byte	1
+ 747 02ce 35       		.byte	53
+ 748 02cf 01       		.byte	1
+ 749 02d0 36       		.byte	54
+ 750 02d1 02       		.byte	2
+ 751 02d2 3E       		.byte	62
+ 752 02d3 44       		.byte	68
+ 753 02d4 40       		.byte	64
+ 754 02d5 54       		.byte	84
+ 755 02d6 41       		.byte	65
+ 756 02d7 02       		.byte	2
+ 757 02d8 42       		.byte	66
+ 758 02d9 06       		.byte	6
+ 759 02da 45       		.byte	69
+ 760 02db EC       		.byte	-20
+ 761 02dc 47       		.byte	71
+ 762 02dd 20       		.byte	32
+ 763 02de 48       		.byte	72
+ 764 02df 23       		.byte	35
+ 765 02e0 49       		.byte	73
+ 766 02e1 FF       		.byte	-1
+ 767 02e2 4A       		.byte	74
+ 768 02e3 FF       		.byte	-1
+ 769 02e4 4B       		.byte	75
+ 770 02e5 FF       		.byte	-1
+ 771 02e6 4D       		.byte	77
+ 772 02e7 83       		.byte	-125
+ 773 02e8 4E       		.byte	78
+ 774 02e9 03       		.byte	3
+ 775 02ea 4F       		.byte	79
+ 776 02eb 01       		.byte	1
+ 777 02ec 50       		.byte	80
+ 778 02ed 18       		.byte	24
+ 779 02ee 52       		.byte	82
+ 780 02ef 80       		.byte	-128
+ 781 02f0 54       		.byte	84
+ 782 02f1 03       		.byte	3
+ 783 02f2 58       		.byte	88
+ 784 02f3 04       		.byte	4
+ 785 02f4 59       		.byte	89
+ 786 02f5 04       		.byte	4
+ 787 02f6 5A       		.byte	90
+ 788 02f7 04       		.byte	4
+ 789 02f8 5B       		.byte	91
+ 790 02f9 04       		.byte	4
+ 791 02fa 5C       		.byte	92
+ 792 02fb 90       		.byte	-112
+ 793 02fc 5D       		.byte	93
+ 794 02fd 99       		.byte	-103
+ 795 02fe 5E       		.byte	94
+ 796 02ff 80       		.byte	-128
+ 797 0300 5F       		.byte	95
+ 798 0301 05       		.byte	5
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 15
+
+
+ 799 0302 60       		.byte	96
+ 800 0303 40       		.byte	64
+ 801 0304 62       		.byte	98
+ 802 0305 40       		.byte	64
+ 803 0306 64       		.byte	100
+ 804 0307 40       		.byte	64
+ 805 0308 65       		.byte	101
+ 806 0309 40       		.byte	64
+ 807 030a 66       		.byte	102
+ 808 030b 80       		.byte	-128
+ 809 030c 68       		.byte	104
+ 810 030d 80       		.byte	-128
+ 811 030e 6A       		.byte	106
+ 812 030f 80       		.byte	-128
+ 813 0310 6C       		.byte	108
+ 814 0311 80       		.byte	-128
+ 815 0312 6E       		.byte	110
+ 816 0313 80       		.byte	-128
+ 817 0314 87       		.byte	-121
+ 818 0315 02       		.byte	2
+ 819 0316 88       		.byte	-120
+ 820 0317 01       		.byte	1
+ 821 0318 91       		.byte	-111
+ 822 0319 06       		.byte	6
+ 823 031a 95       		.byte	-107
+ 824 031b 06       		.byte	6
+ 825 031c 98       		.byte	-104
+ 826 031d 02       		.byte	2
+ 827 031e 9D       		.byte	-99
+ 828 031f 04       		.byte	4
+ 829 0320 A0       		.byte	-96
+ 830 0321 01       		.byte	1
+ 831 0322 A5       		.byte	-91
+ 832 0323 01       		.byte	1
+ 833 0324 AE       		.byte	-82
+ 834 0325 01       		.byte	1
+ 835 0326 B3       		.byte	-77
+ 836 0327 06       		.byte	6
+ 837 0328 B5       		.byte	-75
+ 838 0329 01       		.byte	1
+ 839 032a B6       		.byte	-74
+ 840 032b 03       		.byte	3
+ 841 032c B8       		.byte	-72
+ 842 032d 80       		.byte	-128
+ 843 032e B9       		.byte	-71
+ 844 032f 08       		.byte	8
+ 845 0330 BF       		.byte	-65
+ 846 0331 14       		.byte	20
+ 847 0332 C0       		.byte	-64
+ 848 0333 02       		.byte	2
+ 849 0334 C7       		.byte	-57
+ 850 0335 04       		.byte	4
+ 851 0336 C9       		.byte	-55
+ 852 0337 FF       		.byte	-1
+ 853 0338 CA       		.byte	-54
+ 854 0339 07       		.byte	7
+ 855 033a CB       		.byte	-53
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 16
+
+
+ 856 033b FF       		.byte	-1
+ 857 033c CC       		.byte	-52
+ 858 033d 40       		.byte	64
+ 859 033e CD       		.byte	-51
+ 860 033f 20       		.byte	32
+ 861 0340 CE       		.byte	-50
+ 862 0341 F0       		.byte	-16
+ 863 0342 CF       		.byte	-49
+ 864 0343 05       		.byte	5
+ 865 0344 D0       		.byte	-48
+ 866 0345 08       		.byte	8
+ 867 0346 D8       		.byte	-40
+ 868 0347 04       		.byte	4
+ 869 0348 D9       		.byte	-39
+ 870 0349 04       		.byte	4
+ 871 034a DA       		.byte	-38
+ 872 034b 04       		.byte	4
+ 873 034c DB       		.byte	-37
+ 874 034d 04       		.byte	4
+ 875 034e DF       		.byte	-33
+ 876 034f 01       		.byte	1
+ 877 0350 E0       		.byte	-32
+ 878 0351 40       		.byte	64
+ 879 0352 E1       		.byte	-31
+ 880 0353 A8       		.byte	-88
+ 881 0354 E2       		.byte	-30
+ 882 0355 40       		.byte	64
+ 883 0356 E3       		.byte	-29
+ 884 0357 20       		.byte	32
+ 885 0358 07       		.byte	7
+ 886 0359 08       		.byte	8
+ 887 035a 08       		.byte	8
+ 888 035b 20       		.byte	32
+ 889 035c 0B       		.byte	11
+ 890 035d 40       		.byte	64
+ 891 035e 0F       		.byte	15
+ 892 035f 04       		.byte	4
+ 893 0360 12       		.byte	18
+ 894 0361 01       		.byte	1
+ 895 0362 17       		.byte	23
+ 896 0363 42       		.byte	66
+ 897 0364 19       		.byte	25
+ 898 0365 40       		.byte	64
+ 899 0366 1A       		.byte	26
+ 900 0367 10       		.byte	16
+ 901 0368 1F       		.byte	31
+ 902 0369 40       		.byte	64
+ 903 036a 20       		.byte	32
+ 904 036b 04       		.byte	4
+ 905 036c 25       		.byte	37
+ 906 036d 30       		.byte	48
+ 907 036e 27       		.byte	39
+ 908 036f 10       		.byte	16
+ 909 0370 28       		.byte	40
+ 910 0371 20       		.byte	32
+ 911 0372 2C       		.byte	44
+ 912 0373 20       		.byte	32
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 17
+
+
+ 913 0374 2F       		.byte	47
+ 914 0375 20       		.byte	32
+ 915 0376 34       		.byte	52
+ 916 0377 01       		.byte	1
+ 917 0378 35       		.byte	53
+ 918 0379 08       		.byte	8
+ 919 037a 37       		.byte	55
+ 920 037b 4A       		.byte	74
+ 921 037c 3C       		.byte	60
+ 922 037d 08       		.byte	8
+ 923 037e 3F       		.byte	63
+ 924 037f 04       		.byte	4
+ 925 0380 41       		.byte	65
+ 926 0381 21       		.byte	33
+ 927 0382 47       		.byte	71
+ 928 0383 10       		.byte	16
+ 929 0384 49       		.byte	73
+ 930 0385 06       		.byte	6
+ 931 0386 4A       		.byte	74
+ 932 0387 08       		.byte	8
+ 933 0388 4B       		.byte	75
+ 934 0389 40       		.byte	64
+ 935 038a 4F       		.byte	79
+ 936 038b 04       		.byte	4
+ 937 038c 51       		.byte	81
+ 938 038d 01       		.byte	1
+ 939 038e 52       		.byte	82
+ 940 038f 01       		.byte	1
+ 941 0390 56       		.byte	86
+ 942 0391 04       		.byte	4
+ 943 0392 59       		.byte	89
+ 944 0393 46       		.byte	70
+ 945 0394 5B       		.byte	91
+ 946 0395 20       		.byte	32
+ 947 0396 6E       		.byte	110
+ 948 0397 80       		.byte	-128
+ 949 0398 6F       		.byte	111
+ 950 0399 04       		.byte	4
+ 951 039a 72       		.byte	114
+ 952 039b 80       		.byte	-128
+ 953 039c 73       		.byte	115
+ 954 039d 40       		.byte	64
+ 955 039e 7B       		.byte	123
+ 956 039f 20       		.byte	32
+ 957 03a0 8A       		.byte	-118
+ 958 03a1 40       		.byte	64
+ 959 03a2 95       		.byte	-107
+ 960 03a3 02       		.byte	2
+ 961 03a4 97       		.byte	-105
+ 962 03a5 64       		.byte	100
+ 963 03a6 9B       		.byte	-101
+ 964 03a7 20       		.byte	32
+ 965 03a8 9C       		.byte	-100
+ 966 03a9 01       		.byte	1
+ 967 03aa 9D       		.byte	-99
+ 968 03ab 08       		.byte	8
+ 969 03ac 9E       		.byte	-98
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 18
+
+
+ 970 03ad 81       		.byte	-127
+ 971 03ae 9F       		.byte	-97
+ 972 03af 40       		.byte	64
+ 973 03b0 A0       		.byte	-96
+ 974 03b1 20       		.byte	32
+ 975 03b2 A2       		.byte	-94
+ 976 03b3 08       		.byte	8
+ 977 03b4 A4       		.byte	-92
+ 978 03b5 08       		.byte	8
+ 979 03b6 A5       		.byte	-91
+ 980 03b7 10       		.byte	16
+ 981 03b8 A9       		.byte	-87
+ 982 03b9 40       		.byte	64
+ 983 03ba AE       		.byte	-82
+ 984 03bb 01       		.byte	1
+ 985 03bc B3       		.byte	-77
+ 986 03bd 12       		.byte	18
+ 987 03be C0       		.byte	-64
+ 988 03bf 40       		.byte	64
+ 989 03c0 C2       		.byte	-62
+ 990 03c1 4A       		.byte	74
+ 991 03c2 C4       		.byte	-60
+ 992 03c3 91       		.byte	-111
+ 993 03c4 CA       		.byte	-54
+ 994 03c5 42       		.byte	66
+ 995 03c6 CC       		.byte	-52
+ 996 03c7 D0       		.byte	-48
+ 997 03c8 CE       		.byte	-50
+ 998 03c9 40       		.byte	64
+ 999 03ca D0       		.byte	-48
+ 1000 03cb 25       		.byte	37
+ 1001 03cc D2       		.byte	-46
+ 1002 03cd 0C       		.byte	12
+ 1003 03ce D6       		.byte	-42
+ 1004 03cf 0F       		.byte	15
+ 1005 03d0 DE       		.byte	-34
+ 1006 03d1 02       		.byte	2
+ 1007 03d2 E2       		.byte	-30
+ 1008 03d3 20       		.byte	32
+ 1009 03d4 90       		.byte	-112
+ 1010 03d5 04       		.byte	4
+ 1011 03d6 92       		.byte	-110
+ 1012 03d7 10       		.byte	16
+ 1013 03d8 93       		.byte	-109
+ 1014 03d9 80       		.byte	-128
+ 1015 03da 97       		.byte	-105
+ 1016 03db 20       		.byte	32
+ 1017 03dc 9A       		.byte	-102
+ 1018 03dd 04       		.byte	4
+ 1019 03de 9C       		.byte	-100
+ 1020 03df 20       		.byte	32
+ 1021 03e0 9F       		.byte	-97
+ 1022 03e1 4A       		.byte	74
+ 1023 03e2 A0       		.byte	-96
+ 1024 03e3 04       		.byte	4
+ 1025 03e4 A4       		.byte	-92
+ 1026 03e5 08       		.byte	8
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 19
+
+
+ 1027 03e6 B7       		.byte	-73
+ 1028 03e7 04       		.byte	4
+ 1029 03e8 EE       		.byte	-18
+ 1030 03e9 10       		.byte	16
+ 1031 03ea 02       		.byte	2
+ 1032 03eb 03       		.byte	3
+ 1033 03ec 04       		.byte	4
+ 1034 03ed 0F       		.byte	15
+ 1035 03ee 05       		.byte	5
+ 1036 03ef 01       		.byte	1
+ 1037 03f0 08       		.byte	8
+ 1038 03f1 0F       		.byte	15
+ 1039 03f2 0C       		.byte	12
+ 1040 03f3 08       		.byte	8
+ 1041 03f4 0D       		.byte	13
+ 1042 03f5 01       		.byte	1
+ 1043 03f6 10       		.byte	16
+ 1044 03f7 01       		.byte	1
+ 1045 03f8 14       		.byte	20
+ 1046 03f9 03       		.byte	3
+ 1047 03fa 15       		.byte	21
+ 1048 03fb 02       		.byte	2
+ 1049 03fc 18       		.byte	24
+ 1050 03fd 0C       		.byte	12
+ 1051 03fe 19       		.byte	25
+ 1052 03ff 02       		.byte	2
+ 1053 0400 1A       		.byte	26
+ 1054 0401 03       		.byte	3
+ 1055 0402 1C       		.byte	28
+ 1056 0403 02       		.byte	2
+ 1057 0404 20       		.byte	32
+ 1058 0405 03       		.byte	3
+ 1059 0406 21       		.byte	33
+ 1060 0407 02       		.byte	2
+ 1061 0408 22       		.byte	34
+ 1062 0409 0C       		.byte	12
+ 1063 040a 24       		.byte	36
+ 1064 040b 04       		.byte	4
+ 1065 040c 25       		.byte	37
+ 1066 040d 02       		.byte	2
+ 1067 040e 28       		.byte	40
+ 1068 040f 0C       		.byte	12
+ 1069 0410 29       		.byte	41
+ 1070 0411 01       		.byte	1
+ 1071 0412 31       		.byte	49
+ 1072 0413 01       		.byte	1
+ 1073 0414 35       		.byte	53
+ 1074 0415 02       		.byte	2
+ 1075 0416 36       		.byte	54
+ 1076 0417 0F       		.byte	15
+ 1077 0418 3A       		.byte	58
+ 1078 0419 80       		.byte	-128
+ 1079 041a 3F       		.byte	63
+ 1080 041b 10       		.byte	16
+ 1081 041c 56       		.byte	86
+ 1082 041d 02       		.byte	2
+ 1083 041e 57       		.byte	87
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 20
+
+
+ 1084 041f 11       		.byte	17
+ 1085 0420 58       		.byte	88
+ 1086 0421 04       		.byte	4
+ 1087 0422 59       		.byte	89
+ 1088 0423 04       		.byte	4
+ 1089 0424 5B       		.byte	91
+ 1090 0425 04       		.byte	4
+ 1091 0426 5F       		.byte	95
+ 1092 0427 01       		.byte	1
+ 1093 0428 84       		.byte	-124
+ 1094 0429 06       		.byte	6
+ 1095 042a 86       		.byte	-122
+ 1096 042b 01       		.byte	1
+ 1097 042c 87       		.byte	-121
+ 1098 042d 03       		.byte	3
+ 1099 042e 88       		.byte	-120
+ 1100 042f 07       		.byte	7
+ 1101 0430 8B       		.byte	-117
+ 1102 0431 03       		.byte	3
+ 1103 0432 8E       		.byte	-114
+ 1104 0433 01       		.byte	1
+ 1105 0434 8F       		.byte	-113
+ 1106 0435 01       		.byte	1
+ 1107 0436 90       		.byte	-112
+ 1108 0437 01       		.byte	1
+ 1109 0438 92       		.byte	-110
+ 1110 0439 06       		.byte	6
+ 1111 043a 98       		.byte	-104
+ 1112 043b 06       		.byte	6
+ 1113 043c 99       		.byte	-103
+ 1114 043d 01       		.byte	1
+ 1115 043e 9A       		.byte	-102
+ 1116 043f 01       		.byte	1
+ 1117 0440 9B       		.byte	-101
+ 1118 0441 02       		.byte	2
+ 1119 0442 A0       		.byte	-96
+ 1120 0443 04       		.byte	4
+ 1121 0444 A1       		.byte	-95
+ 1122 0445 01       		.byte	1
+ 1123 0446 A3       		.byte	-93
+ 1124 0447 02       		.byte	2
+ 1125 0448 A4       		.byte	-92
+ 1126 0449 02       		.byte	2
+ 1127 044a A8       		.byte	-88
+ 1128 044b 06       		.byte	6
+ 1129 044c B4       		.byte	-76
+ 1130 044d 07       		.byte	7
+ 1131 044e B5       		.byte	-75
+ 1132 044f 03       		.byte	3
+ 1133 0450 BA       		.byte	-70
+ 1134 0451 20       		.byte	32
+ 1135 0452 BB       		.byte	-69
+ 1136 0453 2C       		.byte	44
+ 1137 0454 D8       		.byte	-40
+ 1138 0455 04       		.byte	4
+ 1139 0456 D9       		.byte	-39
+ 1140 0457 04       		.byte	4
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 21
+
+
+ 1141 0458 DC       		.byte	-36
+ 1142 0459 10       		.byte	16
+ 1143 045a DF       		.byte	-33
+ 1144 045b 01       		.byte	1
+ 1145 045c 00       		.byte	0
+ 1146 045d 04       		.byte	4
+ 1147 045e 02       		.byte	2
+ 1148 045f 02       		.byte	2
+ 1149 0460 03       		.byte	3
+ 1150 0461 04       		.byte	4
+ 1151 0462 04       		.byte	4
+ 1152 0463 04       		.byte	4
+ 1153 0464 05       		.byte	5
+ 1154 0465 40       		.byte	64
+ 1155 0466 07       		.byte	7
+ 1156 0467 44       		.byte	68
+ 1157 0468 08       		.byte	8
+ 1158 0469 10       		.byte	16
+ 1159 046a 0B       		.byte	11
+ 1160 046b 80       		.byte	-128
+ 1161 046c 0C       		.byte	12
+ 1162 046d 10       		.byte	16
+ 1163 046e 0D       		.byte	13
+ 1164 046f 80       		.byte	-128
+ 1165 0470 0E       		.byte	14
+ 1166 0471 50       		.byte	80
+ 1167 0472 10       		.byte	16
+ 1168 0473 A0       		.byte	-96
+ 1169 0474 13       		.byte	19
+ 1170 0475 20       		.byte	32
+ 1171 0476 14       		.byte	20
+ 1172 0477 40       		.byte	64
+ 1173 0478 17       		.byte	23
+ 1174 0479 28       		.byte	40
+ 1175 047a 18       		.byte	24
+ 1176 047b 04       		.byte	4
+ 1177 047c 19       		.byte	25
+ 1178 047d 10       		.byte	16
+ 1179 047e 1F       		.byte	31
+ 1180 047f 40       		.byte	64
+ 1181 0480 21       		.byte	33
+ 1182 0481 04       		.byte	4
+ 1183 0482 22       		.byte	34
+ 1184 0483 10       		.byte	16
+ 1185 0484 26       		.byte	38
+ 1186 0485 12       		.byte	18
+ 1187 0486 27       		.byte	39
+ 1188 0487 40       		.byte	64
+ 1189 0488 29       		.byte	41
+ 1190 0489 02       		.byte	2
+ 1191 048a 2C       		.byte	44
+ 1192 048b 50       		.byte	80
+ 1193 048c 2F       		.byte	47
+ 1194 048d 68       		.byte	104
+ 1195 048e 32       		.byte	50
+ 1196 048f 10       		.byte	16
+ 1197 0490 35       		.byte	53
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 22
+
+
+ 1198 0491 10       		.byte	16
+ 1199 0492 37       		.byte	55
+ 1200 0493 04       		.byte	4
+ 1201 0494 38       		.byte	56
+ 1202 0495 80       		.byte	-128
+ 1203 0496 39       		.byte	57
+ 1204 0497 28       		.byte	40
+ 1205 0498 3D       		.byte	61
+ 1206 0499 80       		.byte	-128
+ 1207 049a 3E       		.byte	62
+ 1208 049b 04       		.byte	4
+ 1209 049c 5E       		.byte	94
+ 1210 049d 20       		.byte	32
+ 1211 049e 60       		.byte	96
+ 1212 049f 08       		.byte	8
+ 1213 04a0 61       		.byte	97
+ 1214 04a1 10       		.byte	16
+ 1215 04a2 6C       		.byte	108
+ 1216 04a3 14       		.byte	20
+ 1217 04a4 6D       		.byte	109
+ 1218 04a5 80       		.byte	-128
+ 1219 04a6 6E       		.byte	110
+ 1220 04a7 04       		.byte	4
+ 1221 04a8 6F       		.byte	111
+ 1222 04a9 18       		.byte	24
+ 1223 04aa 74       		.byte	116
+ 1224 04ab A0       		.byte	-96
+ 1225 04ac 75       		.byte	117
+ 1226 04ad 40       		.byte	64
+ 1227 04ae 77       		.byte	119
+ 1228 04af 28       		.byte	40
+ 1229 04b0 90       		.byte	-112
+ 1230 04b1 80       		.byte	-128
+ 1231 04b2 91       		.byte	-111
+ 1232 04b3 20       		.byte	32
+ 1233 04b4 92       		.byte	-110
+ 1234 04b5 50       		.byte	80
+ 1235 04b6 94       		.byte	-108
+ 1236 04b7 28       		.byte	40
+ 1237 04b8 95       		.byte	-107
+ 1238 04b9 08       		.byte	8
+ 1239 04ba 99       		.byte	-103
+ 1240 04bb 02       		.byte	2
+ 1241 04bc 9B       		.byte	-101
+ 1242 04bd 04       		.byte	4
+ 1243 04be 9C       		.byte	-100
+ 1244 04bf 58       		.byte	88
+ 1245 04c0 9D       		.byte	-99
+ 1246 04c1 40       		.byte	64
+ 1247 04c2 9F       		.byte	-97
+ 1248 04c3 30       		.byte	48
+ 1249 04c4 A1       		.byte	-95
+ 1250 04c5 80       		.byte	-128
+ 1251 04c6 A3       		.byte	-93
+ 1252 04c7 20       		.byte	32
+ 1253 04c8 A4       		.byte	-92
+ 1254 04c9 20       		.byte	32
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 23
+
+
+ 1255 04ca A6       		.byte	-90
+ 1256 04cb 02       		.byte	2
+ 1257 04cc A7       		.byte	-89
+ 1258 04cd 08       		.byte	8
+ 1259 04ce B2       		.byte	-78
+ 1260 04cf 84       		.byte	-124
+ 1261 04d0 B6       		.byte	-74
+ 1262 04d1 40       		.byte	64
+ 1263 04d2 C0       		.byte	-64
+ 1264 04d3 F7       		.byte	-9
+ 1265 04d4 C2       		.byte	-62
+ 1266 04d5 FA       		.byte	-6
+ 1267 04d6 C4       		.byte	-60
+ 1268 04d7 7E       		.byte	126
+ 1269 04d8 CA       		.byte	-54
+ 1270 04d9 E1       		.byte	-31
+ 1271 04da CC       		.byte	-52
+ 1272 04db 64       		.byte	100
+ 1273 04dc CE       		.byte	-50
+ 1274 04dd 5E       		.byte	94
+ 1275 04de D6       		.byte	-42
+ 1276 04df 20       		.byte	32
+ 1277 04e0 04       		.byte	4
+ 1278 04e1 01       		.byte	1
+ 1279 04e2 06       		.byte	6
+ 1280 04e3 02       		.byte	2
+ 1281 04e4 07       		.byte	7
+ 1282 04e5 07       		.byte	7
+ 1283 04e6 08       		.byte	8
+ 1284 04e7 01       		.byte	1
+ 1285 04e8 0A       		.byte	10
+ 1286 04e9 02       		.byte	2
+ 1287 04ea 0F       		.byte	15
+ 1288 04eb 01       		.byte	1
+ 1289 04ec 14       		.byte	20
+ 1290 04ed 03       		.byte	3
+ 1291 04ee 15       		.byte	21
+ 1292 04ef 01       		.byte	1
+ 1293 04f0 17       		.byte	23
+ 1294 04f1 02       		.byte	2
+ 1295 04f2 19       		.byte	25
+ 1296 04f3 03       		.byte	3
+ 1297 04f4 1A       		.byte	26
+ 1298 04f5 03       		.byte	3
+ 1299 04f6 1D       		.byte	29
+ 1300 04f7 01       		.byte	1
+ 1301 04f8 1F       		.byte	31
+ 1302 04f9 02       		.byte	2
+ 1303 04fa 2A       		.byte	42
+ 1304 04fb 01       		.byte	1
+ 1305 04fc 32       		.byte	50
+ 1306 04fd 03       		.byte	3
+ 1307 04fe 35       		.byte	53
+ 1308 04ff 04       		.byte	4
+ 1309 0500 37       		.byte	55
+ 1310 0501 03       		.byte	3
+ 1311 0502 3A       		.byte	58
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 24
+
+
+ 1312 0503 08       		.byte	8
+ 1313 0504 3B       		.byte	59
+ 1314 0505 A0       		.byte	-96
+ 1315 0506 40       		.byte	64
+ 1316 0507 23       		.byte	35
+ 1317 0508 45       		.byte	69
+ 1318 0509 73       		.byte	115
+ 1319 050a 46       		.byte	70
+ 1320 050b 04       		.byte	4
+ 1321 050c 48       		.byte	72
+ 1322 050d 17       		.byte	23
+ 1323 050e 49       		.byte	73
+ 1324 050f FF       		.byte	-1
+ 1325 0510 4A       		.byte	74
+ 1326 0511 FF       		.byte	-1
+ 1327 0512 4B       		.byte	75
+ 1328 0513 FF       		.byte	-1
+ 1329 0514 4D       		.byte	77
+ 1330 0515 60       		.byte	96
+ 1331 0516 58       		.byte	88
+ 1332 0517 04       		.byte	4
+ 1333 0518 59       		.byte	89
+ 1334 0519 04       		.byte	4
+ 1335 051a 5A       		.byte	90
+ 1336 051b 04       		.byte	4
+ 1337 051c 5C       		.byte	92
+ 1338 051d 11       		.byte	17
+ 1339 051e 5D       		.byte	93
+ 1340 051f 01       		.byte	1
+ 1341 0520 5F       		.byte	95
+ 1342 0521 01       		.byte	1
+ 1343 0522 60       		.byte	96
+ 1344 0523 70       		.byte	112
+ 1345 0524 61       		.byte	97
+ 1346 0525 20       		.byte	32
+ 1347 0526 62       		.byte	98
+ 1348 0527 51       		.byte	81
+ 1349 0528 63       		.byte	99
+ 1350 0529 C8       		.byte	-56
+ 1351 052a 64       		.byte	100
+ 1352 052b D1       		.byte	-47
+ 1353 052c 65       		.byte	101
+ 1354 052d DC       		.byte	-36
+ 1355 052e 66       		.byte	102
+ 1356 052f 51       		.byte	81
+ 1357 0530 67       		.byte	103
+ 1358 0531 DC       		.byte	-36
+ 1359 0532 82       		.byte	-126
+ 1360 0533 04       		.byte	4
+ 1361 0534 83       		.byte	-125
+ 1362 0535 01       		.byte	1
+ 1363 0536 84       		.byte	-124
+ 1364 0537 18       		.byte	24
+ 1365 0538 85       		.byte	-123
+ 1366 0539 06       		.byte	6
+ 1367 053a 87       		.byte	-121
+ 1368 053b 01       		.byte	1
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 25
+
+
+ 1369 053c 88       		.byte	-120
+ 1370 053d 1F       		.byte	31
+ 1371 053e 89       		.byte	-119
+ 1372 053f 06       		.byte	6
+ 1373 0540 8C       		.byte	-116
+ 1374 0541 10       		.byte	16
+ 1375 0542 8D       		.byte	-115
+ 1376 0543 08       		.byte	8
+ 1377 0544 8F       		.byte	-113
+ 1378 0545 10       		.byte	16
+ 1379 0546 90       		.byte	-112
+ 1380 0547 04       		.byte	4
+ 1381 0548 91       		.byte	-111
+ 1382 0549 10       		.byte	16
+ 1383 054a 93       		.byte	-109
+ 1384 054b 08       		.byte	8
+ 1385 054c 95       		.byte	-107
+ 1386 054d 07       		.byte	7
+ 1387 054e 98       		.byte	-104
+ 1388 054f 08       		.byte	8
+ 1389 0550 99       		.byte	-103
+ 1390 0551 18       		.byte	24
+ 1391 0552 9C       		.byte	-100
+ 1392 0553 07       		.byte	7
+ 1393 0554 9D       		.byte	-99
+ 1394 0555 04       		.byte	4
+ 1395 0556 9E       		.byte	-98
+ 1396 0557 18       		.byte	24
+ 1397 0558 A1       		.byte	-95
+ 1398 0559 01       		.byte	1
+ 1399 055a A3       		.byte	-93
+ 1400 055b 06       		.byte	6
+ 1401 055c A4       		.byte	-92
+ 1402 055d 1C       		.byte	28
+ 1403 055e A5       		.byte	-91
+ 1404 055f 02       		.byte	2
+ 1405 0560 A6       		.byte	-90
+ 1406 0561 02       		.byte	2
+ 1407 0562 A8       		.byte	-88
+ 1408 0563 1C       		.byte	28
+ 1409 0564 A9       		.byte	-87
+ 1410 0565 18       		.byte	24
+ 1411 0566 AA       		.byte	-86
+ 1412 0567 01       		.byte	1
+ 1413 0568 AD       		.byte	-83
+ 1414 0569 07       		.byte	7
+ 1415 056a AE       		.byte	-82
+ 1416 056b 03       		.byte	3
+ 1417 056c B4       		.byte	-76
+ 1418 056d 1F       		.byte	31
+ 1419 056e B5       		.byte	-75
+ 1420 056f 07       		.byte	7
+ 1421 0570 B7       		.byte	-73
+ 1422 0571 18       		.byte	24
+ 1423 0572 BA       		.byte	-70
+ 1424 0573 20       		.byte	32
+ 1425 0574 D8       		.byte	-40
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 26
+
+
+ 1426 0575 04       		.byte	4
+ 1427 0576 D9       		.byte	-39
+ 1428 0577 04       		.byte	4
+ 1429 0578 DF       		.byte	-33
+ 1430 0579 01       		.byte	1
+ 1431 057a 00       		.byte	0
+ 1432 057b 10       		.byte	16
+ 1433 057c 01       		.byte	1
+ 1434 057d 08       		.byte	8
+ 1435 057e 05       		.byte	5
+ 1436 057f 41       		.byte	65
+ 1437 0580 06       		.byte	6
+ 1438 0581 20       		.byte	32
+ 1439 0582 07       		.byte	7
+ 1440 0583 24       		.byte	36
+ 1441 0584 08       		.byte	8
+ 1442 0585 20       		.byte	32
+ 1443 0586 0A       		.byte	10
+ 1444 0587 20       		.byte	32
+ 1445 0588 0C       		.byte	12
+ 1446 0589 60       		.byte	96
+ 1447 058a 0E       		.byte	14
+ 1448 058b 40       		.byte	64
+ 1449 058c 12       		.byte	18
+ 1450 058d 08       		.byte	8
+ 1451 058e 14       		.byte	20
+ 1452 058f 18       		.byte	24
+ 1453 0590 15       		.byte	21
+ 1454 0591 40       		.byte	64
+ 1455 0592 16       		.byte	22
+ 1456 0593 0A       		.byte	10
+ 1457 0594 18       		.byte	24
+ 1458 0595 10       		.byte	16
+ 1459 0596 1E       		.byte	30
+ 1460 0597 04       		.byte	4
+ 1461 0598 1F       		.byte	31
+ 1462 0599 20       		.byte	32
+ 1463 059a 21       		.byte	33
+ 1464 059b 10       		.byte	16
+ 1465 059c 22       		.byte	34
+ 1466 059d 50       		.byte	80
+ 1467 059e 25       		.byte	37
+ 1468 059f 80       		.byte	-128
+ 1469 05a0 26       		.byte	38
+ 1470 05a1 20       		.byte	32
+ 1471 05a2 27       		.byte	39
+ 1472 05a3 01       		.byte	1
+ 1473 05a4 2C       		.byte	44
+ 1474 05a5 60       		.byte	96
+ 1475 05a6 2E       		.byte	46
+ 1476 05a7 80       		.byte	-128
+ 1477 05a8 2F       		.byte	47
+ 1478 05a9 08       		.byte	8
+ 1479 05aa 31       		.byte	49
+ 1480 05ab 04       		.byte	4
+ 1481 05ac 32       		.byte	50
+ 1482 05ad 50       		.byte	80
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 27
+
+
+ 1483 05ae 35       		.byte	53
+ 1484 05af 40       		.byte	64
+ 1485 05b0 37       		.byte	55
+ 1486 05b1 15       		.byte	21
+ 1487 05b2 38       		.byte	56
+ 1488 05b3 80       		.byte	-128
+ 1489 05b4 39       		.byte	57
+ 1490 05b5 08       		.byte	8
+ 1491 05b6 3E       		.byte	62
+ 1492 05b7 6A       		.byte	106
+ 1493 05b8 40       		.byte	64
+ 1494 05b9 20       		.byte	32
+ 1495 05ba 41       		.byte	65
+ 1496 05bb 14       		.byte	20
+ 1497 05bc 49       		.byte	73
+ 1498 05bd 0E       		.byte	14
+ 1499 05be 50       		.byte	80
+ 1500 05bf C0       		.byte	-64
+ 1501 05c0 52       		.byte	82
+ 1502 05c1 08       		.byte	8
+ 1503 05c2 8C       		.byte	-116
+ 1504 05c3 10       		.byte	16
+ 1505 05c4 91       		.byte	-111
+ 1506 05c5 40       		.byte	64
+ 1507 05c6 92       		.byte	-110
+ 1508 05c7 50       		.byte	80
+ 1509 05c8 94       		.byte	-108
+ 1510 05c9 28       		.byte	40
+ 1511 05ca 95       		.byte	-107
+ 1512 05cb 28       		.byte	40
+ 1513 05cc 96       		.byte	-106
+ 1514 05cd 04       		.byte	4
+ 1515 05ce 99       		.byte	-103
+ 1516 05cf 01       		.byte	1
+ 1517 05d0 9B       		.byte	-101
+ 1518 05d1 04       		.byte	4
+ 1519 05d2 9C       		.byte	-100
+ 1520 05d3 48       		.byte	72
+ 1521 05d4 9D       		.byte	-99
+ 1522 05d5 04       		.byte	4
+ 1523 05d6 9F       		.byte	-97
+ 1524 05d7 01       		.byte	1
+ 1525 05d8 A4       		.byte	-92
+ 1526 05d9 80       		.byte	-128
+ 1527 05da A6       		.byte	-90
+ 1528 05db 22       		.byte	34
+ 1529 05dc AD       		.byte	-83
+ 1530 05dd 01       		.byte	1
+ 1531 05de B6       		.byte	-74
+ 1532 05df 40       		.byte	64
+ 1533 05e0 C0       		.byte	-64
+ 1534 05e1 F6       		.byte	-10
+ 1535 05e2 C2       		.byte	-62
+ 1536 05e3 D6       		.byte	-42
+ 1537 05e4 C4       		.byte	-60
+ 1538 05e5 E2       		.byte	-30
+ 1539 05e6 CA       		.byte	-54
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 28
+
+
+ 1540 05e7 F0       		.byte	-16
+ 1541 05e8 CC       		.byte	-52
+ 1542 05e9 FE       		.byte	-2
+ 1543 05ea CE       		.byte	-50
+ 1544 05eb FA       		.byte	-6
+ 1545 05ec D0       		.byte	-48
+ 1546 05ed 06       		.byte	6
+ 1547 05ee EC       		.byte	-20
+ 1548 05ef 02       		.byte	2
+ 1549 05f0 04       		.byte	4
+ 1550 05f1 07       		.byte	7
+ 1551 05f2 08       		.byte	8
+ 1552 05f3 07       		.byte	7
+ 1553 05f4 0B       		.byte	11
+ 1554 05f5 01       		.byte	1
+ 1555 05f6 10       		.byte	16
+ 1556 05f7 22       		.byte	34
+ 1557 05f8 12       		.byte	18
+ 1558 05f9 91       		.byte	-111
+ 1559 05fa 14       		.byte	20
+ 1560 05fb 61       		.byte	97
+ 1561 05fc 16       		.byte	22
+ 1562 05fd 0E       		.byte	14
+ 1563 05fe 1A       		.byte	26
+ 1564 05ff 60       		.byte	96
+ 1565 0600 1B       		.byte	27
+ 1566 0601 01       		.byte	1
+ 1567 0602 1C       		.byte	28
+ 1568 0603 60       		.byte	96
+ 1569 0604 20       		.byte	32
+ 1570 0605 44       		.byte	68
+ 1571 0606 22       		.byte	34
+ 1572 0607 11       		.byte	17
+ 1573 0608 24       		.byte	36
+ 1574 0609 60       		.byte	96
+ 1575 060a 2A       		.byte	42
+ 1576 060b 60       		.byte	96
+ 1577 060c 2B       		.byte	43
+ 1578 060d 02       		.byte	2
+ 1579 060e 2E       		.byte	46
+ 1580 060f 60       		.byte	96
+ 1581 0610 2F       		.byte	47
+ 1582 0611 02       		.byte	2
+ 1583 0612 30       		.byte	48
+ 1584 0613 80       		.byte	-128
+ 1585 0614 31       		.byte	49
+ 1586 0615 01       		.byte	1
+ 1587 0616 32       		.byte	50
+ 1588 0617 07       		.byte	7
+ 1589 0618 33       		.byte	51
+ 1590 0619 02       		.byte	2
+ 1591 061a 34       		.byte	52
+ 1592 061b 18       		.byte	24
+ 1593 061c 36       		.byte	54
+ 1594 061d 60       		.byte	96
+ 1595 061e 3B       		.byte	59
+ 1596 061f 20       		.byte	32
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 29
+
+
+ 1597 0620 3E       		.byte	62
+ 1598 0621 10       		.byte	16
+ 1599 0622 3F       		.byte	63
+ 1600 0623 05       		.byte	5
+ 1601 0624 40       		.byte	64
+ 1602 0625 45       		.byte	69
+ 1603 0626 41       		.byte	65
+ 1604 0627 03       		.byte	3
+ 1605 0628 42       		.byte	66
+ 1606 0629 06       		.byte	6
+ 1607 062a 44       		.byte	68
+ 1608 062b 02       		.byte	2
+ 1609 062c 46       		.byte	70
+ 1610 062d C0       		.byte	-64
+ 1611 062e 47       		.byte	71
+ 1612 062f 0E       		.byte	14
+ 1613 0630 48       		.byte	72
+ 1614 0631 18       		.byte	24
+ 1615 0632 49       		.byte	73
+ 1616 0633 FF       		.byte	-1
+ 1617 0634 4A       		.byte	74
+ 1618 0635 FF       		.byte	-1
+ 1619 0636 4B       		.byte	75
+ 1620 0637 FF       		.byte	-1
+ 1621 0638 4C       		.byte	76
+ 1622 0639 62       		.byte	98
+ 1623 063a 4D       		.byte	77
+ 1624 063b A0       		.byte	-96
+ 1625 063c 4E       		.byte	78
+ 1626 063d F0       		.byte	-16
+ 1627 063e 4F       		.byte	79
+ 1628 063f 41       		.byte	65
+ 1629 0640 50       		.byte	80
+ 1630 0641 0C       		.byte	12
+ 1631 0642 54       		.byte	84
+ 1632 0643 18       		.byte	24
+ 1633 0644 56       		.byte	86
+ 1634 0645 04       		.byte	4
+ 1635 0646 58       		.byte	88
+ 1636 0647 04       		.byte	4
+ 1637 0648 59       		.byte	89
+ 1638 0649 04       		.byte	4
+ 1639 064a 5A       		.byte	90
+ 1640 064b 04       		.byte	4
+ 1641 064c 5B       		.byte	91
+ 1642 064d 04       		.byte	4
+ 1643 064e 5F       		.byte	95
+ 1644 064f 01       		.byte	1
+ 1645 0650 66       		.byte	102
+ 1646 0651 40       		.byte	64
+ 1647 0652 67       		.byte	103
+ 1648 0653 02       		.byte	2
+ 1649 0654 69       		.byte	105
+ 1650 0655 10       		.byte	16
+ 1651 0656 6A       		.byte	106
+ 1652 0657 30       		.byte	48
+ 1653 0658 6B       		.byte	107
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 30
+
+
+ 1654 0659 10       		.byte	16
+ 1655 065a 6D       		.byte	109
+ 1656 065b 10       		.byte	16
+ 1657 065c 6E       		.byte	110
+ 1658 065d 10       		.byte	16
+ 1659 065e 6F       		.byte	111
+ 1660 065f 12       		.byte	18
+ 1661 0660 81       		.byte	-127
+ 1662 0661 01       		.byte	1
+ 1663 0662 83       		.byte	-125
+ 1664 0663 02       		.byte	2
+ 1665 0664 85       		.byte	-123
+ 1666 0665 03       		.byte	3
+ 1667 0666 88       		.byte	-120
+ 1668 0667 01       		.byte	1
+ 1669 0668 89       		.byte	-119
+ 1670 0669 03       		.byte	3
+ 1671 066a 96       		.byte	-106
+ 1672 066b 01       		.byte	1
+ 1673 066c 9A       		.byte	-102
+ 1674 066d 01       		.byte	1
+ 1675 066e 9C       		.byte	-100
+ 1676 066f 01       		.byte	1
+ 1677 0670 9F       		.byte	-97
+ 1678 0671 01       		.byte	1
+ 1679 0672 A5       		.byte	-91
+ 1680 0673 01       		.byte	1
+ 1681 0674 A7       		.byte	-89
+ 1682 0675 02       		.byte	2
+ 1683 0676 B1       		.byte	-79
+ 1684 0677 03       		.byte	3
+ 1685 0678 B6       		.byte	-74
+ 1686 0679 01       		.byte	1
+ 1687 067a B8       		.byte	-72
+ 1688 067b 80       		.byte	-128
+ 1689 067c BB       		.byte	-69
+ 1690 067d 02       		.byte	2
+ 1691 067e D8       		.byte	-40
+ 1692 067f 04       		.byte	4
+ 1693 0680 D9       		.byte	-39
+ 1694 0681 04       		.byte	4
+ 1695 0682 DC       		.byte	-36
+ 1696 0683 10       		.byte	16
+ 1697 0684 DF       		.byte	-33
+ 1698 0685 01       		.byte	1
+ 1699 0686 03       		.byte	3
+ 1700 0687 04       		.byte	4
+ 1701 0688 04       		.byte	4
+ 1702 0689 28       		.byte	40
+ 1703 068a 08       		.byte	8
+ 1704 068b 48       		.byte	72
+ 1705 068c 0A       		.byte	10
+ 1706 068d 04       		.byte	4
+ 1707 068e 0C       		.byte	12
+ 1708 068f 40       		.byte	64
+ 1709 0690 0E       		.byte	14
+ 1710 0691 54       		.byte	84
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 31
+
+
+ 1711 0692 14       		.byte	20
+ 1712 0693 08       		.byte	8
+ 1713 0694 15       		.byte	21
+ 1714 0695 40       		.byte	64
+ 1715 0696 17       		.byte	23
+ 1716 0697 05       		.byte	5
+ 1717 0698 19       		.byte	25
+ 1718 0699 80       		.byte	-128
+ 1719 069a 1D       		.byte	29
+ 1720 069b 21       		.byte	33
+ 1721 069c 1E       		.byte	30
+ 1722 069d 11       		.byte	17
+ 1723 069e 21       		.byte	33
+ 1724 069f 01       		.byte	1
+ 1725 06a0 24       		.byte	36
+ 1726 06a1 80       		.byte	-128
+ 1727 06a2 26       		.byte	38
+ 1728 06a3 08       		.byte	8
+ 1729 06a4 27       		.byte	39
+ 1730 06a5 04       		.byte	4
+ 1731 06a6 29       		.byte	41
+ 1732 06a7 04       		.byte	4
+ 1733 06a8 2D       		.byte	45
+ 1734 06a9 80       		.byte	-128
+ 1735 06aa 2F       		.byte	47
+ 1736 06ab 08       		.byte	8
+ 1737 06ac 30       		.byte	48
+ 1738 06ad 84       		.byte	-124
+ 1739 06ae 32       		.byte	50
+ 1740 06af 08       		.byte	8
+ 1741 06b0 35       		.byte	53
+ 1742 06b1 20       		.byte	32
+ 1743 06b2 36       		.byte	54
+ 1744 06b3 20       		.byte	32
+ 1745 06b4 38       		.byte	56
+ 1746 06b5 80       		.byte	-128
+ 1747 06b6 39       		.byte	57
+ 1748 06b7 2A       		.byte	42
+ 1749 06b8 3A       		.byte	58
+ 1750 06b9 40       		.byte	64
+ 1751 06ba 3F       		.byte	63
+ 1752 06bb 20       		.byte	32
+ 1753 06bc 44       		.byte	68
+ 1754 06bd 40       		.byte	64
+ 1755 06be 45       		.byte	69
+ 1756 06bf 20       		.byte	32
+ 1757 06c0 47       		.byte	71
+ 1758 06c1 04       		.byte	4
+ 1759 06c2 4D       		.byte	77
+ 1760 06c3 60       		.byte	96
+ 1761 06c4 4E       		.byte	78
+ 1762 06c5 02       		.byte	2
+ 1763 06c6 57       		.byte	87
+ 1764 06c7 18       		.byte	24
+ 1765 06c8 5E       		.byte	94
+ 1766 06c9 01       		.byte	1
+ 1767 06ca 64       		.byte	100
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 32
+
+
+ 1768 06cb 04       		.byte	4
+ 1769 06cc 66       		.byte	102
+ 1770 06cd 40       		.byte	64
+ 1771 06ce 67       		.byte	103
+ 1772 06cf 80       		.byte	-128
+ 1773 06d0 97       		.byte	-105
+ 1774 06d1 80       		.byte	-128
+ 1775 06d2 C0       		.byte	-64
+ 1776 06d3 62       		.byte	98
+ 1777 06d4 C2       		.byte	-62
+ 1778 06d5 F7       		.byte	-9
+ 1779 06d6 C4       		.byte	-60
+ 1780 06d7 F0       		.byte	-16
+ 1781 06d8 CA       		.byte	-54
+ 1782 06d9 32       		.byte	50
+ 1783 06da CC       		.byte	-52
+ 1784 06db 28       		.byte	40
+ 1785 06dc CE       		.byte	-50
+ 1786 06dd 27       		.byte	39
+ 1787 06de D0       		.byte	-48
+ 1788 06df E0       		.byte	-32
+ 1789 06e0 D2       		.byte	-46
+ 1790 06e1 30       		.byte	48
+ 1791 06e2 D6       		.byte	-42
+ 1792 06e3 80       		.byte	-128
+ 1793 06e4 D8       		.byte	-40
+ 1794 06e5 B0       		.byte	-80
+ 1795 06e6 87       		.byte	-121
+ 1796 06e7 40       		.byte	64
+ 1797 06e8 00       		.byte	0
+ 1798 06e9 1C       		.byte	28
+ 1799 06ea 02       		.byte	2
+ 1800 06eb 02       		.byte	2
+ 1801 06ec 04       		.byte	4
+ 1802 06ed 14       		.byte	20
+ 1803 06ee 0A       		.byte	10
+ 1804 06ef 03       		.byte	3
+ 1805 06f0 0C       		.byte	12
+ 1806 06f1 10       		.byte	16
+ 1807 06f2 0E       		.byte	14
+ 1808 06f3 0C       		.byte	12
+ 1809 06f4 0F       		.byte	15
+ 1810 06f5 06       		.byte	6
+ 1811 06f6 10       		.byte	16
+ 1812 06f7 09       		.byte	9
+ 1813 06f8 12       		.byte	18
+ 1814 06f9 10       		.byte	16
+ 1815 06fa 13       		.byte	19
+ 1816 06fb 05       		.byte	5
+ 1817 06fc 17       		.byte	23
+ 1818 06fd 01       		.byte	1
+ 1819 06fe 1B       		.byte	27
+ 1820 06ff 03       		.byte	3
+ 1821 0700 1D       		.byte	29
+ 1822 0701 06       		.byte	6
+ 1823 0702 1F       		.byte	31
+ 1824 0703 01       		.byte	1
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 33
+
+
+ 1825 0704 24       		.byte	36
+ 1826 0705 0C       		.byte	12
+ 1827 0706 26       		.byte	38
+ 1828 0707 11       		.byte	17
+ 1829 0708 27       		.byte	39
+ 1830 0709 02       		.byte	2
+ 1831 070a 28       		.byte	40
+ 1832 070b 10       		.byte	16
+ 1833 070c 34       		.byte	52
+ 1834 070d 1F       		.byte	31
+ 1835 070e 35       		.byte	53
+ 1836 070f 07       		.byte	7
+ 1837 0710 3B       		.byte	59
+ 1838 0711 20       		.byte	32
+ 1839 0712 40       		.byte	64
+ 1840 0713 42       		.byte	66
+ 1841 0714 41       		.byte	65
+ 1842 0715 03       		.byte	3
+ 1843 0716 42       		.byte	66
+ 1844 0717 06       		.byte	6
+ 1845 0718 49       		.byte	73
+ 1846 0719 FF       		.byte	-1
+ 1847 071a 4A       		.byte	74
+ 1848 071b FF       		.byte	-1
+ 1849 071c 4B       		.byte	75
+ 1850 071d FF       		.byte	-1
+ 1851 071e 4F       		.byte	79
+ 1852 071f 01       		.byte	1
+ 1853 0720 50       		.byte	80
+ 1854 0721 18       		.byte	24
+ 1855 0722 52       		.byte	82
+ 1856 0723 80       		.byte	-128
+ 1857 0724 58       		.byte	88
+ 1858 0725 04       		.byte	4
+ 1859 0726 59       		.byte	89
+ 1860 0727 04       		.byte	4
+ 1861 0728 5A       		.byte	90
+ 1862 0729 04       		.byte	4
+ 1863 072a 5B       		.byte	91
+ 1864 072b 04       		.byte	4
+ 1865 072c 5D       		.byte	93
+ 1866 072d 99       		.byte	-103
+ 1867 072e 5F       		.byte	95
+ 1868 072f 01       		.byte	1
+ 1869 0730 60       		.byte	96
+ 1870 0731 40       		.byte	64
+ 1871 0732 62       		.byte	98
+ 1872 0733 40       		.byte	64
+ 1873 0734 64       		.byte	100
+ 1874 0735 40       		.byte	64
+ 1875 0736 65       		.byte	101
+ 1876 0737 40       		.byte	64
+ 1877 0738 66       		.byte	102
+ 1878 0739 80       		.byte	-128
+ 1879 073a 68       		.byte	104
+ 1880 073b 80       		.byte	-128
+ 1881 073c 6A       		.byte	106
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 34
+
+
+ 1882 073d 80       		.byte	-128
+ 1883 073e 6C       		.byte	108
+ 1884 073f 80       		.byte	-128
+ 1885 0740 6E       		.byte	110
+ 1886 0741 80       		.byte	-128
+ 1887 0742 87       		.byte	-121
+ 1888 0743 03       		.byte	3
+ 1889 0744 91       		.byte	-111
+ 1890 0745 01       		.byte	1
+ 1891 0746 93       		.byte	-109
+ 1892 0747 06       		.byte	6
+ 1893 0748 95       		.byte	-107
+ 1894 0749 01       		.byte	1
+ 1895 074a 97       		.byte	-105
+ 1896 074b 0E       		.byte	14
+ 1897 074c 9D       		.byte	-99
+ 1898 074d 0C       		.byte	12
+ 1899 074e 9F       		.byte	-97
+ 1900 074f 03       		.byte	3
+ 1901 0750 A3       		.byte	-93
+ 1902 0751 0C       		.byte	12
+ 1903 0752 A7       		.byte	-89
+ 1904 0753 08       		.byte	8
+ 1905 0754 B1       		.byte	-79
+ 1906 0755 0F       		.byte	15
+ 1907 0756 BB       		.byte	-69
+ 1908 0757 02       		.byte	2
+ 1909 0758 C0       		.byte	-64
+ 1910 0759 53       		.byte	83
+ 1911 075a C1       		.byte	-63
+ 1912 075b 02       		.byte	2
+ 1913 075c C2       		.byte	-62
+ 1914 075d 06       		.byte	6
+ 1915 075e C9       		.byte	-55
+ 1916 075f FF       		.byte	-1
+ 1917 0760 CA       		.byte	-54
+ 1918 0761 FF       		.byte	-1
+ 1919 0762 CB       		.byte	-53
+ 1920 0763 FF       		.byte	-1
+ 1921 0764 CD       		.byte	-51
+ 1922 0765 83       		.byte	-125
+ 1923 0766 CE       		.byte	-50
+ 1924 0767 03       		.byte	3
+ 1925 0768 CF       		.byte	-49
+ 1926 0769 01       		.byte	1
+ 1927 076a D0       		.byte	-48
+ 1928 076b 18       		.byte	24
+ 1929 076c D9       		.byte	-39
+ 1930 076d 04       		.byte	4
+ 1931 076e DA       		.byte	-38
+ 1932 076f 04       		.byte	4
+ 1933 0770 DB       		.byte	-37
+ 1934 0771 04       		.byte	4
+ 1935 0772 DD       		.byte	-35
+ 1936 0773 09       		.byte	9
+ 1937 0774 DF       		.byte	-33
+ 1938 0775 01       		.byte	1
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 35
+
+
+ 1939 0776 E0       		.byte	-32
+ 1940 0777 40       		.byte	64
+ 1941 0778 E2       		.byte	-30
+ 1942 0779 40       		.byte	64
+ 1943 077a E4       		.byte	-28
+ 1944 077b 40       		.byte	64
+ 1945 077c E5       		.byte	-27
+ 1946 077d 40       		.byte	64
+ 1947 077e E6       		.byte	-26
+ 1948 077f 80       		.byte	-128
+ 1949 0780 E8       		.byte	-24
+ 1950 0781 80       		.byte	-128
+ 1951 0782 EA       		.byte	-22
+ 1952 0783 80       		.byte	-128
+ 1953 0784 EC       		.byte	-20
+ 1954 0785 80       		.byte	-128
+ 1955 0786 EE       		.byte	-18
+ 1956 0787 80       		.byte	-128
+ 1957 0788 01       		.byte	1
+ 1958 0789 28       		.byte	40
+ 1959 078a 02       		.byte	2
+ 1960 078b 02       		.byte	2
+ 1961 078c 03       		.byte	3
+ 1962 078d 40       		.byte	64
+ 1963 078e 0B       		.byte	11
+ 1964 078f 80       		.byte	-128
+ 1965 0790 0C       		.byte	12
+ 1966 0791 04       		.byte	4
+ 1967 0792 0E       		.byte	14
+ 1968 0793 10       		.byte	16
+ 1969 0794 12       		.byte	18
+ 1970 0795 04       		.byte	4
+ 1971 0796 13       		.byte	19
+ 1972 0797 08       		.byte	8
+ 1973 0798 19       		.byte	25
+ 1974 0799 20       		.byte	32
+ 1975 079a 21       		.byte	33
+ 1976 079b 10       		.byte	16
+ 1977 079c 22       		.byte	34
+ 1978 079d 10       		.byte	16
+ 1979 079e 23       		.byte	35
+ 1980 079f 08       		.byte	8
+ 1981 07a0 27       		.byte	39
+ 1982 07a1 40       		.byte	64
+ 1983 07a2 2A       		.byte	42
+ 1984 07a3 0C       		.byte	12
+ 1985 07a4 2E       		.byte	46
+ 1986 07a5 08       		.byte	8
+ 1987 07a6 2F       		.byte	47
+ 1988 07a7 40       		.byte	64
+ 1989 07a8 32       		.byte	50
+ 1990 07a9 1A       		.byte	26
+ 1991 07aa 33       		.byte	51
+ 1992 07ab 40       		.byte	64
+ 1993 07ac 36       		.byte	54
+ 1994 07ad 02       		.byte	2
+ 1995 07ae 37       		.byte	55
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 36
+
+
+ 1996 07af 48       		.byte	72
+ 1997 07b0 3B       		.byte	59
+ 1998 07b1 80       		.byte	-128
+ 1999 07b2 3C       		.byte	60
+ 2000 07b3 08       		.byte	8
+ 2001 07b4 42       		.byte	66
+ 2002 07b5 50       		.byte	80
+ 2003 07b6 43       		.byte	67
+ 2004 07b7 20       		.byte	32
+ 2005 07b8 44       		.byte	68
+ 2006 07b9 04       		.byte	4
+ 2007 07ba 46       		.byte	70
+ 2008 07bb 20       		.byte	32
+ 2009 07bc 4B       		.byte	75
+ 2010 07bd 10       		.byte	16
+ 2011 07be 4F       		.byte	79
+ 2012 07bf 50       		.byte	80
+ 2013 07c0 6C       		.byte	108
+ 2014 07c1 24       		.byte	36
+ 2015 07c2 6E       		.byte	110
+ 2016 07c3 80       		.byte	-128
+ 2017 07c4 6F       		.byte	111
+ 2018 07c5 80       		.byte	-128
+ 2019 07c6 71       		.byte	113
+ 2020 07c7 01       		.byte	1
+ 2021 07c8 72       		.byte	114
+ 2022 07c9 40       		.byte	64
+ 2023 07ca 73       		.byte	115
+ 2024 07cb 40       		.byte	64
+ 2025 07cc 80       		.byte	-128
+ 2026 07cd 04       		.byte	4
+ 2027 07ce 83       		.byte	-125
+ 2028 07cf 80       		.byte	-128
+ 2029 07d0 86       		.byte	-122
+ 2030 07d1 40       		.byte	64
+ 2031 07d2 8C       		.byte	-116
+ 2032 07d3 20       		.byte	32
+ 2033 07d4 92       		.byte	-110
+ 2034 07d5 10       		.byte	16
+ 2035 07d6 93       		.byte	-109
+ 2036 07d7 90       		.byte	-112
+ 2037 07d8 95       		.byte	-107
+ 2038 07d9 20       		.byte	32
+ 2039 07da 97       		.byte	-105
+ 2040 07db 40       		.byte	64
+ 2041 07dc 99       		.byte	-103
+ 2042 07dd 08       		.byte	8
+ 2043 07de 9A       		.byte	-102
+ 2044 07df 24       		.byte	36
+ 2045 07e0 9C       		.byte	-100
+ 2046 07e1 04       		.byte	4
+ 2047 07e2 9D       		.byte	-99
+ 2048 07e3 01       		.byte	1
+ 2049 07e4 9F       		.byte	-97
+ 2050 07e5 48       		.byte	72
+ 2051 07e6 A0       		.byte	-96
+ 2052 07e7 04       		.byte	4
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 37
+
+
+ 2053 07e8 A2       		.byte	-94
+ 2054 07e9 0A       		.byte	10
+ 2055 07ea A3       		.byte	-93
+ 2056 07eb 20       		.byte	32
+ 2057 07ec A8       		.byte	-88
+ 2058 07ed 20       		.byte	32
+ 2059 07ee AA       		.byte	-86
+ 2060 07ef 40       		.byte	64
+ 2061 07f0 C0       		.byte	-64
+ 2062 07f1 0F       		.byte	15
+ 2063 07f2 C2       		.byte	-62
+ 2064 07f3 08       		.byte	8
+ 2065 07f4 C4       		.byte	-60
+ 2066 07f5 06       		.byte	6
+ 2067 07f6 CA       		.byte	-54
+ 2068 07f7 C2       		.byte	-62
+ 2069 07f8 CC       		.byte	-52
+ 2070 07f9 DF       		.byte	-33
+ 2071 07fa CE       		.byte	-50
+ 2072 07fb 48       		.byte	72
+ 2073 07fc D0       		.byte	-48
+ 2074 07fd 67       		.byte	103
+ 2075 07fe D2       		.byte	-46
+ 2076 07ff 34       		.byte	52
+ 2077 0800 E6       		.byte	-26
+ 2078 0801 10       		.byte	16
+ 2079 0802 EA       		.byte	-22
+ 2080 0803 01       		.byte	1
+ 2081 0804 0B       		.byte	11
+ 2082 0805 01       		.byte	1
+ 2083 0806 13       		.byte	19
+ 2084 0807 01       		.byte	1
+ 2085 0808 37       		.byte	55
+ 2086 0809 01       		.byte	1
+ 2087 080a 3F       		.byte	63
+ 2088 080b 40       		.byte	64
+ 2089 080c 40       		.byte	64
+ 2090 080d 53       		.byte	83
+ 2091 080e 41       		.byte	65
+ 2092 080f 02       		.byte	2
+ 2093 0810 42       		.byte	66
+ 2094 0811 06       		.byte	6
+ 2095 0812 45       		.byte	69
+ 2096 0813 EC       		.byte	-20
+ 2097 0814 46       		.byte	70
+ 2098 0815 20       		.byte	32
+ 2099 0816 48       		.byte	72
+ 2100 0817 0B       		.byte	11
+ 2101 0818 49       		.byte	73
+ 2102 0819 FF       		.byte	-1
+ 2103 081a 4A       		.byte	74
+ 2104 081b FF       		.byte	-1
+ 2105 081c 4B       		.byte	75
+ 2106 081d FF       		.byte	-1
+ 2107 081e 4D       		.byte	77
+ 2108 081f 83       		.byte	-125
+ 2109 0820 4E       		.byte	78
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 38
+
+
+ 2110 0821 03       		.byte	3
+ 2111 0822 4F       		.byte	79
+ 2112 0823 01       		.byte	1
+ 2113 0824 50       		.byte	80
+ 2114 0825 18       		.byte	24
+ 2115 0826 54       		.byte	84
+ 2116 0827 03       		.byte	3
+ 2117 0828 59       		.byte	89
+ 2118 0829 04       		.byte	4
+ 2119 082a 5A       		.byte	90
+ 2120 082b 04       		.byte	4
+ 2121 082c 5B       		.byte	91
+ 2122 082d 04       		.byte	4
+ 2123 082e 5D       		.byte	93
+ 2124 082f 99       		.byte	-103
+ 2125 0830 5E       		.byte	94
+ 2126 0831 80       		.byte	-128
+ 2127 0832 5F       		.byte	95
+ 2128 0833 05       		.byte	5
+ 2129 0834 60       		.byte	96
+ 2130 0835 40       		.byte	64
+ 2131 0836 62       		.byte	98
+ 2132 0837 40       		.byte	64
+ 2133 0838 64       		.byte	100
+ 2134 0839 40       		.byte	64
+ 2135 083a 65       		.byte	101
+ 2136 083b 40       		.byte	64
+ 2137 083c 66       		.byte	102
+ 2138 083d 80       		.byte	-128
+ 2139 083e 68       		.byte	104
+ 2140 083f 80       		.byte	-128
+ 2141 0840 6A       		.byte	106
+ 2142 0841 80       		.byte	-128
+ 2143 0842 6C       		.byte	108
+ 2144 0843 80       		.byte	-128
+ 2145 0844 6E       		.byte	110
+ 2146 0845 80       		.byte	-128
+ 2147 0846 86       		.byte	-122
+ 2148 0847 01       		.byte	1
+ 2149 0848 87       		.byte	-121
+ 2150 0849 10       		.byte	16
+ 2151 084a 8F       		.byte	-113
+ 2152 084b 08       		.byte	8
+ 2153 084c 91       		.byte	-111
+ 2154 084d 03       		.byte	3
+ 2155 084e 92       		.byte	-110
+ 2156 084f 01       		.byte	1
+ 2157 0850 93       		.byte	-109
+ 2158 0851 0C       		.byte	12
+ 2159 0852 95       		.byte	-107
+ 2160 0853 03       		.byte	3
+ 2161 0854 97       		.byte	-105
+ 2162 0855 04       		.byte	4
+ 2163 0856 98       		.byte	-104
+ 2164 0857 01       		.byte	1
+ 2165 0858 9B       		.byte	-101
+ 2166 0859 05       		.byte	5
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 39
+
+
+ 2167 085a 9D       		.byte	-99
+ 2168 085b 0A       		.byte	10
+ 2169 085c 9F       		.byte	-97
+ 2170 085d 04       		.byte	4
+ 2171 085e A3       		.byte	-93
+ 2172 085f 10       		.byte	16
+ 2173 0860 A5       		.byte	-91
+ 2174 0861 10       		.byte	16
+ 2175 0862 A9       		.byte	-87
+ 2176 0863 03       		.byte	3
+ 2177 0864 AB       		.byte	-85
+ 2178 0865 04       		.byte	4
+ 2179 0866 B0       		.byte	-80
+ 2180 0867 01       		.byte	1
+ 2181 0868 B3       		.byte	-77
+ 2182 0869 10       		.byte	16
+ 2183 086a B7       		.byte	-73
+ 2184 086b 0F       		.byte	15
+ 2185 086c BB       		.byte	-69
+ 2186 086d 80       		.byte	-128
+ 2187 086e BF       		.byte	-65
+ 2188 086f 04       		.byte	4
+ 2189 0870 C0       		.byte	-64
+ 2190 0871 56       		.byte	86
+ 2191 0872 C1       		.byte	-63
+ 2192 0873 02       		.byte	2
+ 2193 0874 C5       		.byte	-59
+ 2194 0875 0B       		.byte	11
+ 2195 0876 C6       		.byte	-58
+ 2196 0877 E0       		.byte	-32
+ 2197 0878 C7       		.byte	-57
+ 2198 0879 0C       		.byte	12
+ 2199 087a C8       		.byte	-56
+ 2200 087b 19       		.byte	25
+ 2201 087c C9       		.byte	-55
+ 2202 087d FF       		.byte	-1
+ 2203 087e CA       		.byte	-54
+ 2204 087f FF       		.byte	-1
+ 2205 0880 CB       		.byte	-53
+ 2206 0881 FF       		.byte	-1
+ 2207 0882 CE       		.byte	-50
+ 2208 0883 F0       		.byte	-16
+ 2209 0884 CF       		.byte	-49
+ 2210 0885 44       		.byte	68
+ 2211 0886 D0       		.byte	-48
+ 2212 0887 0C       		.byte	12
+ 2213 0888 D8       		.byte	-40
+ 2214 0889 04       		.byte	4
+ 2215 088a D9       		.byte	-39
+ 2216 088b 04       		.byte	4
+ 2217 088c DA       		.byte	-38
+ 2218 088d 04       		.byte	4
+ 2219 088e DC       		.byte	-36
+ 2220 088f 09       		.byte	9
+ 2221 0890 DF       		.byte	-33
+ 2222 0891 01       		.byte	1
+ 2223 0892 E6       		.byte	-26
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 40
+
+
+ 2224 0893 C0       		.byte	-64
+ 2225 0894 EA       		.byte	-22
+ 2226 0895 40       		.byte	64
+ 2227 0896 EB       		.byte	-21
+ 2228 0897 02       		.byte	2
+ 2229 0898 00       		.byte	0
+ 2230 0899 04       		.byte	4
+ 2231 089a 08       		.byte	8
+ 2232 089b 20       		.byte	32
+ 2233 089c 0B       		.byte	11
+ 2234 089d 40       		.byte	64
+ 2235 089e 1A       		.byte	26
+ 2236 089f 80       		.byte	-128
+ 2237 08a0 20       		.byte	32
+ 2238 08a1 02       		.byte	2
+ 2239 08a2 23       		.byte	35
+ 2240 08a3 12       		.byte	18
+ 2241 08a4 26       		.byte	38
+ 2242 08a5 40       		.byte	64
+ 2243 08a6 28       		.byte	40
+ 2244 08a7 28       		.byte	40
+ 2245 08a8 29       		.byte	41
+ 2246 08a9 01       		.byte	1
+ 2247 08aa 30       		.byte	48
+ 2248 08ab 08       		.byte	8
+ 2249 08ac 31       		.byte	49
+ 2250 08ad 10       		.byte	16
+ 2251 08ae 32       		.byte	50
+ 2252 08af 02       		.byte	2
+ 2253 08b0 33       		.byte	51
+ 2254 08b1 40       		.byte	64
+ 2255 08b2 35       		.byte	53
+ 2256 08b3 01       		.byte	1
+ 2257 08b4 38       		.byte	56
+ 2258 08b5 04       		.byte	4
+ 2259 08b6 3B       		.byte	59
+ 2260 08b7 80       		.byte	-128
+ 2261 08b8 3E       		.byte	62
+ 2262 08b9 20       		.byte	32
+ 2263 08ba 40       		.byte	64
+ 2264 08bb 08       		.byte	8
+ 2265 08bc 41       		.byte	65
+ 2266 08bd 10       		.byte	16
+ 2267 08be 44       		.byte	68
+ 2268 08bf 04       		.byte	4
+ 2269 08c0 46       		.byte	70
+ 2270 08c1 20       		.byte	32
+ 2271 08c2 48       		.byte	72
+ 2272 08c3 05       		.byte	5
+ 2273 08c4 49       		.byte	73
+ 2274 08c5 18       		.byte	24
+ 2275 08c6 4A       		.byte	74
+ 2276 08c7 0A       		.byte	10
+ 2277 08c8 4D       		.byte	77
+ 2278 08c9 01       		.byte	1
+ 2279 08ca 4F       		.byte	79
+ 2280 08cb 54       		.byte	84
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 41
+
+
+ 2281 08cc 50       		.byte	80
+ 2282 08cd 08       		.byte	8
+ 2283 08ce 53       		.byte	83
+ 2284 08cf 10       		.byte	16
+ 2285 08d0 56       		.byte	86
+ 2286 08d1 20       		.byte	32
+ 2287 08d2 57       		.byte	87
+ 2288 08d3 20       		.byte	32
+ 2289 08d4 5D       		.byte	93
+ 2290 08d5 01       		.byte	1
+ 2291 08d6 5E       		.byte	94
+ 2292 08d7 80       		.byte	-128
+ 2293 08d8 5F       		.byte	95
+ 2294 08d9 14       		.byte	20
+ 2295 08da 7C       		.byte	124
+ 2296 08db 20       		.byte	32
+ 2297 08dc 90       		.byte	-112
+ 2298 08dd 04       		.byte	4
+ 2299 08de 92       		.byte	-110
+ 2300 08df 10       		.byte	16
+ 2301 08e0 93       		.byte	-109
+ 2302 08e1 80       		.byte	-128
+ 2303 08e2 97       		.byte	-105
+ 2304 08e3 20       		.byte	32
+ 2305 08e4 9A       		.byte	-102
+ 2306 08e5 04       		.byte	4
+ 2307 08e6 9C       		.byte	-100
+ 2308 08e7 20       		.byte	32
+ 2309 08e8 9F       		.byte	-97
+ 2310 08e9 4A       		.byte	74
+ 2311 08ea A0       		.byte	-96
+ 2312 08eb 04       		.byte	4
+ 2313 08ec A4       		.byte	-92
+ 2314 08ed 08       		.byte	8
+ 2315 08ee C0       		.byte	-64
+ 2316 08ef 04       		.byte	4
+ 2317 08f0 C2       		.byte	-62
+ 2318 08f1 0A       		.byte	10
+ 2319 08f2 CA       		.byte	-54
+ 2320 08f3 07       		.byte	7
+ 2321 08f4 CC       		.byte	-52
+ 2322 08f5 8F       		.byte	-113
+ 2323 08f6 CE       		.byte	-50
+ 2324 08f7 2A       		.byte	42
+ 2325 08f8 D0       		.byte	-48
+ 2326 08f9 64       		.byte	100
+ 2327 08fa D2       		.byte	-46
+ 2328 08fb 3C       		.byte	60
+ 2329 08fc D6       		.byte	-42
+ 2330 08fd F0       		.byte	-16
+ 2331 08fe DE       		.byte	-34
+ 2332 08ff 20       		.byte	32
+ 2333 0900 AA       		.byte	-86
+ 2334 0901 10       		.byte	16
+ 2335 0902 EC       		.byte	-20
+ 2336 0903 04       		.byte	4
+ 2337 0904 EA       		.byte	-22
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 42
+
+
+ 2338 0905 01       		.byte	1
+ 2339 0906 30       		.byte	48
+ 2340 0907 02       		.byte	2
+ 2341 0908 33       		.byte	51
+ 2342 0909 40       		.byte	64
+ 2343 090a 36       		.byte	54
+ 2344 090b 40       		.byte	64
+ 2345 090c 84       		.byte	-124
+ 2346 090d 02       		.byte	2
+ 2347 090e CC       		.byte	-52
+ 2348 090f 70       		.byte	112
+ 2349 0910 E2       		.byte	-30
+ 2350 0911 10       		.byte	16
+ 2351 0912 03       		.byte	3
+ 2352 0913 20       		.byte	32
+ 2353 0914 07       		.byte	7
+ 2354 0915 20       		.byte	32
+ 2355 0916 50       		.byte	80
+ 2356 0917 10       		.byte	16
+ 2357 0918 56       		.byte	86
+ 2358 0919 20       		.byte	32
+ 2359 091a 59       		.byte	89
+ 2360 091b 01       		.byte	1
+ 2361 091c 66       		.byte	102
+ 2362 091d 04       		.byte	4
+ 2363 091e 81       		.byte	-127
+ 2364 091f 01       		.byte	1
+ 2365 0920 8E       		.byte	-114
+ 2366 0921 20       		.byte	32
+ 2367 0922 8F       		.byte	-113
+ 2368 0923 20       		.byte	32
+ 2369 0924 90       		.byte	-112
+ 2370 0925 20       		.byte	32
+ 2371 0926 9F       		.byte	-97
+ 2372 0927 40       		.byte	64
+ 2373 0928 A6       		.byte	-90
+ 2374 0929 40       		.byte	64
+ 2375 092a B4       		.byte	-76
+ 2376 092b 10       		.byte	16
+ 2377 092c C0       		.byte	-64
+ 2378 092d 30       		.byte	48
+ 2379 092e D4       		.byte	-44
+ 2380 092f 60       		.byte	96
+ 2381 0930 D6       		.byte	-42
+ 2382 0931 40       		.byte	64
+ 2383 0932 D8       		.byte	-40
+ 2384 0933 80       		.byte	-128
+ 2385 0934 E2       		.byte	-30
+ 2386 0935 20       		.byte	32
+ 2387 0936 3E       		.byte	62
+ 2388 0937 10       		.byte	16
+ 2389 0938 50       		.byte	80
+ 2390 0939 40       		.byte	64
+ 2391 093a 57       		.byte	87
+ 2392 093b 08       		.byte	8
+ 2393 093c 8B       		.byte	-117
+ 2394 093d 08       		.byte	8
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 43
+
+
+ 2395 093e 9F       		.byte	-97
+ 2396 093f 40       		.byte	64
+ 2397 0940 A3       		.byte	-93
+ 2398 0941 20       		.byte	32
+ 2399 0942 AA       		.byte	-86
+ 2400 0943 04       		.byte	4
+ 2401 0944 AE       		.byte	-82
+ 2402 0945 40       		.byte	64
+ 2403 0946 CE       		.byte	-50
+ 2404 0947 20       		.byte	32
+ 2405 0948 D4       		.byte	-44
+ 2406 0949 60       		.byte	96
+ 2407 094a EA       		.byte	-22
+ 2408 094b 80       		.byte	-128
+ 2409 094c EE       		.byte	-18
+ 2410 094d 40       		.byte	64
+ 2411 094e 96       		.byte	-106
+ 2412 094f 10       		.byte	16
+ 2413 0950 9F       		.byte	-97
+ 2414 0951 40       		.byte	64
+ 2415 0952 A3       		.byte	-93
+ 2416 0953 20       		.byte	32
+ 2417 0954 B4       		.byte	-76
+ 2418 0955 40       		.byte	64
+ 2419 0956 10       		.byte	16
+ 2420 0957 10       		.byte	16
+ 2421 0958 14       		.byte	20
+ 2422 0959 20       		.byte	32
+ 2423 095a C4       		.byte	-60
+ 2424 095b 0C       		.byte	12
+ 2425 095c 04       		.byte	4
+ 2426 095d 20       		.byte	32
+ 2427 095e 52       		.byte	82
+ 2428 095f 20       		.byte	32
+ 2429 0960 57       		.byte	87
+ 2430 0961 10       		.byte	16
+ 2431 0962 98       		.byte	-104
+ 2432 0963 30       		.byte	48
+ 2433 0964 C0       		.byte	-64
+ 2434 0965 01       		.byte	1
+ 2435 0966 D4       		.byte	-44
+ 2436 0967 06       		.byte	6
+ 2437 0968 8F       		.byte	-113
+ 2438 0969 10       		.byte	16
+ 2439 096a 98       		.byte	-104
+ 2440 096b 30       		.byte	48
+ 2441 096c A7       		.byte	-89
+ 2442 096d 10       		.byte	16
+ 2443 096e AE       		.byte	-82
+ 2444 096f 20       		.byte	32
+ 2445 0970 B4       		.byte	-76
+ 2446 0971 10       		.byte	16
+ 2447 0972 E0       		.byte	-32
+ 2448 0973 08       		.byte	8
+ 2449 0974 EE       		.byte	-18
+ 2450 0975 02       		.byte	2
+ 2451 0976 98       		.byte	-104
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 44
+
+
+ 2452 0977 30       		.byte	48
+ 2453 0978 A2       		.byte	-94
+ 2454 0979 20       		.byte	32
+ 2455 097a B6       		.byte	-74
+ 2456 097b 20       		.byte	32
+ 2457 097c E8       		.byte	-24
+ 2458 097d 08       		.byte	8
+ 2459 097e 96       		.byte	-106
+ 2460 097f 10       		.byte	16
+ 2461 0980 9F       		.byte	-97
+ 2462 0981 40       		.byte	64
+ 2463 0982 A3       		.byte	-93
+ 2464 0983 20       		.byte	32
+ 2465 0984 52       		.byte	82
+ 2466 0985 20       		.byte	32
+ 2467 0986 53       		.byte	83
+ 2468 0987 01       		.byte	1
+ 2469 0988 57       		.byte	87
+ 2470 0989 08       		.byte	8
+ 2471 098a 5F       		.byte	95
+ 2472 098b 20       		.byte	32
+ 2473 098c 82       		.byte	-126
+ 2474 098d 20       		.byte	32
+ 2475 098e 83       		.byte	-125
+ 2476 098f 01       		.byte	1
+ 2477 0990 87       		.byte	-121
+ 2478 0991 08       		.byte	8
+ 2479 0992 8F       		.byte	-113
+ 2480 0993 20       		.byte	32
+ 2481 0994 AA       		.byte	-86
+ 2482 0995 10       		.byte	16
+ 2483 0996 AB       		.byte	-85
+ 2484 0997 60       		.byte	96
+ 2485 0998 D4       		.byte	-44
+ 2486 0999 E0       		.byte	-32
+ 2487 099a D6       		.byte	-42
+ 2488 099b 20       		.byte	32
+ 2489 099c E6       		.byte	-26
+ 2490 099d E0       		.byte	-32
+ 2491 099e EA       		.byte	-22
+ 2492 099f 80       		.byte	-128
+ 2493 09a0 EC       		.byte	-20
+ 2494 09a1 20       		.byte	32
+ 2495 09a2 EE       		.byte	-18
+ 2496 09a3 80       		.byte	-128
+ 2497 09a4 10       		.byte	16
+ 2498 09a5 40       		.byte	64
+ 2499 09a6 13       		.byte	19
+ 2500 09a7 20       		.byte	32
+ 2501 09a8 14       		.byte	20
+ 2502 09a9 80       		.byte	-128
+ 2503 09aa 62       		.byte	98
+ 2504 09ab 20       		.byte	32
+ 2505 09ac 67       		.byte	103
+ 2506 09ad 02       		.byte	2
+ 2507 09ae 78       		.byte	120
+ 2508 09af 10       		.byte	16
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 45
+
+
+ 2509 09b0 7C       		.byte	124
+ 2510 09b1 20       		.byte	32
+ 2511 09b2 93       		.byte	-109
+ 2512 09b3 02       		.byte	2
+ 2513 09b4 98       		.byte	-104
+ 2514 09b5 30       		.byte	48
+ 2515 09b6 A2       		.byte	-94
+ 2516 09b7 20       		.byte	32
+ 2517 09b8 AB       		.byte	-85
+ 2518 09b9 01       		.byte	1
+ 2519 09ba C4       		.byte	-60
+ 2520 09bb 0E       		.byte	14
+ 2521 09bc D6       		.byte	-42
+ 2522 09bd 01       		.byte	1
+ 2523 09be D8       		.byte	-40
+ 2524 09bf 02       		.byte	2
+ 2525 09c0 DE       		.byte	-34
+ 2526 09c1 03       		.byte	3
+ 2527 09c2 78       		.byte	120
+ 2528 09c3 40       		.byte	64
+ 2529 09c4 7C       		.byte	124
+ 2530 09c5 80       		.byte	-128
+ 2531 09c6 98       		.byte	-104
+ 2532 09c7 C0       		.byte	-64
+ 2533 09c8 AB       		.byte	-85
+ 2534 09c9 20       		.byte	32
+ 2535 09ca DC       		.byte	-36
+ 2536 09cb 01       		.byte	1
+ 2537 09cc DE       		.byte	-34
+ 2538 09cd 04       		.byte	4
+ 2539 09ce 10       		.byte	16
+ 2540 09cf 01       		.byte	1
+ 2541 09d0 11       		.byte	17
+ 2542 09d1 01       		.byte	1
+ 2543 09d2 1A       		.byte	26
+ 2544 09d3 01       		.byte	1
+ 2545 09d4 1B       		.byte	27
+ 2546 09d5 01       		.byte	1
+ 2547 09d6 00       		.byte	0
+ 2548 09d7 3F       		.byte	63
+ 2549 09d8 03       		.byte	3
+ 2550 09d9 C0       		.byte	-64
+ 2551 09da 00       		.byte	0
+ 2552 09db 00       		.byte	0
+ 2553 09dc 24       		.byte	36
+ 2554 09dd 3C       		.byte	60
+ 2555 09de 00       		.byte	0
+ 2556 09df 00       		.byte	0
+ 2557 09e0 30       		.byte	48
+ 2558 09e1 00       		.byte	0
+ 2559 09e2 00       		.byte	0
+ 2560 09e3 00       		.byte	0
+ 2561 09e4 03       		.byte	3
+ 2562 09e5 01       		.byte	1
+ 2563 09e6 00       		.byte	0
+ 2564 09e7 00       		.byte	0
+ 2565 09e8 00       		.byte	0
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 46
+
+
+ 2566 09e9 00       		.byte	0
+ 2567 09ea 00       		.byte	0
+ 2568 09eb 00       		.byte	0
+ 2569 09ec 03       		.byte	3
+ 2570 09ed 01       		.byte	1
+ 2571 09ee 01       		.byte	1
+ 2572 09ef 01       		.byte	1
+ 2573 09f0 03       		.byte	3
+ 2574 09f1 00       		.byte	0
+ 2575 09f2 03       		.byte	3
+ 2576 09f3 00       		.byte	0
+ 2577 09f4 08       		.byte	8
+ 2578 09f5 00       		.byte	0
+ 2579 09f6 03       		.byte	3
+ 2580 09f7 6C       		.byte	108
+ 2581 09f8 6C       		.byte	108
+ 2582 09f9 00       		.byte	0
+ 2583 09fa 6C       		.byte	108
+ 2584 09fb 00       		.byte	0
+ 2585 09fc 00       		.byte	0
+ 2586 09fd 00       		.byte	0
+ 2587 09fe 00       		.byte	0
+ 2588 09ff 00       		.byte	0
+ 2589 0a00 B0       		.byte	-80
+ 2590 0a01 00       		.byte	0
+ 2591 0a02 00       		.byte	0
+ 2592 0a03 8C       		.byte	-116
+ 2593 0a04 BC       		.byte	-68
+ 2594 0a05 00       		.byte	0
+ 2595 0a06 3C       		.byte	60
+ 2596 0a07 00       		.byte	0
+ 2597 0a08 00       		.byte	0
+ 2598 0a09 00       		.byte	0
+ 2599 0a0a 00       		.byte	0
+ 2600 0a0b 00       		.byte	0
+ 2601 0a0c 00       		.byte	0
+ 2602 0a0d 3B       		.byte	59
+ 2603 0a0e 3B       		.byte	59
+ 2604 0a0f 00       		.byte	0
+ 2605 0a10 30       		.byte	48
+ 2606 0a11 00       		.byte	0
+ 2607 0a12 00       		.byte	0
+ 2608 0a13 00       		.byte	0
+ 2609 0a14 08       		.byte	8
+ 2610 0a15 03       		.byte	3
+ 2611 0a16 03       		.byte	3
+ 2612 0a17 00       		.byte	0
+ 2613 0a18 03       		.byte	3
+ 2614 0a19 00       		.byte	0
+ 2615 0a1a 00       		.byte	0
+ 2616 0a1b 00       		.byte	0
+ 2617 0a1c 00       		.byte	0
+ 2618 0a1d 0F       		.byte	15
+ 2619 0a1e 0F       		.byte	15
+ 2620 0a1f 00       		.byte	0
+ 2621 0a20 0F       		.byte	15
+ 2622 0a21 00       		.byte	0
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 47
+
+
+ 2623 0a22 00       		.byte	0
+ 2624 0a23 00       		.byte	0
+ 2625              		.section	.cywolatch,"a",%progbits
+ 2626              		.align	2
+ 2627              		.type	cy_meta_wonvl, %object
+ 2628              		.size	cy_meta_wonvl, 4
+ 2629              	cy_meta_wonvl:
+ 2630 0000 BC       		.byte	-68
+ 2631 0001 90       		.byte	-112
+ 2632 0002 AC       		.byte	-84
+ 2633 0003 AF       		.byte	-81
+ 2634              		.section	.cycustnvl,"a",%progbits
+ 2635              		.align	2
+ 2636              		.type	cy_meta_custnvl, %object
+ 2637              		.size	cy_meta_custnvl, 4
+ 2638              	cy_meta_custnvl:
+ 2639 0000 00       		.byte	0
+ 2640 0001 00       		.byte	0
+ 2641 0002 40       		.byte	64
+ 2642 0003 05       		.byte	5
+ 2643              		.section	.cymeta,"a",%progbits
+ 2644              		.align	2
+ 2645              		.type	cy_metadata, %object
+ 2646              		.size	cy_metadata, 12
+ 2647              	cy_metadata:
+ 2648 0000 00       		.byte	0
+ 2649 0001 01       		.byte	1
+ 2650 0002 2E       		.byte	46
+ 2651 0003 16       		.byte	22
+ 2652 0004 10       		.byte	16
+ 2653 0005 69       		.byte	105
+ 2654 0006 00       		.byte	0
+ 2655 0007 01       		.byte	1
+ 2656 0008 00       		.byte	0
+ 2657 0009 00       		.byte	0
+ 2658 000a 00       		.byte	0
+ 2659 000b 00       		.byte	0
+ 2660              		.section	.cyflashprotect,"a",%progbits
+ 2661              		.align	2
+ 2662              		.type	cy_meta_flashprotect, %object
+ 2663              		.size	cy_meta_flashprotect, 256
+ 2664              	cy_meta_flashprotect:
+ 2665 0000 00000000 		.space	256
+ 2665      00000000 
+ 2665      00000000 
+ 2665      00000000 
+ 2665      00000000 
+ 2666              		.text
+ 2667              	.Letext0:
+ 2668              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 2669              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 2670              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 2671              		.section	.debug_info,"",%progbits
+ 2672              	.Ldebug_info0:
+ 2673 0000 35010000 		.4byte	0x135
+ 2674 0004 0400     		.2byte	0x4
+ 2675 0006 00000000 		.4byte	.Ldebug_abbrev0
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 48
+
+
+ 2676 000a 04       		.byte	0x4
+ 2677 000b 01       		.uleb128 0x1
+ 2678 000c 24000000 		.4byte	.LASF17
+ 2679 0010 0C       		.byte	0xc
+ 2680 0011 C5010000 		.4byte	.LASF18
+ 2681 0015 5F010000 		.4byte	.LASF19
+ 2682 0019 00000000 		.4byte	.Ldebug_line0
+ 2683 001d 02       		.uleb128 0x2
+ 2684 001e 01       		.byte	0x1
+ 2685 001f 06       		.byte	0x6
+ 2686 0020 B9010000 		.4byte	.LASF0
+ 2687 0024 03       		.uleb128 0x3
+ 2688 0025 00000000 		.4byte	.LASF9
+ 2689 0029 01       		.byte	0x1
+ 2690 002a 1D       		.byte	0x1d
+ 2691 002b 2F000000 		.4byte	0x2f
+ 2692 002f 02       		.uleb128 0x2
+ 2693 0030 01       		.byte	0x1
+ 2694 0031 08       		.byte	0x8
+ 2695 0032 16000000 		.4byte	.LASF1
+ 2696 0036 02       		.uleb128 0x2
+ 2697 0037 02       		.byte	0x2
+ 2698 0038 05       		.byte	0x5
+ 2699 0039 A6010000 		.4byte	.LASF2
+ 2700 003d 02       		.uleb128 0x2
+ 2701 003e 02       		.byte	0x2
+ 2702 003f 07       		.byte	0x7
+ 2703 0040 C4000000 		.4byte	.LASF3
+ 2704 0044 02       		.uleb128 0x2
+ 2705 0045 04       		.byte	0x4
+ 2706 0046 05       		.byte	0x5
+ 2707 0047 B0010000 		.4byte	.LASF4
+ 2708 004b 02       		.uleb128 0x2
+ 2709 004c 04       		.byte	0x4
+ 2710 004d 07       		.byte	0x7
+ 2711 004e B2000000 		.4byte	.LASF5
+ 2712 0052 02       		.uleb128 0x2
+ 2713 0053 08       		.byte	0x8
+ 2714 0054 05       		.byte	0x5
+ 2715 0055 51010000 		.4byte	.LASF6
+ 2716 0059 02       		.uleb128 0x2
+ 2717 005a 08       		.byte	0x8
+ 2718 005b 07       		.byte	0x7
+ 2719 005c 06010000 		.4byte	.LASF7
+ 2720 0060 04       		.uleb128 0x4
+ 2721 0061 04       		.byte	0x4
+ 2722 0062 05       		.byte	0x5
+ 2723 0063 696E7400 		.ascii	"int\000"
+ 2724 0067 02       		.uleb128 0x2
+ 2725 0068 04       		.byte	0x4
+ 2726 0069 07       		.byte	0x7
+ 2727 006a F9000000 		.4byte	.LASF8
+ 2728 006e 03       		.uleb128 0x3
+ 2729 006f 1D010000 		.4byte	.LASF10
+ 2730 0073 02       		.byte	0x2
+ 2731 0074 18       		.byte	0x18
+ 2732 0075 24000000 		.4byte	0x24
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 49
+
+
+ 2733 0079 05       		.uleb128 0x5
+ 2734 007a 91000000 		.4byte	0x91
+ 2735 007e 8A000000 		.4byte	0x8a
+ 2736 0082 06       		.uleb128 0x6
+ 2737 0083 8A000000 		.4byte	0x8a
+ 2738 0087 230A     		.2byte	0xa23
+ 2739 0089 00       		.byte	0
+ 2740 008a 02       		.uleb128 0x2
+ 2741 008b 04       		.byte	0x4
+ 2742 008c 07       		.byte	0x7
+ 2743 008d 48010000 		.4byte	.LASF11
+ 2744 0091 07       		.uleb128 0x7
+ 2745 0092 6E000000 		.4byte	0x6e
+ 2746 0096 08       		.uleb128 0x8
+ 2747 0097 E7000000 		.4byte	.LASF12
+ 2748 009b 03       		.byte	0x3
+ 2749 009c 1F       		.byte	0x1f
+ 2750 009d A7000000 		.4byte	0xa7
+ 2751 00a1 05       		.uleb128 0x5
+ 2752 00a2 03       		.byte	0x3
+ 2753 00a3 00000000 		.4byte	cy_meta_configecc
+ 2754 00a7 07       		.uleb128 0x7
+ 2755 00a8 79000000 		.4byte	0x79
+ 2756 00ac 05       		.uleb128 0x5
+ 2757 00ad 91000000 		.4byte	0x91
+ 2758 00b1 BC000000 		.4byte	0xbc
+ 2759 00b5 09       		.uleb128 0x9
+ 2760 00b6 8A000000 		.4byte	0x8a
+ 2761 00ba 03       		.byte	0x3
+ 2762 00bb 00       		.byte	0
+ 2763 00bc 0A       		.uleb128 0xa
+ 2764 00bd D7000000 		.4byte	.LASF13
+ 2765 00c1 03       		.byte	0x3
+ 2766 00c2 7101     		.2byte	0x171
+ 2767 00c4 CE000000 		.4byte	0xce
+ 2768 00c8 05       		.uleb128 0x5
+ 2769 00c9 03       		.byte	0x3
+ 2770 00ca 00000000 		.4byte	cy_meta_custnvl
+ 2771 00ce 07       		.uleb128 0x7
+ 2772 00cf AC000000 		.4byte	0xac
+ 2773 00d3 0A       		.uleb128 0xa
+ 2774 00d4 3A010000 		.4byte	.LASF14
+ 2775 00d8 03       		.byte	0x3
+ 2776 00d9 7F01     		.2byte	0x17f
+ 2777 00db E5000000 		.4byte	0xe5
+ 2778 00df 05       		.uleb128 0x5
+ 2779 00e0 03       		.byte	0x3
+ 2780 00e1 00000000 		.4byte	cy_meta_wonvl
+ 2781 00e5 07       		.uleb128 0x7
+ 2782 00e6 AC000000 		.4byte	0xac
+ 2783 00ea 05       		.uleb128 0x5
+ 2784 00eb 91000000 		.4byte	0x91
+ 2785 00ef FA000000 		.4byte	0xfa
+ 2786 00f3 09       		.uleb128 0x9
+ 2787 00f4 8A000000 		.4byte	0x8a
+ 2788 00f8 FF       		.byte	0xff
+ 2789 00f9 00       		.byte	0
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 50
+
+
+ 2790 00fa 0A       		.uleb128 0xa
+ 2791 00fb 25010000 		.4byte	.LASF15
+ 2792 00ff 03       		.byte	0x3
+ 2793 0100 8D01     		.2byte	0x18d
+ 2794 0102 0C010000 		.4byte	0x10c
+ 2795 0106 05       		.uleb128 0x5
+ 2796 0107 03       		.byte	0x3
+ 2797 0108 00000000 		.4byte	cy_meta_flashprotect
+ 2798 010c 07       		.uleb128 0x7
+ 2799 010d EA000000 		.4byte	0xea
+ 2800 0111 05       		.uleb128 0x5
+ 2801 0112 91000000 		.4byte	0x91
+ 2802 0116 21010000 		.4byte	0x121
+ 2803 011a 09       		.uleb128 0x9
+ 2804 011b 8A000000 		.4byte	0x8a
+ 2805 011f 0B       		.byte	0xb
+ 2806 0120 00       		.byte	0
+ 2807 0121 0A       		.uleb128 0xa
+ 2808 0122 0A000000 		.4byte	.LASF16
+ 2809 0126 03       		.byte	0x3
+ 2810 0127 BA01     		.2byte	0x1ba
+ 2811 0129 33010000 		.4byte	0x133
+ 2812 012d 05       		.uleb128 0x5
+ 2813 012e 03       		.byte	0x3
+ 2814 012f 00000000 		.4byte	cy_metadata
+ 2815 0133 07       		.uleb128 0x7
+ 2816 0134 11010000 		.4byte	0x111
+ 2817 0138 00       		.byte	0
+ 2818              		.section	.debug_abbrev,"",%progbits
+ 2819              	.Ldebug_abbrev0:
+ 2820 0000 01       		.uleb128 0x1
+ 2821 0001 11       		.uleb128 0x11
+ 2822 0002 01       		.byte	0x1
+ 2823 0003 25       		.uleb128 0x25
+ 2824 0004 0E       		.uleb128 0xe
+ 2825 0005 13       		.uleb128 0x13
+ 2826 0006 0B       		.uleb128 0xb
+ 2827 0007 03       		.uleb128 0x3
+ 2828 0008 0E       		.uleb128 0xe
+ 2829 0009 1B       		.uleb128 0x1b
+ 2830 000a 0E       		.uleb128 0xe
+ 2831 000b 10       		.uleb128 0x10
+ 2832 000c 17       		.uleb128 0x17
+ 2833 000d 00       		.byte	0
+ 2834 000e 00       		.byte	0
+ 2835 000f 02       		.uleb128 0x2
+ 2836 0010 24       		.uleb128 0x24
+ 2837 0011 00       		.byte	0
+ 2838 0012 0B       		.uleb128 0xb
+ 2839 0013 0B       		.uleb128 0xb
+ 2840 0014 3E       		.uleb128 0x3e
+ 2841 0015 0B       		.uleb128 0xb
+ 2842 0016 03       		.uleb128 0x3
+ 2843 0017 0E       		.uleb128 0xe
+ 2844 0018 00       		.byte	0
+ 2845 0019 00       		.byte	0
+ 2846 001a 03       		.uleb128 0x3
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 51
+
+
+ 2847 001b 16       		.uleb128 0x16
+ 2848 001c 00       		.byte	0
+ 2849 001d 03       		.uleb128 0x3
+ 2850 001e 0E       		.uleb128 0xe
+ 2851 001f 3A       		.uleb128 0x3a
+ 2852 0020 0B       		.uleb128 0xb
+ 2853 0021 3B       		.uleb128 0x3b
+ 2854 0022 0B       		.uleb128 0xb
+ 2855 0023 49       		.uleb128 0x49
+ 2856 0024 13       		.uleb128 0x13
+ 2857 0025 00       		.byte	0
+ 2858 0026 00       		.byte	0
+ 2859 0027 04       		.uleb128 0x4
+ 2860 0028 24       		.uleb128 0x24
+ 2861 0029 00       		.byte	0
+ 2862 002a 0B       		.uleb128 0xb
+ 2863 002b 0B       		.uleb128 0xb
+ 2864 002c 3E       		.uleb128 0x3e
+ 2865 002d 0B       		.uleb128 0xb
+ 2866 002e 03       		.uleb128 0x3
+ 2867 002f 08       		.uleb128 0x8
+ 2868 0030 00       		.byte	0
+ 2869 0031 00       		.byte	0
+ 2870 0032 05       		.uleb128 0x5
+ 2871 0033 01       		.uleb128 0x1
+ 2872 0034 01       		.byte	0x1
+ 2873 0035 49       		.uleb128 0x49
+ 2874 0036 13       		.uleb128 0x13
+ 2875 0037 01       		.uleb128 0x1
+ 2876 0038 13       		.uleb128 0x13
+ 2877 0039 00       		.byte	0
+ 2878 003a 00       		.byte	0
+ 2879 003b 06       		.uleb128 0x6
+ 2880 003c 21       		.uleb128 0x21
+ 2881 003d 00       		.byte	0
+ 2882 003e 49       		.uleb128 0x49
+ 2883 003f 13       		.uleb128 0x13
+ 2884 0040 2F       		.uleb128 0x2f
+ 2885 0041 05       		.uleb128 0x5
+ 2886 0042 00       		.byte	0
+ 2887 0043 00       		.byte	0
+ 2888 0044 07       		.uleb128 0x7
+ 2889 0045 26       		.uleb128 0x26
+ 2890 0046 00       		.byte	0
+ 2891 0047 49       		.uleb128 0x49
+ 2892 0048 13       		.uleb128 0x13
+ 2893 0049 00       		.byte	0
+ 2894 004a 00       		.byte	0
+ 2895 004b 08       		.uleb128 0x8
+ 2896 004c 34       		.uleb128 0x34
+ 2897 004d 00       		.byte	0
+ 2898 004e 03       		.uleb128 0x3
+ 2899 004f 0E       		.uleb128 0xe
+ 2900 0050 3A       		.uleb128 0x3a
+ 2901 0051 0B       		.uleb128 0xb
+ 2902 0052 3B       		.uleb128 0x3b
+ 2903 0053 0B       		.uleb128 0xb
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 52
+
+
+ 2904 0054 49       		.uleb128 0x49
+ 2905 0055 13       		.uleb128 0x13
+ 2906 0056 3F       		.uleb128 0x3f
+ 2907 0057 19       		.uleb128 0x19
+ 2908 0058 02       		.uleb128 0x2
+ 2909 0059 18       		.uleb128 0x18
+ 2910 005a 00       		.byte	0
+ 2911 005b 00       		.byte	0
+ 2912 005c 09       		.uleb128 0x9
+ 2913 005d 21       		.uleb128 0x21
+ 2914 005e 00       		.byte	0
+ 2915 005f 49       		.uleb128 0x49
+ 2916 0060 13       		.uleb128 0x13
+ 2917 0061 2F       		.uleb128 0x2f
+ 2918 0062 0B       		.uleb128 0xb
+ 2919 0063 00       		.byte	0
+ 2920 0064 00       		.byte	0
+ 2921 0065 0A       		.uleb128 0xa
+ 2922 0066 34       		.uleb128 0x34
+ 2923 0067 00       		.byte	0
+ 2924 0068 03       		.uleb128 0x3
+ 2925 0069 0E       		.uleb128 0xe
+ 2926 006a 3A       		.uleb128 0x3a
+ 2927 006b 0B       		.uleb128 0xb
+ 2928 006c 3B       		.uleb128 0x3b
+ 2929 006d 05       		.uleb128 0x5
+ 2930 006e 49       		.uleb128 0x49
+ 2931 006f 13       		.uleb128 0x13
+ 2932 0070 3F       		.uleb128 0x3f
+ 2933 0071 19       		.uleb128 0x19
+ 2934 0072 02       		.uleb128 0x2
+ 2935 0073 18       		.uleb128 0x18
+ 2936 0074 00       		.byte	0
+ 2937 0075 00       		.byte	0
+ 2938 0076 00       		.byte	0
+ 2939              		.section	.debug_aranges,"",%progbits
+ 2940 0000 14000000 		.4byte	0x14
+ 2941 0004 0200     		.2byte	0x2
+ 2942 0006 00000000 		.4byte	.Ldebug_info0
+ 2943 000a 04       		.byte	0x4
+ 2944 000b 00       		.byte	0
+ 2945 000c 0000     		.2byte	0
+ 2946 000e 0000     		.2byte	0
+ 2947 0010 00000000 		.4byte	0
+ 2948 0014 00000000 		.4byte	0
+ 2949              		.section	.debug_line,"",%progbits
+ 2950              	.Ldebug_line0:
+ 2951 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 2951      02003701 
+ 2951      00000201 
+ 2951      FB0E0D00 
+ 2951      01010101 
+ 2952              	.LASF9:
+ 2953 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 2953      6E74385F 
+ 2953      7400
+ 2954              	.LASF16:
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 53
+
+
+ 2955 000a 63795F6D 		.ascii	"cy_metadata\000"
+ 2955      65746164 
+ 2955      61746100 
+ 2956              	.LASF1:
+ 2957 0016 756E7369 		.ascii	"unsigned char\000"
+ 2957      676E6564 
+ 2957      20636861 
+ 2957      7200
+ 2958              	.LASF17:
+ 2959 0024 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2959      43313120 
+ 2959      352E342E 
+ 2959      31203230 
+ 2959      31363036 
+ 2960 0057 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2960      20726576 
+ 2960      6973696F 
+ 2960      6E203233 
+ 2960      37373135 
+ 2961 008a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2961      66756E63 
+ 2961      74696F6E 
+ 2961      2D736563 
+ 2961      74696F6E 
+ 2962              	.LASF5:
+ 2963 00b2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2963      20756E73 
+ 2963      69676E65 
+ 2963      6420696E 
+ 2963      7400
+ 2964              	.LASF3:
+ 2965 00c4 73686F72 		.ascii	"short unsigned int\000"
+ 2965      7420756E 
+ 2965      7369676E 
+ 2965      65642069 
+ 2965      6E7400
+ 2966              	.LASF13:
+ 2967 00d7 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 2967      6574615F 
+ 2967      63757374 
+ 2967      6E766C00 
+ 2968              	.LASF12:
+ 2969 00e7 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 2969      6574615F 
+ 2969      636F6E66 
+ 2969      69676563 
+ 2969      6300
+ 2970              	.LASF8:
+ 2971 00f9 756E7369 		.ascii	"unsigned int\000"
+ 2971      676E6564 
+ 2971      20696E74 
+ 2971      00
+ 2972              	.LASF7:
+ 2973 0106 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2973      206C6F6E 
+ 2973      6720756E 
+ 2973      7369676E 
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccU840Xc.s 			page 54
+
+
+ 2973      65642069 
+ 2974              	.LASF10:
+ 2975 011d 75696E74 		.ascii	"uint8_t\000"
+ 2975      385F7400 
+ 2976              	.LASF15:
+ 2977 0125 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 2977      6574615F 
+ 2977      666C6173 
+ 2977      6870726F 
+ 2977      74656374 
+ 2978              	.LASF14:
+ 2979 013a 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 2979      6574615F 
+ 2979      776F6E76 
+ 2979      6C00
+ 2980              	.LASF11:
+ 2981 0148 73697A65 		.ascii	"sizetype\000"
+ 2981      74797065 
+ 2981      00
+ 2982              	.LASF6:
+ 2983 0151 6C6F6E67 		.ascii	"long long int\000"
+ 2983      206C6F6E 
+ 2983      6720696E 
+ 2983      7400
+ 2984              	.LASF19:
+ 2985 015f 433A5C55 		.ascii	"C:\\Users\\JamesH\\Desktop\\ECE4191-Team-13-PSoC\\P"
+ 2985      73657273 
+ 2985      5C4A616D 
+ 2985      6573485C 
+ 2985      4465736B 
+ 2986 018d 536F4335 		.ascii	"SoC5_Team13Project.cydsn\000"
+ 2986      5F546561 
+ 2986      6D313350 
+ 2986      726F6A65 
+ 2986      63742E63 
+ 2987              	.LASF2:
+ 2988 01a6 73686F72 		.ascii	"short int\000"
+ 2988      7420696E 
+ 2988      7400
+ 2989              	.LASF4:
+ 2990 01b0 6C6F6E67 		.ascii	"long int\000"
+ 2990      20696E74 
+ 2990      00
+ 2991              	.LASF0:
+ 2992 01b9 7369676E 		.ascii	"signed char\000"
+ 2992      65642063 
+ 2992      68617200 
+ 2993              	.LASF18:
+ 2994 01c5 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 2994      72617465 
+ 2994      645F536F 
+ 2994      75726365 
+ 2994      5C50536F 
+ 2995              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

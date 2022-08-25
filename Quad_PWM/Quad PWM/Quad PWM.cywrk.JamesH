@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Components">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Quad PWM\Quad PWM\Quad PWM.cydwr\Analog">
+<ExpandedNodeIds>
+<v>Quad PWM</v>
+<v>Quad PWM\Quad PWM</v>
+<v>Quad PWM\Quad PWM\TopDesign</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\Pins</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\Analog</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\DMA</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\Clocks</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\Interrupts</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\System</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\Directives</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\Flash Security</v>
+<v>Quad PWM\Quad PWM\Header Files\cyapicallbacks.h</v>
+<v>Quad PWM\Quad PWM\Source Files\main.c</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Quad PWM</v>
+<v>Quad PWM\Quad PWM</v>
+<v>Quad PWM\Quad PWM\TopDesign</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\Pins</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\Analog</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\DMA</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\Clocks</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\Interrupts</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\System</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\Directives</v>
+<v>Quad PWM\Quad PWM\Quad PWM.cydwr\Flash Security</v>
+<v>Quad PWM\Quad PWM\Header Files</v>
+<v>Quad PWM\Quad PWM\Source Files</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Quad PWM\Quad PWM\QuadPWM_v1_0\API">
+<ExpandedNodeIds>
+<v>Quad PWM</v>
+<v>Quad PWM\Quad PWM</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0\API</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0\API\QuadPWM.c</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0\API\QuadPWM.h</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0\QuadPWM_v1_0.cysym</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0\QuadPWM_v1_0.pdf</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0\QuadPWM_v1_0.v</v>
+<v>Quad PWM\Quad PWM\TopDesign</v>
+<v>Quad PWM\Quad PWM\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Quad PWM</v>
+<v>Quad PWM\Quad PWM</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0\API</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0\API\QuadPWM.c</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0\API\QuadPWM.h</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0\QuadPWM_v1_0.cysym</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0\QuadPWM_v1_0.pdf</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0\QuadPWM_v1_0.v</v>
+<v>Quad PWM\Quad PWM\TopDesign</v>
+<v>Quad PWM\Quad PWM\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Quad PWM</v>
+<v>Quad PWM\Quad PWM</v>
+<v>Quad PWM\Quad PWM\Quad PWM.gpdsc</v>
+<v>Quad PWM\Quad PWM\Quad PWM.rpt</v>
+<v>Quad PWM\Quad PWM\Quad PWM_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Quad PWM</v>
+<v>Quad PWM\Quad PWM</v>
+<v>Quad PWM\Quad PWM\Quad PWM.gpdsc</v>
+<v>Quad PWM\Quad PWM\Quad PWM.rpt</v>
+<v>Quad PWM\Quad PWM\Quad PWM_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Quad PWM</v>
+<v>Quad PWM\Quad PWM</v>
+<v>Quad PWM\Quad PWM\PSoC 4 Architecture TRM</v>
+<v>Quad PWM\Quad PWM\PSoC 4200M Family Datasheet</v>
+<v>Quad PWM\Quad PWM\System Reference Guides</v>
+<v>Quad PWM\Quad PWM\System Reference Guides\cy_boot_v5_30</v>
+<v>Quad PWM\Quad PWM\System Reference Guides\cy_dmac_v1_10</v>
+<v>Quad PWM\Quad PWM\System Reference Guides\cy_lfclk_v1_0</v>
+<v>Quad PWM\Quad PWM\cy_clock_v2_20.pdf</v>
+<v>Quad PWM\Quad PWM\cy_pins_v2_20</v>
+<v>Quad PWM\Quad PWM\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Quad PWM</v>
+<v>Quad PWM\Quad PWM</v>
+<v>Quad PWM\Quad PWM\PSoC 4 Architecture TRM</v>
+<v>Quad PWM\Quad PWM\PSoC 4200M Family Datasheet</v>
+<v>Quad PWM\Quad PWM\System Reference Guides</v>
+<v>Quad PWM\Quad PWM\System Reference Guides\cy_boot_v5_30</v>
+<v>Quad PWM\Quad PWM\System Reference Guides\cy_dmac_v1_10</v>
+<v>Quad PWM\Quad PWM\System Reference Guides\cy_lfclk_v1_0</v>
+<v>Quad PWM\Quad PWM\cy_clock_v2_20.pdf</v>
+<v>Quad PWM\Quad PWM\cy_pins_v2_20</v>
+<v>Quad PWM\Quad PWM\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Quad PWM\Quad PWM\QuadPWM_v1_0.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="6c335137-fa19-46ce-bc2d-2fbeb6d5f2a2">
+<CyGuid_70084457-cd6a-4593-9ed0-7f6eeb432dc2 type_name="CyDesigner.Common.ProjMgmt.GUI.CyDependenciesCustomData" version="1">
+<dictName v=".\Quad PWM.cydsn\Quad PWM.cyprj">
+<listName />
+</dictName>
+</CyGuid_70084457-cd6a-4593-9ed0-7f6eeb432dc2>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Quad PWM.cydsn\Quad PWM.cydwr" />
+<name v=".\Quad PWM.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Quad PWM.cydsn\main.c" />
+<name v=".\Quad PWM.cydsn\QuadPWM_v1_0\QuadPWM_v1_0.v" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1235, 487" SelectedTabbedMdiWindow="2016743d-5e98-4f20-8e6b-6028ef6b7096"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="444932ab-19a8-4908-bc87-a1702d023f26" /><DocumentWindow Key="C:\Users\JamesH\Downloads\Quad_PWM\Quad PWM\Quad PWM.cydsn\Quad PWM.cydwr" Guid="32dd787d-95b4-471c-a451-1d387b22a3d9" /><DocumentWindow Key="C:\Users\JamesH\Downloads\Quad_PWM\Quad PWM\Quad PWM.cydsn\TopDesign\TopDesign.cysch" Guid="67423079-670c-41c5-aced-03dbd36c7206" /><DocumentWindow Key="C:\Users\JamesH\Downloads\Quad_PWM\Quad PWM\Quad PWM.cydsn\main.c" Guid="a48080f3-5dec-41da-8441-a7b703d7d822" /><DocumentWindow Key="C:\Users\JamesH\Downloads\Quad_PWM\Quad PWM\Quad PWM.cydsn\QuadPWM_v1_0\QuadPWM_v1_0.v" Guid="2016743d-5e98-4f20-8e6b-6028ef6b7096" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

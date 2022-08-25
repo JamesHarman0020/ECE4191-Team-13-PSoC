@@ -20,6 +20,7 @@
 #include "IMU.h"
 #include "SG90.h"
 #include "TB9051.h"
+#include "HCSR04.h"
 
 // Global Variables
 char rxString[30] = {0};
@@ -46,11 +47,18 @@ int main(void) // THIS SHOULD BE FREERTOS
     //SG90_Begin();
     TB9051_Begin();
     UART_RPi_SetCustomInterruptHandler(&onRx);
+    Timer2_Start();
     
     // Setup the floats for serial receive
     // by putting data at the address of the floats
     B1 = (unsigned char *)&prm1;
     B2 = (unsigned char *)&prm2;
+    
+    //Setup interrupts for ultrasonics
+    E1_Start();
+    E2_Start();
+    E1_ClearPending();
+    E1_StartEx(Capture);
     
     for(;;)
     {  
@@ -60,6 +68,8 @@ int main(void) // THIS SHOULD BE FREERTOS
         CyDelay(2000);
         TB9051_VehReverse(125); */
        //char string[20]; sprintf(string, "Main\n"); UART_PutString(string);
+        CyDelay(1000);
+        distMeasure();
     }
 }
 

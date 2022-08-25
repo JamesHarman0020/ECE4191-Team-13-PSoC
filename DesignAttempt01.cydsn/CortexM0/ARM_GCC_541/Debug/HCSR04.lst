@@ -1,0 +1,428 @@
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc2iR2ar.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"HCSR04.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.distMeasure,"ax",%progbits
+  20              		.align	2
+  21              		.global	distMeasure
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	distMeasure, %function
+  25              	distMeasure:
+  26              	.LFB35:
+  27              		.file 1 "HCSR04.c"
+   1:HCSR04.c      **** /* ========================================
+   2:HCSR04.c      ****  *
+   3:HCSR04.c      ****  * Copyright YOUR COMPANY, THE YEAR
+   4:HCSR04.c      ****  * All Rights Reserved
+   5:HCSR04.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:HCSR04.c      ****  *
+   7:HCSR04.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:HCSR04.c      ****  * WHICH IS THE PROPERTY OF your company.
+   9:HCSR04.c      ****  *
+  10:HCSR04.c      ****  * ========================================
+  11:HCSR04.c      **** */
+  12:HCSR04.c      **** 
+  13:HCSR04.c      **** 
+  14:HCSR04.c      **** #include "stdio.h"
+  15:HCSR04.c      **** #include <stdlib.h>
+  16:HCSR04.c      **** #include "project.h"
+  17:HCSR04.c      **** #include "HCSR04.h"
+  18:HCSR04.c      **** 
+  19:HCSR04.c      **** CY_ISR(Capture);
+  20:HCSR04.c      **** 
+  21:HCSR04.c      **** void distMeasure(){
+  28              		.loc 1 21 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  22:HCSR04.c      **** 
+  23:HCSR04.c      **** }
+  33              		.loc 1 23 0
+  34              		@ sp needed
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc2iR2ar.s 			page 2
+
+
+  35 0000 7047     		bx	lr
+  36              		.cfi_endproc
+  37              	.LFE35:
+  38              		.size	distMeasure, .-distMeasure
+  39 0002 C046     		.section	.text.Capture,"ax",%progbits
+  40              		.align	2
+  41              		.global	Capture
+  42              		.code	16
+  43              		.thumb_func
+  44              		.type	Capture, %function
+  45              	Capture:
+  46              	.LFB36:
+  24:HCSR04.c      **** 
+  25:HCSR04.c      ****     //Setup interrupts, clear interrupts, point interrupts to ISR functions?
+  26:HCSR04.c      ****     
+  27:HCSR04.c      ****     //write the trigger pin high for greater than 10microseconds
+  28:HCSR04.c      ****     
+  29:HCSR04.c      ****     //Wait for a pulse in
+  30:HCSR04.c      ****     // calculate time delta and therefore distance
+  31:HCSR04.c      **** 
+  32:HCSR04.c      **** 
+  33:HCSR04.c      **** CY_ISR(Capture) //ISR3
+  34:HCSR04.c      **** {
+  47              		.loc 1 34 0
+  48              		.cfi_startproc
+  49              		@ args = 0, pretend = 0, frame = 0
+  50              		@ frame_needed = 0, uses_anonymous_args = 0
+  51              		@ link register save eliminated.
+  35:HCSR04.c      ****     
+  36:HCSR04.c      **** }
+  52              		.loc 1 36 0
+  53              		@ sp needed
+  54 0000 7047     		bx	lr
+  55              		.cfi_endproc
+  56              	.LFE36:
+  57              		.size	Capture, .-Capture
+  58 0002 C046     		.text
+  59              	.Letext0:
+  60              		.section	.debug_info,"",%progbits
+  61              	.Ldebug_info0:
+  62 0000 AD000000 		.4byte	0xad
+  63 0004 0400     		.2byte	0x4
+  64 0006 00000000 		.4byte	.Ldebug_abbrev0
+  65 000a 04       		.byte	0x4
+  66 000b 01       		.uleb128 0x1
+  67 000c C8000000 		.4byte	.LASF14
+  68 0010 0C       		.byte	0xc
+  69 0011 1B000000 		.4byte	.LASF15
+  70 0015 7E000000 		.4byte	.LASF16
+  71 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  72 001d 00000000 		.4byte	0
+  73 0021 00000000 		.4byte	.Ldebug_line0
+  74 0025 02       		.uleb128 0x2
+  75 0026 01       		.byte	0x1
+  76 0027 06       		.byte	0x6
+  77 0028 69010000 		.4byte	.LASF0
+  78 002c 02       		.uleb128 0x2
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc2iR2ar.s 			page 3
+
+
+  79 002d 01       		.byte	0x1
+  80 002e 08       		.byte	0x8
+  81 002f 59000000 		.4byte	.LASF1
+  82 0033 02       		.uleb128 0x2
+  83 0034 02       		.byte	0x2
+  84 0035 05       		.byte	0x5
+  85 0036 87010000 		.4byte	.LASF2
+  86 003a 02       		.uleb128 0x2
+  87 003b 02       		.byte	0x2
+  88 003c 07       		.byte	0x7
+  89 003d 56010000 		.4byte	.LASF3
+  90 0041 02       		.uleb128 0x2
+  91 0042 04       		.byte	0x4
+  92 0043 05       		.byte	0x5
+  93 0044 6C000000 		.4byte	.LASF4
+  94 0048 02       		.uleb128 0x2
+  95 0049 04       		.byte	0x4
+  96 004a 07       		.byte	0x7
+  97 004b 24000000 		.4byte	.LASF5
+  98 004f 02       		.uleb128 0x2
+  99 0050 08       		.byte	0x8
+ 100 0051 05       		.byte	0x5
+ 101 0052 00000000 		.4byte	.LASF6
+ 102 0056 02       		.uleb128 0x2
+ 103 0057 08       		.byte	0x8
+ 104 0058 07       		.byte	0x7
+ 105 0059 36000000 		.4byte	.LASF7
+ 106 005d 03       		.uleb128 0x3
+ 107 005e 04       		.byte	0x4
+ 108 005f 05       		.byte	0x5
+ 109 0060 696E7400 		.ascii	"int\000"
+ 110 0064 02       		.uleb128 0x2
+ 111 0065 04       		.byte	0x4
+ 112 0066 07       		.byte	0x7
+ 113 0067 0E000000 		.4byte	.LASF8
+ 114 006b 02       		.uleb128 0x2
+ 115 006c 08       		.byte	0x8
+ 116 006d 04       		.byte	0x4
+ 117 006e 75010000 		.4byte	.LASF9
+ 118 0072 02       		.uleb128 0x2
+ 119 0073 04       		.byte	0x4
+ 120 0074 07       		.byte	0x7
+ 121 0075 75000000 		.4byte	.LASF10
+ 122 0079 02       		.uleb128 0x2
+ 123 007a 01       		.byte	0x1
+ 124 007b 08       		.byte	0x8
+ 125 007c 67000000 		.4byte	.LASF11
+ 126 0080 02       		.uleb128 0x2
+ 127 0081 04       		.byte	0x4
+ 128 0082 04       		.byte	0x4
+ 129 0083 81010000 		.4byte	.LASF12
+ 130 0087 02       		.uleb128 0x2
+ 131 0088 08       		.byte	0x8
+ 132 0089 04       		.byte	0x4
+ 133 008a C1000000 		.4byte	.LASF13
+ 134 008e 04       		.uleb128 0x4
+ 135 008f 4D000000 		.4byte	.LASF17
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc2iR2ar.s 			page 4
+
+
+ 136 0093 01       		.byte	0x1
+ 137 0094 15       		.byte	0x15
+ 138 0095 00000000 		.4byte	.LFB35
+ 139 0099 02000000 		.4byte	.LFE35-.LFB35
+ 140 009d 01       		.uleb128 0x1
+ 141 009e 9C       		.byte	0x9c
+ 142 009f 05       		.uleb128 0x5
+ 143 00a0 91010000 		.4byte	.LASF18
+ 144 00a4 01       		.byte	0x1
+ 145 00a5 21       		.byte	0x21
+ 146 00a6 00000000 		.4byte	.LFB36
+ 147 00aa 02000000 		.4byte	.LFE36-.LFB36
+ 148 00ae 01       		.uleb128 0x1
+ 149 00af 9C       		.byte	0x9c
+ 150 00b0 00       		.byte	0
+ 151              		.section	.debug_abbrev,"",%progbits
+ 152              	.Ldebug_abbrev0:
+ 153 0000 01       		.uleb128 0x1
+ 154 0001 11       		.uleb128 0x11
+ 155 0002 01       		.byte	0x1
+ 156 0003 25       		.uleb128 0x25
+ 157 0004 0E       		.uleb128 0xe
+ 158 0005 13       		.uleb128 0x13
+ 159 0006 0B       		.uleb128 0xb
+ 160 0007 03       		.uleb128 0x3
+ 161 0008 0E       		.uleb128 0xe
+ 162 0009 1B       		.uleb128 0x1b
+ 163 000a 0E       		.uleb128 0xe
+ 164 000b 55       		.uleb128 0x55
+ 165 000c 17       		.uleb128 0x17
+ 166 000d 11       		.uleb128 0x11
+ 167 000e 01       		.uleb128 0x1
+ 168 000f 10       		.uleb128 0x10
+ 169 0010 17       		.uleb128 0x17
+ 170 0011 00       		.byte	0
+ 171 0012 00       		.byte	0
+ 172 0013 02       		.uleb128 0x2
+ 173 0014 24       		.uleb128 0x24
+ 174 0015 00       		.byte	0
+ 175 0016 0B       		.uleb128 0xb
+ 176 0017 0B       		.uleb128 0xb
+ 177 0018 3E       		.uleb128 0x3e
+ 178 0019 0B       		.uleb128 0xb
+ 179 001a 03       		.uleb128 0x3
+ 180 001b 0E       		.uleb128 0xe
+ 181 001c 00       		.byte	0
+ 182 001d 00       		.byte	0
+ 183 001e 03       		.uleb128 0x3
+ 184 001f 24       		.uleb128 0x24
+ 185 0020 00       		.byte	0
+ 186 0021 0B       		.uleb128 0xb
+ 187 0022 0B       		.uleb128 0xb
+ 188 0023 3E       		.uleb128 0x3e
+ 189 0024 0B       		.uleb128 0xb
+ 190 0025 03       		.uleb128 0x3
+ 191 0026 08       		.uleb128 0x8
+ 192 0027 00       		.byte	0
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc2iR2ar.s 			page 5
+
+
+ 193 0028 00       		.byte	0
+ 194 0029 04       		.uleb128 0x4
+ 195 002a 2E       		.uleb128 0x2e
+ 196 002b 00       		.byte	0
+ 197 002c 3F       		.uleb128 0x3f
+ 198 002d 19       		.uleb128 0x19
+ 199 002e 03       		.uleb128 0x3
+ 200 002f 0E       		.uleb128 0xe
+ 201 0030 3A       		.uleb128 0x3a
+ 202 0031 0B       		.uleb128 0xb
+ 203 0032 3B       		.uleb128 0x3b
+ 204 0033 0B       		.uleb128 0xb
+ 205 0034 11       		.uleb128 0x11
+ 206 0035 01       		.uleb128 0x1
+ 207 0036 12       		.uleb128 0x12
+ 208 0037 06       		.uleb128 0x6
+ 209 0038 40       		.uleb128 0x40
+ 210 0039 18       		.uleb128 0x18
+ 211 003a 9742     		.uleb128 0x2117
+ 212 003c 19       		.uleb128 0x19
+ 213 003d 00       		.byte	0
+ 214 003e 00       		.byte	0
+ 215 003f 05       		.uleb128 0x5
+ 216 0040 2E       		.uleb128 0x2e
+ 217 0041 00       		.byte	0
+ 218 0042 3F       		.uleb128 0x3f
+ 219 0043 19       		.uleb128 0x19
+ 220 0044 03       		.uleb128 0x3
+ 221 0045 0E       		.uleb128 0xe
+ 222 0046 3A       		.uleb128 0x3a
+ 223 0047 0B       		.uleb128 0xb
+ 224 0048 3B       		.uleb128 0x3b
+ 225 0049 0B       		.uleb128 0xb
+ 226 004a 27       		.uleb128 0x27
+ 227 004b 19       		.uleb128 0x19
+ 228 004c 11       		.uleb128 0x11
+ 229 004d 01       		.uleb128 0x1
+ 230 004e 12       		.uleb128 0x12
+ 231 004f 06       		.uleb128 0x6
+ 232 0050 40       		.uleb128 0x40
+ 233 0051 18       		.uleb128 0x18
+ 234 0052 9742     		.uleb128 0x2117
+ 235 0054 19       		.uleb128 0x19
+ 236 0055 00       		.byte	0
+ 237 0056 00       		.byte	0
+ 238 0057 00       		.byte	0
+ 239              		.section	.debug_aranges,"",%progbits
+ 240 0000 24000000 		.4byte	0x24
+ 241 0004 0200     		.2byte	0x2
+ 242 0006 00000000 		.4byte	.Ldebug_info0
+ 243 000a 04       		.byte	0x4
+ 244 000b 00       		.byte	0
+ 245 000c 0000     		.2byte	0
+ 246 000e 0000     		.2byte	0
+ 247 0010 00000000 		.4byte	.LFB35
+ 248 0014 02000000 		.4byte	.LFE35-.LFB35
+ 249 0018 00000000 		.4byte	.LFB36
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc2iR2ar.s 			page 6
+
+
+ 250 001c 02000000 		.4byte	.LFE36-.LFB36
+ 251 0020 00000000 		.4byte	0
+ 252 0024 00000000 		.4byte	0
+ 253              		.section	.debug_ranges,"",%progbits
+ 254              	.Ldebug_ranges0:
+ 255 0000 00000000 		.4byte	.LFB35
+ 256 0004 02000000 		.4byte	.LFE35
+ 257 0008 00000000 		.4byte	.LFB36
+ 258 000c 02000000 		.4byte	.LFE36
+ 259 0010 00000000 		.4byte	0
+ 260 0014 00000000 		.4byte	0
+ 261              		.section	.debug_line,"",%progbits
+ 262              	.Ldebug_line0:
+ 263 0000 45000000 		.section	.debug_str,"MS",%progbits,1
+ 263      02001F00 
+ 263      00000201 
+ 263      FB0E0D00 
+ 263      01010101 
+ 264              	.LASF6:
+ 265 0000 6C6F6E67 		.ascii	"long long int\000"
+ 265      206C6F6E 
+ 265      6720696E 
+ 265      7400
+ 266              	.LASF8:
+ 267 000e 756E7369 		.ascii	"unsigned int\000"
+ 267      676E6564 
+ 267      20696E74 
+ 267      00
+ 268              	.LASF15:
+ 269 001b 48435352 		.ascii	"HCSR04.c\000"
+ 269      30342E63 
+ 269      00
+ 270              	.LASF5:
+ 271 0024 6C6F6E67 		.ascii	"long unsigned int\000"
+ 271      20756E73 
+ 271      69676E65 
+ 271      6420696E 
+ 271      7400
+ 272              	.LASF7:
+ 273 0036 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 273      206C6F6E 
+ 273      6720756E 
+ 273      7369676E 
+ 273      65642069 
+ 274              	.LASF17:
+ 275 004d 64697374 		.ascii	"distMeasure\000"
+ 275      4D656173 
+ 275      75726500 
+ 276              	.LASF1:
+ 277 0059 756E7369 		.ascii	"unsigned char\000"
+ 277      676E6564 
+ 277      20636861 
+ 277      7200
+ 278              	.LASF11:
+ 279 0067 63686172 		.ascii	"char\000"
+ 279      00
+ 280              	.LASF4:
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc2iR2ar.s 			page 7
+
+
+ 281 006c 6C6F6E67 		.ascii	"long int\000"
+ 281      20696E74 
+ 281      00
+ 282              	.LASF10:
+ 283 0075 73697A65 		.ascii	"sizetype\000"
+ 283      74797065 
+ 283      00
+ 284              	.LASF16:
+ 285 007e 433A5C55 		.ascii	"C:\\Users\\JamesH\\Desktop\\ECE4191-Team-13-PSoC\\D"
+ 285      73657273 
+ 285      5C4A616D 
+ 285      6573485C 
+ 285      4465736B 
+ 286 00ac 65736967 		.ascii	"esignAttempt01.cydsn\000"
+ 286      6E417474 
+ 286      656D7074 
+ 286      30312E63 
+ 286      7964736E 
+ 287              	.LASF13:
+ 288 00c1 646F7562 		.ascii	"double\000"
+ 288      6C6500
+ 289              	.LASF14:
+ 290 00c8 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 290      43313120 
+ 290      352E342E 
+ 290      31203230 
+ 290      31363036 
+ 291 00fb 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 291      20726576 
+ 291      6973696F 
+ 291      6E203233 
+ 291      37373135 
+ 292 012e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 292      66756E63 
+ 292      74696F6E 
+ 292      2D736563 
+ 292      74696F6E 
+ 293              	.LASF3:
+ 294 0156 73686F72 		.ascii	"short unsigned int\000"
+ 294      7420756E 
+ 294      7369676E 
+ 294      65642069 
+ 294      6E7400
+ 295              	.LASF0:
+ 296 0169 7369676E 		.ascii	"signed char\000"
+ 296      65642063 
+ 296      68617200 
+ 297              	.LASF9:
+ 298 0175 6C6F6E67 		.ascii	"long double\000"
+ 298      20646F75 
+ 298      626C6500 
+ 299              	.LASF12:
+ 300 0181 666C6F61 		.ascii	"float\000"
+ 300      7400
+ 301              	.LASF2:
+ 302 0187 73686F72 		.ascii	"short int\000"
+ 302      7420696E 
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc2iR2ar.s 			page 8
+
+
+ 302      7400
+ 303              	.LASF18:
+ 304 0191 43617074 		.ascii	"Capture\000"
+ 304      75726500 
+ 305              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
