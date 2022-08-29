@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
   28:HCSR04.c      **** float distR[AV_Ln] = {0};
   29:HCSR04.c      **** 
   30:HCSR04.c      **** 
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 2
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 2
 
 
   31:HCSR04.c      **** void HCSR04_Begin(){
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
   72 0038 00000000 		.word	.LANCHOR0
   73              		.cfi_endproc
   74              	.LFE64:
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 3
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 3
 
 
   75              		.size	HCSR04_Begin, .-HCSR04_Begin
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  115              		.global	__aeabi_f2d
  116 0016 00BF     		.section	.text.CaptureL,"ax",%progbits
  117              		.align	2
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 4
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 4
 
 
  118              		.global	CaptureL
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
   86:HCSR04.c      ****     float pulseLength = clicks / (24E6);
  141              		.loc 1 86 0
  142 000e 201A     		subs	r0, r4, r0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 5
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 5
 
 
  143              	.LVL13:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  190              		.loc 1 93 0
  191 0062 2046     		mov	r0, r4
  192 0064 FFF7FEFF 		bl	__aeabi_f2d
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 6
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 6
 
 
  193              	.LVL24:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  241              	distMeasureR:
  242              	.LFB67:
   57:HCSR04.c      ****     US_R_Write(1); //write the trigger pin high for greater than 10microseconds
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 7
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 7
 
 
  243              		.loc 1 57 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
   46:HCSR04.c      ****     }
  291              		.loc 1 46 0
  292 0008 FFF7FEFF 		bl	distMeasureR
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 8
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 8
 
 
  293              	.LVL33:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
   69:HCSR04.c      ****     mCounterR++;
  343              		.loc 1 69 0
  344 0022 1D4D     		ldr	r5, .L31+8
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 9
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 9
 
 
  345 0024 6C69     		ldr	r4, [r5, #20]
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  394              	.L26:
  395              	.LBE5:
   77:HCSR04.c      ****     }
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 10
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 10
 
 
  396              		.loc 1 77 0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  446              	.LC1:
  447 0008 09523A20 		.ascii	"\011R: %f\012\000"
  447      25660A00 
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 11
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 11
 
 
  448              		.bss
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  498 0006 00000000 		.4byte	.Ldebug_abbrev0
  499 000a 04       		.byte	0x4
  500 000b 01       		.uleb128 0x1
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 12
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 12
 
 
  501 000c C3000000 		.4byte	.LASF53
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  555 0078 04       		.byte	0x4
  556 0079 06030000 		.4byte	.LASF9
  557 007d 02       		.uleb128 0x2
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 13
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 13
 
 
  558 007e 04       		.byte	0x4
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  612 00f7 07       		.uleb128 0x7
  613 00f8 18000000 		.4byte	.LVL4
  614 00fc 42040000 		.4byte	0x442
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 14
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 14
 
 
  615 0100 08       		.uleb128 0x8
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  669 0172 30       		.byte	0x30
  670 0173 00       		.byte	0
  671 0174 00       		.byte	0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 15
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 15
 
 
  672 0175 0B       		.uleb128 0xb
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  726 01f0 51       		.byte	0x51
  727 01f1 05       		.uleb128 0x5
  728 01f2 03       		.byte	0x3
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 16
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 16
 
 
  729 01f3 00000000 		.4byte	.LC0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  783 026b 09       		.uleb128 0x9
  784 026c 01       		.uleb128 0x1
  785 026d 50       		.byte	0x50
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 17
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 17
 
 
  786 026e 01       		.uleb128 0x1
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  840 02e0 0C       		.uleb128 0xc
  841 02e1 8D000000 		.4byte	.LASF20
  842 02e5 01       		.byte	0x1
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 18
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 18
 
 
  843 02e6 44       		.byte	0x44
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  897 0352 08000000 		.4byte	.LVL35
  898 0356 BB040000 		.4byte	0x4bb
  899 035a 07       		.uleb128 0x7
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 19
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 19
 
 
  900 035b 0E000000 		.4byte	.LVL36
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  954 03d4 8F010000 		.4byte	.LASF33
  955 03d8 01       		.byte	0x1
  956 03d9 1A       		.byte	0x1a
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 20
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 20
 
 
  957 03da 68000000 		.4byte	0x68
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  1011 0452 00000000 		.4byte	.LASF41
  1012 0456 07       		.byte	0x7
  1013 0457 18       		.byte	0x18
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 21
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 21
 
 
  1014 0458 15       		.uleb128 0x15
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  1068 04d0 6B       		.byte	0x6b
  1069 04d1 00       		.byte	0
  1070              		.section	.debug_abbrev,"",%progbits
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 22
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 22
 
 
  1071              	.Ldebug_abbrev0:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  1125 0035 00       		.byte	0
  1126 0036 05       		.uleb128 0x5
  1127 0037 16       		.uleb128 0x16
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 23
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 23
 
 
  1128 0038 00       		.byte	0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  1182 0073 09       		.uleb128 0x9
  1183 0074 8A8201   		.uleb128 0x410a
  1184 0077 00       		.byte	0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 24
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 24
 
 
  1185 0078 02       		.uleb128 0x2
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  1239 00b2 00       		.byte	0
  1240 00b3 0D       		.uleb128 0xd
  1241 00b4 0B       		.uleb128 0xb
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 25
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 25
 
 
  1242 00b5 01       		.byte	0x1
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  1296 00eb 03       		.uleb128 0x3
  1297 00ec 0E       		.uleb128 0xe
  1298 00ed 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 26
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 26
 
 
  1299 00ee 0B       		.uleb128 0xb
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  1353              	.Ldebug_loc0:
  1354              	.LLST0:
  1355 0000 0E000000 		.4byte	.LVL12
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 27
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 27
 
 
  1356 0004 10000000 		.4byte	.LVL13
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  1410 0086 00000000 		.4byte	0
  1411              	.LLST5:
  1412 008a 5A000000 		.4byte	.LVL46
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 28
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 28
 
 
  1413 008e 5F000000 		.4byte	.LVL47-1
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  1463              	.LASF41:
  1464 0000 455F4C5F 		.ascii	"E_L_StartEx\000"
  1464      53746172 
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 29
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 29
 
 
  1464      74457800 
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  1490      52656164 
  1490      50657269 
  1490      6F6400
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 30
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 30
 
 
  1491              	.LASF25:
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  1512      20696E74 
  1512      00
  1513              	.LASF27:
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 31
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 31
 
 
  1514 01a2 49544D5F 		.ascii	"ITM_RxBuffer\000"
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  1538      206C6F6E 
  1538      6720756E 
  1538      7369676E 
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 32
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 32
 
 
  1538      65642069 
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 1
  1563 02f0 73686F72 		.ascii	"short int\000"
  1563      7420696E 
  1563      7400
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cckFqXxI.s 			page 33
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc0GLsfc.s 			page 33
 
 
  1564              	.LASF24:

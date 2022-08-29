@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
   33              		.cfi_def_cfa_offset 8
   34              		.cfi_offset 3, -8
   35              		.cfi_offset 14, -4
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 2
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 2
 
 
   23:IMU.c         ****     I2C_1_Start(); //Enable I2C In PSOC
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
   79              		.loc 1 33 0
   80 0002 FFF7FEFF 		bl	I2C_1_I2CMasterStatus
   81              	.LVL5:
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 3
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 3
 
 
   82 0006 08BD     		pop	{r3, pc}
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
   42:IMU.c         ****     
   43:IMU.c         **** }
   44:IMU.c         **** 
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 4
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 4
 
 
   45:IMU.c         **** void LIS3MDL_ReadWhoAmIReg(uint8 * rdPtr) {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  174              		.thumb
  175              		.thumb_func
  176              		.type	LIS3MDL_ReadAxisRaw, %function
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 5
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 5
 
 
  177              	LIS3MDL_ReadAxisRaw:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  220 003a 0020     		movs	r0, #0
  221 003c FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
  222              	.LVL20:
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 6
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 6
 
 
   64:IMU.c         ****     Err6 = I2C_1_I2CMasterSendStop(100); 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  267 0024 FFF7FEFF 		bl	I2C_1_I2CMasterSendRestart
  268              	.LVL26:
   74:IMU.c         ****     uint8 rdPtrL, rdPtrH;
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 7
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 7
 
 
   75:IMU.c         ****     Err4 = I2C_1_I2CMasterReadByte(I2C_1_ACK_DATA, &rdPtrL, 1000);                    // (S) DATA |
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
   86:IMU.c         **** void LIS3MDL_ReadCtrlReg(uint8 * CtrlReg1,uint8 * CtrlReg2, uint8 * CtrlReg3, uint8 * CtrlReg4) {
  312              		.loc 1 86 0
  313              		.cfi_startproc
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 8
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 8
 
 
  314              		@ args = 0, pretend = 0, frame = 80
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  362 0036 4FF47A72 		mov	r2, #1000
  363 003a 5146     		mov	r1, r10
  364 003c 0120     		movs	r0, #1
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 9
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 9
 
 
  365              	.LVL46:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  413              		.cfi_def_cfa_offset 32
  414              		@ sp needed
  415 008e BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 10
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 10
 
 
  416              	.LVL59:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  126:IMU.c         ****     I2C_1_I2CMasterWriteByte(0x01,100);                       // Indicate which register you want t
  127:IMU.c         ****     I2C_1_I2CMasterWriteByte(0x00,100);                                        // Write to register
  128:IMU.c         ****     I2C_1_I2CMasterSendStop(100); 
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 11
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 11
 
 
  129:IMU.c         ****         //Enable embedded register functions/filters
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  478              		@ frame_needed = 0, uses_anonymous_args = 0
  479              	.LVL65:
  480 0000 F0B5     		push	{r4, r5, r6, r7, lr}
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 12
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 12
 
 
  481              		.cfi_def_cfa_offset 20
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  528 003e FFF7FEFF 		bl	I2C_1_I2CMasterSendStop
  529              	.LVL79:
  155:IMU.c         ****     char string[80]; sprintf(string, "\nErrors %ld %ld %ld %ld %ld ", Err1,Err2,Err3,Err4,Err5); UA
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 13
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 13
 
 
  530              		.loc 1 155 0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  578              		.loc 1 161 0
  579 0006 4FF47A72 		mov	r2, #1000
  580 000a 0021     		movs	r1, #0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 14
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 14
 
 
  581              	.LVL85:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  626              		.cfi_startproc
  627              		@ args = 0, pretend = 0, frame = 8
  628              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 15
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 15
 
 
  629              	.LVL93:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  671              		.loc 1 182 0
  672 004a 9DF80620 		ldrb	r2, [sp, #6]	@ zero_extendqisi2
  673              	.LVL101:
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 16
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 16
 
 
  183:IMU.c         ****     uint8 rdPtrLS = rdPtrL;
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  718 0016 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
  719              	.LVL108:
  193:IMU.c         ****     I2C_1_I2CMasterSendRestart(LSM6DS3_I2CADD, I2C_1_READ_XFER_MODE, 1000);  // (M) SR | (M) SAD + 
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 17
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 17
 
 
  720              		.loc 1 193 0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  767              	.LVL116:
  201:IMU.c         ****     I2C_1_I2CMasterReadByte(I2C_1_ACK_DATA, &CtrlReg[7], 1000);        
  768              		.loc 1 201 0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 18
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 18
 
 
  769 007a 4FF47A72 		mov	r2, #1000
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  812 0004 0400     		.2byte	0x4
  813 0006 00000000 		.4byte	.Ldebug_abbrev0
  814 000a 04       		.byte	0x4
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 19
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 19
 
 
  815 000b 01       		.uleb128 0x1
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  869 0077 08       		.byte	0x8
  870 0078 04       		.byte	0x4
  871 0079 60010000 		.4byte	.LASF9
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 20
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 20
 
 
  872 007d 02       		.uleb128 0x2
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  926 00ef E6000000 		.4byte	.LASF20
  927 00f3 01       		.byte	0x1
  928 00f4 1B       		.byte	0x1b
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 21
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 21
 
 
  929 00f5 68000000 		.4byte	0x68
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  983 0152 20000000 		.4byte	.LVL3
  984 0156 7F100000 		.4byte	0x107f
  985 015a 6A010000 		.4byte	0x16a
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 22
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 22
 
 
  986 015e 0B       		.uleb128 0xb
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1040 01c1 01       		.byte	0x1
  1041 01c2 28       		.byte	0x28
  1042 01c3 00000000 		.4byte	.LFB67
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 23
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 23
 
 
  1043 01c7 02000000 		.4byte	.LFE67-.LFB67
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1097 023f 1B       		.byte	0x1b
  1098 0240 68000000 		.4byte	0x68
  1099 0244 4A020000 		.4byte	0x24a
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 24
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 24
 
 
  1100 0248 08       		.uleb128 0x8
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1154 02ac 01       		.uleb128 0x1
  1155 02ad 3F       		.byte	0x3f
  1156 02ae 0B       		.uleb128 0xb
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 25
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 25
 
 
  1157 02af 01       		.uleb128 0x1
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1211 0300 50       		.byte	0x50
  1212 0301 02       		.uleb128 0x2
  1213 0302 08       		.byte	0x8
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 26
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 26
 
 
  1214 0303 64       		.byte	0x64
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1268 037b 01       		.byte	0x1
  1269 037c 3A       		.byte	0x3a
  1270 037d AE000000 		.4byte	0xae
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 27
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 27
 
 
  1271 0381 07       		.uleb128 0x7
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1325 03ed 0B       		.uleb128 0xb
  1326 03ee 01       		.uleb128 0x1
  1327 03ef 52       		.byte	0x52
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 28
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 28
 
 
  1328 03f0 03       		.uleb128 0x3
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1382 0444 02       		.uleb128 0x2
  1383 0445 75       		.byte	0x75
  1384 0446 00       		.sleb128 0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 29
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 29
 
 
  1385 0447 0B       		.uleb128 0xb
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1439 04a0 5A000000 		.4byte	.LLST3
  1440 04a4 10       		.uleb128 0x10
  1441 04a5 EF030000 		.4byte	.LASF27
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 30
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 30
 
 
  1442 04a9 01       		.byte	0x1
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1496 051e 01       		.byte	0x1
  1497 051f 4A       		.byte	0x4a
  1498 0520 96000000 		.4byte	0x96
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 31
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 31
 
 
  1499 0524 02       		.uleb128 0x2
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1553 058a 0B       		.uleb128 0xb
  1554 058b 01       		.uleb128 0x1
  1555 058c 52       		.byte	0x52
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 32
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 32
 
 
  1556 058d 03       		.uleb128 0x3
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1610 05e1 02       		.uleb128 0x2
  1611 05e2 91       		.byte	0x91
  1612 05e3 77       		.sleb128 -9
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 33
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 33
 
 
  1613 05e4 0B       		.uleb128 0xb
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1667 063d 01       		.byte	0x1
  1668 063e 56       		.byte	0x56
  1669 063f 06030000 		.4byte	0x306
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 34
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 34
 
 
  1670 0643 97000000 		.4byte	.LLST5
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1724 06ca DD010000 		.4byte	.LLST14
  1725 06ce 07       		.uleb128 0x7
  1726 06cf F7020000 		.4byte	.LASF19
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 35
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 35
 
 
  1727 06d3 01       		.byte	0x1
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1781 0743 4E       		.byte	0x4e
  1782 0744 0B       		.uleb128 0xb
  1783 0745 01       		.uleb128 0x1
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 36
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 36
 
 
  1784 0746 51       		.byte	0x51
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1838 079a 50       		.byte	0x50
  1839 079b 01       		.uleb128 0x1
  1840 079c 31       		.byte	0x31
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 37
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 37
 
 
  1841 079d 0B       		.uleb128 0xb
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1895 07e7 0A       		.byte	0xa
  1896 07e8 E803     		.2byte	0x3e8
  1897 07ea 00       		.byte	0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 38
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 38
 
 
  1898 07eb 0A       		.uleb128 0xa
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  1952 0841 00       		.sleb128 0
  1953 0842 0B       		.uleb128 0xb
  1954 0843 01       		.uleb128 0x1
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 39
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 39
 
 
  1955 0844 53       		.byte	0x53
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2009 0896 EF030000 		.4byte	.LASF27
  2010 089a 01       		.byte	0x1
  2011 089b 67       		.byte	0x67
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 40
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 40
 
 
  2012 089c AE000000 		.4byte	0xae
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2066 0914 10000000 		.4byte	.LVL61
  2067 0918 74100000 		.4byte	0x1074
  2068 091c 32090000 		.4byte	0x932
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 41
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 41
 
 
  2069 0920 0B       		.uleb128 0xb
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2123 096e 0B       		.uleb128 0xb
  2124 096f 01       		.uleb128 0x1
  2125 0970 50       		.byte	0x50
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 42
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 42
 
 
  2126 0971 02       		.uleb128 0x2
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2180 09ec 68000000 		.4byte	0x68
  2181 09f0 F6090000 		.4byte	0x9f6
  2182 09f4 08       		.uleb128 0x8
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 43
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 43
 
 
  2183 09f5 00       		.byte	0
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2237 0a5f 01       		.uleb128 0x1
  2238 0a60 30       		.byte	0x30
  2239 0a61 0B       		.uleb128 0xb
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 44
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 44
 
 
  2240 0a62 01       		.uleb128 0x1
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2294 0ab6 01       		.uleb128 0x1
  2295 0ab7 51       		.byte	0x51
  2296 0ab8 02       		.uleb128 0x2
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 45
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 45
 
 
  2297 0ab9 77       		.byte	0x77
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2351 0b06 00       		.sleb128 0
  2352 0b07 0B       		.uleb128 0xb
  2353 0b08 02       		.uleb128 0x2
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 46
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 46
 
 
  2354 0b09 7D       		.byte	0x7d
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2408 0b76 05000000 		.4byte	.LASF30
  2409 0b7a 01       		.byte	0x1
  2410 0b7b A0       		.byte	0xa0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 47
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 47
 
 
  2411 0b7c AE000000 		.4byte	0xae
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2465 0bf4 0B0C0000 		.4byte	0xc0b
  2466 0bf8 0B       		.uleb128 0xb
  2467 0bf9 01       		.uleb128 0x1
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 48
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 48
 
 
  2468 0bfa 50       		.byte	0x50
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2522 0c45 00       		.byte	0
  2523 0c46 0A       		.uleb128 0xa
  2524 0c47 34000000 		.4byte	.LVL90
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 49
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 49
 
 
  2525 0c4b AB100000 		.4byte	0x10ab
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2579 0c98 AA000000 		.4byte	.LASF54
  2580 0c9c 01       		.byte	0x1
  2581 0c9d AA       		.byte	0xaa
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 50
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 50
 
 
  2582 0c9e 00000000 		.4byte	.LFB75
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2636 0d19 1F0D0000 		.4byte	0xd1f
  2637 0d1d 08       		.uleb128 0x8
  2638 0d1e 00       		.byte	0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 51
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 51
 
 
  2639 0d1f 07       		.uleb128 0x7
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2693 0d8b 12000000 		.4byte	.LVL95
  2694 0d8f 74100000 		.4byte	0x1074
  2695 0d93 A90D0000 		.4byte	0xda9
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 52
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 52
 
 
  2696 0d97 0B       		.uleb128 0xb
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2750 0de2 00       		.byte	0
  2751 0de3 0A       		.uleb128 0xa
  2752 0de4 36000000 		.4byte	.LVL98
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 53
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 53
 
 
  2753 0de8 AB100000 		.4byte	0x10ab
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2807 0e35 C4000000 		.4byte	.LASF55
  2808 0e39 01       		.byte	0x1
  2809 0e3a BD       		.byte	0xbd
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 54
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 54
 
 
  2810 0e3b 00000000 		.4byte	.LFB76
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2864 0eb6 CD0E0000 		.4byte	0xecd
  2865 0eba 0B       		.uleb128 0xb
  2866 0ebb 01       		.uleb128 0x1
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 55
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 55
 
 
  2867 0ebc 50       		.byte	0x50
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2921 0f07 0A       		.uleb128 0xa
  2922 0f08 32000000 		.4byte	.LVL110
  2923 0f0c AB100000 		.4byte	0x10ab
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 56
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 56
 
 
  2924 0f10 270F0000 		.4byte	0xf27
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  2978 0f5d 74       		.byte	0x74
  2979 0f5e 02       		.sleb128 2
  2980 0f5f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 57
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 57
 
 
  2981 0f60 01       		.uleb128 0x1
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3035 0fb4 0B       		.uleb128 0xb
  3036 0fb5 01       		.uleb128 0x1
  3037 0fb6 50       		.byte	0x50
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 58
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 58
 
 
  3038 0fb7 01       		.uleb128 0x1
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3092 1001 52       		.byte	0x52
  3093 1002 03       		.uleb128 0x3
  3094 1003 0A       		.byte	0xa
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 59
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 59
 
 
  3095 1004 E803     		.2byte	0x3e8
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3149 1055 64       		.byte	0x64
  3150 1056 00       		.byte	0
  3151 1057 00       		.byte	0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 60
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 60
 
 
  3152 1058 16       		.uleb128 0x16
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3206              	.Ldebug_abbrev0:
  3207 0000 01       		.uleb128 0x1
  3208 0001 11       		.uleb128 0x11
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 61
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 61
 
 
  3209 0002 01       		.byte	0x1
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3263 0038 00       		.byte	0
  3264 0039 03       		.uleb128 0x3
  3265 003a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 62
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 62
 
 
  3266 003b 3A       		.uleb128 0x3a
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3320 0072 00       		.byte	0
  3321 0073 09       		.uleb128 0x9
  3322 0074 898201   		.uleb128 0x4109
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 63
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 63
 
 
  3323 0077 00       		.byte	0
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3377 00b5 19       		.uleb128 0x19
  3378 00b6 00       		.byte	0
  3379 00b7 00       		.byte	0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 64
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 64
 
 
  3380 00b8 0E       		.uleb128 0xe
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3434 00ef 0F       		.uleb128 0xf
  3435 00f0 00       		.byte	0
  3436 00f1 0B       		.uleb128 0xb
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 65
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 65
 
 
  3437 00f2 0B       		.uleb128 0xb
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3491 0128 34       		.uleb128 0x34
  3492 0129 00       		.byte	0
  3493 012a 03       		.uleb128 0x3
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 66
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 66
 
 
  3494 012b 0E       		.uleb128 0xe
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3548 0026 0100     		.2byte	0x1
  3549 0028 50       		.byte	0x50
  3550 0029 0E000000 		.4byte	.LVL15
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 67
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 67
 
 
  3551 002d 48000000 		.4byte	.LFE69
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3605 00ba 9F       		.byte	0x9f
  3606 00bb 00000000 		.4byte	0
  3607 00bf 00000000 		.4byte	0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 68
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 68
 
 
  3608              	.LLST6:
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3662              	.LLST9:
  3663 0147 1C000000 		.4byte	.LVL39
  3664 014b 22000000 		.4byte	.LVL40
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 69
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 69
 
 
  3665 014f 0100     		.2byte	0x1
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3719 01e1 82000000 		.4byte	.LVL56
  3720 01e5 0100     		.2byte	0x1
  3721 01e7 50       		.byte	0x50
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 70
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 70
 
 
  3722 01e8 82000000 		.4byte	.LVL56
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3776 0278 0100     		.2byte	0x1
  3777 027a 56       		.byte	0x56
  3778 027b 00000000 		.4byte	0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 71
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 71
 
 
  3779 027f 00000000 		.4byte	0
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3833 0312 54       		.byte	0x54
  3834 0313 00000000 		.4byte	0
  3835 0317 00000000 		.4byte	0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 72
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 72
 
 
  3836              	.LLST24:
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3890 006c 5C000000 		.4byte	.LFE75-.LFB75
  3891 0070 00000000 		.4byte	.LFB76
  3892 0074 AA000000 		.4byte	.LFE76-.LFB76
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 73
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 73
 
 
  3893 0078 00000000 		.4byte	0
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3937      42656769 
  3937      6E00
  3938              	.LASF24:
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 74
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 74
 
 
  3939 0022 4932435F 		.ascii	"I2C_1_I2CMasterStatus\000"
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3963      7400
  3964              	.LASF55:
  3965 00c4 4C534D36 		.ascii	"LSM6DS3_ReadCtrlReg\000"
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 75
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 75
 
 
  3965      4453335F 
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  3988              	.LASF35:
  3989 0172 4C495333 		.ascii	"LIS3MDL_ReadAxisRaw\000"
  3989      4D444C5F 
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 76
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 76
 
 
  3989      52656164 
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  4011      7369676E 
  4011      65642069 
  4011      6E7400
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 77
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 77
 
 
  4012              	.LASF11:
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 1
  4036      434D6173 
  4036      74657253 
  4036      656E6453 
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccbAvOlj.s 			page 78
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cc4jWNBZ.s 			page 78
 
 
  4037              	.LASF56:

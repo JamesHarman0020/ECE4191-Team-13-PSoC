@@ -109,8 +109,8 @@
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\I2C_1_SLAVE.c" value="SOURCE_C;CortexM3;;;;I2C_1" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\I2C_1_MASTER.c" value="SOURCE_C;CortexM3;;;;I2C_1" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\I2C_1_PVT.h" value="HEADER;;;;;I2C_1" />
-  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\RX.c" value="SOURCE_C;CortexM3;;;;RX" />
-  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\RX.h" value="HEADER;;;;;RX" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\RXcmplt.c" value="SOURCE_C;CortexM3;;;;RXcmplt" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\RXcmplt.h" value="HEADER;;;;;RXcmplt" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Timer_R.c" value="SOURCE_C;CortexM3;;;;Timer_R" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Timer_R.h" value="HEADER;;;;;Timer_R" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Timer_R_PM.c" value="SOURCE_C;CortexM3;;;;Timer_R" />
@@ -119,6 +119,8 @@
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\US_R.h" value="HEADER;;;;;US_R" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\US_R.c" value="SOURCE_C;CortexM3;;;;US_R" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\US_R_PM.c" value="SOURCE_C;CortexM3;;;;US_R" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\rxDMA_dma.c" value="SOURCE_C;CortexM3;;;;rxDMA" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\rxDMA_dma.h" value="HEADER;;;;;rxDMA" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\UART_RPi_IntClock.c" value="SOURCE_C;CortexM3;;;;UART_RPi_IntClock" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\UART_RPi_IntClock.h" value="HEADER;;;;;UART_RPi_IntClock" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />

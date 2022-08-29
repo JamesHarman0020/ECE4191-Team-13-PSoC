@@ -11,7 +11,7 @@
 */
 #include "TB9051.h"
 #include "project.h"
-#include <math.h>
+#define PI 3.141529
 
 void TB9051_Begin()
 {
@@ -99,6 +99,31 @@ void TB9051_Brake(int motor)
 }
 
 void TB9051_VehMoveTo(float x, float y){
+    ///// JINGWEI NAVIGATION /////
+    // float r,d，v,w;
+    // int ticks_per_rev, ticks_l, ticks_r;
+    // float S_l = 2*PI*r*ticks_l/ticks_per_rev;
+    // float S_r = 2*PI*r*ticks_r/ticks_per_rev;
 
-};
+    // float fai = (S_r - S_l)/d;
+
+    float d = 0.19; //distance between two wheels
+    float t = 2; // time to reach the destination
+    float r_wheel = 0.028; // radien of wheels
+    //float a[2] = {0, 0},b[2] = {x, y}; //oringinal opint and destination point
+    float theta = atan(y/x);
+    float r = (pow(x,2)+pow(y,2))/(2*sqrt((pow(x,2)+pow(y,2)))*cos(theta)); //radien of mid point
+    float r_right = r - d/2;
+    float r_left = r + d/2;
+    float v_right = theta*2*PI*r_right/(360*theta); // linear speed of right wheel
+    float v_left = theta*2*PI*r_left/(360*theta); // linear speed of left wheel
+    float w_r = v_right/r_wheel; // angular speed of right wheel
+    float w_l = v_left/r_wheel; // angular speed of left wheel
+    float vRel_left = round(v_left * 255);    // REPLACE THESE
+    float vRel_right = round(v_right * 255);
+    char string[20]; sprintf(string, "R: %f. L: %f \n", vRel_right, vRel_left); UART_PutString(string);
+    
+    TB9051_Forward(0, vRel_right);
+    TB9051_Forward(1, vRel_left);
+}
 /* [] END OF FILE */

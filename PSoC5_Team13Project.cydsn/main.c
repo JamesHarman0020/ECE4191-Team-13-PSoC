@@ -33,11 +33,23 @@ int mask = 0xff;
 int startFlag = 0;
 uint16 rxByte;
 char string[30];
-unsigned char RxBuffer[9] = {0};
+uint8 rxBuffer[10] = {0};
 
 //Functions
 void onRx();
-CY_ISR(readRX);
+CY_ISR(readBuf);
+void DMA_Config();
+
+   /* Defines for rxDMA */
+#define rxDMA_BYTES_PER_BURST 1
+#define rxDMA_REQUEST_PER_BURST 1
+#define rxDMA_SRC_BASE (CYDEV_PERIPH_BASE)
+#define rxDMA_DST_BASE (CYDEV_SRAM_BASE)
+
+/* Variable declarations for rxDMA */
+/* Move these variable declarations to the top of the function */
+uint8 rxDMA_Chan;
+uint8 rxDMA_TD[1];
 
 
 int main(void) // THIS SHOULD BE FREERTOS 
@@ -51,6 +63,7 @@ int main(void) // THIS SHOULD BE FREERTOS
     //SG90_Begin();
     TB9051_Begin();
     HCSR04_Begin();
+    DMA_Config();
     
     // Setup the floats for serial receive
     // by putting data at the address of the floats
@@ -58,9 +71,9 @@ int main(void) // THIS SHOULD BE FREERTOS
     B2 = (unsigned char *)&prm2;
     
     //Setup interrupts
-    RX_Start();
-    RX_ClearPending();
-    RX_StartEx(readRX);
+    RXcmplt_Start();
+    RXcmplt_ClearPending();
+    RXcmplt_StartEx(readBuf);
     
     for(;;)
     {  
@@ -70,41 +83,36 @@ int main(void) // THIS SHOULD BE FREERTOS
         CyDelay(2000);
         TB9051_VehReverse(125); */
        //char string[20]; sprintf(string, "Main\n"); UART_PutString(string);
-       CyDelay(200);
-       distMeasure();
+       //CyDelay(200);
+       //TB9051_VehMoveTo(15.000, 5.000);   
+    //distMeasure();
        
     }
 }
 
 // User Functions
-
-CY_ISR(readRX) 
-{   
-    rxByte = UART_RPi_GetByte() & mask;      // rxByte only contains data in bits 7-0            
-    if (rxByte == 0xff) {                   // Start byte
-        startFlag = 1;
-        rxCount = 0;
-    }
-    else if (startFlag) {
-        switch (rxCount) {
-            case 1: fn = (char)rxByte;      break;   //fn byte
-            case 2: B1[0] = (char)rxByte;   break;  //float 1 [4 bytes]
-            case 3: B1[1] = (char)rxByte;   break;
-            case 4: B1[2] = (char)rxByte;   break;
-            case 5: B1[3] = (char)rxByte;   break;
-            case 6: B2[0] = (char)rxByte;   break;  //float 2 [4 bytes]
-            case 7: B2[1] = (char)rxByte;   break;
-            case 8: B2[2] = (char)rxByte;   break;
-            case 9: B2[3] = (char)rxByte;   break;
+CY_ISR(readBuf){
+    if (rxBuffer[10] == 0x00) {
+        fn = (char)rxBuffer[1];
+        for (int i = 0; i < 4; i++) {
+            B1[i] = (char)rxBuffer[i+2];
+            B2[i] = (char)rxBuffer[i+6];
         }
     }
-    
-    if (rxCount < 9) rxCount++; 
-    else {
-        rxCount = 0; startFlag = 0;         // Reset and wait for start bit
-        sprintf(string,"%i: %0.3f %0.3f \n",fn,prm1,prm2); UART_PutString(string);
-        UART_RPi_ClearRxBuffer();
-        //fnCall(fn,prm1,prm2);
-        
+    for (int i = 0; i < 10; i++) {
+         sprintf(string,"%x ",rxBuffer[i]); UART_PutString(string);
     }
+    sprintf(string,"\t %i: %0.3f %0.3f \n",fn,prm1,prm2); UART_PutString(string);
+    fnCall(fn,prm1,prm2);
+}
+
+/* DMA Configuration for rxDMA */
+void DMA_Config() {
+    rxDMA_Chan = rxDMA_DmaInitialize(rxDMA_BYTES_PER_BURST, rxDMA_REQUEST_PER_BURST, 
+        HI16(rxDMA_SRC_BASE), HI16(rxDMA_DST_BASE));
+    rxDMA_TD[0] = CyDmaTdAllocate();
+    CyDmaTdSetConfiguration(rxDMA_TD[0], 10, rxDMA_TD[0], rxDMA__TD_TERMOUT_EN | CY_DMA_TD_INC_DST_ADR);
+    CyDmaTdSetAddress(rxDMA_TD[0], LO16((uint32)UART_RPi_RXDATA_PTR), LO16((uint32)rxBuffer));
+    CyDmaChSetInitialTd(rxDMA_Chan, rxDMA_TD[0]);
+    CyDmaChEnable(rxDMA_Chan, 1);
 }

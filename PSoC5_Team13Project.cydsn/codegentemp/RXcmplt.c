@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: RX.c  
+* File Name: RXcmplt.c  
 * Version 1.70
 *
 *  Description:
@@ -18,15 +18,15 @@
 
 #include <cydevice_trm.h>
 #include <CyLib.h>
-#include <RX.h>
+#include <RXcmplt.h>
 #include "cyapicallbacks.h"
 
-#if !defined(RX__REMOVED) /* Check for removal by optimization */
+#if !defined(RXcmplt__REMOVED) /* Check for removal by optimization */
 
 /*******************************************************************************
 *  Place your includes, defines and code here 
 ********************************************************************************/
-/* `#START RX_intc` */
+/* `#START RXcmplt_intc` */
 
 /* `#END` */
 
@@ -42,7 +42,7 @@ CY_ISR_PROTO(IntDefaultHandler);
 
 
 /*******************************************************************************
-* Function Name: RX_Start
+* Function Name: RXcmplt_Start
 ********************************************************************************
 *
 * Summary:
@@ -58,24 +58,24 @@ CY_ISR_PROTO(IntDefaultHandler);
 *   None
 *
 *******************************************************************************/
-void RX_Start(void)
+void RXcmplt_Start(void)
 {
     /* For all we know the interrupt is active. */
-    RX_Disable();
+    RXcmplt_Disable();
 
-    /* Set the ISR to point to the RX Interrupt. */
-    RX_SetVector(&RX_Interrupt);
+    /* Set the ISR to point to the RXcmplt Interrupt. */
+    RXcmplt_SetVector(&RXcmplt_Interrupt);
 
     /* Set the priority. */
-    RX_SetPriority((uint8)RX_INTC_PRIOR_NUMBER);
+    RXcmplt_SetPriority((uint8)RXcmplt_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    RX_Enable();
+    RXcmplt_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: RX_StartEx
+* Function Name: RXcmplt_StartEx
 ********************************************************************************
 *
 * Summary:
@@ -101,24 +101,24 @@ void RX_Start(void)
 *   None
 *
 *******************************************************************************/
-void RX_StartEx(cyisraddress address)
+void RXcmplt_StartEx(cyisraddress address)
 {
     /* For all we know the interrupt is active. */
-    RX_Disable();
+    RXcmplt_Disable();
 
-    /* Set the ISR to point to the RX Interrupt. */
-    RX_SetVector(address);
+    /* Set the ISR to point to the RXcmplt Interrupt. */
+    RXcmplt_SetVector(address);
 
     /* Set the priority. */
-    RX_SetPriority((uint8)RX_INTC_PRIOR_NUMBER);
+    RXcmplt_SetPriority((uint8)RXcmplt_INTC_PRIOR_NUMBER);
 
     /* Enable it. */
-    RX_Enable();
+    RXcmplt_Enable();
 }
 
 
 /*******************************************************************************
-* Function Name: RX_Stop
+* Function Name: RXcmplt_Stop
 ********************************************************************************
 *
 * Summary:
@@ -131,22 +131,22 @@ void RX_StartEx(cyisraddress address)
 *   None
 *
 *******************************************************************************/
-void RX_Stop(void)
+void RXcmplt_Stop(void)
 {
     /* Disable this interrupt. */
-    RX_Disable();
+    RXcmplt_Disable();
 
     /* Set the ISR to point to the passive one. */
-    RX_SetVector(&IntDefaultHandler);
+    RXcmplt_SetVector(&IntDefaultHandler);
 }
 
 
 /*******************************************************************************
-* Function Name: RX_Interrupt
+* Function Name: RXcmplt_Interrupt
 ********************************************************************************
 *
 * Summary:
-*   The default Interrupt Service Routine for RX.
+*   The default Interrupt Service Routine for RXcmplt.
 *
 *   Add custom code between the coments to keep the next version of this file
 *   from over writting your code.
@@ -157,27 +157,27 @@ void RX_Stop(void)
 *   None
 *
 *******************************************************************************/
-CY_ISR(RX_Interrupt)
+CY_ISR(RXcmplt_Interrupt)
 {
-    #ifdef RX_INTERRUPT_INTERRUPT_CALLBACK
-        RX_Interrupt_InterruptCallback();
-    #endif /* RX_INTERRUPT_INTERRUPT_CALLBACK */ 
+    #ifdef RXcmplt_INTERRUPT_INTERRUPT_CALLBACK
+        RXcmplt_Interrupt_InterruptCallback();
+    #endif /* RXcmplt_INTERRUPT_INTERRUPT_CALLBACK */ 
 
     /*  Place your Interrupt code here. */
-    /* `#START RX_Interrupt` */
+    /* `#START RXcmplt_Interrupt` */
 
     /* `#END` */
 }
 
 
 /*******************************************************************************
-* Function Name: RX_SetVector
+* Function Name: RXcmplt_SetVector
 ********************************************************************************
 *
 * Summary:
-*   Change the ISR vector for the Interrupt. Note calling RX_Start
+*   Change the ISR vector for the Interrupt. Note calling RXcmplt_Start
 *   will override any effect this method would have had. To set the vector 
-*   before the component has been started use RX_StartEx instead.
+*   before the component has been started use RXcmplt_StartEx instead.
 * 
 *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
 *   used to provide consistent definition across compilers:
@@ -197,18 +197,18 @@ CY_ISR(RX_Interrupt)
 *   None
 *
 *******************************************************************************/
-void RX_SetVector(cyisraddress address)
+void RXcmplt_SetVector(cyisraddress address)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    ramVectorTable[CYINT_IRQ_BASE + (uint32)RX__INTC_NUMBER] = address;
+    ramVectorTable[CYINT_IRQ_BASE + (uint32)RXcmplt__INTC_NUMBER] = address;
 }
 
 
 /*******************************************************************************
-* Function Name: RX_GetVector
+* Function Name: RXcmplt_GetVector
 ********************************************************************************
 *
 * Summary:
@@ -221,26 +221,26 @@ void RX_SetVector(cyisraddress address)
 *   Address of the ISR in the interrupt vector table.
 *
 *******************************************************************************/
-cyisraddress RX_GetVector(void)
+cyisraddress RXcmplt_GetVector(void)
 {
     cyisraddress * ramVectorTable;
 
     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
 
-    return ramVectorTable[CYINT_IRQ_BASE + (uint32)RX__INTC_NUMBER];
+    return ramVectorTable[CYINT_IRQ_BASE + (uint32)RXcmplt__INTC_NUMBER];
 }
 
 
 /*******************************************************************************
-* Function Name: RX_SetPriority
+* Function Name: RXcmplt_SetPriority
 ********************************************************************************
 *
 * Summary:
 *   Sets the Priority of the Interrupt. 
 *
-*   Note calling RX_Start or RX_StartEx will 
+*   Note calling RXcmplt_Start or RXcmplt_StartEx will 
 *   override any effect this API would have had. This API should only be called
-*   after RX_Start or RX_StartEx has been called. 
+*   after RXcmplt_Start or RXcmplt_StartEx has been called. 
 *   To set the initial priority for the component, use the Design-Wide Resources
 *   Interrupt Editor.
 *
@@ -255,14 +255,14 @@ cyisraddress RX_GetVector(void)
 *   None
 *
 *******************************************************************************/
-void RX_SetPriority(uint8 priority)
+void RXcmplt_SetPriority(uint8 priority)
 {
-    *RX_INTC_PRIOR = priority << 5;
+    *RXcmplt_INTC_PRIOR = priority << 5;
 }
 
 
 /*******************************************************************************
-* Function Name: RX_GetPriority
+* Function Name: RXcmplt_GetPriority
 ********************************************************************************
 *
 * Summary:
@@ -277,19 +277,19 @@ void RX_SetPriority(uint8 priority)
 *    PSoC 4: Priority is from 0 to 3.
 *
 *******************************************************************************/
-uint8 RX_GetPriority(void)
+uint8 RXcmplt_GetPriority(void)
 {
     uint8 priority;
 
 
-    priority = *RX_INTC_PRIOR >> 5;
+    priority = *RXcmplt_INTC_PRIOR >> 5;
 
     return priority;
 }
 
 
 /*******************************************************************************
-* Function Name: RX_Enable
+* Function Name: RXcmplt_Enable
 ********************************************************************************
 *
 * Summary:
@@ -304,15 +304,15 @@ uint8 RX_GetPriority(void)
 *   None
 *
 *******************************************************************************/
-void RX_Enable(void)
+void RXcmplt_Enable(void)
 {
     /* Enable the general interrupt. */
-    *RX_INTC_SET_EN = RX__INTC_MASK;
+    *RXcmplt_INTC_SET_EN = RXcmplt__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: RX_GetState
+* Function Name: RXcmplt_GetState
 ********************************************************************************
 *
 * Summary:
@@ -325,15 +325,15 @@ void RX_Enable(void)
 *   1 if enabled, 0 if disabled.
 *
 *******************************************************************************/
-uint8 RX_GetState(void)
+uint8 RXcmplt_GetState(void)
 {
     /* Get the state of the general interrupt. */
-    return ((*RX_INTC_SET_EN & (uint32)RX__INTC_MASK) != 0u) ? 1u:0u;
+    return ((*RXcmplt_INTC_SET_EN & (uint32)RXcmplt__INTC_MASK) != 0u) ? 1u:0u;
 }
 
 
 /*******************************************************************************
-* Function Name: RX_Disable
+* Function Name: RXcmplt_Disable
 ********************************************************************************
 *
 * Summary:
@@ -346,15 +346,15 @@ uint8 RX_GetState(void)
 *   None
 *
 *******************************************************************************/
-void RX_Disable(void)
+void RXcmplt_Disable(void)
 {
     /* Disable the general interrupt. */
-    *RX_INTC_CLR_EN = RX__INTC_MASK;
+    *RXcmplt_INTC_CLR_EN = RXcmplt__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: RX_SetPending
+* Function Name: RXcmplt_SetPending
 ********************************************************************************
 *
 * Summary:
@@ -373,14 +373,14 @@ void RX_Disable(void)
 *   interrupts).
 *
 *******************************************************************************/
-void RX_SetPending(void)
+void RXcmplt_SetPending(void)
 {
-    *RX_INTC_SET_PD = RX__INTC_MASK;
+    *RXcmplt_INTC_SET_PD = RXcmplt__INTC_MASK;
 }
 
 
 /*******************************************************************************
-* Function Name: RX_ClearPending
+* Function Name: RXcmplt_ClearPending
 ********************************************************************************
 *
 * Summary:
@@ -398,9 +398,9 @@ void RX_SetPending(void)
 *   None
 *
 *******************************************************************************/
-void RX_ClearPending(void)
+void RXcmplt_ClearPending(void)
 {
-    *RX_INTC_CLR_PD = RX__INTC_MASK;
+    *RXcmplt_INTC_CLR_PD = RXcmplt__INTC_MASK;
 }
 
 #endif /* End check for removal by optimization */

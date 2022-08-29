@@ -31,7 +31,7 @@
 #define UART_RPi_RX_ENABLED                     (1u)
 #define UART_RPi_TX_ENABLED                     (1u)
 #define UART_RPi_HD_ENABLED                     (0u)
-#define UART_RPi_RX_INTERRUPT_ENABLED           (0u)
+#define UART_RPi_RX_INTERRUPT_ENABLED           (1u)
 #define UART_RPi_TX_INTERRUPT_ENABLED           (0u)
 #define UART_RPi_INTERNAL_CLOCK_USED            (1u)
 #define UART_RPi_RXHW_ADDRESS_ENABLED           (0u)
@@ -42,11 +42,11 @@
 #define UART_RPi_BREAK_BITS_TX                  (13u)
 #define UART_RPi_BREAK_BITS_RX                  (13u)
 #define UART_RPi_TXCLKGEN_DP                    (1u)
-#define UART_RPi_USE23POLLING                   (1u)
+#define UART_RPi_USE23POLLING                   (0u)
 #define UART_RPi_FLOW_CONTROL                   (0u)
 #define UART_RPi_CLK_FREQ                       (0u)
 #define UART_RPi_TX_BUFFER_SIZE                 (4u)
-#define UART_RPi_RX_BUFFER_SIZE                 (4u)
+#define UART_RPi_RX_BUFFER_SIZE                 (9u)
 
 /* Check to see if required defines such as CY_PSOC5LP are available */
 /* They are defined starting with cy_boot v3.0 */
@@ -354,7 +354,7 @@ extern uint8 UART_RPi_initVar;
 
 #if (UART_RPi_RXHW_ADDRESS_ENABLED)
     #define UART_RPi_RX_ADDRESS_MODE    (0u)
-    #define UART_RPi_RX_HW_ADDRESS1     (0u)
+    #define UART_RPi_RX_HW_ADDRESS1     (255u)
     #define UART_RPi_RX_HW_ADDRESS2     (0u)
 #endif /* (UART_RPi_RXHW_ADDRESS_ENABLED) */
 
