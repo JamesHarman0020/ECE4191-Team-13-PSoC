@@ -2,7 +2,7 @@
 --	Conversion of PSoC5_Team13Project.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Aug 26 09:38:17 2022
+--	Thu Sep 01 13:50:58 2022
 --
 
 USE cypress.cypress.all;
@@ -848,6 +848,7 @@ SIGNAL \US_L:control_3\ : bit;
 SIGNAL \US_L:control_2\ : bit;
 SIGNAL \US_L:control_1\ : bit;
 SIGNAL \US_L:control_0\ : bit;
+SIGNAL Net_179 : bit;
 SIGNAL \UART_RPi:Net_9\ : bit;
 SIGNAL Net_263 : bit;
 SIGNAL \UART_RPi:Net_61\ : bit;
@@ -863,9 +864,8 @@ SIGNAL \UART_RPi:BUART:FinalAddrMode_0\ : bit;
 SIGNAL \UART_RPi:BUART:tx_ctrl_mark\ : bit;
 SIGNAL \UART_RPi:BUART:reset_sr\ : bit;
 SIGNAL \UART_RPi:BUART:HalfDuplexSend_last\ : bit;
-SIGNAL Net_172 : bit;
+SIGNAL Net_266 : bit;
 SIGNAL \UART_RPi:BUART:txn\ : bit;
-SIGNAL Net_179 : bit;
 SIGNAL \UART_RPi:BUART:tx_interrupt_out\ : bit;
 SIGNAL \UART_RPi:BUART:rx_interrupt_out\ : bit;
 SIGNAL \UART_RPi:BUART:tx_state_1\ : bit;
@@ -1138,15 +1138,15 @@ SIGNAL \UART_RPi:BUART:sRX:MODULE_4:gte\ : bit;
 ATTRIBUTE port_state_att of \UART_RPi:BUART:sRX:MODULE_4:gte\:SIGNAL IS 2;
 SIGNAL \UART_RPi:BUART:sRX:MODULE_4:lte\ : bit;
 ATTRIBUTE port_state_att of \UART_RPi:BUART:sRX:MODULE_4:lte\:SIGNAL IS 2;
-SIGNAL tmpOE__Rx_1_net_0 : bit;
-SIGNAL tmpIO_0__Rx_1_net_0 : bit;
-TERMINAL tmpSIOVREF__Rx_1_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Rx_1_net_0 : bit;
-SIGNAL tmpOE__Tx_1_net_0 : bit;
-SIGNAL tmpFB_0__Tx_1_net_0 : bit;
-SIGNAL tmpIO_0__Tx_1_net_0 : bit;
-TERMINAL tmpSIOVREF__Tx_1_net_0 : bit;
-SIGNAL tmpINTERRUPT_0__Tx_1_net_0 : bit;
+SIGNAL tmpOE__RPi_RX_net_0 : bit;
+SIGNAL tmpIO_0__RPi_RX_net_0 : bit;
+TERMINAL tmpSIOVREF__RPi_RX_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__RPi_RX_net_0 : bit;
+SIGNAL tmpOE__RPi_Tx_net_0 : bit;
+SIGNAL tmpFB_0__RPi_Tx_net_0 : bit;
+SIGNAL tmpIO_0__RPi_Tx_net_0 : bit;
+TERMINAL tmpSIOVREF__RPi_Tx_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__RPi_Tx_net_0 : bit;
 SIGNAL tmpOE__Trig_R_net_0 : bit;
 SIGNAL Net_244 : bit;
 SIGNAL tmpFB_0__Trig_R_net_0 : bit;
@@ -1874,6 +1874,8 @@ Net_283D <= ((not \QuadPWM:toggle_1\ and not \QuadPWM:ff0\ and \QuadPWM:toggle_0
 	OR (not \QuadPWM:toggle_1\ and \QuadPWM:toggle_0\));
 
 \QuadPWM:MODULE_1:g2:a0:s_0\ <= (not \QuadPWM:toggle_0\);
+
+Net_266 <= (not \UART_RPi:BUART:txn\);
 
 \UART_RPi:BUART:counter_load_not\ <= ((not \UART_RPi:BUART:tx_bitclk_enable_pre\ and \UART_RPi:BUART:tx_state_2\)
 	OR \UART_RPi:BUART:tx_state_0\
@@ -3235,6 +3237,10 @@ TB_PWM4:cy_psoc3_pins_v1_10
 		clock=>zero,
 		control=>(\US_L:control_7\, \US_L:control_6\, \US_L:control_5\, \US_L:control_4\,
 			\US_L:control_3\, \US_L:control_2\, \US_L:control_1\, Net_192));
+\UART_RPi:TXInternalInterrupt\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_179);
 \UART_RPi:IntClock\:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"b0162966-0060-4af5-82d1-fcb491ad7619/be0a0e37-ad17-42ca-b5a1-1a654d736358",
@@ -3435,7 +3441,7 @@ TB_PWM4:cy_psoc3_pins_v1_10
 		clock=>\UART_RPi:BUART:clock_op\,
 		status=>(zero, zero, zero, \UART_RPi:BUART:tx_fifo_notfull\,
 			\UART_RPi:BUART:tx_status_2\, \UART_RPi:BUART:tx_fifo_empty\, \UART_RPi:BUART:tx_status_0\),
-		interrupt=>\UART_RPi:BUART:tx_interrupt_out\);
+		interrupt=>Net_179);
 \UART_RPi:BUART:sRX:RxShifter:u0\:cy_psoc3_dp
 	GENERIC MAP(cy_dpconfig=>"0000000000000000000000000000000000000000000000000000001001000000000100000000000000010000001100000001000000000000000100100001000011111111000000001111111111111111101000000110001001000001111100000000000000001100",
 		d0_init=>"00000000",
@@ -3544,7 +3550,7 @@ TB_PWM4:cy_psoc3_pins_v1_10
 		status=>(zero, \UART_RPi:BUART:rx_status_5\, \UART_RPi:BUART:rx_status_4\, \UART_RPi:BUART:rx_status_3\,
 			\UART_RPi:BUART:rx_status_2\, zero, zero),
 		interrupt=>Net_263);
-Rx_1:cy_psoc3_pins_v1_10
+RPi_RX:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"1425177d-0d0e-4468-8bcc-e638e5509a9b",
 		drive_mode=>"001",
 		ibuf_enabled=>"1",
@@ -3604,8 +3610,8 @@ Rx_1:cy_psoc3_pins_v1_10
 		y=>(zero),
 		fb=>Net_104,
 		analog=>(open),
-		io=>(tmpIO_0__Rx_1_net_0),
-		siovref=>(tmpSIOVREF__Rx_1_net_0),
+		io=>(tmpIO_0__RPi_RX_net_0),
+		siovref=>(tmpSIOVREF__RPi_RX_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>tmpOE__STP_0_net_0,
@@ -3613,8 +3619,8 @@ Rx_1:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>tmpOE__STP_0_net_0,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Rx_1_net_0);
-Tx_1:cy_psoc3_pins_v1_10
+		interrupt=>tmpINTERRUPT_0__RPi_RX_net_0);
+RPi_Tx:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"ed092b9b-d398-4703-be89-cebf998501f6",
 		drive_mode=>"110",
 		ibuf_enabled=>"1",
@@ -3671,11 +3677,11 @@ Tx_1:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(tmpOE__STP_0_net_0),
-		y=>Net_173,
-		fb=>(tmpFB_0__Tx_1_net_0),
+		y=>Net_266,
+		fb=>(tmpFB_0__RPi_Tx_net_0),
 		analog=>(open),
-		io=>(tmpIO_0__Tx_1_net_0),
-		siovref=>(tmpSIOVREF__Tx_1_net_0),
+		io=>(tmpIO_0__RPi_Tx_net_0),
+		siovref=>(tmpSIOVREF__RPi_Tx_net_0),
 		annotation=>(open),
 		in_clock=>zero,
 		in_clock_en=>tmpOE__STP_0_net_0,
@@ -3683,7 +3689,7 @@ Tx_1:cy_psoc3_pins_v1_10
 		out_clock=>zero,
 		out_clock_en=>tmpOE__STP_0_net_0,
 		out_reset=>zero,
-		interrupt=>tmpINTERRUPT_0__Tx_1_net_0);
+		interrupt=>tmpINTERRUPT_0__RPi_Tx_net_0);
 Trig_R:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"23c0ac24-8d1d-4006-88e3-d5f9d3d98889",
 		drive_mode=>"110",

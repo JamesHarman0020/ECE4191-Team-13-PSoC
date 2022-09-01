@@ -9,11 +9,10 @@
  *
  * ========================================
 */
-
-
+#include "project.h"
+#include "HCSR04.h"
 #include "stdio.h"
 #include <stdlib.h>
-#include "project.h"
 #include "HCSR04.h"
 #define AV_Ln 3
 
@@ -25,8 +24,9 @@ int initFlag = 0;
 int compLFlag = 0;
 int compRFlag = 0;
 float distL[AV_Ln] = {0};
+float distAvL = 0;
+float distAvR = 0;
 float distR[AV_Ln] = {0};
-
 
 void HCSR04_Begin(){
     E_R_Start();
@@ -41,11 +41,18 @@ void HCSR04_Begin(){
 }
 
 void distMeasure(){
+    UART_PutString("Begin US Read");
     if (initFlag){
-        //distMeasureL();
+        distMeasureL();
         distMeasureR();
+        float f1 = 100.5;
+        float f2 = 2.5;
+        CyDelay(10);
+        fnSend(101, &distAvL ,&distAvR);
+            //compLFlag = 0; compRFlag = 0;
     }
     else HCSR04_Begin();
+    
 }
 
 void distMeasureL(){
@@ -70,13 +77,12 @@ CY_ISR(CaptureR) //ISR3
     mCounterR++;
     
     if (mCounterR == 3) {
-        float distAv = (distR[0] + distR[1] + distR[2]) / AV_Ln;
-        if (distAv < 0.3f) {
-            char string[20]; sprintf(string, "\tR: %f\n", distAv); UART_PutString(string);
-        }
+        distAvR = (distR[0] + distR[1] + distR[2]) / AV_Ln;
         mCounterR = 0;
     }
     else distMeasureR();
+    compRFlag = 1;
+    //fnSend(101, 0, distAvR);
 }
 
 
@@ -88,13 +94,11 @@ CY_ISR(CaptureL) //ISR3
     mCounterL++;
     
     if (mCounterL == 3) {
-        float distAv = (distL[0] + distL[1] + distL[2]) / AV_Ln;
-        if (distAv < 0.3f) {
-            char string[20]; sprintf(string, "L: %f", distAv); UART_PutString(string);
-        }
+        distAvL = (distL[0] + distL[1] + distL[2]) / AV_Ln;
         mCounterL = 0;
     }
     else distMeasureL();
+    compLFlag = 1;
 }
 
 /* [] END OF FILE */

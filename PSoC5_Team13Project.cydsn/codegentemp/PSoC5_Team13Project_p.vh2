@@ -1,5 +1,5 @@
 -- Project:   PSoC5_Team13Project
--- Generated: 08/26/2022 09:38:18
+-- Generated: 09/01/2022 13:50:58
 -- PSoC Creator  4.4
 
 ENTITY PSoC5_Team13Project IS
@@ -17,8 +17,8 @@ ENTITY PSoC5_Team13Project IS
         TB_PWM3(0)_PAD : OUT std_ulogic;
         TB_PWM4(0)_PAD : OUT std_ulogic;
         \UART:tx(0)_PAD\ : OUT std_ulogic;
-        Rx_1(0)_PAD : IN std_ulogic;
-        Tx_1(0)_PAD : OUT std_ulogic;
+        RPi_RX(0)_PAD : IN std_ulogic;
+        RPi_Tx(0)_PAD : OUT std_ulogic;
         Trig_R(0)_PAD : OUT std_ulogic;
         Trig_L(0)_PAD : OUT std_ulogic;
         Echo_R(0)_PAD : IN std_ulogic;
@@ -55,8 +55,8 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     ATTRIBUTE udbclken_assigned OF Net_137 : SIGNAL IS "True";
     ATTRIBUTE global_signal OF Net_137 : SIGNAL IS true;
     SIGNAL Net_137_local : bit;
-    SIGNAL Net_173 : bit;
     SIGNAL Net_178 : bit;
+    SIGNAL Net_179 : bit;
     SIGNAL Net_188 : bit;
     SIGNAL Net_192 : bit;
     SIGNAL Net_196 : bit;
@@ -71,13 +71,15 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL Net_244 : bit;
     SIGNAL Net_251 : bit;
     SIGNAL Net_263 : bit;
+    SIGNAL Net_266 : bit;
     SIGNAL Net_282 : bit;
     SIGNAL Net_283 : bit;
     SIGNAL Net_34 : bit;
     SIGNAL Net_35 : bit;
     SIGNAL Net_36 : bit;
     SIGNAL Net_366 : bit;
-    SIGNAL Rx_1(0)__PA : bit;
+    SIGNAL RPi_RX(0)__PA : bit;
+    SIGNAL RPi_Tx(0)__PA : bit;
     SIGNAL SCL_1(0)__PA : bit;
     SIGNAL SDA_1(0)__PA : bit;
     SIGNAL SG90(0)__PA : bit;
@@ -93,7 +95,6 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL TB_PWM4(0)__PA : bit;
     SIGNAL Trig_L(0)__PA : bit;
     SIGNAL Trig_R(0)__PA : bit;
-    SIGNAL Tx_1(0)__PA : bit;
     SIGNAL \I2C_1:Net_1109_0\ : bit;
     SIGNAL \I2C_1:Net_1109_1\ : bit;
     SIGNAL \I2C_1:Net_643_0\ : bit;
@@ -311,31 +312,34 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     ATTRIBUTE Location OF TB_PWM4(0) : LABEL IS "P1[5]";
     ATTRIBUTE lib_model OF \UART:tx(0)\ : LABEL IS "iocell12";
     ATTRIBUTE Location OF \UART:tx(0)\ : LABEL IS "P12[7]";
-    ATTRIBUTE lib_model OF Rx_1(0) : LABEL IS "iocell13";
-    ATTRIBUTE Location OF Rx_1(0) : LABEL IS "P2[3]";
-    ATTRIBUTE lib_model OF Trig_R(0) : LABEL IS "iocell14";
+    ATTRIBUTE lib_model OF RPi_RX(0) : LABEL IS "iocell13";
+    ATTRIBUTE Location OF RPi_RX(0) : LABEL IS "P2[3]";
+    ATTRIBUTE lib_model OF RPi_Tx(0) : LABEL IS "iocell14";
+    ATTRIBUTE Location OF RPi_Tx(0) : LABEL IS "P2[2]";
+    ATTRIBUTE lib_model OF Trig_R(0) : LABEL IS "iocell15";
     ATTRIBUTE Location OF Trig_R(0) : LABEL IS "P0[5]";
-    ATTRIBUTE lib_model OF Trig_L(0) : LABEL IS "iocell15";
+    ATTRIBUTE lib_model OF Trig_L(0) : LABEL IS "iocell16";
     ATTRIBUTE Location OF Trig_L(0) : LABEL IS "P0[6]";
-    ATTRIBUTE lib_model OF Echo_R(0) : LABEL IS "iocell16";
+    ATTRIBUTE lib_model OF Echo_R(0) : LABEL IS "iocell17";
     ATTRIBUTE Location OF Echo_R(0) : LABEL IS "P0[1]";
-    ATTRIBUTE lib_model OF Echo_L(0) : LABEL IS "iocell17";
+    ATTRIBUTE lib_model OF Echo_L(0) : LABEL IS "iocell18";
     ATTRIBUTE Location OF Echo_L(0) : LABEL IS "P0[0]";
-    ATTRIBUTE lib_model OF SDA_1(0) : LABEL IS "iocell18";
+    ATTRIBUTE lib_model OF SDA_1(0) : LABEL IS "iocell19";
     ATTRIBUTE Location OF SDA_1(0) : LABEL IS "P12[5]";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:status_2\ : LABEL IS "macrocell1";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:counter_load_not\ : LABEL IS "macrocell2";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_status_0\ : LABEL IS "macrocell3";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_status_2\ : LABEL IS "macrocell4";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_counter_load\ : LABEL IS "macrocell5";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_status_4\ : LABEL IS "macrocell6";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_status_5\ : LABEL IS "macrocell7";
-    ATTRIBUTE lib_model OF \Timer_L:TimerUDB:capt_fifo_load\ : LABEL IS "macrocell8";
-    ATTRIBUTE lib_model OF \Timer_L:TimerUDB:status_tc\ : LABEL IS "macrocell9";
-    ATTRIBUTE lib_model OF Net_366 : LABEL IS "macrocell10";
-    ATTRIBUTE lib_model OF \Timer_R:TimerUDB:capt_fifo_load\ : LABEL IS "macrocell11";
-    ATTRIBUTE lib_model OF \Timer_R:TimerUDB:status_tc\ : LABEL IS "macrocell12";
-    ATTRIBUTE lib_model OF Net_223 : LABEL IS "macrocell13";
+    ATTRIBUTE lib_model OF Net_266 : LABEL IS "macrocell2";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:counter_load_not\ : LABEL IS "macrocell3";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_status_0\ : LABEL IS "macrocell4";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_status_2\ : LABEL IS "macrocell5";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_counter_load\ : LABEL IS "macrocell6";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_status_4\ : LABEL IS "macrocell7";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_status_5\ : LABEL IS "macrocell8";
+    ATTRIBUTE lib_model OF \Timer_L:TimerUDB:capt_fifo_load\ : LABEL IS "macrocell9";
+    ATTRIBUTE lib_model OF \Timer_L:TimerUDB:status_tc\ : LABEL IS "macrocell10";
+    ATTRIBUTE lib_model OF Net_366 : LABEL IS "macrocell11";
+    ATTRIBUTE lib_model OF \Timer_R:TimerUDB:capt_fifo_load\ : LABEL IS "macrocell12";
+    ATTRIBUTE lib_model OF \Timer_R:TimerUDB:status_tc\ : LABEL IS "macrocell13";
+    ATTRIBUTE lib_model OF Net_223 : LABEL IS "macrocell14";
     ATTRIBUTE lib_model OF \StepperDriver:Sync:ctrl_reg\ : LABEL IS "controlcell1";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell2";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell1";
@@ -361,21 +365,20 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     ATTRIBUTE lib_model OF \Timer_R:TimerUDB:sT24:timerdp:u2\ : LABEL IS "datapathcell12";
     ATTRIBUTE lib_model OF \US_R:Sync:ctrl_reg\ : LABEL IS "controlcell7";
     ATTRIBUTE lib_model OF rxDMA : LABEL IS "drqcell1";
-    ATTRIBUTE lib_model OF \PWM:PWMUDB:runmode_enable\ : LABEL IS "macrocell14";
-    ATTRIBUTE lib_model OF \PWM:PWMUDB:prevCompare1\ : LABEL IS "macrocell15";
-    ATTRIBUTE lib_model OF \PWM:PWMUDB:status_0\ : LABEL IS "macrocell16";
-    ATTRIBUTE lib_model OF Net_202 : LABEL IS "macrocell17";
-    ATTRIBUTE lib_model OF Net_239 : LABEL IS "macrocell18";
-    ATTRIBUTE lib_model OF Net_240 : LABEL IS "macrocell19";
-    ATTRIBUTE lib_model OF \QuadPWM:toggle_1\ : LABEL IS "macrocell20";
-    ATTRIBUTE lib_model OF \QuadPWM:toggle_0\ : LABEL IS "macrocell21";
-    ATTRIBUTE lib_model OF Net_282 : LABEL IS "macrocell22";
-    ATTRIBUTE lib_model OF Net_283 : LABEL IS "macrocell23";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:txn\ : LABEL IS "macrocell24";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_1\ : LABEL IS "macrocell25";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_0\ : LABEL IS "macrocell26";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_2\ : LABEL IS "macrocell27";
-    ATTRIBUTE lib_model OF Net_173 : LABEL IS "macrocell28";
+    ATTRIBUTE lib_model OF \PWM:PWMUDB:runmode_enable\ : LABEL IS "macrocell15";
+    ATTRIBUTE lib_model OF \PWM:PWMUDB:prevCompare1\ : LABEL IS "macrocell16";
+    ATTRIBUTE lib_model OF \PWM:PWMUDB:status_0\ : LABEL IS "macrocell17";
+    ATTRIBUTE lib_model OF Net_202 : LABEL IS "macrocell18";
+    ATTRIBUTE lib_model OF Net_239 : LABEL IS "macrocell19";
+    ATTRIBUTE lib_model OF Net_240 : LABEL IS "macrocell20";
+    ATTRIBUTE lib_model OF \QuadPWM:toggle_1\ : LABEL IS "macrocell21";
+    ATTRIBUTE lib_model OF \QuadPWM:toggle_0\ : LABEL IS "macrocell22";
+    ATTRIBUTE lib_model OF Net_282 : LABEL IS "macrocell23";
+    ATTRIBUTE lib_model OF Net_283 : LABEL IS "macrocell24";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:txn\ : LABEL IS "macrocell25";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_1\ : LABEL IS "macrocell26";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_0\ : LABEL IS "macrocell27";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_2\ : LABEL IS "macrocell28";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_bitclk\ : LABEL IS "macrocell29";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell30";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_0\ : LABEL IS "macrocell31";
@@ -1950,7 +1953,7 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    Rx_1:logicalport
+    RPi_RX:logicalport
         GENERIC MAP(
             drive_mode => "001",
             ibuf_enabled => "1",
@@ -2022,19 +2025,19 @@ BEGIN
             out_reset => open,
             in_clock => open);
 
-    Rx_1(0):iocell
+    RPi_RX(0):iocell
         GENERIC MAP(
             in_sync_mode => 2,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "Rx_1",
+            logicalport => "RPi_RX",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
         PORT MAP(
-            pa_out => Rx_1(0)__PA,
+            pa_out => RPi_RX(0)__PA,
             oe => open,
             fb => Net_104,
-            pad_in => Rx_1(0)_PAD,
+            pad_in => RPi_RX(0)_PAD,
             in_clock => ClockBlock_BUS_CLK,
             in_clock_en => '1',
             in_reset => '0',
@@ -2042,7 +2045,7 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    Tx_1:logicalport
+    RPi_Tx:logicalport
         GENERIC MAP(
             drive_mode => "110",
             ibuf_enabled => "1",
@@ -2113,20 +2116,20 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    Tx_1(0):iocell
+    RPi_Tx(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "Tx_1",
+            logicalport => "RPi_Tx",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
         PORT MAP(
-            pa_out => Tx_1(0)__PA,
+            pa_out => RPi_Tx(0)__PA,
             oe => open,
-            pin_input => Net_173,
-            pad_out => Tx_1(0)_PAD,
-            pad_in => Tx_1(0)_PAD,
+            pin_input => Net_266,
+            pad_out => RPi_Tx(0)_PAD,
+            pad_in => RPi_Tx(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -2604,6 +2607,15 @@ BEGIN
             main_0 => \PWM:PWMUDB:runmode_enable\,
             main_1 => \PWM:PWMUDB:tc_i\);
 
+    Net_266:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_266,
+            main_0 => \UART_RPi:BUART:txn\);
+
     \UART_RPi:BUART:counter_load_not\:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_2) + (!main_0 * !main_1 * !main_3)",
@@ -2958,6 +2970,14 @@ BEGIN
             control_0 => Net_192,
             busclk => ClockBlock_BUS_CLK);
 
+    \UART_RPi:TXInternalInterrupt\:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_179,
+            clock => ClockBlock_BUS_CLK);
+
     \UART_RPi:RXInternalInterrupt\:interrupt
         GENERIC MAP(
             int_type => "10",
@@ -3055,7 +3075,8 @@ BEGIN
             status_3 => \UART_RPi:BUART:tx_fifo_notfull\,
             status_2 => \UART_RPi:BUART:tx_status_2\,
             status_1 => \UART_RPi:BUART:tx_fifo_empty\,
-            status_0 => \UART_RPi:BUART:tx_status_0\);
+            status_0 => \UART_RPi:BUART:tx_status_0\,
+            interrupt => Net_179);
 
     \UART_RPi:BUART:sRX:RxShifter:u0\:datapathcell
         GENERIC MAP(
@@ -3814,19 +3835,6 @@ BEGIN
             main_3 => \UART_RPi:BUART:tx_state_2\,
             main_4 => \UART_RPi:BUART:tx_counter_dp\,
             main_5 => \UART_RPi:BUART:tx_bitclk\);
-
-    Net_173:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * !main_2)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => Net_173,
-            clock_0 => \UART_RPi:Net_9\,
-            main_0 => \UART_RPi:BUART:tx_state_1\,
-            main_1 => \UART_RPi:BUART:tx_state_0\,
-            main_2 => \UART_RPi:BUART:tx_state_2\);
 
     \UART_RPi:BUART:tx_bitclk\:macrocell
         GENERIC MAP(

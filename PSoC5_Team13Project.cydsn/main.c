@@ -20,7 +20,7 @@
 #include "IMU.h"
 #include "SG90.h"
 #include "TB9051.h"
-#include "HCSR04.h"
+//#include "HCSR04.h"
 
 // Global Variables
 char rxString[30] = {0};
@@ -33,7 +33,8 @@ int mask = 0xff;
 int startFlag = 0;
 uint16 rxByte;
 char string[30];
-uint8 rxBuffer[10] = {0};
+uint8 rxBuffer[19] = {0};
+uint8 packBuffer[10] = {0};
 
 //Functions
 void onRx();
@@ -83,28 +84,36 @@ int main(void) // THIS SHOULD BE FREERTOS
         CyDelay(2000);
         TB9051_VehReverse(125); */
        //char string[20]; sprintf(string, "Main\n"); UART_PutString(string);
-       //CyDelay(200);
+       //CyDelay(1000);
+       //float param1 = 100;
+       //float param2 = 100;
+        //UART_RPi_PutChar('c');
+        //UART_RPi_PutString("Hello");
+       //fnSend(2, &param1, &param2);
        //TB9051_VehMoveTo(15.000, 5.000);   
-    //distMeasure();
+        //distMeasure();
        
     }
 }
 
 // User Functions
 CY_ISR(readBuf){
-    if (rxBuffer[10] == 0x00) {
+    // A packet should arrive within a matter of us could be used as an error check
+    if (rxBuffer[0] == 0x00) {
         fn = (char)rxBuffer[1];
         for (int i = 0; i < 4; i++) {
             B1[i] = (char)rxBuffer[i+2];
             B2[i] = (char)rxBuffer[i+6];
         }
     }
+        
     for (int i = 0; i < 10; i++) {
          sprintf(string,"%x ",rxBuffer[i]); UART_PutString(string);
     }
     sprintf(string,"\t %i: %0.3f %0.3f \n",fn,prm1,prm2); UART_PutString(string);
     fnCall(fn,prm1,prm2);
 }
+
 
 /* DMA Configuration for rxDMA */
 void DMA_Config() {

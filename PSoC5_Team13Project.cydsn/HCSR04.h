@@ -12,9 +12,10 @@
 #ifndef HCSR04
 #define HCSR04
 
-void distMeasure();
-void distMeasureL();
-void distMeasureR();
+extern void HCSR04_Begin();
+extern void distMeasure();
+extern void distMeasureL();
+extern void distMeasureR();
 CY_ISR(CaptureL);
 CY_ISR(CaptureR);
 

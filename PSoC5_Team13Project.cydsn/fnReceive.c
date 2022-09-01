@@ -19,35 +19,15 @@
 #include "IMU.h"
 #include "SG90.h"
 #include "TB9051.h"
+#include "HCSR04.h"
 
 void fnCall(int fn, float para2, float para3);
-
-void RunFn(char * comString){
-    ///// This interprets incoming serial as strings, trying to bypass that /////
-    /*char *pEnd;
-    
-    int b = strlen(comString);
-    for (int i = 0 ; i<b-1; i++) 
-    { 
-        if (comString[i] == 44) {
-            comString[i] = 32;
-        }
-    }
-    float para1 = strtof(comString, &pEnd);
-    float para2 = strtof(pEnd, &pEnd);
-    float para3 = strtof(pEnd, &pEnd);
-    fnCall(para1, para2, para3);*/
-    
-    //char string[20]; sprintf(string, "%f, ", para1); UART_PutString(string);
-    //sprintf(string, "%f, ", para2); UART_PutString(string);
-    //sprintf(string, "%f\n", para3); UART_PutString(string);
-}
+void fnSend(int fn, float * para2, float * para3);
 
 void fnCall(int fn, float para2, float para3) {
-    uint8 InterruptState = CyEnterCriticalSection();
-    char string[20]; sprintf(string, "%i %.3f %.3f", fn, para2, para3); UART_PutString(string);
-    CyExitCriticalSection(InterruptState);
-    /*switch (fn) { 
+    //char string[20]; sprintf(string, "%i %.3f %.3f", fn, para2, para3); UART_PutString(string);
+    //CyExitCriticalSection(InterruptState);
+    switch (fn) { 
         case 0: TB9051_VehMoveTo(para2,para3);          break; // Motor Commands
         case 1: TB9051_Begin();                         break;
         case 2: TB9051_Forward((int)para2,(int)para3);  break;
@@ -59,8 +39,12 @@ void fnCall(int fn, float para2, float para3) {
         case 50: oneStepCCW((int)para2);                break; // Stepper Commands
         case 51: oneStepCW((int)para2);                 break;
         case 52: moveAngle(para2);                      break;
-        case 60: SG90_Begin();                          break; // Servo Commands
-        case 61: SG90_ToAngle(para2);                   break;
+        //case 60: SG90_Begin();                          break; // Servo Commands
+        //case 61: SG90_ToAngle(para2);                   break;
+        case 100: HCSR04_Begin();                       break;
+        case 101: distMeasure();                        break;
+        case 102: distMeasureL();                       break;
+        case 103: distMeasureR();                       break;
         case 200: LIS3MDL_Begin();                      break; // Accelerometer
         case 201: LIS3MDL_MasterStatus();               break;
         case 202: LIS3MDL_TransferByte();               break;
@@ -75,8 +59,42 @@ void fnCall(int fn, float para2, float para3) {
         //case 213: LSM6DS3_ReadMultipleBytes();          break;
         //case 214: LSM6DS3_ReadWhoAmIReg() TO-DO;      break;
         //case 215: LSM6DS3_ReadCtrlReg(); TO-DO:       break; 
-    }*/
+    }
 }
+
+void fnSend(int fn, float * para2, float * para3){
+    uint8 txBuffer[10];// = {0x00, 0x65, 0x42, 0xc8, 0x00, 0x00, 0x42, 0xc8, 0x00};
+    
+    union {
+        float a;
+        unsigned char Ba[4];
+    } BtoFa;
+    
+    union {
+        float b;
+        unsigned char Bb[4];
+    } BtoFb;
+    
+    BtoFa.a = *para2;
+    BtoFb.b = *para3;
+    
+    for (int i = 0; i < 4; i++){
+        txBuffer[i+2] = BtoFa.Ba[3-i];
+        txBuffer[i+6] = BtoFb.Bb[3-i];
+    }
+    
+    txBuffer[0] = 0x00;
+    txBuffer[1] = (unsigned char)fn;
+    //memcpy(&txBuffer[2],para2,5);
+    //memcpy(&txBuffer[6],para3,5);
+    
+    UART_PutString("Send: ");
+    for (int i = 0; i < 10; i++) {
+        char string[10]; sprintf(string, "%x ", txBuffer[i]); UART_PutString(string);
+    }  UART_PutCRLF(); 
+    //char string[20]; sprintf(string, "Sent: %i, %0.3f, %0.3f ", fn, *para2, *para3); UART_PutString(string); 
+    UART_RPi_PutArray(txBuffer,10);
+};
 
 
 

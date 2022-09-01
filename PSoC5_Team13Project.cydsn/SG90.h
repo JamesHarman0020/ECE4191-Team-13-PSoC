@@ -12,7 +12,6 @@
 #ifndef SG90
 #define SG90
     
-    
 void SG90_Begin();
 void SG90_ToAngle(float angle);
     
