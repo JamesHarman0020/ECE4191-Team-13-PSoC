@@ -18,6 +18,7 @@
 
 float spSound = 331.5;
 CY_ISR(Capture2);
+CY_ISR(Trigger);
 int mCounterR = 0;
 int mCounterL = 0;
 int initFlag = 0;
@@ -34,14 +35,17 @@ void HCSR04_Begin(){
     E_R_ClearPending();
     E_R_StartEx(CaptureR);
     E_L_ClearPending();
-    E_L_StartEx(CaptureL);   
+    E_L_StartEx(CaptureL);
+    US_Trig_Start();
+    US_Trig_ClearPending();
+    US_Trig_StartEx(Trigger);
     Timer_R_Start();    
     Timer_L_Start();
+    US_Timer_Start();
     initFlag = 1;
 }
 
 void distMeasure(){
-    UART_PutString("Begin US Read");
     if (initFlag){
         distMeasureL();
         distMeasureR();
@@ -52,7 +56,6 @@ void distMeasure(){
             //compLFlag = 0; compRFlag = 0;
     }
     else HCSR04_Begin();
-    
 }
 
 void distMeasureL(){
@@ -99,6 +102,11 @@ CY_ISR(CaptureL) //ISR3
     }
     else distMeasureL();
     compLFlag = 1;
+}
+
+CY_ISR(Trigger)
+{
+    distMeasure();
 }
 
 /* [] END OF FILE */

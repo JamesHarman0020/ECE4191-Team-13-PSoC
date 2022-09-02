@@ -121,8 +121,46 @@
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\US_R_PM.c" value="SOURCE_C;CortexM3;;;;US_R" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\rxDMA_dma.c" value="SOURCE_C;CortexM3;;;;rxDMA" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\rxDMA_dma.h" value="HEADER;;;;;rxDMA" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\TB9051_QD1.c" value="SOURCE_C;CortexM3;;;;TB9051_QD1" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\TB9051_QD1.h" value="HEADER;;;;;TB9051_QD1" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\TB9051_QD1_PM.c" value="SOURCE_C;CortexM3;;;;TB9051_QD1" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Quad1A_aliases.h" value="HEADER;;;;;Quad1A" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Quad1A.c" value="SOURCE_C;CortexM3;;;;Quad1A" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Quad1A.h" value="HEADER;;;;;Quad1A" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Quad1B_aliases.h" value="HEADER;;;;;Quad1B" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Quad1B.c" value="SOURCE_C;CortexM3;;;;Quad1B" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Quad1B.h" value="HEADER;;;;;Quad1B" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Clock_4.c" value="SOURCE_C;CortexM3;;;;Clock_4" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Clock_4.h" value="HEADER;;;;;Clock_4" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\QD1_Timer.c" value="SOURCE_C;CortexM3;;;;QD1_Timer" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\QD1_Timer.h" value="HEADER;;;;;QD1_Timer" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\QD1_Timer_PM.c" value="SOURCE_C;CortexM3;;;;QD1_Timer" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\US_Timer.c" value="SOURCE_C;CortexM3;;;;US_Timer" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\US_Timer.h" value="HEADER;;;;;US_Timer" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\US_Timer_PM.c" value="SOURCE_C;CortexM3;;;;US_Timer" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\US_Trig.c" value="SOURCE_C;CortexM3;;;;US_Trig" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\US_Trig.h" value="HEADER;;;;;US_Trig" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\QD1_ISR.c" value="SOURCE_C;CortexM3;;;;QD1_ISR" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\QD1_ISR.h" value="HEADER;;;;;QD1_ISR" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\TB9051_QD2.c" value="SOURCE_C;CortexM3;;;;TB9051_QD2" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\TB9051_QD2.h" value="HEADER;;;;;TB9051_QD2" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\TB9051_QD2_PM.c" value="SOURCE_C;CortexM3;;;;TB9051_QD2" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Quad2A_aliases.h" value="HEADER;;;;;Quad2A" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Quad2A.c" value="SOURCE_C;CortexM3;;;;Quad2A" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Quad2A.h" value="HEADER;;;;;Quad2A" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Quad2B_aliases.h" value="HEADER;;;;;Quad2B" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Quad2B.c" value="SOURCE_C;CortexM3;;;;Quad2B" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Quad2B.h" value="HEADER;;;;;Quad2B" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Clock_5.c" value="SOURCE_C;CortexM3;;;;Clock_5" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Clock_5.h" value="HEADER;;;;;Clock_5" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\UART_RPi_IntClock.c" value="SOURCE_C;CortexM3;;;;UART_RPi_IntClock" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\UART_RPi_IntClock.h" value="HEADER;;;;;UART_RPi_IntClock" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\TB9051_QD1_Cnt16.c" value="SOURCE_C;CortexM3;;;;TB9051_QD1_Cnt16" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\TB9051_QD1_Cnt16.h" value="HEADER;;;;;TB9051_QD1_Cnt16" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\TB9051_QD1_Cnt16_PM.c" value="SOURCE_C;CortexM3;;;;TB9051_QD1_Cnt16" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\TB9051_QD2_Cnt16.c" value="SOURCE_C;CortexM3;;;;TB9051_QD2_Cnt16" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\TB9051_QD2_Cnt16.h" value="HEADER;;;;;TB9051_QD2_Cnt16" />
+  <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\TB9051_QD2_Cnt16_PM.c" value="SOURCE_C;CortexM3;;;;TB9051_QD2_Cnt16" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Cm3RealView.scat" value="LINKER_SCRIPT;;;fdb8e1ae-f83a-46cf-9446-1d703716f38a;;cy_boot" />
   <file name="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\codegentemp\Cm3Start.c" value="SOURCE_C;CortexM3;;;;cy_boot" />

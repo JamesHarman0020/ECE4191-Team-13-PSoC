@@ -1,5 +1,5 @@
 -- Project:   PSoC5_Team13Project
--- Generated: 09/01/2022 13:51:00
+-- Generated: 09/02/2022 15:10:34
 -- PSoC Creator  4.4
 
 ENTITY PSoC5_Team13Project IS
@@ -23,7 +23,11 @@ ENTITY PSoC5_Team13Project IS
         Trig_L(0)_PAD : OUT std_ulogic;
         Echo_R(0)_PAD : IN std_ulogic;
         Echo_L(0)_PAD : IN std_ulogic;
-        SDA_1(0)_PAD : INOUT std_ulogic);
+        SDA_1(0)_PAD : INOUT std_ulogic;
+        Quad1A(0)_PAD : IN std_ulogic;
+        Quad1B(0)_PAD : IN std_ulogic;
+        Quad2A(0)_PAD : IN std_ulogic;
+        Quad2B(0)_PAD : IN std_ulogic);
     ATTRIBUTE voltage_VDDABUF OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDA OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VUSB OF __DEFAULT__ : ENTITY IS 5e0;
@@ -58,36 +62,56 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL Net_178 : bit;
     SIGNAL Net_179 : bit;
     SIGNAL Net_188 : bit;
-    ATTRIBUTE placement_force OF Net_188 : SIGNAL IS "U(3,2,B)0";
+    ATTRIBUTE placement_force OF Net_188 : SIGNAL IS "U(0,5,B)3";
     SIGNAL Net_192 : bit;
     SIGNAL Net_196 : bit;
     SIGNAL Net_202 : bit;
-    ATTRIBUTE placement_force OF Net_202 : SIGNAL IS "U(2,4,B)2";
+    ATTRIBUTE placement_force OF Net_202 : SIGNAL IS "U(3,4,A)3";
     SIGNAL Net_218 : bit;
     SIGNAL Net_219 : bit;
-    ATTRIBUTE placement_force OF Net_219 : SIGNAL IS "U(3,5,B)0";
+    ATTRIBUTE placement_force OF Net_219 : SIGNAL IS "U(3,1,A)2";
     SIGNAL Net_223 : bit;
-    ATTRIBUTE placement_force OF Net_223 : SIGNAL IS "U(2,5,B)3";
+    ATTRIBUTE placement_force OF Net_223 : SIGNAL IS "U(2,2,A)3";
     SIGNAL Net_23 : bit;
     SIGNAL Net_239 : bit;
-    ATTRIBUTE placement_force OF Net_239 : SIGNAL IS "U(2,4,A)3";
+    ATTRIBUTE placement_force OF Net_239 : SIGNAL IS "U(0,3,A)1";
     SIGNAL Net_240 : bit;
-    ATTRIBUTE placement_force OF Net_240 : SIGNAL IS "U(2,4,B)3";
+    ATTRIBUTE placement_force OF Net_240 : SIGNAL IS "U(0,3,A)3";
     SIGNAL Net_241 : bit;
     SIGNAL Net_244 : bit;
     SIGNAL Net_251 : bit;
     SIGNAL Net_263 : bit;
     SIGNAL Net_266 : bit;
-    ATTRIBUTE placement_force OF Net_266 : SIGNAL IS "U(0,3,A)0";
+    ATTRIBUTE placement_force OF Net_266 : SIGNAL IS "U(0,4,B)0";
+    SIGNAL Net_270 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_270 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_270 : SIGNAL IS true;
+    SIGNAL Net_270_local : bit;
     SIGNAL Net_282 : bit;
-    ATTRIBUTE placement_force OF Net_282 : SIGNAL IS "U(2,2,B)0";
+    ATTRIBUTE placement_force OF Net_282 : SIGNAL IS "U(0,3,A)2";
     SIGNAL Net_283 : bit;
-    ATTRIBUTE placement_force OF Net_283 : SIGNAL IS "U(2,3,A)2";
+    ATTRIBUTE placement_force OF Net_283 : SIGNAL IS "U(1,3,A)1";
+    SIGNAL Net_304 : bit;
+    ATTRIBUTE placement_force OF Net_304 : SIGNAL IS "U(3,1,B)1";
+    SIGNAL Net_315 : bit;
+    ATTRIBUTE placement_force OF Net_315 : SIGNAL IS "U(1,4,A)0";
+    SIGNAL Net_335 : bit;
+    ATTRIBUTE udbclken_assigned OF Net_335 : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF Net_335 : SIGNAL IS true;
+    SIGNAL Net_335_local : bit;
+    SIGNAL Net_338 : bit;
+    SIGNAL Net_339 : bit;
     SIGNAL Net_34 : bit;
     SIGNAL Net_35 : bit;
     SIGNAL Net_36 : bit;
     SIGNAL Net_366 : bit;
-    ATTRIBUTE placement_force OF Net_366 : SIGNAL IS "U(2,3,B)0";
+    ATTRIBUTE placement_force OF Net_366 : SIGNAL IS "U(0,5,A)1";
+    SIGNAL Net_405 : bit;
+    SIGNAL Net_407 : bit;
+    SIGNAL Quad1A(0)__PA : bit;
+    SIGNAL Quad1B(0)__PA : bit;
+    SIGNAL Quad2A(0)__PA : bit;
+    SIGNAL Quad2B(0)__PA : bit;
     SIGNAL RPi_RX(0)__PA : bit;
     SIGNAL RPi_Tx(0)__PA : bit;
     SIGNAL SCL_1(0)__PA : bit;
@@ -121,24 +145,39 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL \PWM:PWMUDB:control_6\ : bit;
     SIGNAL \PWM:PWMUDB:control_7\ : bit;
     SIGNAL \PWM:PWMUDB:prevCompare1\ : bit;
-    ATTRIBUTE placement_force OF \PWM:PWMUDB:prevCompare1\ : SIGNAL IS "U(2,3,B)3";
+    ATTRIBUTE placement_force OF \PWM:PWMUDB:prevCompare1\ : SIGNAL IS "U(3,3,B)0";
     SIGNAL \PWM:PWMUDB:runmode_enable\ : bit;
-    ATTRIBUTE placement_force OF \PWM:PWMUDB:runmode_enable\ : SIGNAL IS "U(2,4,A)0";
+    ATTRIBUTE placement_force OF \PWM:PWMUDB:runmode_enable\ : SIGNAL IS "U(3,2,A)2";
     SIGNAL \Timer_L:TimerUDB:sT24:timerdp:u0.ce0__sig\ : bit;
     SIGNAL \PWM:PWMUDB:status_0\ : bit;
-    ATTRIBUTE placement_force OF \PWM:PWMUDB:status_0\ : SIGNAL IS "U(2,3,A)3";
+    ATTRIBUTE placement_force OF \PWM:PWMUDB:status_0\ : SIGNAL IS "U(3,3,A)2";
     SIGNAL \PWM:PWMUDB:status_2\ : bit;
-    ATTRIBUTE placement_force OF \PWM:PWMUDB:status_2\ : SIGNAL IS "U(1,3,A)0";
+    ATTRIBUTE placement_force OF \PWM:PWMUDB:status_2\ : SIGNAL IS "U(3,5,A)1";
     SIGNAL \PWM:PWMUDB:status_3\ : bit;
     SIGNAL \PWM:PWMUDB:tc_i\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:control_0\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:control_1\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:control_2\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:control_3\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:control_4\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:control_5\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:control_6\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:control_7\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:per_zero\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u1.ce0__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u0.ce0__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:status_2\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:status_3\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:status_tc\ : bit;
+    ATTRIBUTE placement_force OF \QD1_Timer:TimerUDB:status_tc\ : SIGNAL IS "U(1,3,B)1";
     SIGNAL \QuadPWM:ce0\ : bit;
     SIGNAL \QuadPWM:ce1\ : bit;
     SIGNAL \QuadPWM:ff0\ : bit;
     SIGNAL \QuadPWM:ff1\ : bit;
     SIGNAL \QuadPWM:toggle_0\ : bit;
-    ATTRIBUTE placement_force OF \QuadPWM:toggle_0\ : SIGNAL IS "U(2,4,B)0";
+    ATTRIBUTE placement_force OF \QuadPWM:toggle_0\ : SIGNAL IS "U(2,3,A)3";
     SIGNAL \QuadPWM:toggle_1\ : bit;
-    ATTRIBUTE placement_force OF \QuadPWM:toggle_1\ : SIGNAL IS "U(2,2,A)0";
+    ATTRIBUTE placement_force OF \QuadPWM:toggle_1\ : SIGNAL IS "U(3,3,B)3";
     SIGNAL \StepperDriver:control_4\ : bit;
     SIGNAL \StepperDriver:control_5\ : bit;
     SIGNAL \StepperDriver:control_6\ : bit;
@@ -149,10 +188,145 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL \TB9051_EN:control_5\ : bit;
     SIGNAL \TB9051_EN:control_6\ : bit;
     SIGNAL \TB9051_EN:control_7\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:cmp_out_i\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:control_0\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:control_1\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:control_2\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:control_3\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:control_4\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:control_5\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:control_6\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:control_7\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:count_enable\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Cnt16:CounterUDB:count_enable\ : SIGNAL IS "U(0,1,A)0";
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:count_stored_i\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Cnt16:CounterUDB:count_stored_i\ : SIGNAL IS "U(0,0,B)1";
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:overflow\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:overflow_reg_i\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Cnt16:CounterUDB:overflow_reg_i\ : SIGNAL IS "U(0,1,A)1";
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:prevCompare\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Cnt16:CounterUDB:prevCompare\ : SIGNAL IS "U(0,2,A)1";
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:reload\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Cnt16:CounterUDB:reload\ : SIGNAL IS "U(1,2,A)2";
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u0.ce0__sig\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:status_0\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Cnt16:CounterUDB:status_0\ : SIGNAL IS "U(0,2,B)3";
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:status_1\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:status_2\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Cnt16:CounterUDB:status_2\ : SIGNAL IS "U(0,1,A)3";
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:status_3\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Cnt16:CounterUDB:status_3\ : SIGNAL IS "U(0,2,A)2";
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:status_5\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:status_6\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:underflow_reg_i\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Cnt16:CounterUDB:underflow_reg_i\ : SIGNAL IS "U(0,2,B)1";
+    SIGNAL \TB9051_QD1:Net_1203\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Net_1203\ : SIGNAL IS "U(1,0,B)1";
+    SIGNAL \TB9051_QD1:Net_1251\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Net_1251\ : SIGNAL IS "U(0,2,A)3";
+    SIGNAL \TB9051_QD1:Net_1251_split\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Net_1251_split\ : SIGNAL IS "U(0,1,B)0";
+    SIGNAL \TB9051_QD1:Net_1260\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Net_1260\ : SIGNAL IS "U(0,0,A)0";
+    SIGNAL \TB9051_QD1:Net_1275\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Net_1275\ : SIGNAL IS "U(1,1,A)1";
+    SIGNAL \TB9051_QD1:Net_530\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Net_530\ : SIGNAL IS "U(1,1,A)0";
+    SIGNAL \TB9051_QD1:Net_611\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:Net_611\ : SIGNAL IS "U(1,1,B)1";
+    SIGNAL \TB9051_QD1:bQuadDec:error\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:bQuadDec:error\ : SIGNAL IS "U(1,1,A)3";
+    SIGNAL \TB9051_QD1:bQuadDec:quad_A_delayed_0\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:bQuadDec:quad_A_delayed_0\ : SIGNAL IS "U(0,2,B)2";
+    SIGNAL \TB9051_QD1:bQuadDec:quad_A_delayed_1\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:bQuadDec:quad_A_delayed_1\ : SIGNAL IS "U(0,0,B)2";
+    SIGNAL \TB9051_QD1:bQuadDec:quad_A_delayed_2\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:bQuadDec:quad_A_delayed_2\ : SIGNAL IS "U(0,0,B)0";
+    SIGNAL \TB9051_QD1:bQuadDec:quad_A_filt\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:bQuadDec:quad_A_filt\ : SIGNAL IS "U(0,0,A)1";
+    SIGNAL \TB9051_QD1:bQuadDec:quad_B_delayed_0\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:bQuadDec:quad_B_delayed_0\ : SIGNAL IS "U(1,3,B)0";
+    SIGNAL \TB9051_QD1:bQuadDec:quad_B_delayed_1\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:bQuadDec:quad_B_delayed_1\ : SIGNAL IS "U(1,1,A)2";
+    SIGNAL \TB9051_QD1:bQuadDec:quad_B_delayed_2\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:bQuadDec:quad_B_delayed_2\ : SIGNAL IS "U(1,1,B)2";
+    SIGNAL \TB9051_QD1:bQuadDec:quad_B_filt\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:bQuadDec:quad_B_filt\ : SIGNAL IS "U(1,1,B)0";
+    SIGNAL \TB9051_QD1:bQuadDec:state_0\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:bQuadDec:state_0\ : SIGNAL IS "U(1,0,A)3";
+    SIGNAL \TB9051_QD1:bQuadDec:state_1\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD1:bQuadDec:state_1\ : SIGNAL IS "U(0,0,B)3";
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:cmp_out_i\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:control_0\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:control_1\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:control_2\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:control_3\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:control_4\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:control_5\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:control_6\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:control_7\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:count_enable\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Cnt16:CounterUDB:count_enable\ : SIGNAL IS "U(2,4,A)1";
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:count_stored_i\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Cnt16:CounterUDB:count_stored_i\ : SIGNAL IS "U(2,4,B)0";
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:overflow\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:overflow_reg_i\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Cnt16:CounterUDB:overflow_reg_i\ : SIGNAL IS "U(2,4,B)1";
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:prevCompare\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Cnt16:CounterUDB:prevCompare\ : SIGNAL IS "U(3,4,B)3";
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:reload\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Cnt16:CounterUDB:reload\ : SIGNAL IS "U(2,4,B)3";
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:status_0\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Cnt16:CounterUDB:status_0\ : SIGNAL IS "U(3,4,A)0";
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:status_1\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:status_2\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Cnt16:CounterUDB:status_2\ : SIGNAL IS "U(2,4,B)2";
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:status_3\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Cnt16:CounterUDB:status_3\ : SIGNAL IS "U(2,0,B)3";
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:status_5\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:status_6\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:underflow_reg_i\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Cnt16:CounterUDB:underflow_reg_i\ : SIGNAL IS "U(2,2,A)2";
+    SIGNAL \TB9051_QD2:Net_1203\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Net_1203\ : SIGNAL IS "U(2,5,A)1";
+    SIGNAL \TB9051_QD2:Net_1251\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Net_1251\ : SIGNAL IS "U(2,5,B)2";
+    SIGNAL \TB9051_QD2:Net_1251_split\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Net_1251_split\ : SIGNAL IS "U(2,3,A)0";
+    SIGNAL \TB9051_QD2:Net_1260\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Net_1260\ : SIGNAL IS "U(2,1,A)1";
+    SIGNAL \TB9051_QD2:Net_1275\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Net_1275\ : SIGNAL IS "U(2,4,A)0";
+    SIGNAL \TB9051_QD2:Net_530\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Net_530\ : SIGNAL IS "U(2,4,A)2";
+    SIGNAL \TB9051_QD2:Net_611\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:Net_611\ : SIGNAL IS "U(2,5,A)3";
+    SIGNAL \TB9051_QD2:bQuadDec:error\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:bQuadDec:error\ : SIGNAL IS "U(2,3,B)0";
+    SIGNAL \TB9051_QD2:bQuadDec:quad_A_delayed_0\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:bQuadDec:quad_A_delayed_0\ : SIGNAL IS "U(2,5,B)3";
+    SIGNAL \TB9051_QD2:bQuadDec:quad_A_delayed_1\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:bQuadDec:quad_A_delayed_1\ : SIGNAL IS "U(2,5,B)0";
+    SIGNAL \TB9051_QD2:bQuadDec:quad_A_delayed_2\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:bQuadDec:quad_A_delayed_2\ : SIGNAL IS "U(2,5,B)1";
+    SIGNAL \TB9051_QD2:bQuadDec:quad_A_filt\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:bQuadDec:quad_A_filt\ : SIGNAL IS "U(2,3,B)2";
+    SIGNAL \TB9051_QD2:bQuadDec:quad_B_delayed_0\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:bQuadDec:quad_B_delayed_0\ : SIGNAL IS "U(1,4,B)1";
+    SIGNAL \TB9051_QD2:bQuadDec:quad_B_delayed_1\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:bQuadDec:quad_B_delayed_1\ : SIGNAL IS "U(1,4,B)2";
+    SIGNAL \TB9051_QD2:bQuadDec:quad_B_delayed_2\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:bQuadDec:quad_B_delayed_2\ : SIGNAL IS "U(1,2,A)0";
+    SIGNAL \TB9051_QD2:bQuadDec:quad_B_filt\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:bQuadDec:quad_B_filt\ : SIGNAL IS "U(1,2,A)1";
+    SIGNAL \TB9051_QD2:bQuadDec:state_0\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:bQuadDec:state_0\ : SIGNAL IS "U(3,2,B)2";
+    SIGNAL \TB9051_QD2:bQuadDec:state_1\ : bit;
+    ATTRIBUTE placement_force OF \TB9051_QD2:bQuadDec:state_1\ : SIGNAL IS "U(3,5,B)0";
     SIGNAL \Timer_L:TimerUDB:capt_fifo_load\ : bit;
-    ATTRIBUTE placement_force OF \Timer_L:TimerUDB:capt_fifo_load\ : SIGNAL IS "U(3,3,A)2";
+    ATTRIBUTE placement_force OF \Timer_L:TimerUDB:capt_fifo_load\ : SIGNAL IS "U(1,5,B)2";
     SIGNAL \Timer_L:TimerUDB:capture_last\ : bit;
-    ATTRIBUTE placement_force OF \Timer_L:TimerUDB:capture_last\ : SIGNAL IS "U(3,3,B)3";
+    ATTRIBUTE placement_force OF \Timer_L:TimerUDB:capture_last\ : SIGNAL IS "U(1,5,A)1";
     SIGNAL \Timer_L:TimerUDB:control_0\ : bit;
     SIGNAL \Timer_L:TimerUDB:control_1\ : bit;
     SIGNAL \Timer_L:TimerUDB:control_2\ : bit;
@@ -167,11 +341,11 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL \Timer_L:TimerUDB:status_2\ : bit;
     SIGNAL \Timer_L:TimerUDB:status_3\ : bit;
     SIGNAL \Timer_L:TimerUDB:status_tc\ : bit;
-    ATTRIBUTE placement_force OF \Timer_L:TimerUDB:status_tc\ : SIGNAL IS "U(3,2,A)1";
+    ATTRIBUTE placement_force OF \Timer_L:TimerUDB:status_tc\ : SIGNAL IS "U(0,4,B)2";
     SIGNAL \Timer_R:TimerUDB:capt_fifo_load\ : bit;
-    ATTRIBUTE placement_force OF \Timer_R:TimerUDB:capt_fifo_load\ : SIGNAL IS "U(2,5,A)1";
+    ATTRIBUTE placement_force OF \Timer_R:TimerUDB:capt_fifo_load\ : SIGNAL IS "U(3,3,A)0";
     SIGNAL \Timer_R:TimerUDB:capture_last\ : bit;
-    ATTRIBUTE placement_force OF \Timer_R:TimerUDB:capture_last\ : SIGNAL IS "U(3,5,A)2";
+    ATTRIBUTE placement_force OF \Timer_R:TimerUDB:capture_last\ : SIGNAL IS "U(3,1,B)3";
     SIGNAL \Timer_R:TimerUDB:control_0\ : bit;
     SIGNAL \Timer_R:TimerUDB:control_1\ : bit;
     SIGNAL \Timer_R:TimerUDB:control_2\ : bit;
@@ -182,15 +356,16 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL \Timer_R:TimerUDB:control_7\ : bit;
     SIGNAL \Timer_R:TimerUDB:per_zero\ : bit;
     SIGNAL \Timer_R:TimerUDB:sT24:timerdp:u1.ce0__sig\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.ce0__sig\ : bit;
     SIGNAL \Timer_R:TimerUDB:status_2\ : bit;
     SIGNAL \Timer_R:TimerUDB:status_3\ : bit;
     SIGNAL \Timer_R:TimerUDB:status_tc\ : bit;
-    ATTRIBUTE placement_force OF \Timer_R:TimerUDB:status_tc\ : SIGNAL IS "U(3,5,A)0";
+    ATTRIBUTE placement_force OF \Timer_R:TimerUDB:status_tc\ : SIGNAL IS "U(2,2,A)0";
     SIGNAL \\\UART:tx(0)\\__PA\ : bit;
     SIGNAL \UART_RPi:BUART:counter_load_not\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:counter_load_not\ : SIGNAL IS "U(1,5,A)1";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:counter_load_not\ : SIGNAL IS "U(2,1,B)2";
     SIGNAL \UART_RPi:BUART:rx_bitclk_enable\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_bitclk_enable\ : SIGNAL IS "U(0,4,A)3";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_bitclk_enable\ : SIGNAL IS "U(0,3,B)2";
     SIGNAL \UART_RPi:BUART:rx_count7_tc\ : bit;
     SIGNAL \UART_RPi:BUART:rx_count_0\ : bit;
     SIGNAL \UART_RPi:BUART:rx_count_1\ : bit;
@@ -200,48 +375,48 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL \UART_RPi:BUART:rx_count_5\ : bit;
     SIGNAL \UART_RPi:BUART:rx_count_6\ : bit;
     SIGNAL \UART_RPi:BUART:rx_counter_load\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_counter_load\ : SIGNAL IS "U(0,4,A)1";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_counter_load\ : SIGNAL IS "U(0,5,B)2";
     SIGNAL \UART_RPi:BUART:rx_fifofull\ : bit;
     SIGNAL \UART_RPi:BUART:rx_fifonotempty\ : bit;
     SIGNAL \UART_RPi:BUART:rx_last\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_last\ : SIGNAL IS "U(0,4,B)2";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_last\ : SIGNAL IS "U(0,4,A)1";
     SIGNAL \UART_RPi:BUART:rx_load_fifo\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_load_fifo\ : SIGNAL IS "U(0,5,A)3";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_load_fifo\ : SIGNAL IS "U(0,4,B)1";
     SIGNAL \UART_RPi:BUART:rx_state_0\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_state_0\ : SIGNAL IS "U(0,4,B)3";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_state_0\ : SIGNAL IS "U(0,4,A)3";
     SIGNAL \UART_RPi:BUART:rx_state_2\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_state_2\ : SIGNAL IS "U(0,4,B)0";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_state_2\ : SIGNAL IS "U(0,4,A)0";
     SIGNAL \UART_RPi:BUART:rx_state_3\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_state_3\ : SIGNAL IS "U(0,5,B)0";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_state_3\ : SIGNAL IS "U(0,3,B)3";
     SIGNAL \UART_RPi:BUART:rx_state_stop1_reg\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_state_stop1_reg\ : SIGNAL IS "U(0,5,B)1";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_state_stop1_reg\ : SIGNAL IS "U(0,5,A)2";
     SIGNAL \UART_RPi:BUART:rx_status_3\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_status_3\ : SIGNAL IS "U(0,4,B)1";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_status_3\ : SIGNAL IS "U(0,4,A)2";
     SIGNAL \UART_RPi:BUART:rx_status_4\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_status_4\ : SIGNAL IS "U(0,5,B)3";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_status_4\ : SIGNAL IS "U(0,5,B)0";
     SIGNAL \UART_RPi:BUART:rx_status_5\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_status_5\ : SIGNAL IS "U(0,5,A)2";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:rx_status_5\ : SIGNAL IS "U(0,5,B)1";
     SIGNAL \UART_RPi:BUART:tx_bitclk\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:tx_bitclk\ : SIGNAL IS "U(0,3,A)3";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:tx_bitclk\ : SIGNAL IS "U(2,0,A)0";
     SIGNAL \UART_RPi:BUART:tx_bitclk_enable_pre\ : bit;
     SIGNAL \UART_RPi:BUART:tx_counter_dp\ : bit;
     SIGNAL \UART_RPi:BUART:tx_ctrl_mark_last\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:tx_ctrl_mark_last\ : SIGNAL IS "U(0,5,B)2";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:tx_ctrl_mark_last\ : SIGNAL IS "U(1,5,B)3";
     SIGNAL \UART_RPi:BUART:tx_fifo_empty\ : bit;
     SIGNAL \UART_RPi:BUART:tx_fifo_notfull\ : bit;
     SIGNAL \UART_RPi:BUART:tx_shift_out\ : bit;
     SIGNAL \UART_RPi:BUART:tx_state_0\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:tx_state_0\ : SIGNAL IS "U(1,4,B)0";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:tx_state_0\ : SIGNAL IS "U(3,0,B)2";
     SIGNAL \UART_RPi:BUART:tx_state_1\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:tx_state_1\ : SIGNAL IS "U(1,4,A)3";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:tx_state_1\ : SIGNAL IS "U(2,2,B)0";
     SIGNAL \UART_RPi:BUART:tx_state_2\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:tx_state_2\ : SIGNAL IS "U(1,3,B)2";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:tx_state_2\ : SIGNAL IS "U(2,0,B)2";
     SIGNAL \UART_RPi:BUART:tx_status_0\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:tx_status_0\ : SIGNAL IS "U(0,3,B)1";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:tx_status_0\ : SIGNAL IS "U(3,1,B)2";
     SIGNAL \UART_RPi:BUART:tx_status_2\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:tx_status_2\ : SIGNAL IS "U(0,3,B)0";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:tx_status_2\ : SIGNAL IS "U(3,0,A)3";
     SIGNAL \UART_RPi:BUART:txn\ : bit;
-    ATTRIBUTE placement_force OF \UART_RPi:BUART:txn\ : SIGNAL IS "U(1,3,A)1";
+    ATTRIBUTE placement_force OF \UART_RPi:BUART:txn\ : SIGNAL IS "U(2,2,B)2";
     SIGNAL \UART_RPi:Net_9\ : bit;
     ATTRIBUTE udbclken_assigned OF \UART_RPi:Net_9\ : SIGNAL IS "True";
     ATTRIBUTE global_signal OF \UART_RPi:Net_9\ : SIGNAL IS true;
@@ -260,6 +435,21 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL \US_R:control_5\ : bit;
     SIGNAL \US_R:control_6\ : bit;
     SIGNAL \US_R:control_7\ : bit;
+    SIGNAL \US_Timer:TimerUDB:control_0\ : bit;
+    SIGNAL \US_Timer:TimerUDB:control_1\ : bit;
+    SIGNAL \US_Timer:TimerUDB:control_2\ : bit;
+    SIGNAL \US_Timer:TimerUDB:control_3\ : bit;
+    SIGNAL \US_Timer:TimerUDB:control_4\ : bit;
+    SIGNAL \US_Timer:TimerUDB:control_5\ : bit;
+    SIGNAL \US_Timer:TimerUDB:control_6\ : bit;
+    SIGNAL \US_Timer:TimerUDB:control_7\ : bit;
+    SIGNAL \US_Timer:TimerUDB:per_zero\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u1.ce0__sig\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.ce0__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:status_2\ : bit;
+    SIGNAL \US_Timer:TimerUDB:status_3\ : bit;
+    SIGNAL \US_Timer:TimerUDB:status_tc\ : bit;
+    ATTRIBUTE placement_force OF \US_Timer:TimerUDB:status_tc\ : SIGNAL IS "U(3,1,A)3";
     SIGNAL __ONE__ : bit;
     ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
     SIGNAL __ZERO__ : bit;
@@ -330,6 +520,78 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL \Timer_R:TimerUDB:sT24:timerdp:u1.cfbo__sig\ : bit;
     SIGNAL \Timer_R:TimerUDB:sT24:timerdp:u2.sor__sig\ : bit;
     SIGNAL \Timer_R:TimerUDB:sT24:timerdp:u2.cmsbo__sig\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.cl0__sig\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.z0__sig\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.ff0__sig\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.ce1__sig\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.cl1__sig\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.z1__sig\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.ff1__sig\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.co_msb__sig\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.cfbo__sig\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u1.sor__sig\ : bit;
+    SIGNAL \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u1.cmsbo__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u0.cl0__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u0.z0__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u0.ff0__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u0.ce1__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u0.cl1__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u0.z1__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u0.ff1__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u0.co_msb__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u0.cfbo__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u1.sor__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u1.cmsbo__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u1.cl0__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u1.z0__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u1.ff0__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u1.ce1__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u1.cl1__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u1.z1__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u1.ff1__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u1.co_msb__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u1.sol_msb__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u1.cfbo__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u2.sor__sig\ : bit;
+    SIGNAL \QD1_Timer:TimerUDB:sT24:timerdp:u2.cmsbo__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u0.cl0__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u0.z0__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u0.ff0__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u0.ce1__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u0.cl1__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u0.z1__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u0.ff1__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u0.co_msb__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u0.cfbo__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u1.sor__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u1.cmsbo__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u1.cl0__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u1.z0__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u1.ff0__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u1.ce1__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u1.cl1__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u1.z1__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u1.ff1__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u1.co_msb__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u1.sol_msb__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u1.cfbo__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u2.sor__sig\ : bit;
+    SIGNAL \US_Timer:TimerUDB:sT24:timerdp:u2.cmsbo__sig\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.cl0__sig\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.z0__sig\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.ff0__sig\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.ce1__sig\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.cl1__sig\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.z1__sig\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.ff1__sig\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.co_msb__sig\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.sol_msb__sig\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.cfbo__sig\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u1.sor__sig\ : bit;
+    SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u1.cmsbo__sig\ : bit;
     ATTRIBUTE Location OF ClockBlock : LABEL IS "F(Clock,0)";
     ATTRIBUTE lib_model OF STP_0(0) : LABEL IS "iocell1";
     ATTRIBUTE Location OF STP_0(0) : LABEL IS "P3[0]";
@@ -371,148 +633,314 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     ATTRIBUTE Location OF Echo_L(0) : LABEL IS "P0[0]";
     ATTRIBUTE lib_model OF SDA_1(0) : LABEL IS "iocell20";
     ATTRIBUTE Location OF SDA_1(0) : LABEL IS "P12[5]";
+    ATTRIBUTE lib_model OF Quad1A(0) : LABEL IS "iocell21";
+    ATTRIBUTE Location OF Quad1A(0) : LABEL IS "P2[6]";
+    ATTRIBUTE lib_model OF Quad1B(0) : LABEL IS "iocell22";
+    ATTRIBUTE Location OF Quad1B(0) : LABEL IS "P2[7]";
+    ATTRIBUTE lib_model OF Quad2A(0) : LABEL IS "iocell23";
+    ATTRIBUTE Location OF Quad2A(0) : LABEL IS "P2[4]";
+    ATTRIBUTE lib_model OF Quad2B(0) : LABEL IS "iocell24";
+    ATTRIBUTE Location OF Quad2B(0) : LABEL IS "P2[5]";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:status_2\ : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF \PWM:PWMUDB:status_2\ : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF \PWM:PWMUDB:status_2\ : LABEL IS "U(3,5)";
     ATTRIBUTE lib_model OF Net_266 : LABEL IS "macrocell2";
-    ATTRIBUTE Location OF Net_266 : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF Net_266 : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:counter_load_not\ : LABEL IS "macrocell3";
-    ATTRIBUTE Location OF \UART_RPi:BUART:counter_load_not\ : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF \UART_RPi:BUART:counter_load_not\ : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_status_0\ : LABEL IS "macrocell4";
-    ATTRIBUTE Location OF \UART_RPi:BUART:tx_status_0\ : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF \UART_RPi:BUART:tx_status_0\ : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_status_2\ : LABEL IS "macrocell5";
-    ATTRIBUTE Location OF \UART_RPi:BUART:tx_status_2\ : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF \UART_RPi:BUART:tx_status_2\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_counter_load\ : LABEL IS "macrocell6";
-    ATTRIBUTE Location OF \UART_RPi:BUART:rx_counter_load\ : LABEL IS "U(0,4)";
+    ATTRIBUTE Location OF \UART_RPi:BUART:rx_counter_load\ : LABEL IS "U(0,5)";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_status_4\ : LABEL IS "macrocell7";
     ATTRIBUTE Location OF \UART_RPi:BUART:rx_status_4\ : LABEL IS "U(0,5)";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_status_5\ : LABEL IS "macrocell8";
     ATTRIBUTE Location OF \UART_RPi:BUART:rx_status_5\ : LABEL IS "U(0,5)";
     ATTRIBUTE lib_model OF \Timer_L:TimerUDB:capt_fifo_load\ : LABEL IS "macrocell9";
-    ATTRIBUTE Location OF \Timer_L:TimerUDB:capt_fifo_load\ : LABEL IS "U(3,3)";
+    ATTRIBUTE Location OF \Timer_L:TimerUDB:capt_fifo_load\ : LABEL IS "U(1,5)";
     ATTRIBUTE lib_model OF \Timer_L:TimerUDB:status_tc\ : LABEL IS "macrocell10";
-    ATTRIBUTE Location OF \Timer_L:TimerUDB:status_tc\ : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF \Timer_L:TimerUDB:status_tc\ : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF Net_366 : LABEL IS "macrocell11";
-    ATTRIBUTE Location OF Net_366 : LABEL IS "U(2,3)";
+    ATTRIBUTE Location OF Net_366 : LABEL IS "U(0,5)";
     ATTRIBUTE lib_model OF \Timer_R:TimerUDB:capt_fifo_load\ : LABEL IS "macrocell12";
-    ATTRIBUTE Location OF \Timer_R:TimerUDB:capt_fifo_load\ : LABEL IS "U(2,5)";
+    ATTRIBUTE Location OF \Timer_R:TimerUDB:capt_fifo_load\ : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF \Timer_R:TimerUDB:status_tc\ : LABEL IS "macrocell13";
-    ATTRIBUTE Location OF \Timer_R:TimerUDB:status_tc\ : LABEL IS "U(3,5)";
+    ATTRIBUTE Location OF \Timer_R:TimerUDB:status_tc\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF Net_223 : LABEL IS "macrocell14";
-    ATTRIBUTE Location OF Net_223 : LABEL IS "U(2,5)";
+    ATTRIBUTE Location OF Net_223 : LABEL IS "U(2,2)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:reload\ : LABEL IS "macrocell15";
+    ATTRIBUTE Location OF \TB9051_QD1:Cnt16:CounterUDB:reload\ : LABEL IS "U(1,2)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:status_0\ : LABEL IS "macrocell16";
+    ATTRIBUTE Location OF \TB9051_QD1:Cnt16:CounterUDB:status_0\ : LABEL IS "U(0,2)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:status_2\ : LABEL IS "macrocell17";
+    ATTRIBUTE Location OF \TB9051_QD1:Cnt16:CounterUDB:status_2\ : LABEL IS "U(0,1)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:status_3\ : LABEL IS "macrocell18";
+    ATTRIBUTE Location OF \TB9051_QD1:Cnt16:CounterUDB:status_3\ : LABEL IS "U(0,2)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:count_enable\ : LABEL IS "macrocell19";
+    ATTRIBUTE Location OF \TB9051_QD1:Cnt16:CounterUDB:count_enable\ : LABEL IS "U(0,1)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Net_530\ : LABEL IS "macrocell20";
+    ATTRIBUTE Location OF \TB9051_QD1:Net_530\ : LABEL IS "U(1,1)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Net_611\ : LABEL IS "macrocell21";
+    ATTRIBUTE Location OF \TB9051_QD1:Net_611\ : LABEL IS "U(1,1)";
+    ATTRIBUTE lib_model OF \QD1_Timer:TimerUDB:status_tc\ : LABEL IS "macrocell22";
+    ATTRIBUTE Location OF \QD1_Timer:TimerUDB:status_tc\ : LABEL IS "U(1,3)";
+    ATTRIBUTE lib_model OF \US_Timer:TimerUDB:status_tc\ : LABEL IS "macrocell23";
+    ATTRIBUTE Location OF \US_Timer:TimerUDB:status_tc\ : LABEL IS "U(3,1)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:reload\ : LABEL IS "macrocell24";
+    ATTRIBUTE Location OF \TB9051_QD2:Cnt16:CounterUDB:reload\ : LABEL IS "U(2,4)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:status_0\ : LABEL IS "macrocell25";
+    ATTRIBUTE Location OF \TB9051_QD2:Cnt16:CounterUDB:status_0\ : LABEL IS "U(3,4)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:status_2\ : LABEL IS "macrocell26";
+    ATTRIBUTE Location OF \TB9051_QD2:Cnt16:CounterUDB:status_2\ : LABEL IS "U(2,4)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:status_3\ : LABEL IS "macrocell27";
+    ATTRIBUTE Location OF \TB9051_QD2:Cnt16:CounterUDB:status_3\ : LABEL IS "U(2,0)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:count_enable\ : LABEL IS "macrocell28";
+    ATTRIBUTE Location OF \TB9051_QD2:Cnt16:CounterUDB:count_enable\ : LABEL IS "U(2,4)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Net_530\ : LABEL IS "macrocell29";
+    ATTRIBUTE Location OF \TB9051_QD2:Net_530\ : LABEL IS "U(2,4)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Net_611\ : LABEL IS "macrocell30";
+    ATTRIBUTE Location OF \TB9051_QD2:Net_611\ : LABEL IS "U(2,5)";
     ATTRIBUTE lib_model OF \StepperDriver:Sync:ctrl_reg\ : LABEL IS "controlcell1";
-    ATTRIBUTE Location OF \StepperDriver:Sync:ctrl_reg\ : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF \StepperDriver:Sync:ctrl_reg\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell2";
-    ATTRIBUTE Location OF \PWM:PWMUDB:genblk1:ctrlreg\ : LABEL IS "U(2,4)";
+    ATTRIBUTE Location OF \PWM:PWMUDB:genblk1:ctrlreg\ : LABEL IS "U(3,2)";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell1";
-    ATTRIBUTE Location OF \PWM:PWMUDB:genblk8:stsreg\ : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF \PWM:PWMUDB:genblk8:stsreg\ : LABEL IS "U(3,5)";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "datapathcell1";
-    ATTRIBUTE Location OF \PWM:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF \PWM:PWMUDB:sP16:pwmdp:u0\ : LABEL IS "U(2,5)";
     ATTRIBUTE lib_model OF \PWM:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "datapathcell2";
-    ATTRIBUTE Location OF \PWM:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF \PWM:PWMUDB:sP16:pwmdp:u1\ : LABEL IS "U(3,5)";
     ATTRIBUTE lib_model OF \TB9051_EN:Sync:ctrl_reg\ : LABEL IS "controlcell3";
-    ATTRIBUTE Location OF \TB9051_EN:Sync:ctrl_reg\ : LABEL IS "U(3,3)";
+    ATTRIBUTE Location OF \TB9051_EN:Sync:ctrl_reg\ : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF \QuadPWM:PwmDatapath:u0\ : LABEL IS "datapathcell3";
-    ATTRIBUTE Location OF \QuadPWM:PwmDatapath:u0\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \QuadPWM:PwmDatapath:u0\ : LABEL IS "U(0,3)";
     ATTRIBUTE lib_model OF \US_L:Sync:ctrl_reg\ : LABEL IS "controlcell4";
     ATTRIBUTE Location OF \US_L:Sync:ctrl_reg\ : LABEL IS "U(3,4)";
-    ATTRIBUTE Location OF \UART_RPi:TXInternalInterrupt\ : LABEL IS "[IntrContainer=(0)][IntrId=(4)]";
-    ATTRIBUTE Location OF \UART_RPi:RXInternalInterrupt\ : LABEL IS "[IntrContainer=(0)][IntrId=(3)]";
+    ATTRIBUTE Location OF \UART_RPi:TXInternalInterrupt\ : LABEL IS "[IntrContainer=(0)][IntrId=(6)]";
+    ATTRIBUTE Location OF \UART_RPi:RXInternalInterrupt\ : LABEL IS "[IntrContainer=(0)][IntrId=(5)]";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:sTX:TxShifter:u0\ : LABEL IS "datapathcell4";
-    ATTRIBUTE Location OF \UART_RPi:BUART:sTX:TxShifter:u0\ : LABEL IS "U(1,4)";
+    ATTRIBUTE Location OF \UART_RPi:BUART:sTX:TxShifter:u0\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:sTX:sCLOCK:TxBitClkGen\ : LABEL IS "datapathcell5";
-    ATTRIBUTE Location OF \UART_RPi:BUART:sTX:sCLOCK:TxBitClkGen\ : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF \UART_RPi:BUART:sTX:sCLOCK:TxBitClkGen\ : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:sTX:TxSts\ : LABEL IS "statusicell2";
-    ATTRIBUTE Location OF \UART_RPi:BUART:sTX:TxSts\ : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF \UART_RPi:BUART:sTX:TxSts\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:sRX:RxShifter:u0\ : LABEL IS "datapathcell6";
-    ATTRIBUTE Location OF \UART_RPi:BUART:sRX:RxShifter:u0\ : LABEL IS "U(0,5)";
-    ATTRIBUTE Location OF \UART_RPi:BUART:sRX:RxBitCounter\ : LABEL IS "U(0,4)";
+    ATTRIBUTE Location OF \UART_RPi:BUART:sRX:RxShifter:u0\ : LABEL IS "U(1,5)";
+    ATTRIBUTE Location OF \UART_RPi:BUART:sRX:RxBitCounter\ : LABEL IS "U(0,3)";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:sRX:RxSts\ : LABEL IS "statusicell3";
     ATTRIBUTE Location OF \UART_RPi:BUART:sRX:RxSts\ : LABEL IS "U(0,5)";
     ATTRIBUTE Location OF E_L : LABEL IS "[IntrContainer=(0)][IntrId=(0)]";
     ATTRIBUTE lib_model OF \Timer_L:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell5";
-    ATTRIBUTE Location OF \Timer_L:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(2,3)";
+    ATTRIBUTE Location OF \Timer_L:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(1,5)";
     ATTRIBUTE lib_model OF \Timer_L:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell4";
-    ATTRIBUTE Location OF \Timer_L:TimerUDB:rstSts:stsreg\ : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF \Timer_L:TimerUDB:rstSts:stsreg\ : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF \Timer_L:TimerUDB:sT24:timerdp:u0\ : LABEL IS "datapathcell7";
-    ATTRIBUTE Location OF \Timer_L:TimerUDB:sT24:timerdp:u0\ : LABEL IS "U(2,3)";
+    ATTRIBUTE Location OF \Timer_L:TimerUDB:sT24:timerdp:u0\ : LABEL IS "U(1,4)";
     ATTRIBUTE lib_model OF \Timer_L:TimerUDB:sT24:timerdp:u1\ : LABEL IS "datapathcell8";
-    ATTRIBUTE Location OF \Timer_L:TimerUDB:sT24:timerdp:u1\ : LABEL IS "U(3,3)";
+    ATTRIBUTE Location OF \Timer_L:TimerUDB:sT24:timerdp:u1\ : LABEL IS "U(0,4)";
     ATTRIBUTE lib_model OF \Timer_L:TimerUDB:sT24:timerdp:u2\ : LABEL IS "datapathcell9";
-    ATTRIBUTE Location OF \Timer_L:TimerUDB:sT24:timerdp:u2\ : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF \Timer_L:TimerUDB:sT24:timerdp:u2\ : LABEL IS "U(0,5)";
     ATTRIBUTE Location OF \I2C_1:I2C_IRQ\ : LABEL IS "[IntrContainer=(0)][IntrId=(15)]";
     ATTRIBUTE Location OF \I2C_1:I2C_FF\ : LABEL IS "F(I2C,0)";
-    ATTRIBUTE Location OF RXcmplt : LABEL IS "[IntrContainer=(0)][IntrId=(2)]";
+    ATTRIBUTE Location OF RXcmplt : LABEL IS "[IntrContainer=(0)][IntrId=(3)]";
     ATTRIBUTE lib_model OF \Timer_R:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell6";
-    ATTRIBUTE Location OF \Timer_R:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(2,5)";
+    ATTRIBUTE Location OF \Timer_R:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(2,3)";
     ATTRIBUTE lib_model OF \Timer_R:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell5";
-    ATTRIBUTE Location OF \Timer_R:TimerUDB:rstSts:stsreg\ : LABEL IS "U(3,5)";
+    ATTRIBUTE Location OF \Timer_R:TimerUDB:rstSts:stsreg\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \Timer_R:TimerUDB:sT24:timerdp:u0\ : LABEL IS "datapathcell10";
-    ATTRIBUTE Location OF \Timer_R:TimerUDB:sT24:timerdp:u0\ : LABEL IS "U(2,5)";
+    ATTRIBUTE Location OF \Timer_R:TimerUDB:sT24:timerdp:u0\ : LABEL IS "U(2,3)";
     ATTRIBUTE lib_model OF \Timer_R:TimerUDB:sT24:timerdp:u1\ : LABEL IS "datapathcell11";
-    ATTRIBUTE Location OF \Timer_R:TimerUDB:sT24:timerdp:u1\ : LABEL IS "U(3,5)";
+    ATTRIBUTE Location OF \Timer_R:TimerUDB:sT24:timerdp:u1\ : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF \Timer_R:TimerUDB:sT24:timerdp:u2\ : LABEL IS "datapathcell12";
-    ATTRIBUTE Location OF \Timer_R:TimerUDB:sT24:timerdp:u2\ : LABEL IS "U(3,4)";
+    ATTRIBUTE Location OF \Timer_R:TimerUDB:sT24:timerdp:u2\ : LABEL IS "U(3,2)";
     ATTRIBUTE Location OF E_R : LABEL IS "[IntrContainer=(0)][IntrId=(1)]";
     ATTRIBUTE lib_model OF \US_R:Sync:ctrl_reg\ : LABEL IS "controlcell7";
-    ATTRIBUTE Location OF \US_R:Sync:ctrl_reg\ : LABEL IS "U(3,5)";
+    ATTRIBUTE Location OF \US_R:Sync:ctrl_reg\ : LABEL IS "U(3,3)";
     ATTRIBUTE lib_model OF rxDMA : LABEL IS "drqcell1";
     ATTRIBUTE Location OF rxDMA : LABEL IS "[DrqContainer=(0)][DrqId=(0)]";
-    ATTRIBUTE lib_model OF \PWM:PWMUDB:runmode_enable\ : LABEL IS "macrocell15";
-    ATTRIBUTE Location OF \PWM:PWMUDB:runmode_enable\ : LABEL IS "U(2,4)";
-    ATTRIBUTE lib_model OF \PWM:PWMUDB:prevCompare1\ : LABEL IS "macrocell16";
-    ATTRIBUTE Location OF \PWM:PWMUDB:prevCompare1\ : LABEL IS "U(2,3)";
-    ATTRIBUTE lib_model OF \PWM:PWMUDB:status_0\ : LABEL IS "macrocell17";
-    ATTRIBUTE Location OF \PWM:PWMUDB:status_0\ : LABEL IS "U(2,3)";
-    ATTRIBUTE lib_model OF Net_202 : LABEL IS "macrocell18";
-    ATTRIBUTE Location OF Net_202 : LABEL IS "U(2,4)";
-    ATTRIBUTE lib_model OF Net_239 : LABEL IS "macrocell19";
-    ATTRIBUTE Location OF Net_239 : LABEL IS "U(2,4)";
-    ATTRIBUTE lib_model OF Net_240 : LABEL IS "macrocell20";
-    ATTRIBUTE Location OF Net_240 : LABEL IS "U(2,4)";
-    ATTRIBUTE lib_model OF \QuadPWM:toggle_1\ : LABEL IS "macrocell21";
-    ATTRIBUTE Location OF \QuadPWM:toggle_1\ : LABEL IS "U(2,2)";
-    ATTRIBUTE lib_model OF \QuadPWM:toggle_0\ : LABEL IS "macrocell22";
-    ATTRIBUTE Location OF \QuadPWM:toggle_0\ : LABEL IS "U(2,4)";
-    ATTRIBUTE lib_model OF Net_282 : LABEL IS "macrocell23";
-    ATTRIBUTE Location OF Net_282 : LABEL IS "U(2,2)";
-    ATTRIBUTE lib_model OF Net_283 : LABEL IS "macrocell24";
-    ATTRIBUTE Location OF Net_283 : LABEL IS "U(2,3)";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:txn\ : LABEL IS "macrocell25";
-    ATTRIBUTE Location OF \UART_RPi:BUART:txn\ : LABEL IS "U(1,3)";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_1\ : LABEL IS "macrocell26";
-    ATTRIBUTE Location OF \UART_RPi:BUART:tx_state_1\ : LABEL IS "U(1,4)";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_0\ : LABEL IS "macrocell27";
-    ATTRIBUTE Location OF \UART_RPi:BUART:tx_state_0\ : LABEL IS "U(1,4)";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_2\ : LABEL IS "macrocell28";
-    ATTRIBUTE Location OF \UART_RPi:BUART:tx_state_2\ : LABEL IS "U(1,3)";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_bitclk\ : LABEL IS "macrocell29";
-    ATTRIBUTE Location OF \UART_RPi:BUART:tx_bitclk\ : LABEL IS "U(0,3)";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell30";
-    ATTRIBUTE Location OF \UART_RPi:BUART:tx_ctrl_mark_last\ : LABEL IS "U(0,5)";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_0\ : LABEL IS "macrocell31";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:sCTRLReg:ctrlreg\ : LABEL IS "controlcell8";
+    ATTRIBUTE Location OF \TB9051_QD1:Cnt16:CounterUDB:sCTRLReg:ctrlreg\ : LABEL IS "U(0,1)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:sSTSReg:stsreg\ : LABEL IS "statusicell6";
+    ATTRIBUTE Location OF \TB9051_QD1:Cnt16:CounterUDB:sSTSReg:stsreg\ : LABEL IS "U(0,2)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0\ : LABEL IS "datapathcell13";
+    ATTRIBUTE Location OF \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0\ : LABEL IS "U(1,2)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u1\ : LABEL IS "datapathcell14";
+    ATTRIBUTE Location OF \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u1\ : LABEL IS "U(0,2)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_A_delayed_0\ : LABEL IS "macrocell31";
+    ATTRIBUTE Location OF \TB9051_QD1:bQuadDec:quad_A_delayed_0\ : LABEL IS "U(0,2)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_A_delayed_1\ : LABEL IS "macrocell32";
+    ATTRIBUTE Location OF \TB9051_QD1:bQuadDec:quad_A_delayed_1\ : LABEL IS "U(0,0)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_A_delayed_2\ : LABEL IS "macrocell33";
+    ATTRIBUTE Location OF \TB9051_QD1:bQuadDec:quad_A_delayed_2\ : LABEL IS "U(0,0)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_B_delayed_0\ : LABEL IS "macrocell34";
+    ATTRIBUTE Location OF \TB9051_QD1:bQuadDec:quad_B_delayed_0\ : LABEL IS "U(1,3)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_B_delayed_1\ : LABEL IS "macrocell35";
+    ATTRIBUTE Location OF \TB9051_QD1:bQuadDec:quad_B_delayed_1\ : LABEL IS "U(1,1)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_B_delayed_2\ : LABEL IS "macrocell36";
+    ATTRIBUTE Location OF \TB9051_QD1:bQuadDec:quad_B_delayed_2\ : LABEL IS "U(1,1)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:Stsreg\ : LABEL IS "statusicell7";
+    ATTRIBUTE Location OF \TB9051_QD1:bQuadDec:Stsreg\ : LABEL IS "U(2,1)";
+    ATTRIBUTE lib_model OF \QD1_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell9";
+    ATTRIBUTE Location OF \QD1_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(0,4)";
+    ATTRIBUTE lib_model OF \QD1_Timer:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell8";
+    ATTRIBUTE Location OF \QD1_Timer:TimerUDB:rstSts:stsreg\ : LABEL IS "U(0,0)";
+    ATTRIBUTE lib_model OF \QD1_Timer:TimerUDB:sT24:timerdp:u0\ : LABEL IS "datapathcell15";
+    ATTRIBUTE Location OF \QD1_Timer:TimerUDB:sT24:timerdp:u0\ : LABEL IS "U(1,1)";
+    ATTRIBUTE lib_model OF \QD1_Timer:TimerUDB:sT24:timerdp:u1\ : LABEL IS "datapathcell16";
+    ATTRIBUTE Location OF \QD1_Timer:TimerUDB:sT24:timerdp:u1\ : LABEL IS "U(0,1)";
+    ATTRIBUTE lib_model OF \QD1_Timer:TimerUDB:sT24:timerdp:u2\ : LABEL IS "datapathcell17";
+    ATTRIBUTE Location OF \QD1_Timer:TimerUDB:sT24:timerdp:u2\ : LABEL IS "U(0,0)";
+    ATTRIBUTE lib_model OF \US_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell10";
+    ATTRIBUTE Location OF \US_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(3,1)";
+    ATTRIBUTE lib_model OF \US_Timer:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell9";
+    ATTRIBUTE Location OF \US_Timer:TimerUDB:rstSts:stsreg\ : LABEL IS "U(3,1)";
+    ATTRIBUTE lib_model OF \US_Timer:TimerUDB:sT24:timerdp:u0\ : LABEL IS "datapathcell18";
+    ATTRIBUTE Location OF \US_Timer:TimerUDB:sT24:timerdp:u0\ : LABEL IS "U(2,0)";
+    ATTRIBUTE lib_model OF \US_Timer:TimerUDB:sT24:timerdp:u1\ : LABEL IS "datapathcell19";
+    ATTRIBUTE Location OF \US_Timer:TimerUDB:sT24:timerdp:u1\ : LABEL IS "U(3,0)";
+    ATTRIBUTE lib_model OF \US_Timer:TimerUDB:sT24:timerdp:u2\ : LABEL IS "datapathcell20";
+    ATTRIBUTE Location OF \US_Timer:TimerUDB:sT24:timerdp:u2\ : LABEL IS "U(3,1)";
+    ATTRIBUTE Location OF US_Trig : LABEL IS "[IntrContainer=(0)][IntrId=(4)]";
+    ATTRIBUTE Location OF QD1_ISR : LABEL IS "[IntrContainer=(0)][IntrId=(2)]";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:sCTRLReg:ctrlreg\ : LABEL IS "controlcell11";
+    ATTRIBUTE Location OF \TB9051_QD2:Cnt16:CounterUDB:sCTRLReg:ctrlreg\ : LABEL IS "U(2,4)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:sSTSReg:stsreg\ : LABEL IS "statusicell10";
+    ATTRIBUTE Location OF \TB9051_QD2:Cnt16:CounterUDB:sSTSReg:stsreg\ : LABEL IS "U(2,0)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0\ : LABEL IS "datapathcell21";
+    ATTRIBUTE Location OF \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0\ : LABEL IS "U(3,4)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u1\ : LABEL IS "datapathcell22";
+    ATTRIBUTE Location OF \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u1\ : LABEL IS "U(2,4)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_A_delayed_0\ : LABEL IS "macrocell37";
+    ATTRIBUTE Location OF \TB9051_QD2:bQuadDec:quad_A_delayed_0\ : LABEL IS "U(2,5)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_A_delayed_1\ : LABEL IS "macrocell38";
+    ATTRIBUTE Location OF \TB9051_QD2:bQuadDec:quad_A_delayed_1\ : LABEL IS "U(2,5)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_A_delayed_2\ : LABEL IS "macrocell39";
+    ATTRIBUTE Location OF \TB9051_QD2:bQuadDec:quad_A_delayed_2\ : LABEL IS "U(2,5)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_B_delayed_0\ : LABEL IS "macrocell40";
+    ATTRIBUTE Location OF \TB9051_QD2:bQuadDec:quad_B_delayed_0\ : LABEL IS "U(1,4)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_B_delayed_1\ : LABEL IS "macrocell41";
+    ATTRIBUTE Location OF \TB9051_QD2:bQuadDec:quad_B_delayed_1\ : LABEL IS "U(1,4)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_B_delayed_2\ : LABEL IS "macrocell42";
+    ATTRIBUTE Location OF \TB9051_QD2:bQuadDec:quad_B_delayed_2\ : LABEL IS "U(1,2)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:Stsreg\ : LABEL IS "statusicell11";
+    ATTRIBUTE Location OF \TB9051_QD2:bQuadDec:Stsreg\ : LABEL IS "U(2,4)";
+    ATTRIBUTE lib_model OF \PWM:PWMUDB:runmode_enable\ : LABEL IS "macrocell43";
+    ATTRIBUTE Location OF \PWM:PWMUDB:runmode_enable\ : LABEL IS "U(3,2)";
+    ATTRIBUTE lib_model OF \PWM:PWMUDB:prevCompare1\ : LABEL IS "macrocell44";
+    ATTRIBUTE Location OF \PWM:PWMUDB:prevCompare1\ : LABEL IS "U(3,3)";
+    ATTRIBUTE lib_model OF \PWM:PWMUDB:status_0\ : LABEL IS "macrocell45";
+    ATTRIBUTE Location OF \PWM:PWMUDB:status_0\ : LABEL IS "U(3,3)";
+    ATTRIBUTE lib_model OF Net_202 : LABEL IS "macrocell46";
+    ATTRIBUTE Location OF Net_202 : LABEL IS "U(3,4)";
+    ATTRIBUTE lib_model OF Net_239 : LABEL IS "macrocell47";
+    ATTRIBUTE Location OF Net_239 : LABEL IS "U(0,3)";
+    ATTRIBUTE lib_model OF Net_240 : LABEL IS "macrocell48";
+    ATTRIBUTE Location OF Net_240 : LABEL IS "U(0,3)";
+    ATTRIBUTE lib_model OF \QuadPWM:toggle_1\ : LABEL IS "macrocell49";
+    ATTRIBUTE Location OF \QuadPWM:toggle_1\ : LABEL IS "U(3,3)";
+    ATTRIBUTE lib_model OF \QuadPWM:toggle_0\ : LABEL IS "macrocell50";
+    ATTRIBUTE Location OF \QuadPWM:toggle_0\ : LABEL IS "U(2,3)";
+    ATTRIBUTE lib_model OF Net_282 : LABEL IS "macrocell51";
+    ATTRIBUTE Location OF Net_282 : LABEL IS "U(0,3)";
+    ATTRIBUTE lib_model OF Net_283 : LABEL IS "macrocell52";
+    ATTRIBUTE Location OF Net_283 : LABEL IS "U(1,3)";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:txn\ : LABEL IS "macrocell53";
+    ATTRIBUTE Location OF \UART_RPi:BUART:txn\ : LABEL IS "U(2,2)";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_1\ : LABEL IS "macrocell54";
+    ATTRIBUTE Location OF \UART_RPi:BUART:tx_state_1\ : LABEL IS "U(2,2)";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_0\ : LABEL IS "macrocell55";
+    ATTRIBUTE Location OF \UART_RPi:BUART:tx_state_0\ : LABEL IS "U(3,0)";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_2\ : LABEL IS "macrocell56";
+    ATTRIBUTE Location OF \UART_RPi:BUART:tx_state_2\ : LABEL IS "U(2,0)";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_bitclk\ : LABEL IS "macrocell57";
+    ATTRIBUTE Location OF \UART_RPi:BUART:tx_bitclk\ : LABEL IS "U(2,0)";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell58";
+    ATTRIBUTE Location OF \UART_RPi:BUART:tx_ctrl_mark_last\ : LABEL IS "U(1,5)";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_0\ : LABEL IS "macrocell59";
     ATTRIBUTE Location OF \UART_RPi:BUART:rx_state_0\ : LABEL IS "U(0,4)";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_load_fifo\ : LABEL IS "macrocell32";
-    ATTRIBUTE Location OF \UART_RPi:BUART:rx_load_fifo\ : LABEL IS "U(0,5)";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_3\ : LABEL IS "macrocell33";
-    ATTRIBUTE Location OF \UART_RPi:BUART:rx_state_3\ : LABEL IS "U(0,5)";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_2\ : LABEL IS "macrocell34";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_load_fifo\ : LABEL IS "macrocell60";
+    ATTRIBUTE Location OF \UART_RPi:BUART:rx_load_fifo\ : LABEL IS "U(0,4)";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_3\ : LABEL IS "macrocell61";
+    ATTRIBUTE Location OF \UART_RPi:BUART:rx_state_3\ : LABEL IS "U(0,3)";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_2\ : LABEL IS "macrocell62";
     ATTRIBUTE Location OF \UART_RPi:BUART:rx_state_2\ : LABEL IS "U(0,4)";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_bitclk_enable\ : LABEL IS "macrocell35";
-    ATTRIBUTE Location OF \UART_RPi:BUART:rx_bitclk_enable\ : LABEL IS "U(0,4)";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell36";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_bitclk_enable\ : LABEL IS "macrocell63";
+    ATTRIBUTE Location OF \UART_RPi:BUART:rx_bitclk_enable\ : LABEL IS "U(0,3)";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell64";
     ATTRIBUTE Location OF \UART_RPi:BUART:rx_state_stop1_reg\ : LABEL IS "U(0,5)";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_status_3\ : LABEL IS "macrocell37";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_status_3\ : LABEL IS "macrocell65";
     ATTRIBUTE Location OF \UART_RPi:BUART:rx_status_3\ : LABEL IS "U(0,4)";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_last\ : LABEL IS "macrocell38";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_last\ : LABEL IS "macrocell66";
     ATTRIBUTE Location OF \UART_RPi:BUART:rx_last\ : LABEL IS "U(0,4)";
-    ATTRIBUTE lib_model OF \Timer_L:TimerUDB:capture_last\ : LABEL IS "macrocell39";
-    ATTRIBUTE Location OF \Timer_L:TimerUDB:capture_last\ : LABEL IS "U(3,3)";
-    ATTRIBUTE lib_model OF Net_188 : LABEL IS "macrocell40";
-    ATTRIBUTE Location OF Net_188 : LABEL IS "U(3,2)";
-    ATTRIBUTE lib_model OF \Timer_R:TimerUDB:capture_last\ : LABEL IS "macrocell41";
-    ATTRIBUTE Location OF \Timer_R:TimerUDB:capture_last\ : LABEL IS "U(3,5)";
-    ATTRIBUTE lib_model OF Net_219 : LABEL IS "macrocell42";
-    ATTRIBUTE Location OF Net_219 : LABEL IS "U(3,5)";
+    ATTRIBUTE lib_model OF \Timer_L:TimerUDB:capture_last\ : LABEL IS "macrocell67";
+    ATTRIBUTE Location OF \Timer_L:TimerUDB:capture_last\ : LABEL IS "U(1,5)";
+    ATTRIBUTE lib_model OF Net_188 : LABEL IS "macrocell68";
+    ATTRIBUTE Location OF Net_188 : LABEL IS "U(0,5)";
+    ATTRIBUTE lib_model OF \Timer_R:TimerUDB:capture_last\ : LABEL IS "macrocell69";
+    ATTRIBUTE Location OF \Timer_R:TimerUDB:capture_last\ : LABEL IS "U(3,1)";
+    ATTRIBUTE lib_model OF Net_219 : LABEL IS "macrocell70";
+    ATTRIBUTE Location OF Net_219 : LABEL IS "U(3,1)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Net_1251\ : LABEL IS "macrocell71";
+    ATTRIBUTE Location OF \TB9051_QD1:Net_1251\ : LABEL IS "U(0,2)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell72";
+    ATTRIBUTE Location OF \TB9051_QD1:Cnt16:CounterUDB:overflow_reg_i\ : LABEL IS "U(0,1)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:underflow_reg_i\ : LABEL IS "macrocell73";
+    ATTRIBUTE Location OF \TB9051_QD1:Cnt16:CounterUDB:underflow_reg_i\ : LABEL IS "U(0,2)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Net_1275\ : LABEL IS "macrocell74";
+    ATTRIBUTE Location OF \TB9051_QD1:Net_1275\ : LABEL IS "U(1,1)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:prevCompare\ : LABEL IS "macrocell75";
+    ATTRIBUTE Location OF \TB9051_QD1:Cnt16:CounterUDB:prevCompare\ : LABEL IS "U(0,2)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Net_1251_split\ : LABEL IS "macrocell76";
+    ATTRIBUTE Location OF \TB9051_QD1:Net_1251_split\ : LABEL IS "U(0,1)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:count_stored_i\ : LABEL IS "macrocell77";
+    ATTRIBUTE Location OF \TB9051_QD1:Cnt16:CounterUDB:count_stored_i\ : LABEL IS "U(0,0)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Net_1203\ : LABEL IS "macrocell78";
+    ATTRIBUTE Location OF \TB9051_QD1:Net_1203\ : LABEL IS "U(1,0)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_A_filt\ : LABEL IS "macrocell79";
+    ATTRIBUTE Location OF \TB9051_QD1:bQuadDec:quad_A_filt\ : LABEL IS "U(0,0)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_B_filt\ : LABEL IS "macrocell80";
+    ATTRIBUTE Location OF \TB9051_QD1:bQuadDec:quad_B_filt\ : LABEL IS "U(1,1)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Net_1260\ : LABEL IS "macrocell81";
+    ATTRIBUTE Location OF \TB9051_QD1:Net_1260\ : LABEL IS "U(0,0)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:error\ : LABEL IS "macrocell82";
+    ATTRIBUTE Location OF \TB9051_QD1:bQuadDec:error\ : LABEL IS "U(1,1)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:state_1\ : LABEL IS "macrocell83";
+    ATTRIBUTE Location OF \TB9051_QD1:bQuadDec:state_1\ : LABEL IS "U(0,0)";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:state_0\ : LABEL IS "macrocell84";
+    ATTRIBUTE Location OF \TB9051_QD1:bQuadDec:state_0\ : LABEL IS "U(1,0)";
+    ATTRIBUTE lib_model OF Net_315 : LABEL IS "macrocell85";
+    ATTRIBUTE Location OF Net_315 : LABEL IS "U(1,4)";
+    ATTRIBUTE lib_model OF Net_304 : LABEL IS "macrocell86";
+    ATTRIBUTE Location OF Net_304 : LABEL IS "U(3,1)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Net_1251\ : LABEL IS "macrocell87";
+    ATTRIBUTE Location OF \TB9051_QD2:Net_1251\ : LABEL IS "U(2,5)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell88";
+    ATTRIBUTE Location OF \TB9051_QD2:Cnt16:CounterUDB:overflow_reg_i\ : LABEL IS "U(2,4)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:underflow_reg_i\ : LABEL IS "macrocell89";
+    ATTRIBUTE Location OF \TB9051_QD2:Cnt16:CounterUDB:underflow_reg_i\ : LABEL IS "U(2,2)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Net_1275\ : LABEL IS "macrocell90";
+    ATTRIBUTE Location OF \TB9051_QD2:Net_1275\ : LABEL IS "U(2,4)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:prevCompare\ : LABEL IS "macrocell91";
+    ATTRIBUTE Location OF \TB9051_QD2:Cnt16:CounterUDB:prevCompare\ : LABEL IS "U(3,4)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Net_1251_split\ : LABEL IS "macrocell92";
+    ATTRIBUTE Location OF \TB9051_QD2:Net_1251_split\ : LABEL IS "U(2,3)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:count_stored_i\ : LABEL IS "macrocell93";
+    ATTRIBUTE Location OF \TB9051_QD2:Cnt16:CounterUDB:count_stored_i\ : LABEL IS "U(2,4)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Net_1203\ : LABEL IS "macrocell94";
+    ATTRIBUTE Location OF \TB9051_QD2:Net_1203\ : LABEL IS "U(2,5)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_A_filt\ : LABEL IS "macrocell95";
+    ATTRIBUTE Location OF \TB9051_QD2:bQuadDec:quad_A_filt\ : LABEL IS "U(2,3)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_B_filt\ : LABEL IS "macrocell96";
+    ATTRIBUTE Location OF \TB9051_QD2:bQuadDec:quad_B_filt\ : LABEL IS "U(1,2)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Net_1260\ : LABEL IS "macrocell97";
+    ATTRIBUTE Location OF \TB9051_QD2:Net_1260\ : LABEL IS "U(2,1)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:error\ : LABEL IS "macrocell98";
+    ATTRIBUTE Location OF \TB9051_QD2:bQuadDec:error\ : LABEL IS "U(2,3)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:state_1\ : LABEL IS "macrocell99";
+    ATTRIBUTE Location OF \TB9051_QD2:bQuadDec:state_1\ : LABEL IS "U(3,5)";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:state_0\ : LABEL IS "macrocell100";
+    ATTRIBUTE Location OF \TB9051_QD2:bQuadDec:state_0\ : LABEL IS "U(3,2)";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -849,10 +1277,14 @@ BEGIN
             clk_bus => ClockBlock_BUS_CLK_local,
             dsi_clkin_div => open,
             dsi_glb_div => open,
-            dclk_glb_0 => \UART_RPi:Net_9\,
-            dclk_0 => \UART_RPi:Net_9_local\,
-            dclk_glb_1 => Net_137,
-            dclk_1 => Net_137_local,
+            dclk_glb_0 => Net_270,
+            dclk_0 => Net_270_local,
+            dclk_glb_1 => Net_335,
+            dclk_1 => Net_335_local,
+            dclk_glb_2 => \UART_RPi:Net_9\,
+            dclk_2 => \UART_RPi:Net_9_local\,
+            dclk_glb_3 => Net_137,
+            dclk_3 => Net_137_local,
             clk_bus_glb_ff => \ClockBlock.clk_bus_glb_ff__sig\);
 
     STP_0:logicalport
@@ -2695,6 +3127,370 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
+    Quad1A:logicalport
+        GENERIC MAP(
+            drive_mode => "001",
+            ibuf_enabled => "1",
+            id => "616eae7b-0936-4214-aa3b-77fcc1d0254c",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "0",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "0",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "I",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Quad1A(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Quad1A",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Quad1A(0)__PA,
+            oe => open,
+            fb => Net_405,
+            pad_in => Quad1A(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Quad1B:logicalport
+        GENERIC MAP(
+            drive_mode => "001",
+            ibuf_enabled => "1",
+            id => "c7bcb319-c955-4515-8d82-8275e91244d3",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "0",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "0",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "I",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Quad1B(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Quad1B",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Quad1B(0)__PA,
+            oe => open,
+            fb => Net_407,
+            pad_in => Quad1B(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Quad2A:logicalport
+        GENERIC MAP(
+            drive_mode => "001",
+            ibuf_enabled => "1",
+            id => "c4a5c346-31e7-46af-bd7e-ab1cbbe9e7da",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "0",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "0",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "I",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Quad2A(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Quad2A",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Quad2A(0)__PA,
+            oe => open,
+            fb => Net_338,
+            pad_in => Quad2A(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Quad2B:logicalport
+        GENERIC MAP(
+            drive_mode => "001",
+            ibuf_enabled => "1",
+            id => "0d235888-4405-4967-82f3-f28312ff9b92",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "0",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "0",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "I",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "00",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Quad2B(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Quad2B",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Quad2B(0)__PA,
+            oe => open,
+            fb => Net_339,
+            pad_in => Quad2B(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
     \PWM:PWMUDB:status_2\:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1)",
@@ -2839,6 +3635,174 @@ BEGIN
         PORT MAP(
             q => Net_223,
             main_0 => Net_218);
+
+    \TB9051_QD1:Cnt16:CounterUDB:reload\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1 * !main_2)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Cnt16:CounterUDB:reload\,
+            main_0 => \TB9051_QD1:Net_1260\,
+            main_1 => \TB9051_QD1:Cnt16:CounterUDB:status_1\,
+            main_2 => \TB9051_QD1:Cnt16:CounterUDB:overflow\);
+
+    \TB9051_QD1:Cnt16:CounterUDB:status_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Cnt16:CounterUDB:status_0\,
+            main_0 => \TB9051_QD1:Cnt16:CounterUDB:cmp_out_i\,
+            main_1 => \TB9051_QD1:Cnt16:CounterUDB:prevCompare\);
+
+    \TB9051_QD1:Cnt16:CounterUDB:status_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Cnt16:CounterUDB:status_2\,
+            main_0 => \TB9051_QD1:Cnt16:CounterUDB:overflow\,
+            main_1 => \TB9051_QD1:Cnt16:CounterUDB:overflow_reg_i\);
+
+    \TB9051_QD1:Cnt16:CounterUDB:status_3\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Cnt16:CounterUDB:status_3\,
+            main_0 => \TB9051_QD1:Cnt16:CounterUDB:status_1\,
+            main_1 => \TB9051_QD1:Cnt16:CounterUDB:underflow_reg_i\);
+
+    \TB9051_QD1:Cnt16:CounterUDB:count_enable\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1 * main_2)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Cnt16:CounterUDB:count_enable\,
+            main_0 => \TB9051_QD1:Cnt16:CounterUDB:control_7\,
+            main_1 => \TB9051_QD1:Cnt16:CounterUDB:count_stored_i\,
+            main_2 => \TB9051_QD1:Net_1203\);
+
+    \TB9051_QD1:Net_530\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1 * !main_2)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Net_530\,
+            main_0 => \TB9051_QD1:Net_1275\,
+            main_1 => \TB9051_QD1:Net_1251\,
+            main_2 => \TB9051_QD1:Cnt16:CounterUDB:prevCompare\);
+
+    \TB9051_QD1:Net_611\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1 * !main_2)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Net_611\,
+            main_0 => \TB9051_QD1:Net_1275\,
+            main_1 => \TB9051_QD1:Net_1251\,
+            main_2 => \TB9051_QD1:Cnt16:CounterUDB:prevCompare\);
+
+    \QD1_Timer:TimerUDB:status_tc\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \QD1_Timer:TimerUDB:status_tc\,
+            main_0 => \QD1_Timer:TimerUDB:control_7\,
+            main_1 => \QD1_Timer:TimerUDB:per_zero\);
+
+    \US_Timer:TimerUDB:status_tc\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \US_Timer:TimerUDB:status_tc\,
+            main_0 => \US_Timer:TimerUDB:control_7\,
+            main_1 => \US_Timer:TimerUDB:per_zero\);
+
+    \TB9051_QD2:Cnt16:CounterUDB:reload\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1 * !main_2)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Cnt16:CounterUDB:reload\,
+            main_0 => \TB9051_QD2:Net_1260\,
+            main_1 => \TB9051_QD2:Cnt16:CounterUDB:status_1\,
+            main_2 => \TB9051_QD2:Cnt16:CounterUDB:overflow\);
+
+    \TB9051_QD2:Cnt16:CounterUDB:status_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Cnt16:CounterUDB:status_0\,
+            main_0 => \TB9051_QD2:Cnt16:CounterUDB:cmp_out_i\,
+            main_1 => \TB9051_QD2:Cnt16:CounterUDB:prevCompare\);
+
+    \TB9051_QD2:Cnt16:CounterUDB:status_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Cnt16:CounterUDB:status_2\,
+            main_0 => \TB9051_QD2:Cnt16:CounterUDB:overflow\,
+            main_1 => \TB9051_QD2:Cnt16:CounterUDB:overflow_reg_i\);
+
+    \TB9051_QD2:Cnt16:CounterUDB:status_3\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Cnt16:CounterUDB:status_3\,
+            main_0 => \TB9051_QD2:Cnt16:CounterUDB:status_1\,
+            main_1 => \TB9051_QD2:Cnt16:CounterUDB:underflow_reg_i\);
+
+    \TB9051_QD2:Cnt16:CounterUDB:count_enable\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1 * main_2)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Cnt16:CounterUDB:count_enable\,
+            main_0 => \TB9051_QD2:Cnt16:CounterUDB:control_7\,
+            main_1 => \TB9051_QD2:Cnt16:CounterUDB:count_stored_i\,
+            main_2 => \TB9051_QD2:Net_1203\);
+
+    \TB9051_QD2:Net_530\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1 * !main_2)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Net_530\,
+            main_0 => \TB9051_QD2:Net_1275\,
+            main_1 => \TB9051_QD2:Net_1251\,
+            main_2 => \TB9051_QD2:Cnt16:CounterUDB:prevCompare\);
+
+    \TB9051_QD2:Net_611\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1 * !main_2)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Net_611\,
+            main_0 => \TB9051_QD2:Net_1275\,
+            main_1 => \TB9051_QD2:Net_1251\,
+            main_2 => \TB9051_QD2:Cnt16:CounterUDB:prevCompare\);
 
     \StepperDriver:Sync:ctrl_reg\:controlcell
         GENERIC MAP(
@@ -3730,6 +4694,860 @@ BEGIN
             termout => Net_178,
             clock => ClockBlock_BUS_CLK);
 
+    \TB9051_QD1:Cnt16:CounterUDB:sCTRLReg:ctrlreg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_270,
+            control_7 => \TB9051_QD1:Cnt16:CounterUDB:control_7\,
+            control_6 => \TB9051_QD1:Cnt16:CounterUDB:control_6\,
+            control_5 => \TB9051_QD1:Cnt16:CounterUDB:control_5\,
+            control_4 => \TB9051_QD1:Cnt16:CounterUDB:control_4\,
+            control_3 => \TB9051_QD1:Cnt16:CounterUDB:control_3\,
+            control_2 => \TB9051_QD1:Cnt16:CounterUDB:control_2\,
+            control_1 => \TB9051_QD1:Cnt16:CounterUDB:control_1\,
+            control_0 => \TB9051_QD1:Cnt16:CounterUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \TB9051_QD1:Cnt16:CounterUDB:sSTSReg:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0011111",
+            clk_inv => '0',
+            clken_mode => 1,
+            reset_inv => '0')
+        PORT MAP(
+            reset => \TB9051_QD1:Net_1260\,
+            clock => Net_270,
+            status_6 => \TB9051_QD1:Cnt16:CounterUDB:status_6\,
+            status_5 => \TB9051_QD1:Cnt16:CounterUDB:status_5\,
+            status_4 => open,
+            status_3 => \TB9051_QD1:Cnt16:CounterUDB:status_3\,
+            status_2 => \TB9051_QD1:Cnt16:CounterUDB:status_2\,
+            status_1 => \TB9051_QD1:Cnt16:CounterUDB:status_1\,
+            status_0 => \TB9051_QD1:Cnt16:CounterUDB:status_0\);
+
+    \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001000000001000000010000000000000010000000000000000100000000000000100000000010000001000000000000001000000011111111000000001111111111111111101000000000000000000001000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_270,
+            cs_addr_2 => \TB9051_QD1:Net_1251\,
+            cs_addr_1 => \TB9051_QD1:Cnt16:CounterUDB:count_enable\,
+            cs_addr_0 => \TB9051_QD1:Cnt16:CounterUDB:reload\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.ce0__sig\,
+            cl0 => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.cl0__sig\,
+            z0 => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.z0__sig\,
+            ff0 => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.ff0__sig\,
+            ce1 => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.ce1__sig\,
+            cl1 => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.cl1__sig\,
+            z1 => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.z1__sig\,
+            ff1 => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.ff1__sig\,
+            co_msb => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.co_msb__sig\,
+            sol_msb => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.sol_msb__sig\,
+            cfbo => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.cfbo__sig\,
+            sil => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u1.sor__sig\,
+            cmsbi => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u1.cmsbo__sig\);
+
+    \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001000000001000000010000000000000010000000000000000100000000000000100000000010000001000000000000001000000011111111000000001111111111111111101011110000000000000001000001110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_270,
+            cs_addr_2 => \TB9051_QD1:Net_1251\,
+            cs_addr_1 => \TB9051_QD1:Cnt16:CounterUDB:count_enable\,
+            cs_addr_0 => \TB9051_QD1:Cnt16:CounterUDB:reload\,
+            z0_comb => \TB9051_QD1:Cnt16:CounterUDB:status_1\,
+            f0_comb => \TB9051_QD1:Cnt16:CounterUDB:overflow\,
+            ce1_comb => \TB9051_QD1:Cnt16:CounterUDB:cmp_out_i\,
+            f0_bus_stat_comb => \TB9051_QD1:Cnt16:CounterUDB:status_6\,
+            f0_blk_stat_comb => \TB9051_QD1:Cnt16:CounterUDB:status_5\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.ce0__sig\,
+            cl0i => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.cl0__sig\,
+            z0i => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.z0__sig\,
+            ff0i => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.ff0__sig\,
+            ce1i => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.ce1__sig\,
+            cl1i => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.cl1__sig\,
+            z1i => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.z1__sig\,
+            ff1i => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.ff1__sig\,
+            ci => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.co_msb__sig\,
+            sir => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.sol_msb__sig\,
+            cfbi => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0.cfbo__sig\,
+            sor => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u1.sor__sig\,
+            cmsbo => \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u1.cmsbo__sig\);
+
+    \TB9051_QD1:bQuadDec:quad_A_delayed_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:bQuadDec:quad_A_delayed_0\,
+            clock_0 => Net_270,
+            main_0 => Net_407);
+
+    \TB9051_QD1:bQuadDec:quad_A_delayed_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:bQuadDec:quad_A_delayed_1\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:bQuadDec:quad_A_delayed_0\);
+
+    \TB9051_QD1:bQuadDec:quad_A_delayed_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:bQuadDec:quad_A_delayed_2\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:bQuadDec:quad_A_delayed_1\);
+
+    \TB9051_QD1:bQuadDec:quad_B_delayed_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:bQuadDec:quad_B_delayed_0\,
+            clock_0 => Net_270,
+            main_0 => Net_405);
+
+    \TB9051_QD1:bQuadDec:quad_B_delayed_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:bQuadDec:quad_B_delayed_1\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:bQuadDec:quad_B_delayed_0\);
+
+    \TB9051_QD1:bQuadDec:quad_B_delayed_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:bQuadDec:quad_B_delayed_2\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:bQuadDec:quad_B_delayed_1\);
+
+    \TB9051_QD1:bQuadDec:Stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "0001111",
+            cy_md_select => "0001111",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_270,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \TB9051_QD1:bQuadDec:error\,
+            status_2 => \TB9051_QD1:Net_1260\,
+            status_1 => \TB9051_QD1:Net_611\,
+            status_0 => \TB9051_QD1:Net_530\);
+
+    \QD1_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => ClockBlock_BUS_CLK,
+            control_7 => \QD1_Timer:TimerUDB:control_7\,
+            control_6 => \QD1_Timer:TimerUDB:control_6\,
+            control_5 => \QD1_Timer:TimerUDB:control_5\,
+            control_4 => \QD1_Timer:TimerUDB:control_4\,
+            control_3 => \QD1_Timer:TimerUDB:control_3\,
+            control_2 => \QD1_Timer:TimerUDB:control_2\,
+            control_1 => \QD1_Timer:TimerUDB:control_1\,
+            control_0 => \QD1_Timer:TimerUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \QD1_Timer:TimerUDB:rstSts:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0000011",
+            clk_inv => '0',
+            clken_mode => 1,
+            reset_inv => '0')
+        PORT MAP(
+            reset => Net_315,
+            clock => ClockBlock_BUS_CLK,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \QD1_Timer:TimerUDB:status_3\,
+            status_2 => \QD1_Timer:TimerUDB:status_2\,
+            status_1 => open,
+            status_0 => \QD1_Timer:TimerUDB:status_tc\);
+
+    \QD1_Timer:TimerUDB:sT24:timerdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => ClockBlock_BUS_CLK,
+            cs_addr_2 => Net_315,
+            cs_addr_1 => \QD1_Timer:TimerUDB:control_7\,
+            cs_addr_0 => \QD1_Timer:TimerUDB:per_zero\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \QD1_Timer:TimerUDB:sT24:timerdp:u0.ce0__sig\,
+            cl0 => \QD1_Timer:TimerUDB:sT24:timerdp:u0.cl0__sig\,
+            z0 => \QD1_Timer:TimerUDB:sT24:timerdp:u0.z0__sig\,
+            ff0 => \QD1_Timer:TimerUDB:sT24:timerdp:u0.ff0__sig\,
+            ce1 => \QD1_Timer:TimerUDB:sT24:timerdp:u0.ce1__sig\,
+            cl1 => \QD1_Timer:TimerUDB:sT24:timerdp:u0.cl1__sig\,
+            z1 => \QD1_Timer:TimerUDB:sT24:timerdp:u0.z1__sig\,
+            ff1 => \QD1_Timer:TimerUDB:sT24:timerdp:u0.ff1__sig\,
+            co_msb => \QD1_Timer:TimerUDB:sT24:timerdp:u0.co_msb__sig\,
+            sol_msb => \QD1_Timer:TimerUDB:sT24:timerdp:u0.sol_msb__sig\,
+            cfbo => \QD1_Timer:TimerUDB:sT24:timerdp:u0.cfbo__sig\,
+            sil => \QD1_Timer:TimerUDB:sT24:timerdp:u1.sor__sig\,
+            cmsbi => \QD1_Timer:TimerUDB:sT24:timerdp:u1.cmsbo__sig\);
+
+    \QD1_Timer:TimerUDB:sT24:timerdp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => ClockBlock_BUS_CLK,
+            cs_addr_2 => Net_315,
+            cs_addr_1 => \QD1_Timer:TimerUDB:control_7\,
+            cs_addr_0 => \QD1_Timer:TimerUDB:per_zero\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \QD1_Timer:TimerUDB:sT24:timerdp:u0.ce0__sig\,
+            cl0i => \QD1_Timer:TimerUDB:sT24:timerdp:u0.cl0__sig\,
+            z0i => \QD1_Timer:TimerUDB:sT24:timerdp:u0.z0__sig\,
+            ff0i => \QD1_Timer:TimerUDB:sT24:timerdp:u0.ff0__sig\,
+            ce1i => \QD1_Timer:TimerUDB:sT24:timerdp:u0.ce1__sig\,
+            cl1i => \QD1_Timer:TimerUDB:sT24:timerdp:u0.cl1__sig\,
+            z1i => \QD1_Timer:TimerUDB:sT24:timerdp:u0.z1__sig\,
+            ff1i => \QD1_Timer:TimerUDB:sT24:timerdp:u0.ff1__sig\,
+            ci => \QD1_Timer:TimerUDB:sT24:timerdp:u0.co_msb__sig\,
+            sir => \QD1_Timer:TimerUDB:sT24:timerdp:u0.sol_msb__sig\,
+            cfbi => \QD1_Timer:TimerUDB:sT24:timerdp:u0.cfbo__sig\,
+            sor => \QD1_Timer:TimerUDB:sT24:timerdp:u1.sor__sig\,
+            cmsbo => \QD1_Timer:TimerUDB:sT24:timerdp:u1.cmsbo__sig\,
+            ce0 => \QD1_Timer:TimerUDB:sT24:timerdp:u1.ce0__sig\,
+            cl0 => \QD1_Timer:TimerUDB:sT24:timerdp:u1.cl0__sig\,
+            z0 => \QD1_Timer:TimerUDB:sT24:timerdp:u1.z0__sig\,
+            ff0 => \QD1_Timer:TimerUDB:sT24:timerdp:u1.ff0__sig\,
+            ce1 => \QD1_Timer:TimerUDB:sT24:timerdp:u1.ce1__sig\,
+            cl1 => \QD1_Timer:TimerUDB:sT24:timerdp:u1.cl1__sig\,
+            z1 => \QD1_Timer:TimerUDB:sT24:timerdp:u1.z1__sig\,
+            ff1 => \QD1_Timer:TimerUDB:sT24:timerdp:u1.ff1__sig\,
+            co_msb => \QD1_Timer:TimerUDB:sT24:timerdp:u1.co_msb__sig\,
+            sol_msb => \QD1_Timer:TimerUDB:sT24:timerdp:u1.sol_msb__sig\,
+            cfbo => \QD1_Timer:TimerUDB:sT24:timerdp:u1.cfbo__sig\,
+            sil => \QD1_Timer:TimerUDB:sT24:timerdp:u2.sor__sig\,
+            cmsbi => \QD1_Timer:TimerUDB:sT24:timerdp:u2.cmsbo__sig\);
+
+    \QD1_Timer:TimerUDB:sT24:timerdp:u2\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => ClockBlock_BUS_CLK,
+            cs_addr_2 => Net_315,
+            cs_addr_1 => \QD1_Timer:TimerUDB:control_7\,
+            cs_addr_0 => \QD1_Timer:TimerUDB:per_zero\,
+            z0_comb => \QD1_Timer:TimerUDB:per_zero\,
+            f0_bus_stat_comb => \QD1_Timer:TimerUDB:status_3\,
+            f0_blk_stat_comb => \QD1_Timer:TimerUDB:status_2\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \QD1_Timer:TimerUDB:sT24:timerdp:u1.ce0__sig\,
+            cl0i => \QD1_Timer:TimerUDB:sT24:timerdp:u1.cl0__sig\,
+            z0i => \QD1_Timer:TimerUDB:sT24:timerdp:u1.z0__sig\,
+            ff0i => \QD1_Timer:TimerUDB:sT24:timerdp:u1.ff0__sig\,
+            ce1i => \QD1_Timer:TimerUDB:sT24:timerdp:u1.ce1__sig\,
+            cl1i => \QD1_Timer:TimerUDB:sT24:timerdp:u1.cl1__sig\,
+            z1i => \QD1_Timer:TimerUDB:sT24:timerdp:u1.z1__sig\,
+            ff1i => \QD1_Timer:TimerUDB:sT24:timerdp:u1.ff1__sig\,
+            ci => \QD1_Timer:TimerUDB:sT24:timerdp:u1.co_msb__sig\,
+            sir => \QD1_Timer:TimerUDB:sT24:timerdp:u1.sol_msb__sig\,
+            cfbi => \QD1_Timer:TimerUDB:sT24:timerdp:u1.cfbo__sig\,
+            sor => \QD1_Timer:TimerUDB:sT24:timerdp:u2.sor__sig\,
+            cmsbo => \QD1_Timer:TimerUDB:sT24:timerdp:u2.cmsbo__sig\);
+
+    \US_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => ClockBlock_BUS_CLK,
+            control_7 => \US_Timer:TimerUDB:control_7\,
+            control_6 => \US_Timer:TimerUDB:control_6\,
+            control_5 => \US_Timer:TimerUDB:control_5\,
+            control_4 => \US_Timer:TimerUDB:control_4\,
+            control_3 => \US_Timer:TimerUDB:control_3\,
+            control_2 => \US_Timer:TimerUDB:control_2\,
+            control_1 => \US_Timer:TimerUDB:control_1\,
+            control_0 => \US_Timer:TimerUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \US_Timer:TimerUDB:rstSts:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0000011",
+            clk_inv => '0',
+            clken_mode => 1,
+            reset_inv => '0')
+        PORT MAP(
+            reset => Net_304,
+            clock => ClockBlock_BUS_CLK,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \US_Timer:TimerUDB:status_3\,
+            status_2 => \US_Timer:TimerUDB:status_2\,
+            status_1 => open,
+            status_0 => \US_Timer:TimerUDB:status_tc\);
+
+    \US_Timer:TimerUDB:sT24:timerdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => ClockBlock_BUS_CLK,
+            cs_addr_2 => Net_304,
+            cs_addr_1 => \US_Timer:TimerUDB:control_7\,
+            cs_addr_0 => \US_Timer:TimerUDB:per_zero\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \US_Timer:TimerUDB:sT24:timerdp:u0.ce0__sig\,
+            cl0 => \US_Timer:TimerUDB:sT24:timerdp:u0.cl0__sig\,
+            z0 => \US_Timer:TimerUDB:sT24:timerdp:u0.z0__sig\,
+            ff0 => \US_Timer:TimerUDB:sT24:timerdp:u0.ff0__sig\,
+            ce1 => \US_Timer:TimerUDB:sT24:timerdp:u0.ce1__sig\,
+            cl1 => \US_Timer:TimerUDB:sT24:timerdp:u0.cl1__sig\,
+            z1 => \US_Timer:TimerUDB:sT24:timerdp:u0.z1__sig\,
+            ff1 => \US_Timer:TimerUDB:sT24:timerdp:u0.ff1__sig\,
+            co_msb => \US_Timer:TimerUDB:sT24:timerdp:u0.co_msb__sig\,
+            sol_msb => \US_Timer:TimerUDB:sT24:timerdp:u0.sol_msb__sig\,
+            cfbo => \US_Timer:TimerUDB:sT24:timerdp:u0.cfbo__sig\,
+            sil => \US_Timer:TimerUDB:sT24:timerdp:u1.sor__sig\,
+            cmsbi => \US_Timer:TimerUDB:sT24:timerdp:u1.cmsbo__sig\);
+
+    \US_Timer:TimerUDB:sT24:timerdp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => ClockBlock_BUS_CLK,
+            cs_addr_2 => Net_304,
+            cs_addr_1 => \US_Timer:TimerUDB:control_7\,
+            cs_addr_0 => \US_Timer:TimerUDB:per_zero\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \US_Timer:TimerUDB:sT24:timerdp:u0.ce0__sig\,
+            cl0i => \US_Timer:TimerUDB:sT24:timerdp:u0.cl0__sig\,
+            z0i => \US_Timer:TimerUDB:sT24:timerdp:u0.z0__sig\,
+            ff0i => \US_Timer:TimerUDB:sT24:timerdp:u0.ff0__sig\,
+            ce1i => \US_Timer:TimerUDB:sT24:timerdp:u0.ce1__sig\,
+            cl1i => \US_Timer:TimerUDB:sT24:timerdp:u0.cl1__sig\,
+            z1i => \US_Timer:TimerUDB:sT24:timerdp:u0.z1__sig\,
+            ff1i => \US_Timer:TimerUDB:sT24:timerdp:u0.ff1__sig\,
+            ci => \US_Timer:TimerUDB:sT24:timerdp:u0.co_msb__sig\,
+            sir => \US_Timer:TimerUDB:sT24:timerdp:u0.sol_msb__sig\,
+            cfbi => \US_Timer:TimerUDB:sT24:timerdp:u0.cfbo__sig\,
+            sor => \US_Timer:TimerUDB:sT24:timerdp:u1.sor__sig\,
+            cmsbo => \US_Timer:TimerUDB:sT24:timerdp:u1.cmsbo__sig\,
+            ce0 => \US_Timer:TimerUDB:sT24:timerdp:u1.ce0__sig\,
+            cl0 => \US_Timer:TimerUDB:sT24:timerdp:u1.cl0__sig\,
+            z0 => \US_Timer:TimerUDB:sT24:timerdp:u1.z0__sig\,
+            ff0 => \US_Timer:TimerUDB:sT24:timerdp:u1.ff0__sig\,
+            ce1 => \US_Timer:TimerUDB:sT24:timerdp:u1.ce1__sig\,
+            cl1 => \US_Timer:TimerUDB:sT24:timerdp:u1.cl1__sig\,
+            z1 => \US_Timer:TimerUDB:sT24:timerdp:u1.z1__sig\,
+            ff1 => \US_Timer:TimerUDB:sT24:timerdp:u1.ff1__sig\,
+            co_msb => \US_Timer:TimerUDB:sT24:timerdp:u1.co_msb__sig\,
+            sol_msb => \US_Timer:TimerUDB:sT24:timerdp:u1.sol_msb__sig\,
+            cfbo => \US_Timer:TimerUDB:sT24:timerdp:u1.cfbo__sig\,
+            sil => \US_Timer:TimerUDB:sT24:timerdp:u2.sor__sig\,
+            cmsbi => \US_Timer:TimerUDB:sT24:timerdp:u2.cmsbo__sig\);
+
+    \US_Timer:TimerUDB:sT24:timerdp:u2\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => ClockBlock_BUS_CLK,
+            cs_addr_2 => Net_304,
+            cs_addr_1 => \US_Timer:TimerUDB:control_7\,
+            cs_addr_0 => \US_Timer:TimerUDB:per_zero\,
+            z0_comb => \US_Timer:TimerUDB:per_zero\,
+            f0_bus_stat_comb => \US_Timer:TimerUDB:status_3\,
+            f0_blk_stat_comb => \US_Timer:TimerUDB:status_2\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \US_Timer:TimerUDB:sT24:timerdp:u1.ce0__sig\,
+            cl0i => \US_Timer:TimerUDB:sT24:timerdp:u1.cl0__sig\,
+            z0i => \US_Timer:TimerUDB:sT24:timerdp:u1.z0__sig\,
+            ff0i => \US_Timer:TimerUDB:sT24:timerdp:u1.ff0__sig\,
+            ce1i => \US_Timer:TimerUDB:sT24:timerdp:u1.ce1__sig\,
+            cl1i => \US_Timer:TimerUDB:sT24:timerdp:u1.cl1__sig\,
+            z1i => \US_Timer:TimerUDB:sT24:timerdp:u1.z1__sig\,
+            ff1i => \US_Timer:TimerUDB:sT24:timerdp:u1.ff1__sig\,
+            ci => \US_Timer:TimerUDB:sT24:timerdp:u1.co_msb__sig\,
+            sir => \US_Timer:TimerUDB:sT24:timerdp:u1.sol_msb__sig\,
+            cfbi => \US_Timer:TimerUDB:sT24:timerdp:u1.cfbo__sig\,
+            sor => \US_Timer:TimerUDB:sT24:timerdp:u2.sor__sig\,
+            cmsbo => \US_Timer:TimerUDB:sT24:timerdp:u2.cmsbo__sig\);
+
+    US_Trig:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_304,
+            clock => ClockBlock_BUS_CLK);
+
+    QD1_ISR:interrupt
+        GENERIC MAP(
+            int_type => "10",
+            is_nmi => 0)
+        PORT MAP(
+            interrupt => Net_315,
+            clock => ClockBlock_BUS_CLK);
+
+    \TB9051_QD2:Cnt16:CounterUDB:sCTRLReg:ctrlreg\:controlcell
+        GENERIC MAP(
+            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_1 => "00000000",
+            cy_ext_reset => 0,
+            cy_force_order => 1,
+            cy_init_value => "00000000",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_335,
+            control_7 => \TB9051_QD2:Cnt16:CounterUDB:control_7\,
+            control_6 => \TB9051_QD2:Cnt16:CounterUDB:control_6\,
+            control_5 => \TB9051_QD2:Cnt16:CounterUDB:control_5\,
+            control_4 => \TB9051_QD2:Cnt16:CounterUDB:control_4\,
+            control_3 => \TB9051_QD2:Cnt16:CounterUDB:control_3\,
+            control_2 => \TB9051_QD2:Cnt16:CounterUDB:control_2\,
+            control_1 => \TB9051_QD2:Cnt16:CounterUDB:control_1\,
+            control_0 => \TB9051_QD2:Cnt16:CounterUDB:control_0\,
+            busclk => ClockBlock_BUS_CLK);
+
+    \TB9051_QD2:Cnt16:CounterUDB:sSTSReg:stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "1111111",
+            cy_md_select => "0011111",
+            clk_inv => '0',
+            clken_mode => 1,
+            reset_inv => '0')
+        PORT MAP(
+            reset => \TB9051_QD2:Net_1260\,
+            clock => Net_335,
+            status_6 => \TB9051_QD2:Cnt16:CounterUDB:status_6\,
+            status_5 => \TB9051_QD2:Cnt16:CounterUDB:status_5\,
+            status_4 => open,
+            status_3 => \TB9051_QD2:Cnt16:CounterUDB:status_3\,
+            status_2 => \TB9051_QD2:Cnt16:CounterUDB:status_2\,
+            status_1 => \TB9051_QD2:Cnt16:CounterUDB:status_1\,
+            status_0 => \TB9051_QD2:Cnt16:CounterUDB:status_0\);
+
+    \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001000000001000000010000000000000010000000000000000100000000000000100000000010000001000000000000001000000011111111000000001111111111111111101000000000000000000001000000000000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_335,
+            cs_addr_2 => \TB9051_QD2:Net_1251\,
+            cs_addr_1 => \TB9051_QD2:Cnt16:CounterUDB:count_enable\,
+            cs_addr_0 => \TB9051_QD2:Cnt16:CounterUDB:reload\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0 => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.ce0__sig\,
+            cl0 => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.cl0__sig\,
+            z0 => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.z0__sig\,
+            ff0 => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.ff0__sig\,
+            ce1 => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.ce1__sig\,
+            cl1 => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.cl1__sig\,
+            z1 => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.z1__sig\,
+            ff1 => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.ff1__sig\,
+            co_msb => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.co_msb__sig\,
+            sol_msb => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.sol_msb__sig\,
+            cfbo => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.cfbo__sig\,
+            sil => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u1.sor__sig\,
+            cmsbi => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u1.cmsbo__sig\);
+
+    \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u1\:datapathcell
+        GENERIC MAP(
+            a0_init => "00000000",
+            a1_init => "00000000",
+            ce0_sync => 1,
+            ce1_sync => 1,
+            cl0_sync => 1,
+            cl1_sync => 1,
+            cmsb_sync => 1,
+            co_msb_sync => 1,
+            cy_dpconfig => "0000000001000000000000001000000001000000010000000000000010000000000000000100000000000000100000000010000001000000000000001000000011111111000000001111111111111111101011110000000000000001000001110000000000011000",
+            d0_init => "00000000",
+            d1_init => "00000000",
+            f0_blk_sync => 1,
+            f0_bus_sync => 1,
+            f1_blk_sync => 1,
+            f1_bus_sync => 1,
+            ff0_sync => 1,
+            ff1_sync => 1,
+            ov_msb_sync => 1,
+            so_sync => 1,
+            z0_sync => 1,
+            z1_sync => 1,
+            uses_p_in => '0',
+            uses_p_out => '0',
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_335,
+            cs_addr_2 => \TB9051_QD2:Net_1251\,
+            cs_addr_1 => \TB9051_QD2:Cnt16:CounterUDB:count_enable\,
+            cs_addr_0 => \TB9051_QD2:Cnt16:CounterUDB:reload\,
+            z0_comb => \TB9051_QD2:Cnt16:CounterUDB:status_1\,
+            f0_comb => \TB9051_QD2:Cnt16:CounterUDB:overflow\,
+            ce1_comb => \TB9051_QD2:Cnt16:CounterUDB:cmp_out_i\,
+            f0_bus_stat_comb => \TB9051_QD2:Cnt16:CounterUDB:status_6\,
+            f0_blk_stat_comb => \TB9051_QD2:Cnt16:CounterUDB:status_5\,
+            busclk => ClockBlock_BUS_CLK,
+            ce0i => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.ce0__sig\,
+            cl0i => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.cl0__sig\,
+            z0i => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.z0__sig\,
+            ff0i => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.ff0__sig\,
+            ce1i => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.ce1__sig\,
+            cl1i => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.cl1__sig\,
+            z1i => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.z1__sig\,
+            ff1i => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.ff1__sig\,
+            ci => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.co_msb__sig\,
+            sir => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.sol_msb__sig\,
+            cfbi => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.cfbo__sig\,
+            sor => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u1.sor__sig\,
+            cmsbo => \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u1.cmsbo__sig\);
+
+    \TB9051_QD2:bQuadDec:quad_A_delayed_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:bQuadDec:quad_A_delayed_0\,
+            clock_0 => Net_335,
+            main_0 => Net_338);
+
+    \TB9051_QD2:bQuadDec:quad_A_delayed_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:bQuadDec:quad_A_delayed_1\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:bQuadDec:quad_A_delayed_0\);
+
+    \TB9051_QD2:bQuadDec:quad_A_delayed_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:bQuadDec:quad_A_delayed_2\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:bQuadDec:quad_A_delayed_1\);
+
+    \TB9051_QD2:bQuadDec:quad_B_delayed_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:bQuadDec:quad_B_delayed_0\,
+            clock_0 => Net_335,
+            main_0 => Net_339);
+
+    \TB9051_QD2:bQuadDec:quad_B_delayed_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:bQuadDec:quad_B_delayed_1\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:bQuadDec:quad_B_delayed_0\);
+
+    \TB9051_QD2:bQuadDec:quad_B_delayed_2\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:bQuadDec:quad_B_delayed_2\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:bQuadDec:quad_B_delayed_1\);
+
+    \TB9051_QD2:bQuadDec:Stsreg\:statusicell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_int_mask => "0001111",
+            cy_md_select => "0001111",
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            clock => Net_335,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => \TB9051_QD2:bQuadDec:error\,
+            status_2 => \TB9051_QD2:Net_1260\,
+            status_1 => \TB9051_QD2:Net_611\,
+            status_0 => \TB9051_QD2:Net_530\);
+
     \PWM:PWMUDB:runmode_enable\:macrocell
         GENERIC MAP(
             eqn_main => "(main_0)",
@@ -4134,5 +5952,421 @@ BEGIN
             main_0 => Net_218,
             main_1 => \Timer_R:TimerUDB:control_7\,
             main_2 => \Timer_R:TimerUDB:capture_last\);
+
+    \TB9051_QD1:Net_1251\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1 * !main_2 * !main_4 * !main_6) + (main_0 * !main_1 * main_2 * !main_4 * main_6) + (main_0 * !main_1 * !main_3 * !main_4 * main_5) + (main_7)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Net_1251\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:Net_1251\,
+            main_1 => \TB9051_QD1:Net_1260\,
+            main_2 => \TB9051_QD1:bQuadDec:quad_A_filt\,
+            main_3 => \TB9051_QD1:bQuadDec:quad_B_filt\,
+            main_4 => \TB9051_QD1:bQuadDec:error\,
+            main_5 => \TB9051_QD1:bQuadDec:state_1\,
+            main_6 => \TB9051_QD1:bQuadDec:state_0\,
+            main_7 => \TB9051_QD1:Net_1251_split\);
+
+    \TB9051_QD1:Cnt16:CounterUDB:overflow_reg_i\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Cnt16:CounterUDB:overflow_reg_i\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:Cnt16:CounterUDB:overflow\);
+
+    \TB9051_QD1:Cnt16:CounterUDB:underflow_reg_i\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Cnt16:CounterUDB:underflow_reg_i\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:Cnt16:CounterUDB:status_1\);
+
+    \TB9051_QD1:Net_1275\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Net_1275\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:Cnt16:CounterUDB:status_1\,
+            main_1 => \TB9051_QD1:Cnt16:CounterUDB:overflow\);
+
+    \TB9051_QD1:Cnt16:CounterUDB:prevCompare\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Cnt16:CounterUDB:prevCompare\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:Cnt16:CounterUDB:cmp_out_i\);
+
+    \TB9051_QD1:Net_1251_split\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1 * main_3 * !main_4 * !main_5) + (main_0 * !main_1 * main_4 * !main_5 * !main_6) + (main_0 * !main_2 * !main_4 * !main_5 * !main_6) + (main_0 * main_3 * !main_4 * !main_5 * !main_6) + (!main_1 * !main_2 * !main_3 * !main_4 * main_5 * !main_6) + (!main_1 * main_2 * !main_3 * !main_4 * main_5 * main_6) + (!main_1 * main_2 * main_3 * !main_4 * !main_5 * main_6) + (!main_2 * main_3 * !main_4 * !main_5 * !main_6)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Net_1251_split\,
+            main_0 => \TB9051_QD1:Net_1251\,
+            main_1 => \TB9051_QD1:Net_1260\,
+            main_2 => \TB9051_QD1:bQuadDec:quad_A_filt\,
+            main_3 => \TB9051_QD1:bQuadDec:quad_B_filt\,
+            main_4 => \TB9051_QD1:bQuadDec:error\,
+            main_5 => \TB9051_QD1:bQuadDec:state_1\,
+            main_6 => \TB9051_QD1:bQuadDec:state_0\);
+
+    \TB9051_QD1:Cnt16:CounterUDB:count_stored_i\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Cnt16:CounterUDB:count_stored_i\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:Net_1203\);
+
+    \TB9051_QD1:Net_1203\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_4 * !main_5 * !main_6) + (!main_0 * !main_2 * !main_3 * !main_4 * !main_5 * main_6) + (!main_0 * main_2 * !main_3 * !main_4 * main_5 * main_6) + (!main_0 * main_2 * main_3 * !main_4 * main_5 * !main_6) + (!main_2 * main_3 * !main_4 * !main_5 * !main_6)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Net_1203\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:Net_1260\,
+            main_1 => \TB9051_QD1:Net_1203\,
+            main_2 => \TB9051_QD1:bQuadDec:quad_A_filt\,
+            main_3 => \TB9051_QD1:bQuadDec:quad_B_filt\,
+            main_4 => \TB9051_QD1:bQuadDec:error\,
+            main_5 => \TB9051_QD1:bQuadDec:state_1\,
+            main_6 => \TB9051_QD1:bQuadDec:state_0\);
+
+    \TB9051_QD1:bQuadDec:quad_A_filt\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1 * !main_2 * main_3) + (main_0 * main_1 * main_2 * !main_3)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:bQuadDec:quad_A_filt\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:bQuadDec:quad_A_delayed_0\,
+            main_1 => \TB9051_QD1:bQuadDec:quad_A_delayed_1\,
+            main_2 => \TB9051_QD1:bQuadDec:quad_A_delayed_2\,
+            main_3 => \TB9051_QD1:bQuadDec:quad_A_filt\);
+
+    \TB9051_QD1:bQuadDec:quad_B_filt\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1 * !main_2 * main_3) + (main_0 * main_1 * main_2 * !main_3)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:bQuadDec:quad_B_filt\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:bQuadDec:quad_B_delayed_0\,
+            main_1 => \TB9051_QD1:bQuadDec:quad_B_delayed_1\,
+            main_2 => \TB9051_QD1:bQuadDec:quad_B_delayed_2\,
+            main_3 => \TB9051_QD1:bQuadDec:quad_B_filt\);
+
+    \TB9051_QD1:Net_1260\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1) + (!main_0 * !main_2 * !main_3) + (!main_1 * !main_2 * !main_3)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:Net_1260\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:Net_1260\,
+            main_1 => \TB9051_QD1:bQuadDec:error\,
+            main_2 => \TB9051_QD1:bQuadDec:state_1\,
+            main_3 => \TB9051_QD1:bQuadDec:state_0\);
+
+    \TB9051_QD1:bQuadDec:error\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5) + (!main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_5) + (!main_0 * main_1 * !main_2 * !main_3 * !main_4 * main_5) + (main_1 * main_2 * !main_3 * !main_4 * !main_5)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:bQuadDec:error\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:Net_1260\,
+            main_1 => \TB9051_QD1:bQuadDec:quad_A_filt\,
+            main_2 => \TB9051_QD1:bQuadDec:quad_B_filt\,
+            main_3 => \TB9051_QD1:bQuadDec:error\,
+            main_4 => \TB9051_QD1:bQuadDec:state_1\,
+            main_5 => \TB9051_QD1:bQuadDec:state_0\);
+
+    \TB9051_QD1:bQuadDec:state_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_2 * !main_3 * main_5) + (!main_0 * main_1 * !main_3 * main_4) + (!main_0 * main_1 * main_3 * !main_4 * !main_5) + (main_1 * !main_2 * !main_3 * !main_4 * !main_5)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:bQuadDec:state_1\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:Net_1260\,
+            main_1 => \TB9051_QD1:bQuadDec:quad_A_filt\,
+            main_2 => \TB9051_QD1:bQuadDec:quad_B_filt\,
+            main_3 => \TB9051_QD1:bQuadDec:error\,
+            main_4 => \TB9051_QD1:bQuadDec:state_1\,
+            main_5 => \TB9051_QD1:bQuadDec:state_0\);
+
+    \TB9051_QD1:bQuadDec:state_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_2 * !main_3 * main_4) + (!main_0 * main_2 * !main_3 * main_5) + (!main_0 * main_2 * main_3 * !main_4 * !main_5) + (!main_1 * main_2 * !main_3 * !main_4 * !main_5)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD1:bQuadDec:state_0\,
+            clock_0 => Net_270,
+            main_0 => \TB9051_QD1:Net_1260\,
+            main_1 => \TB9051_QD1:bQuadDec:quad_A_filt\,
+            main_2 => \TB9051_QD1:bQuadDec:quad_B_filt\,
+            main_3 => \TB9051_QD1:bQuadDec:error\,
+            main_4 => \TB9051_QD1:bQuadDec:state_1\,
+            main_5 => \TB9051_QD1:bQuadDec:state_0\);
+
+    Net_315:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_315,
+            clock_0 => ClockBlock_BUS_CLK,
+            main_0 => \QD1_Timer:TimerUDB:control_7\,
+            main_1 => \QD1_Timer:TimerUDB:per_zero\);
+
+    Net_304:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_304,
+            clock_0 => ClockBlock_BUS_CLK,
+            main_0 => \US_Timer:TimerUDB:control_7\,
+            main_1 => \US_Timer:TimerUDB:per_zero\);
+
+    \TB9051_QD2:Net_1251\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1 * !main_2 * !main_4 * !main_6) + (main_0 * !main_1 * main_2 * !main_4 * main_6) + (main_0 * !main_1 * !main_3 * !main_4 * main_5) + (main_7)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Net_1251\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:Net_1251\,
+            main_1 => \TB9051_QD2:Net_1260\,
+            main_2 => \TB9051_QD2:bQuadDec:quad_A_filt\,
+            main_3 => \TB9051_QD2:bQuadDec:quad_B_filt\,
+            main_4 => \TB9051_QD2:bQuadDec:error\,
+            main_5 => \TB9051_QD2:bQuadDec:state_1\,
+            main_6 => \TB9051_QD2:bQuadDec:state_0\,
+            main_7 => \TB9051_QD2:Net_1251_split\);
+
+    \TB9051_QD2:Cnt16:CounterUDB:overflow_reg_i\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Cnt16:CounterUDB:overflow_reg_i\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:Cnt16:CounterUDB:overflow\);
+
+    \TB9051_QD2:Cnt16:CounterUDB:underflow_reg_i\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Cnt16:CounterUDB:underflow_reg_i\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:Cnt16:CounterUDB:status_1\);
+
+    \TB9051_QD2:Net_1275\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Net_1275\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:Cnt16:CounterUDB:status_1\,
+            main_1 => \TB9051_QD2:Cnt16:CounterUDB:overflow\);
+
+    \TB9051_QD2:Cnt16:CounterUDB:prevCompare\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Cnt16:CounterUDB:prevCompare\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:Cnt16:CounterUDB:cmp_out_i\);
+
+    \TB9051_QD2:Net_1251_split\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * !main_1 * main_3 * !main_4 * !main_5) + (main_0 * !main_1 * main_4 * !main_5 * !main_6) + (main_0 * !main_2 * !main_4 * !main_5 * !main_6) + (main_0 * main_3 * !main_4 * !main_5 * !main_6) + (!main_1 * !main_2 * !main_3 * !main_4 * main_5 * !main_6) + (!main_1 * main_2 * !main_3 * !main_4 * main_5 * main_6) + (!main_1 * main_2 * main_3 * !main_4 * !main_5 * main_6) + (!main_2 * main_3 * !main_4 * !main_5 * !main_6)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Net_1251_split\,
+            main_0 => \TB9051_QD2:Net_1251\,
+            main_1 => \TB9051_QD2:Net_1260\,
+            main_2 => \TB9051_QD2:bQuadDec:quad_A_filt\,
+            main_3 => \TB9051_QD2:bQuadDec:quad_B_filt\,
+            main_4 => \TB9051_QD2:bQuadDec:error\,
+            main_5 => \TB9051_QD2:bQuadDec:state_1\,
+            main_6 => \TB9051_QD2:bQuadDec:state_0\);
+
+    \TB9051_QD2:Cnt16:CounterUDB:count_stored_i\:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Cnt16:CounterUDB:count_stored_i\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:Net_1203\);
+
+    \TB9051_QD2:Net_1203\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_4 * !main_5 * !main_6) + (!main_0 * !main_2 * !main_3 * !main_4 * !main_5 * main_6) + (!main_2 * main_3 * !main_4 * !main_5 * !main_6)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Net_1203\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:Net_1260\,
+            main_1 => \TB9051_QD2:Net_1203\,
+            main_2 => \TB9051_QD2:bQuadDec:quad_A_filt\,
+            main_3 => \TB9051_QD2:bQuadDec:quad_B_filt\,
+            main_4 => \TB9051_QD2:bQuadDec:error\,
+            main_5 => \TB9051_QD2:bQuadDec:state_1\,
+            main_6 => \TB9051_QD2:bQuadDec:state_0\);
+
+    \TB9051_QD2:bQuadDec:quad_A_filt\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1 * !main_2 * main_3) + (main_0 * main_1 * main_2 * !main_3)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:bQuadDec:quad_A_filt\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:bQuadDec:quad_A_delayed_0\,
+            main_1 => \TB9051_QD2:bQuadDec:quad_A_delayed_1\,
+            main_2 => \TB9051_QD2:bQuadDec:quad_A_delayed_2\,
+            main_3 => \TB9051_QD2:bQuadDec:quad_A_filt\);
+
+    \TB9051_QD2:bQuadDec:quad_B_filt\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1 * !main_2 * main_3) + (main_0 * main_1 * main_2 * !main_3)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:bQuadDec:quad_B_filt\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:bQuadDec:quad_B_delayed_0\,
+            main_1 => \TB9051_QD2:bQuadDec:quad_B_delayed_1\,
+            main_2 => \TB9051_QD2:bQuadDec:quad_B_delayed_2\,
+            main_3 => \TB9051_QD2:bQuadDec:quad_B_filt\);
+
+    \TB9051_QD2:Net_1260\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1) + (!main_0 * !main_2 * !main_3) + (!main_1 * !main_2 * !main_3)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:Net_1260\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:Net_1260\,
+            main_1 => \TB9051_QD2:bQuadDec:error\,
+            main_2 => \TB9051_QD2:bQuadDec:state_1\,
+            main_3 => \TB9051_QD2:bQuadDec:state_0\);
+
+    \TB9051_QD2:bQuadDec:error\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * !main_1 * !main_2 * !main_3 * main_4 * main_5) + (!main_0 * !main_1 * main_2 * !main_3 * main_4 * !main_5) + (!main_0 * main_1 * !main_2 * !main_3 * !main_4 * main_5) + (main_1 * main_2 * !main_3 * !main_4 * !main_5)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:bQuadDec:error\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:Net_1260\,
+            main_1 => \TB9051_QD2:bQuadDec:quad_A_filt\,
+            main_2 => \TB9051_QD2:bQuadDec:quad_B_filt\,
+            main_3 => \TB9051_QD2:bQuadDec:error\,
+            main_4 => \TB9051_QD2:bQuadDec:state_1\,
+            main_5 => \TB9051_QD2:bQuadDec:state_0\);
+
+    \TB9051_QD2:bQuadDec:state_1\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_2 * !main_3 * main_5) + (!main_0 * main_1 * !main_3 * main_4) + (!main_0 * main_1 * main_3 * !main_4 * !main_5) + (main_1 * !main_2 * !main_3 * !main_4 * !main_5)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:bQuadDec:state_1\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:Net_1260\,
+            main_1 => \TB9051_QD2:bQuadDec:quad_A_filt\,
+            main_2 => \TB9051_QD2:bQuadDec:quad_B_filt\,
+            main_3 => \TB9051_QD2:bQuadDec:error\,
+            main_4 => \TB9051_QD2:bQuadDec:state_1\,
+            main_5 => \TB9051_QD2:bQuadDec:state_0\);
+
+    \TB9051_QD2:bQuadDec:state_0\:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_2 * !main_3 * main_4) + (!main_0 * main_2 * !main_3 * main_5) + (!main_0 * main_2 * main_3 * !main_4 * !main_5) + (!main_1 * main_2 * !main_3 * !main_4 * !main_5)",
+            regmode => 1,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => \TB9051_QD2:bQuadDec:state_0\,
+            clock_0 => Net_335,
+            main_0 => \TB9051_QD2:Net_1260\,
+            main_1 => \TB9051_QD2:bQuadDec:quad_A_filt\,
+            main_2 => \TB9051_QD2:bQuadDec:quad_B_filt\,
+            main_3 => \TB9051_QD2:bQuadDec:error\,
+            main_4 => \TB9051_QD2:bQuadDec:state_1\,
+            main_5 => \TB9051_QD2:bQuadDec:state_0\);
 
 END __DEFAULT__;

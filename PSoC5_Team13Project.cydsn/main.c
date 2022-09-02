@@ -33,8 +33,7 @@ int mask = 0xff;
 int startFlag = 0;
 uint16 rxByte;
 char string[30];
-uint8 rxBuffer[19] = {0};
-uint8 packBuffer[10] = {0};
+uint8 rxBuffer[15] = {0};
 
 //Functions
 void onRx();
@@ -75,7 +74,11 @@ int main(void) // THIS SHOULD BE FREERTOS
     RXcmplt_Start();
     RXcmplt_ClearPending();
     RXcmplt_StartEx(readBuf);
-    
+    /*
+    // DESYNC TEST
+    for (int i = 0; i < 8; i++)
+        UART_RPi_PutChar('c');
+    */    
     for(;;)
     {  
         /* // MOTOR TEST
@@ -87,31 +90,69 @@ int main(void) // THIS SHOULD BE FREERTOS
        //CyDelay(1000);
        //float param1 = 100;
        //float param2 = 100;
-        //UART_RPi_PutChar('c');
+       //UART_RPi_PutChar('c');
         //UART_RPi_PutString("Hello");
        //fnSend(2, &param1, &param2);
        //TB9051_VehMoveTo(15.000, 5.000);   
         //distMeasure();
+        /*CyDelay(100);
+        int temp = TB9051_QD_GetCounter();
+        unsigned int param1 = (unsigned int) temp;
+        char string[20]; sprintf(string, "param1: %d \n", param1); UART_PutString(string);*/
        
     }
 }
 
 // User Functions
 CY_ISR(readBuf){
+   
     // A packet should arrive within a matter of us could be used as an error check
-    if (rxBuffer[0] == 0x00) {
-        fn = (char)rxBuffer[1];
-        for (int i = 0; i < 4; i++) {
-            B1[i] = (char)rxBuffer[i+2];
-            B2[i] = (char)rxBuffer[i+6];
+    int stopPres = 0;
+    int startPres = 0;
+    int startPos = 0;
+    int deSyncFlg = 0;
+    UART_PutString("RX: ");
+    for (int i = 0; i < 15; i++) {
+        sprintf(string,"%x ",rxBuffer[i]); UART_PutString(string);
+    }
+    UART_PutCRLF();
+    
+    
+    for (int i = 14; i >= 0; i--) {
+        if (rxBuffer[i] == 0x55) {
+            stopPres = 1; 
+        }
+        else if (startPres == 0 && rxBuffer[i] == 0xff) {
+            startPres = 1;
+            startPos = i;
         }
     }
-        
-    for (int i = 0; i < 10; i++) {
-         sprintf(string,"%x ",rxBuffer[i]); UART_PutString(string);
+    
+    
+    if (startPos >= 4) {
+        deSyncFlg = 1;
+        float p1 = 15 - startPos; // This requires fine tuning
+        float p2 = 0;
+        fnSend(90, &p1, &p2);
     }
-    sprintf(string,"\t %i: %0.3f %0.3f \n",fn,prm1,prm2); UART_PutString(string);
-    fnCall(fn,prm1,prm2);
+    
+    if (deSyncFlg == 0) { 
+        fn = (char)rxBuffer[startPos + 1];
+        for (int i = 0; i < 4; i++) {
+            B1[i] = (char)rxBuffer[startPos + 2 + i];
+            B2[i] = (char)rxBuffer[startPos + i + 6];
+        }
+        
+        sprintf(string,"\t %i: %0.3f %0.3f \n",fn,prm1,prm2); UART_PutString(string);
+        fnCall(fn,&prm1,&prm2);
+    }
+    // SECOND APPROACH
+    /*if (packFlag == 0 & rxBuffer[0] == 0xff) {
+        packFlag = 1;
+        packBuffer[i] == 
+    }*/
+    
+    
 }
 
 
@@ -120,7 +161,7 @@ void DMA_Config() {
     rxDMA_Chan = rxDMA_DmaInitialize(rxDMA_BYTES_PER_BURST, rxDMA_REQUEST_PER_BURST, 
         HI16(rxDMA_SRC_BASE), HI16(rxDMA_DST_BASE));
     rxDMA_TD[0] = CyDmaTdAllocate();
-    CyDmaTdSetConfiguration(rxDMA_TD[0], 10, rxDMA_TD[0], rxDMA__TD_TERMOUT_EN | CY_DMA_TD_INC_DST_ADR);
+    CyDmaTdSetConfiguration(rxDMA_TD[0], 15, rxDMA_TD[0], rxDMA__TD_TERMOUT_EN | CY_DMA_TD_INC_DST_ADR);
     CyDmaTdSetAddress(rxDMA_TD[0], LO16((uint32)UART_RPi_RXDATA_PTR), LO16((uint32)rxBuffer));
     CyDmaChSetInitialTd(rxDMA_Chan, rxDMA_TD[0]);
     CyDmaChEnable(rxDMA_Chan, 1);

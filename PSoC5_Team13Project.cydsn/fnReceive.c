@@ -21,10 +21,13 @@
 #include "TB9051.h"
 #include "HCSR04.h"
 
-void fnCall(int fn, float para2, float para3);
+void fnCall(int fn, float * para2, float * para3);
 void fnSend(int fn, float * para2, float * para3);
+void Uart_Resync(int n);
 
-void fnCall(int fn, float para2, float para3) {
+void fnCall(int fn, float * pPrm1, float * pPrm2) {
+    float para2 = *pPrm1;
+    float para3 = *pPrm2;
     //char string[20]; sprintf(string, "%i %.3f %.3f", fn, para2, para3); UART_PutString(string);
     //CyExitCriticalSection(InterruptState);
     switch (fn) { 
@@ -41,6 +44,7 @@ void fnCall(int fn, float para2, float para3) {
         case 52: moveAngle(para2);                      break;
         //case 60: SG90_Begin();                          break; // Servo Commands
         //case 61: SG90_ToAngle(para2);                   break;
+        case 90: Uart_Resync((int)para2);               break;
         case 100: HCSR04_Begin();                       break;
         case 101: distMeasure();                        break;
         case 102: distMeasureL();                       break;
@@ -63,7 +67,7 @@ void fnCall(int fn, float para2, float para3) {
 }
 
 void fnSend(int fn, float * para2, float * para3){
-    uint8 txBuffer[10];// = {0x00, 0x65, 0x42, 0xc8, 0x00, 0x00, 0x42, 0xc8, 0x00};
+    uint8 txBuffer[15];// = {0x00, 0x65, 0x42, 0xc8, 0x00, 0x00, 0x42, 0xc8, 0x00};
     
     union {
         float a;
@@ -78,24 +82,39 @@ void fnSend(int fn, float * para2, float * para3){
     BtoFa.a = *para2;
     BtoFb.b = *para3;
     
-    for (int i = 0; i < 4; i++){
-        txBuffer[i+2] = BtoFa.Ba[3-i];
-        txBuffer[i+6] = BtoFb.Bb[3-i];
+    for (int i = 0; i < 3; i++){
+        txBuffer[i+4] = BtoFa.Ba[3-i];
+        txBuffer[i+8] = BtoFb.Bb[3-i];
     }
     
-    txBuffer[0] = 0x00;
-    txBuffer[1] = (unsigned char)fn;
-    //memcpy(&txBuffer[2],para2,5);
-    //memcpy(&txBuffer[6],para3,5);
+    txBuffer[0] = 0xff;
+    txBuffer[1] = 0xff;
+    txBuffer[2] = 0xff;
+    txBuffer[3] = (unsigned char)fn;
+    txBuffer[12] = 0x55;
+    txBuffer[13] = 0x55;
+    txBuffer[14] = 0x55;
     
+    /* //// DEBUG /////
     UART_PutString("Send: ");
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 15; i++) {
         char string[10]; sprintf(string, "%x ", txBuffer[i]); UART_PutString(string);
-    }  UART_PutCRLF(); 
-    //char string[20]; sprintf(string, "Sent: %i, %0.3f, %0.3f ", fn, *para2, *para3); UART_PutString(string); 
-    UART_RPi_PutArray(txBuffer,10);
-};
+    }   
+    */
+    
+    char string[20]; sprintf(string, "Sent: %i, %0.3f, %0.3f ", fn, *para2, *para3); UART_PutString(string); 
+    UART_PutCRLF();
+    
+     do {} while (UART_RPi_ReadTxStatus() == UART_RPi_TX_STS_COMPLETE);
+        UART_RPi_PutArray(txBuffer,15);
+}
 
+void Uart_Resync(int n){
+    for (int i = 0; i < n; i ++) {
+        //do{} while (UART_RPi_ReadTxStatus() != UART_RPi_TX_STS_COMPLETE); //Wait for UART to be free
+        UART_RPi_PutChar(0x01);
+    }
+}
 
 
 

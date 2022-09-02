@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\PSoC5_Team13Project\Source Files\Source Files\TB9051.c">
 <ExpandedNodeIds>
 <v>Workspace01</v>
 <v>Workspace01\DesignAttempt01</v>
@@ -110,6 +110,8 @@
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_4.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_5.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
@@ -121,10 +123,10 @@
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\E1.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\E2.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_1.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_2.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\E_L.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\E_R.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_L.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_R.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\fnReceive.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\HCSR04.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
@@ -137,8 +139,16 @@
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_PM.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\QD1_ISR.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\QD1_Timer.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\QD1_Timer_PM.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Quad1A.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Quad1B.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Quad2A.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Quad2B.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadPWM.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\RX.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\RXcmplt.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\rxDMA_dma.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\SBT0811.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL_1.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA_1.lst</v>
@@ -158,10 +168,20 @@
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\TB9051.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\TB9051_EN.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\TB9051_EN_PM.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_2.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_2_PM.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Trig_1.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Trig_2.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\TB9051_QD1.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\TB9051_QD1_Cnt16.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\TB9051_QD1_Cnt16_PM.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\TB9051_QD1_PM.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\TB9051_QD2.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\TB9051_QD2_Cnt16.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\TB9051_QD2_Cnt16_PM.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\TB9051_QD2_PM.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_L.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_L_PM.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_R.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_R_PM.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Trig_L.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Trig_R.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_AsmGnu.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_RPi.lst</v>
@@ -169,8 +189,13 @@
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_RPi_INT.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_RPi_IntClock.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_RPi_PM.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_PM.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_L.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_L_PM.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_R.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_R_PM.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_Timer.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_Timer_PM.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_Trig.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.elf</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.hex</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.map</v>
@@ -182,49 +207,6 @@
 <v>Workspace01</v>
 <v>Workspace01\DesignAttempt01</v>
 <v>Workspace01\PSoC5_Team13Project</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\E1.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\E2.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_1.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_2.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\fnReceive.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\HCSR04.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_INT.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_MASTER.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_PM.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_SLAVE.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\IMU.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_PM.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\QuadPWM.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\RX.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\SBT0811.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL_1.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA_1.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\SG90.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\StepperDriver.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\StepperDriver_PM.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\STP_0.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\STP_1.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\STP_2.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -242,7 +224,7 @@
 <v>Workspace01\PSoC5_Team13Project\System Reference Guides\cy_boot_v6_0</v>
 <v>Workspace01\PSoC5_Team13Project\cy_clock_v2_20</v>
 <v>Workspace01\PSoC5_Team13Project\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>Workspace01\PSoC5_Team13Project\cy_constant_v1_0.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\cy_dma_v1_70.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\cy_isr_v1_70</v>
 <v>Workspace01\PSoC5_Team13Project\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\cy_pins_v2_20</v>
@@ -250,10 +232,15 @@
 <v>Workspace01\PSoC5_Team13Project\CyControlReg_v1_80</v>
 <v>Workspace01\PSoC5_Team13Project\CyControlReg_v1_80\CyControlReg_v1_80.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\I2C_v3_50.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\not_v1_0</v>
+<v>Workspace01\PSoC5_Team13Project\not_v1_0\not_v1_0.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\PWM_v3_30.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\QuadDec_v3_0</v>
+<v>Workspace01\PSoC5_Team13Project\QuadDec_v3_0\QuadDec_v3_0.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\QuadPWM_v1_0.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\SW_Tx_UART_v1_50.pdf</v>
-<v>Workspace01\PSoC5_Team13Project\Timer_v2_80.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\Timer_v2_80</v>
+<v>Workspace01\PSoC5_Team13Project\Timer_v2_80\Timer_v2_80.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\UART_v2_50.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
@@ -265,7 +252,7 @@
 <v>Workspace01\PSoC5_Team13Project\System Reference Guides\cy_boot_v6_0</v>
 <v>Workspace01\PSoC5_Team13Project\cy_clock_v2_20</v>
 <v>Workspace01\PSoC5_Team13Project\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
-<v>Workspace01\PSoC5_Team13Project\cy_constant_v1_0.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\cy_dma_v1_70.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\cy_isr_v1_70</v>
 <v>Workspace01\PSoC5_Team13Project\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\cy_pins_v2_20</v>
@@ -273,10 +260,15 @@
 <v>Workspace01\PSoC5_Team13Project\CyControlReg_v1_80</v>
 <v>Workspace01\PSoC5_Team13Project\CyControlReg_v1_80\CyControlReg_v1_80.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\I2C_v3_50.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\not_v1_0</v>
+<v>Workspace01\PSoC5_Team13Project\not_v1_0\not_v1_0.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\PWM_v3_30.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\QuadDec_v3_0</v>
+<v>Workspace01\PSoC5_Team13Project\QuadDec_v3_0\QuadDec_v3_0.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\QuadPWM_v1_0.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\SW_Tx_UART_v1_50.pdf</v>
-<v>Workspace01\PSoC5_Team13Project\Timer_v2_80.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\Timer_v2_80</v>
+<v>Workspace01\PSoC5_Team13Project\Timer_v2_80\Timer_v2_80.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\UART_v2_50.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
@@ -311,6 +303,7 @@
 <name v=".\PSoC5_Team13Project.cydsn\fnReceive.c" />
 <name v=".\PSoC5_Team13Project.cydsn\Generated_Source\PSoC5\UART_RPi.c" />
 <name v=".\PSoC5_Team13Project.cydsn\Generated_Source\PSoC5\UART_RPi.h" />
+<name v=".\PSoC5_Team13Project.cydsn\TB9051.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -318,7 +311,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1341, 703" SelectedTabbedMdiWindow="eb0603d2-9d14-4d1b-9f8c-513825401b30"><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\HCSR04.c" Guid="cb5e45f0-7436-4462-a947-404c07d7a173" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\main.c" Guid="2cb759a8-2b45-49b5-9c64-ea12e33d3a36" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\TopDesign\TopDesign.cysch" Guid="eb0603d2-9d14-4d1b-9f8c-513825401b30" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\PSoC5_Team13Project.cydwr" Guid="de4d0ce9-5c78-4233-bb22-29818f61f47f" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\fnReceive.c" Guid="5b817942-7b0d-4605-8b76-d1041afc1005" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\Generated_Source\PSoC5\UART_RPi.c" Guid="70cf1d73-aa2c-40dc-9d05-1253914228ab" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\Generated_Source\PSoC5\UART_RPi.h" Guid="8a9691c1-5f6b-4e96-9a44-8eb41f69cf03" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1220, 487" SelectedTabbedMdiWindow="eb0603d2-9d14-4d1b-9f8c-513825401b30"><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\HCSR04.c" Guid="cb5e45f0-7436-4462-a947-404c07d7a173" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\main.c" Guid="2cb759a8-2b45-49b5-9c64-ea12e33d3a36" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\TopDesign\TopDesign.cysch" Guid="eb0603d2-9d14-4d1b-9f8c-513825401b30" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\PSoC5_Team13Project.cydwr" Guid="de4d0ce9-5c78-4233-bb22-29818f61f47f" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\fnReceive.c" Guid="5b817942-7b0d-4605-8b76-d1041afc1005" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\Generated_Source\PSoC5\UART_RPi.c" Guid="70cf1d73-aa2c-40dc-9d05-1253914228ab" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\Generated_Source\PSoC5\UART_RPi.h" Guid="8a9691c1-5f6b-4e96-9a44-8eb41f69cf03" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="444932ab-19a8-4908-bc87-a1702d023f26" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\TB9051.c" Guid="2ad62876-de80-4d22-90a8-41a49be0219b" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

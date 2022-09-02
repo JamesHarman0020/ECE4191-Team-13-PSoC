@@ -1,7 +1,9 @@
-C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\PSoC5_Team13Project.cyprj|1ffc4bac-faeb-4674-8a8d-0f966c4fff8c
-C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\Quad_PWM\Quad PWM\Quad PWM.cydsn\Quad PWM.cyprj|ea6432c8-1da2-4376-bdb1-664822fd4db2
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|02540d92-3b60-41c1-802d-0e217508f368
-C:\Users\JamesH\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|54352831-3b04-483e-bda5-b6aa47cc9aa4
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|fb0170f5-65fd-48c3-a2d3-2fb79f08d050
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|2c4b752c-2760-4e84-bd77-7dfe15f13105
-C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|fc835c07-473c-4113-b04f-a792fce6c1c8
+C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\DesignAttempt01.cydsn\DesignAttempt01.cyprj|aab5f816-7fe9-4977-9086-8bb0c63e471a
+C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\Quad_PWM\Quad PWM\Quad PWM.cydsn\Quad PWM.cyprj|521ecffa-aa94-42da-98da-3fc8da82e374
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|606cebcf-4d41-40b9-8fa0-122f01517369
+C:\Users\JamesH\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|e85fb148-6795-4ee4-ab05-67527c05c33f
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|6af6ab94-3607-470c-bd26-a68966040538
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|53b8c225-5cba-4ac4-bdb4-9ce098a4f181
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|2926418b-89ef-4312-9e32-b652cd689069
+C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\PSoC5_Team13Project.cyprj|c4835293-957a-4343-a655-00e834d4833e
+C:\Users\JamesH\Downloads\Quad_PWM\Quad PWM\Quad PWM.cydsn\Quad PWM.cyprj|4b22be9c-f7ac-42bc-8d6e-945467447f78

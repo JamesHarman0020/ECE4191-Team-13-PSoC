@@ -1,5 +1,5 @@
 # PSoC5_Team13Project
-# 2022-09-01 03:50:58Z
+# 2022-09-02 05:10:29Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -26,3 +26,7 @@ set_io "Trig_L(0)" iocell 0 6
 set_io "Echo_R(0)" iocell 0 1
 set_io "Echo_L(0)" iocell 0 0
 set_io "SDA_1(0)" iocell 12 5
+set_io "Quad1A(0)" iocell 2 6
+set_io "Quad1B(0)" iocell 2 7
+set_io "Quad2A(0)" iocell 2 4
+set_io "Quad2B(0)" iocell 2 5

@@ -207,6 +207,44 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\RXcmplt.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\rxDMA_dma.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\rxDMA_dma.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_4.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_4.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\US_Trig.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\US_Trig.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\US_Timer.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\US_Timer.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\US_Timer_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD1_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Quad1A_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Quad1A.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Quad1A.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Quad1B_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Quad1B.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Quad1B.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\QD1_Timer.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\QD1_Timer.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\QD1_Timer_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\QD1_ISR.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\QD1_ISR.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD2_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Quad2A_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Quad2A.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Quad2A.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Quad2B_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Quad2B.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Quad2B.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_5.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_5.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD1_Cnt16.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD1_Cnt16.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD1_Cnt16_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD2_Cnt16.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD2_Cnt16.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD2_Cnt16_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\Export\ARM_GCC_Generic">

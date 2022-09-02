@@ -13,6 +13,13 @@
 #include "project.h"
 #define PI 3.141529
 
+CY_ISR(QD_Read);
+unsigned int QD1_Old = 0;
+unsigned int QD2_Old = 0;
+float d = 0.19; //distance between two wheels
+float r_wheel = 0.028; // radien of wheels
+float theta = 360/48.0f;
+
 void TB9051_Begin()
 {
     QuadPWM_Init();
@@ -20,6 +27,15 @@ void TB9051_Begin()
         QuadPWM_SetDutyCycle(i,0);
     }
     TB9051_EN_Write(0x2); // EN high ENB low
+    
+    //Enable Quad Dec. 
+    TB9051_QD1_Start();
+    TB9051_QD2_Start();
+    QD1_Timer_Start();
+    QD1_ISR_Start();
+    QD1_ISR_ClearPending();
+    QD1_ISR_StartEx(QD_Read);
+    
 }
 
 void TB9051_VehForward(int speed) {
@@ -107,9 +123,8 @@ void TB9051_VehMoveTo(float x, float y){
 
     // float fai = (S_r - S_l)/d;
 
-    float d = 0.19; //distance between two wheels
+    
     float t = 2; // time to reach the destination
-    float r_wheel = 0.028; // radien of wheels
     //float a[2] = {0, 0},b[2] = {x, y}; //oringinal opint and destination point
     float theta = atan(y/x);
     float r = (pow(x,2)+pow(y,2))/(2*sqrt((pow(x,2)+pow(y,2)))*cos(theta)); //radien of mid point
@@ -126,4 +141,33 @@ void TB9051_VehMoveTo(float x, float y){
     TB9051_Forward(0, vRel_right);
     TB9051_Forward(1, vRel_left);
 }
+
+CY_ISR(QD_Read)
+{
+    // Get new positions
+    int QD1_New = TB9051_QD1_GetCounter();
+    int QD2_New = TB9051_QD2_GetCounter();
+    
+    int QD1_Delta = QD1_New - QD1_Old; 
+    int QD2_Delta = QD2_New - QD2_Old; 
+    float QD1_Ratio = QD1_Delta / 34.014f;
+    float QD2_Ratio = QD2_Delta / 34.014f;
+    float w1_Pos = QD1_Ratio * 2 * PI * r_wheel * theta / 360;
+    float w2_Pos = QD2_Ratio * 2 * PI * r_wheel * theta / 360;
+    float w1_Vel = w1_Pos / 0.020;
+    float w2_Vel = w2_Pos / 0.020;
+    
+    //char string[20]; sprintf(string, "W1: %0.3f W2: %0.3f\n", w1_Vel, w2_Vel); UART_PutString(string);
+    fnSend(10, &w1_Vel, &w2_Vel);
+    //int QD1_Theta = 0;
+    //int QD2_Theta = 0;
+    
+    //float velocity = 2*PI*r_wheel*
+    
+    // Keep old positions
+    QD1_Old = QD1_New;
+    QD2_Old = QD2_New;
+}
+
+
 /* [] END OF FILE */
