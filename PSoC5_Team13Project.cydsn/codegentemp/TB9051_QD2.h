@@ -50,7 +50,7 @@ extern uint8 TB9051_QD2_initVar;
 *   Conditional Compilation Parameters
 ***************************************/
 
-#define TB9051_QD2_COUNTER_RESOLUTION         (1u)
+#define TB9051_QD2_COUNTER_RESOLUTION         (2u)
 
 
 /***************************************

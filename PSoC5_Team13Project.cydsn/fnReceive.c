@@ -31,19 +31,20 @@ void fnCall(int fn, float * pPrm1, float * pPrm2) {
     //char string[20]; sprintf(string, "%i %.3f %.3f", fn, para2, para3); UART_PutString(string);
     //CyExitCriticalSection(InterruptState);
     switch (fn) { 
-        case 0: TB9051_VehMoveTo(para2,para3);          break; // Motor Commands
+        case 0: TB9051_VehMoveTo(pPrm1,pPrm2);          break; // Motor Commands
         case 1: TB9051_Begin();                         break;
-        case 2: TB9051_Forward((int)para2,(int)para3);  break;
+        case 2: TB9051_Forward((int)para2,0,(int)para3);break;
         case 3: TB9051_Reverse((int)para2,(int)para3);  break;
         case 4: TB9051_Brake((int)para2);               break;
-        case 5: TB9051_VehForward((int)para2);          break;
+        case 5: TB9051_VehForward(0,pPrm1);             break;
         case 6: TB9051_VehReverse((int)para2);          break;
         case 7: TB9051_VehBrake();                      break;
+        case 8: linAngtoVel(&para2, &para3);            break;
         case 50: oneStepCCW((int)para2);                break; // Stepper Commands
         case 51: oneStepCW((int)para2);                 break;
         case 52: moveAngle(para2);                      break;
-        //case 60: SG90_Begin();                          break; // Servo Commands
-        //case 61: SG90_ToAngle(para2);                   break;
+        //case 60: SG90_Begin();                        break; // Servo Commands
+        //case 61: SG90_ToAngle(para2);                 break;
         case 90: Uart_Resync((int)para2);               break;
         case 100: HCSR04_Begin();                       break;
         case 101: distMeasure();                        break;
@@ -99,28 +100,21 @@ void fnSend(int fn, float * para2, float * para3){
     UART_PutString("Send: ");
     for (int i = 0; i < 15; i++) {
         char string[10]; sprintf(string, "%x ", txBuffer[i]); UART_PutString(string);
-    }   
-    */
+    }
+    UART_PutCRLF(); */
     
-    char string[20]; sprintf(string, "Sent: %i, %0.3f, %0.3f ", fn, *para2, *para3); UART_PutString(string); 
-    UART_PutCRLF();
-    
-     do {} while (UART_RPi_ReadTxStatus() == UART_RPi_TX_STS_COMPLETE);
-        UART_RPi_PutArray(txBuffer,15);
+    UART_RPi_PutArray(txBuffer,15);
+    char string[20]; sprintf(string, "T:%i,%0.2f,%0.2f\n", fn, *para2, *para3); UART_PutString(string);
 }
+
 
 void Uart_Resync(int n){
-    for (int i = 0; i < n; i ++) {
-        //do{} while (UART_RPi_ReadTxStatus() != UART_RPi_TX_STS_COMPLETE); //Wait for UART to be free
-        UART_RPi_PutChar(0x01);
+    UART_PutString("resync");
+    uint8 resyncBuff[15] = {0};
+    if (UART_RPi_GetTxBufferSize() == 0) {
+        UART_RPi_PutArray(resyncBuff,n);
     }
 }
-
-
-
-
-
-
 
 
 /* [] END OF FILE */

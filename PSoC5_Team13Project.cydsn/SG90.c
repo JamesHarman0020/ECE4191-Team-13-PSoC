@@ -9,14 +9,14 @@
  *
  * ========================================
 */
+
 #include "SG90.h"
 #include "stdio.h"
 #include <stdlib.h>
 #include "project.h"
 #include <math.h>
-/* [] END OF FILE */
 
-
+/*
 void SG90_Begin() {
     PWM_Start();
     PWM_WritePeriod(6400); // MAGIC NUMBER
@@ -35,3 +35,4 @@ void SG90_ToAngle(float angle) { //On datasheet the PWM should be between 1-2ms,
         char string[40]; sprintf(string,"Error: Angle out of Servo range [90:90]"); UART_PutString(string);
     }
 }
+    */

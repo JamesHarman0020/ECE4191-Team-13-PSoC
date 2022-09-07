@@ -1,6 +1,6 @@
 -- ======================================================================
 -- PSoC5_Team13Project.ctl generated from PSoC5_Team13Project
--- 09/02/2022 at 15:10
+-- 09/07/2022 at 14:49
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 

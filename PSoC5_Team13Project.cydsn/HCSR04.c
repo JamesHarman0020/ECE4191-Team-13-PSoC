@@ -47,12 +47,20 @@ void HCSR04_Begin(){
 
 void distMeasure(){
     if (initFlag){
+        //compLFlag = 0; compRFlag = 0;
         distMeasureL();
         distMeasureR();
-        float f1 = 100.5;
-        float f2 = 2.5;
         CyDelay(10);
-        fnSend(101, &distAvL ,&distAvR);
+        //int i = 0;
+        /*do {
+            CyDelayUs(10);
+            i++;
+        } while((i < 1000) | (compLFlag == 0 & compRFlag == 0));
+        */
+        if (distAvL < 0.5 | distAvR < 0.5)
+            fnSend(101, &distAvL ,&distAvR);
+            
+        //}
             //compLFlag = 0; compRFlag = 0;
     }
     else HCSR04_Begin();
@@ -67,9 +75,7 @@ void distMeasureL(){
 void distMeasureR(){
     US_R_Write(1); //write the trigger pin high for greater than 10microseconds
     CyDelayUs(15);
-    US_R_Write(0);
-    CyDelayUs(15);
-    
+    US_R_Write(0);   
 }
      
 CY_ISR(CaptureR) //ISR3
@@ -82,10 +88,15 @@ CY_ISR(CaptureR) //ISR3
     if (mCounterR == 3) {
         distAvR = (distR[0] + distR[1] + distR[2]) / AV_Ln;
         mCounterR = 0;
+        if (distAvR <= 0.2 & distAvR > 0) {
+            US_LED_R_Write(1);
+        } 
+        else {
+            US_LED_R_Write(0);    
+        }
     }
     else distMeasureR();
     compRFlag = 1;
-    //fnSend(101, 0, distAvR);
 }
 
 
@@ -99,6 +110,12 @@ CY_ISR(CaptureL) //ISR3
     if (mCounterL == 3) {
         distAvL = (distL[0] + distL[1] + distL[2]) / AV_Ln;
         mCounterL = 0;
+        if (distAvL <= 0.2 & distAvL > 0) {
+            US_LED_L_Write(1);
+        } 
+        else {
+            US_LED_L_Write(0);    
+        }
     }
     else distMeasureL();
     compLFlag = 1;

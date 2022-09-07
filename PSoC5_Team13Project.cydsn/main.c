@@ -21,8 +21,10 @@
 #include "SG90.h"
 #include "TB9051.h"
 //#include "HCSR04.h"
+#include "pid.h"
 
 // Global Variables
+float fullSpeedNoLoad = 0.2814784; // m/s
 char rxString[30] = {0};
 int rxCount = 0;
 char comString[30] = {0};
@@ -34,6 +36,7 @@ int startFlag = 0;
 uint16 rxByte;
 char string[30];
 uint8 rxBuffer[15] = {0};
+uint8 rxBufferOld[15] = {0};
 
 //Functions
 void onRx();
@@ -65,94 +68,77 @@ int main(void) // THIS SHOULD BE FREERTOS
     HCSR04_Begin();
     DMA_Config();
     
-    // Setup the floats for serial receive
-    // by putting data at the address of the floats
-    B1 = (unsigned char *)&prm1;
-    B2 = (unsigned char *)&prm2;
+    B1 = (unsigned char *)&prm1;    // Setup the floats for serial receive
+    B2 = (unsigned char *)&prm2;    // by putting data at the address of the floats
     
     //Setup interrupts
     RXcmplt_Start();
     RXcmplt_ClearPending();
     RXcmplt_StartEx(readBuf);
-    /*
-    // DESYNC TEST
+    
+    /* // DESYNC TEST -- To test the robustness of the UART buffer
     for (int i = 0; i < 8; i++)
         UART_RPi_PutChar('c');
     */    
     for(;;)
-    {  
-        /* // MOTOR TEST
-        CyDelay(5000);
-        TB9051_VehBrake();
-        CyDelay(2000);
-        TB9051_VehReverse(125); */
-       //char string[20]; sprintf(string, "Main\n"); UART_PutString(string);
-       //CyDelay(1000);
-       //float param1 = 100;
-       //float param2 = 100;
-       //UART_RPi_PutChar('c');
-        //UART_RPi_PutString("Hello");
-       //fnSend(2, &param1, &param2);
-       //TB9051_VehMoveTo(15.000, 5.000);   
-        //distMeasure();
-        /*CyDelay(100);
-        int temp = TB9051_QD_GetCounter();
-        unsigned int param1 = (unsigned int) temp;
-        char string[20]; sprintf(string, "param1: %d \n", param1); UART_PutString(string);*/
-       
+    {          
     }
 }
 
 // User Functions
-CY_ISR(readBuf){
-   
-    // A packet should arrive within a matter of us could be used as an error check
-    int stopPres = 0;
-    int startPres = 0;
-    int startPos = 0;
-    int deSyncFlg = 0;
-    UART_PutString("RX: ");
-    for (int i = 0; i < 15; i++) {
-        sprintf(string,"%x ",rxBuffer[i]); UART_PutString(string);
-    }
-    UART_PutCRLF();
-    
-    
-    for (int i = 14; i >= 0; i--) {
-        if (rxBuffer[i] == 0x55) {
-            stopPres = 1; 
-        }
-        else if (startPres == 0 && rxBuffer[i] == 0xff) {
-            startPres = 1;
-            startPos = i;
+int fn_old, param1_old, param2_old;
+CY_ISR(readBuf){ // Read Incoming serial data
+    int diffFlag = 0;
+    for (int i = 3; i < 12; i++) {
+        if (rxBuffer[i] != rxBufferOld[i]) {
+            diffFlag = 1;
         }
     }
-    
-    
-    if (startPos >= 4) {
-        deSyncFlg = 1;
-        float p1 = 15 - startPos; // This requires fine tuning
-        float p2 = 0;
-        fnSend(90, &p1, &p2);
-    }
-    
-    if (deSyncFlg == 0) { 
-        fn = (char)rxBuffer[startPos + 1];
-        for (int i = 0; i < 4; i++) {
-            B1[i] = (char)rxBuffer[startPos + 2 + i];
-            B2[i] = (char)rxBuffer[startPos + i + 6];
+    memcpy(rxBufferOld,rxBuffer,15);
+    if (diffFlag) {        
+        // A packet should arrive within a matter of us -> could be used as an error check
+        int stopPres = 0;
+        int startPres = 0;
+        int startPos = 0;
+        int deSyncFlg = 0;   
+        
+        for (int i = 14; i >= 0; i--) { // Search for the stop byte
+            if (rxBuffer[i] == 0x55) {
+                stopPres = 1; 
+            }
+            // If we have a stop byte, begin searching for a start byte
+            else if (stopPres == 0 & rxBuffer[i] == 0xff & i <= 12) { //Search for the start byte
+                startPres = 1;
+                startPos = i;
+            }
         }
         
-        sprintf(string,"\t %i: %0.3f %0.3f \n",fn,prm1,prm2); UART_PutString(string);
-        fnCall(fn,&prm1,&prm2);
-    }
-    // SECOND APPROACH
-    /*if (packFlag == 0 & rxBuffer[0] == 0xff) {
-        packFlag = 1;
-        packBuffer[i] == 
-    }*/
-    
-    
+        if (startPos >= 4) { //If out of sync, call RPi to adjust.
+            deSyncFlg = 1;
+            float p1 = 15 - startPos; // This requires fine tuning
+            float p2 = 0;
+            UART_PutString("Frame Error: ");
+             for (int i = 0; i < 15; i++) { 
+                sprintf(string,"%x ",rxBuffer[i]); UART_PutString(string);
+            }
+            UART_PutCRLF();
+            fnSend(90, &p1, &p2);
+        }
+        
+        if (deSyncFlg == 0) {  // If insync (Bye, Bye, Bye) read the data and assign it to function, param1, param2 
+            fn = (char)rxBuffer[startPos + 1];
+            for (int i = 0; i < 4; i++) {
+                B1[i] = (char)rxBuffer[startPos + 2 + i];
+                B2[i] = (char)rxBuffer[startPos + i + 6];
+            }
+            
+            // DEBUG FOR INCOMING SERIAL - PRINT DATA IN HEX / DEC
+            sprintf(string,"R:%i %0.3f %0.3f \n",fn,prm1,prm2); UART_PutString(string);
+            if (fn_old != fn | param1_old != prm1 | param2_old != prm2) {
+                fnCall(fn,&prm1,&prm2);
+            }
+        }
+    }    
 }
 
 

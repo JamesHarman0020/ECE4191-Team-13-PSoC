@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: SG90.c  
+* File Name: LED_R.c  
 * Version 2.20
 *
 * Description:
@@ -15,15 +15,15 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "SG90.h"
+#include "LED_R.h"
 
 /* APIs are not generated for P15[7:6] on PSoC 5 */
 #if !(CY_PSOC5A &&\
-	 SG90__PORT == 15 && ((SG90__MASK & 0xC0) != 0))
+	 LED_R__PORT == 15 && ((LED_R__MASK & 0xC0) != 0))
 
 
 /*******************************************************************************
-* Function Name: SG90_Write
+* Function Name: LED_R_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -52,17 +52,17 @@
 *  this function.
 *
 * \funcusage
-*  \snippet SG90_SUT.c usage_SG90_Write
+*  \snippet LED_R_SUT.c usage_LED_R_Write
 *******************************************************************************/
-void SG90_Write(uint8 value)
+void LED_R_Write(uint8 value)
 {
-    uint8 staticBits = (SG90_DR & (uint8)(~SG90_MASK));
-    SG90_DR = staticBits | ((uint8)(value << SG90_SHIFT) & SG90_MASK);
+    uint8 staticBits = (LED_R_DR & (uint8)(~LED_R_MASK));
+    LED_R_DR = staticBits | ((uint8)(value << LED_R_SHIFT) & LED_R_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: SG90_SetDriveMode
+* Function Name: LED_R_SetDriveMode
 ****************************************************************************//**
 *
 * \brief Sets the drive mode for each of the Pins component's pins.
@@ -85,16 +85,16 @@ void SG90_Write(uint8 value)
 *  APIs (primary method) or disable interrupts around this function.
 *
 * \funcusage
-*  \snippet SG90_SUT.c usage_SG90_SetDriveMode
+*  \snippet LED_R_SUT.c usage_LED_R_SetDriveMode
 *******************************************************************************/
-void SG90_SetDriveMode(uint8 mode)
+void LED_R_SetDriveMode(uint8 mode)
 {
-	CyPins_SetPinDriveMode(SG90_0, mode);
+	CyPins_SetPinDriveMode(LED_R_0, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: SG90_Read
+* Function Name: LED_R_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -108,16 +108,16 @@ void SG90_SetDriveMode(uint8 mode)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet SG90_SUT.c usage_SG90_Read  
+*  \snippet LED_R_SUT.c usage_LED_R_Read  
 *******************************************************************************/
-uint8 SG90_Read(void)
+uint8 LED_R_Read(void)
 {
-    return (SG90_PS & SG90_MASK) >> SG90_SHIFT;
+    return (LED_R_PS & LED_R_MASK) >> LED_R_SHIFT;
 }
 
 
 /*******************************************************************************
-* Function Name: SG90_ReadDataReg
+* Function Name: LED_R_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -126,8 +126,8 @@ uint8 SG90_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred SG90_Read() API because the 
-* SG90_ReadDataReg() reads the data register instead of the status 
+* preferred LED_R_Read() API because the 
+* LED_R_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -136,19 +136,19 @@ uint8 SG90_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet SG90_SUT.c usage_SG90_ReadDataReg 
+*  \snippet LED_R_SUT.c usage_LED_R_ReadDataReg 
 *******************************************************************************/
-uint8 SG90_ReadDataReg(void)
+uint8 LED_R_ReadDataReg(void)
 {
-    return (SG90_DR & SG90_MASK) >> SG90_SHIFT;
+    return (LED_R_DR & LED_R_MASK) >> LED_R_SHIFT;
 }
 
 
 /* If interrupt is connected for this Pins component */ 
-#if defined(SG90_INTSTAT) 
+#if defined(LED_R_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: SG90_SetInterruptMode
+    * Function Name: LED_R_SetInterruptMode
     ****************************************************************************//**
     *
     * \brief Configures the interrupt mode for each of the Pins component's
@@ -161,12 +161,12 @@ uint8 SG90_ReadDataReg(void)
     * \param position
     *  The pin position as listed in the Pins component. You may OR these to be 
     *  able to configure the interrupt mode of multiple pins within a Pins 
-    *  component. Or you may use SG90_INTR_ALL to configure the
+    *  component. Or you may use LED_R_INTR_ALL to configure the
     *  interrupt mode of all the pins in the Pins component.       
-    *  - SG90_0_INTR       (First pin in the list)
-    *  - SG90_1_INTR       (Second pin in the list)
+    *  - LED_R_0_INTR       (First pin in the list)
+    *  - LED_R_1_INTR       (Second pin in the list)
     *  - ...
-    *  - SG90_INTR_ALL     (All pins in Pins component)
+    *  - LED_R_INTR_ALL     (All pins in Pins component)
     *
     * \param mode
     *  Interrupt mode for the selected pins. Valid options are documented in
@@ -182,19 +182,19 @@ uint8 SG90_ReadDataReg(void)
     *  port.
     *
     * \funcusage
-    *  \snippet SG90_SUT.c usage_SG90_SetInterruptMode
+    *  \snippet LED_R_SUT.c usage_LED_R_SetInterruptMode
     *******************************************************************************/
-    void SG90_SetInterruptMode(uint16 position, uint16 mode)
+    void LED_R_SetInterruptMode(uint16 position, uint16 mode)
     {
-		if((position & SG90_0_INTR) != 0u) 
+		if((position & LED_R_0_INTR) != 0u) 
 		{ 
-			 SG90_0_INTTYPE_REG = (uint8)mode; 
+			 LED_R_0_INTTYPE_REG = (uint8)mode; 
 		}
     }
     
     
     /*******************************************************************************
-    * Function Name: SG90_ClearInterrupt
+    * Function Name: LED_R_ClearInterrupt
     ****************************************************************************//**
     *
     * \brief Clears any active interrupts attached with the component and returns 
@@ -211,11 +211,11 @@ uint8 SG90_ReadDataReg(void)
     *  those associated with the Pins component.
     *
     * \funcusage
-    *  \snippet SG90_SUT.c usage_SG90_ClearInterrupt
+    *  \snippet LED_R_SUT.c usage_LED_R_ClearInterrupt
     *******************************************************************************/
-    uint8 SG90_ClearInterrupt(void)
+    uint8 LED_R_ClearInterrupt(void)
     {
-        return (SG90_INTSTAT & SG90_MASK) >> SG90_SHIFT;
+        return (LED_R_INTSTAT & LED_R_MASK) >> LED_R_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

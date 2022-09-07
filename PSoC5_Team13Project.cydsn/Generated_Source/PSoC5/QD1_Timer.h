@@ -168,7 +168,7 @@ void QD1_Timer_Wakeup(void)        ;
 *    Initialial Parameter Constants
 ***************************************/
 
-#define QD1_Timer_INIT_PERIOD             479999u
+#define QD1_Timer_INIT_PERIOD             1199999u
 #define QD1_Timer_INIT_CAPTURE_MODE       ((uint8)((uint8)0u << QD1_Timer_CTRL_CAP_MODE_SHIFT))
 #define QD1_Timer_INIT_TRIGGER_MODE       ((uint8)((uint8)0u << QD1_Timer_CTRL_TRIG_MODE_SHIFT))
 #if (QD1_Timer_UsingFixedFunction)

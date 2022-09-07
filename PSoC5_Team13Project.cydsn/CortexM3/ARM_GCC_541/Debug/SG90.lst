@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccFvYrUr.s 			page 1
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccBTc615.s 			page 1
 
 
    1              		.syntax unified
@@ -19,776 +19,311 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccFvYrUr.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.SG90_Write,"ax",%progbits
-  20              		.align	2
-  21              		.global	SG90_Write
-  22              		.thumb
-  23              		.thumb_func
-  24              		.type	SG90_Write, %function
-  25              	SG90_Write:
-  26              	.LFB0:
-  27              		.file 1 "Generated_Source\\PSoC5\\SG90.c"
-   1:Generated_Source\PSoC5/SG90.c **** /*******************************************************************************
-   2:Generated_Source\PSoC5/SG90.c **** * File Name: SG90.c  
-   3:Generated_Source\PSoC5/SG90.c **** * Version 2.20
-   4:Generated_Source\PSoC5/SG90.c **** *
-   5:Generated_Source\PSoC5/SG90.c **** * Description:
-   6:Generated_Source\PSoC5/SG90.c **** *  This file contains API to enable firmware control of a Pins component.
-   7:Generated_Source\PSoC5/SG90.c **** *
-   8:Generated_Source\PSoC5/SG90.c **** * Note:
-   9:Generated_Source\PSoC5/SG90.c **** *
-  10:Generated_Source\PSoC5/SG90.c **** ********************************************************************************
-  11:Generated_Source\PSoC5/SG90.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
-  12:Generated_Source\PSoC5/SG90.c **** * You may use this file only in accordance with the license, terms, conditions, 
-  13:Generated_Source\PSoC5/SG90.c **** * disclaimers, and limitations in the end user license agreement accompanying 
-  14:Generated_Source\PSoC5/SG90.c **** * the software package with which this file was provided.
-  15:Generated_Source\PSoC5/SG90.c **** *******************************************************************************/
-  16:Generated_Source\PSoC5/SG90.c **** 
-  17:Generated_Source\PSoC5/SG90.c **** #include "cytypes.h"
-  18:Generated_Source\PSoC5/SG90.c **** #include "SG90.h"
-  19:Generated_Source\PSoC5/SG90.c **** 
-  20:Generated_Source\PSoC5/SG90.c **** /* APIs are not generated for P15[7:6] on PSoC 5 */
-  21:Generated_Source\PSoC5/SG90.c **** #if !(CY_PSOC5A &&\
-  22:Generated_Source\PSoC5/SG90.c **** 	 SG90__PORT == 15 && ((SG90__MASK & 0xC0) != 0))
-  23:Generated_Source\PSoC5/SG90.c **** 
-  24:Generated_Source\PSoC5/SG90.c **** 
-  25:Generated_Source\PSoC5/SG90.c **** /*******************************************************************************
-  26:Generated_Source\PSoC5/SG90.c **** * Function Name: SG90_Write
-  27:Generated_Source\PSoC5/SG90.c **** ****************************************************************************//**
-  28:Generated_Source\PSoC5/SG90.c **** *
-  29:Generated_Source\PSoC5/SG90.c **** * \brief Writes the value to the physical port (data output register), masking
-  30:Generated_Source\PSoC5/SG90.c **** *  and shifting the bits appropriately. 
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccFvYrUr.s 			page 2
+  19              	.Letext0:
+  20              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+  21              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+  22              		.file 3 "Generated_Source\\PSoC5/core_cm3.h"
+  23              		.section	.debug_info,"",%progbits
+  24              	.Ldebug_info0:
+  25 0000 AA000000 		.4byte	0xaa
+  26 0004 0400     		.2byte	0x4
+  27 0006 00000000 		.4byte	.Ldebug_abbrev0
+  28 000a 04       		.byte	0x4
+  29 000b 01       		.uleb128 0x1
+  30 000c 2E000000 		.4byte	.LASF16
+  31 0010 0C       		.byte	0xc
+  32 0011 CE000000 		.4byte	.LASF17
+  33 0015 FF000000 		.4byte	.LASF18
+  34 0019 00000000 		.4byte	.Ldebug_line0
+  35 001d 02       		.uleb128 0x2
+  36 001e 01       		.byte	0x1
+  37 001f 06       		.byte	0x6
+  38 0020 63010000 		.4byte	.LASF0
+  39 0024 02       		.uleb128 0x2
+  40 0025 01       		.byte	0x1
+  41 0026 08       		.byte	0x8
+  42 0027 EC000000 		.4byte	.LASF1
+  43 002b 02       		.uleb128 0x2
+  44 002c 02       		.byte	0x2
+  45 002d 05       		.byte	0x5
+  46 002e 8B010000 		.4byte	.LASF2
+  47 0032 02       		.uleb128 0x2
+  48 0033 02       		.byte	0x2
+  49 0034 07       		.byte	0x7
+  50 0035 0E000000 		.4byte	.LASF3
+  51 0039 03       		.uleb128 0x3
+  52 003a 7B010000 		.4byte	.LASF12
+  53 003e 01       		.byte	0x1
+  54 003f 3F       		.byte	0x3f
+  55 0040 44000000 		.4byte	0x44
+  56 0044 02       		.uleb128 0x2
+  57 0045 04       		.byte	0x4
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccBTc615.s 			page 2
 
 
-  31:Generated_Source\PSoC5/SG90.c **** *
-  32:Generated_Source\PSoC5/SG90.c **** * The data output register controls the signal applied to the physical pin in 
-  33:Generated_Source\PSoC5/SG90.c **** * conjunction with the drive mode parameter. This function avoids changing 
-  34:Generated_Source\PSoC5/SG90.c **** * other bits in the port by using the appropriate method (read-modify-write or
-  35:Generated_Source\PSoC5/SG90.c **** * bit banding).
-  36:Generated_Source\PSoC5/SG90.c **** *
-  37:Generated_Source\PSoC5/SG90.c **** * <b>Note</b> This function should not be used on a hardware digital output pin 
-  38:Generated_Source\PSoC5/SG90.c **** * as it is driven by the hardware signal attached to it.
-  39:Generated_Source\PSoC5/SG90.c **** *
-  40:Generated_Source\PSoC5/SG90.c **** * \param value
-  41:Generated_Source\PSoC5/SG90.c **** *  Value to write to the component instance.
-  42:Generated_Source\PSoC5/SG90.c **** *
-  43:Generated_Source\PSoC5/SG90.c **** * \return 
-  44:Generated_Source\PSoC5/SG90.c **** *  None 
-  45:Generated_Source\PSoC5/SG90.c **** *
-  46:Generated_Source\PSoC5/SG90.c **** * \sideeffect
-  47:Generated_Source\PSoC5/SG90.c **** *  If you use read-modify-write operations that are not atomic; the Interrupt 
-  48:Generated_Source\PSoC5/SG90.c **** *  Service Routines (ISR) can cause corruption of this function. An ISR that 
-  49:Generated_Source\PSoC5/SG90.c **** *  interrupts this function and performs writes to the Pins component data 
-  50:Generated_Source\PSoC5/SG90.c **** *  register can cause corrupted port data. To avoid this issue, you should 
-  51:Generated_Source\PSoC5/SG90.c **** *  either use the Per-Pin APIs (primary method) or disable interrupts around 
-  52:Generated_Source\PSoC5/SG90.c **** *  this function.
-  53:Generated_Source\PSoC5/SG90.c **** *
-  54:Generated_Source\PSoC5/SG90.c **** * \funcusage
-  55:Generated_Source\PSoC5/SG90.c **** *  \snippet SG90_SUT.c usage_SG90_Write
-  56:Generated_Source\PSoC5/SG90.c **** *******************************************************************************/
-  57:Generated_Source\PSoC5/SG90.c **** void SG90_Write(uint8 value)
-  58:Generated_Source\PSoC5/SG90.c **** {
-  28              		.loc 1 58 0
-  29              		.cfi_startproc
-  30              		@ args = 0, pretend = 0, frame = 0
-  31              		@ frame_needed = 0, uses_anonymous_args = 0
-  32              		@ link register save eliminated.
-  33              	.LVL0:
-  59:Generated_Source\PSoC5/SG90.c ****     uint8 staticBits = (SG90_DR & (uint8)(~SG90_MASK));
-  34              		.loc 1 59 0
-  35 0000 044A     		ldr	r2, .L2
-  36 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  37 0004 03F0FB03 		and	r3, r3, #251
-  38              	.LVL1:
-  60:Generated_Source\PSoC5/SG90.c ****     SG90_DR = staticBits | ((uint8)(value << SG90_SHIFT) & SG90_MASK);
-  39              		.loc 1 60 0
-  40 0008 8000     		lsls	r0, r0, #2
-  41              	.LVL2:
-  42 000a 00F00400 		and	r0, r0, #4
-  43 000e 1843     		orrs	r0, r0, r3
-  44 0010 1070     		strb	r0, [r2]
-  45 0012 7047     		bx	lr
-  46              	.L3:
-  47              		.align	2
-  48              	.L2:
-  49 0014 00510040 		.word	1073762560
-  50              		.cfi_endproc
-  51              	.LFE0:
-  52              		.size	SG90_Write, .-SG90_Write
-  53              		.section	.text.SG90_SetDriveMode,"ax",%progbits
-  54              		.align	2
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccFvYrUr.s 			page 3
+  58 0046 05       		.byte	0x5
+  59 0047 46010000 		.4byte	.LASF4
+  60 004b 02       		.uleb128 0x2
+  61 004c 04       		.byte	0x4
+  62 004d 07       		.byte	0x7
+  63 004e BC000000 		.4byte	.LASF5
+  64 0052 02       		.uleb128 0x2
+  65 0053 08       		.byte	0x8
+  66 0054 05       		.byte	0x5
+  67 0055 00000000 		.4byte	.LASF6
+  68 0059 02       		.uleb128 0x2
+  69 005a 08       		.byte	0x8
+  70 005b 07       		.byte	0x7
+  71 005c D5000000 		.4byte	.LASF7
+  72 0060 04       		.uleb128 0x4
+  73 0061 04       		.byte	0x4
+  74 0062 05       		.byte	0x5
+  75 0063 696E7400 		.ascii	"int\000"
+  76 0067 02       		.uleb128 0x2
+  77 0068 04       		.byte	0x4
+  78 0069 07       		.byte	0x7
+  79 006a 21000000 		.4byte	.LASF8
+  80 006e 02       		.uleb128 0x2
+  81 006f 08       		.byte	0x8
+  82 0070 04       		.byte	0x4
+  83 0071 6F010000 		.4byte	.LASF9
+  84 0075 02       		.uleb128 0x2
+  85 0076 04       		.byte	0x4
+  86 0077 07       		.byte	0x7
+  87 0078 9D010000 		.4byte	.LASF10
+  88 007c 02       		.uleb128 0x2
+  89 007d 01       		.byte	0x1
+  90 007e 08       		.byte	0x8
+  91 007f FA000000 		.4byte	.LASF11
+  92 0083 03       		.uleb128 0x3
+  93 0084 95010000 		.4byte	.LASF13
+  94 0088 02       		.byte	0x2
+  95 0089 2C       		.byte	0x2c
+  96 008a 39000000 		.4byte	0x39
+  97 008e 02       		.uleb128 0x2
+  98 008f 04       		.byte	0x4
+  99 0090 04       		.byte	0x4
+ 100 0091 85010000 		.4byte	.LASF14
+ 101 0095 02       		.uleb128 0x2
+ 102 0096 08       		.byte	0x8
+ 103 0097 04       		.byte	0x4
+ 104 0098 4F010000 		.4byte	.LASF15
+ 105 009c 05       		.uleb128 0x5
+ 106 009d 56010000 		.4byte	.LASF19
+ 107 00a1 03       		.byte	0x3
+ 108 00a2 1207     		.2byte	0x712
+ 109 00a4 A8000000 		.4byte	0xa8
+ 110 00a8 06       		.uleb128 0x6
+ 111 00a9 83000000 		.4byte	0x83
+ 112 00ad 00       		.byte	0
+ 113              		.section	.debug_abbrev,"",%progbits
+ 114              	.Ldebug_abbrev0:
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccBTc615.s 			page 3
 
 
-  55              		.global	SG90_SetDriveMode
-  56              		.thumb
-  57              		.thumb_func
-  58              		.type	SG90_SetDriveMode, %function
-  59              	SG90_SetDriveMode:
-  60              	.LFB1:
-  61:Generated_Source\PSoC5/SG90.c **** }
-  62:Generated_Source\PSoC5/SG90.c **** 
-  63:Generated_Source\PSoC5/SG90.c **** 
-  64:Generated_Source\PSoC5/SG90.c **** /*******************************************************************************
-  65:Generated_Source\PSoC5/SG90.c **** * Function Name: SG90_SetDriveMode
-  66:Generated_Source\PSoC5/SG90.c **** ****************************************************************************//**
-  67:Generated_Source\PSoC5/SG90.c **** *
-  68:Generated_Source\PSoC5/SG90.c **** * \brief Sets the drive mode for each of the Pins component's pins.
-  69:Generated_Source\PSoC5/SG90.c **** * 
-  70:Generated_Source\PSoC5/SG90.c **** * <b>Note</b> This affects all pins in the Pins component instance. Use the
-  71:Generated_Source\PSoC5/SG90.c **** * Per-Pin APIs if you wish to control individual pin's drive modes.
-  72:Generated_Source\PSoC5/SG90.c **** *
-  73:Generated_Source\PSoC5/SG90.c **** * \param mode
-  74:Generated_Source\PSoC5/SG90.c **** *  Mode for the selected signals. Valid options are documented in 
-  75:Generated_Source\PSoC5/SG90.c **** *  \ref driveMode.
-  76:Generated_Source\PSoC5/SG90.c **** *
-  77:Generated_Source\PSoC5/SG90.c **** * \return
-  78:Generated_Source\PSoC5/SG90.c **** *  None
-  79:Generated_Source\PSoC5/SG90.c **** *
-  80:Generated_Source\PSoC5/SG90.c **** * \sideeffect
-  81:Generated_Source\PSoC5/SG90.c **** *  If you use read-modify-write operations that are not atomic, the ISR can
-  82:Generated_Source\PSoC5/SG90.c **** *  cause corruption of this function. An ISR that interrupts this function 
-  83:Generated_Source\PSoC5/SG90.c **** *  and performs writes to the Pins component Drive Mode registers can cause 
-  84:Generated_Source\PSoC5/SG90.c **** *  corrupted port data. To avoid this issue, you should either use the Per-Pin
-  85:Generated_Source\PSoC5/SG90.c **** *  APIs (primary method) or disable interrupts around this function.
-  86:Generated_Source\PSoC5/SG90.c **** *
-  87:Generated_Source\PSoC5/SG90.c **** * \funcusage
-  88:Generated_Source\PSoC5/SG90.c **** *  \snippet SG90_SUT.c usage_SG90_SetDriveMode
-  89:Generated_Source\PSoC5/SG90.c **** *******************************************************************************/
-  90:Generated_Source\PSoC5/SG90.c **** void SG90_SetDriveMode(uint8 mode)
-  91:Generated_Source\PSoC5/SG90.c **** {
-  61              		.loc 1 91 0
-  62              		.cfi_startproc
-  63              		@ args = 0, pretend = 0, frame = 0
-  64              		@ frame_needed = 0, uses_anonymous_args = 0
-  65              		@ link register save eliminated.
-  66              	.LVL3:
-  92:Generated_Source\PSoC5/SG90.c **** 	CyPins_SetPinDriveMode(SG90_0, mode);
-  67              		.loc 1 92 0
-  68 0000 044A     		ldr	r2, .L5
-  69 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
-  70 0004 03F0F103 		and	r3, r3, #241
-  71 0008 00F00E00 		and	r0, r0, #14
-  72              	.LVL4:
-  73 000c 1843     		orrs	r0, r0, r3
-  74 000e 1070     		strb	r0, [r2]
-  75 0010 7047     		bx	lr
-  76              	.L6:
-  77 0012 00BF     		.align	2
-  78              	.L5:
-  79 0014 02500040 		.word	1073762306
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccFvYrUr.s 			page 4
+ 115 0000 01       		.uleb128 0x1
+ 116 0001 11       		.uleb128 0x11
+ 117 0002 01       		.byte	0x1
+ 118 0003 25       		.uleb128 0x25
+ 119 0004 0E       		.uleb128 0xe
+ 120 0005 13       		.uleb128 0x13
+ 121 0006 0B       		.uleb128 0xb
+ 122 0007 03       		.uleb128 0x3
+ 123 0008 0E       		.uleb128 0xe
+ 124 0009 1B       		.uleb128 0x1b
+ 125 000a 0E       		.uleb128 0xe
+ 126 000b 10       		.uleb128 0x10
+ 127 000c 17       		.uleb128 0x17
+ 128 000d 00       		.byte	0
+ 129 000e 00       		.byte	0
+ 130 000f 02       		.uleb128 0x2
+ 131 0010 24       		.uleb128 0x24
+ 132 0011 00       		.byte	0
+ 133 0012 0B       		.uleb128 0xb
+ 134 0013 0B       		.uleb128 0xb
+ 135 0014 3E       		.uleb128 0x3e
+ 136 0015 0B       		.uleb128 0xb
+ 137 0016 03       		.uleb128 0x3
+ 138 0017 0E       		.uleb128 0xe
+ 139 0018 00       		.byte	0
+ 140 0019 00       		.byte	0
+ 141 001a 03       		.uleb128 0x3
+ 142 001b 16       		.uleb128 0x16
+ 143 001c 00       		.byte	0
+ 144 001d 03       		.uleb128 0x3
+ 145 001e 0E       		.uleb128 0xe
+ 146 001f 3A       		.uleb128 0x3a
+ 147 0020 0B       		.uleb128 0xb
+ 148 0021 3B       		.uleb128 0x3b
+ 149 0022 0B       		.uleb128 0xb
+ 150 0023 49       		.uleb128 0x49
+ 151 0024 13       		.uleb128 0x13
+ 152 0025 00       		.byte	0
+ 153 0026 00       		.byte	0
+ 154 0027 04       		.uleb128 0x4
+ 155 0028 24       		.uleb128 0x24
+ 156 0029 00       		.byte	0
+ 157 002a 0B       		.uleb128 0xb
+ 158 002b 0B       		.uleb128 0xb
+ 159 002c 3E       		.uleb128 0x3e
+ 160 002d 0B       		.uleb128 0xb
+ 161 002e 03       		.uleb128 0x3
+ 162 002f 08       		.uleb128 0x8
+ 163 0030 00       		.byte	0
+ 164 0031 00       		.byte	0
+ 165 0032 05       		.uleb128 0x5
+ 166 0033 34       		.uleb128 0x34
+ 167 0034 00       		.byte	0
+ 168 0035 03       		.uleb128 0x3
+ 169 0036 0E       		.uleb128 0xe
+ 170 0037 3A       		.uleb128 0x3a
+ 171 0038 0B       		.uleb128 0xb
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccBTc615.s 			page 4
 
 
-  80              		.cfi_endproc
-  81              	.LFE1:
-  82              		.size	SG90_SetDriveMode, .-SG90_SetDriveMode
-  83              		.section	.text.SG90_Read,"ax",%progbits
-  84              		.align	2
-  85              		.global	SG90_Read
-  86              		.thumb
-  87              		.thumb_func
-  88              		.type	SG90_Read, %function
-  89              	SG90_Read:
-  90              	.LFB2:
-  93:Generated_Source\PSoC5/SG90.c **** }
-  94:Generated_Source\PSoC5/SG90.c **** 
-  95:Generated_Source\PSoC5/SG90.c **** 
-  96:Generated_Source\PSoC5/SG90.c **** /*******************************************************************************
-  97:Generated_Source\PSoC5/SG90.c **** * Function Name: SG90_Read
-  98:Generated_Source\PSoC5/SG90.c **** ****************************************************************************//**
-  99:Generated_Source\PSoC5/SG90.c **** *
- 100:Generated_Source\PSoC5/SG90.c **** * \brief Reads the associated physical port (pin status register) and masks 
- 101:Generated_Source\PSoC5/SG90.c **** *  the required bits according to the width and bit position of the component
- 102:Generated_Source\PSoC5/SG90.c **** *  instance. 
- 103:Generated_Source\PSoC5/SG90.c **** *
- 104:Generated_Source\PSoC5/SG90.c **** * The pin's status register returns the current logic level present on the 
- 105:Generated_Source\PSoC5/SG90.c **** * physical pin.
- 106:Generated_Source\PSoC5/SG90.c **** *
- 107:Generated_Source\PSoC5/SG90.c **** * \return 
- 108:Generated_Source\PSoC5/SG90.c **** *  The current value for the pins in the component as a right justified number.
- 109:Generated_Source\PSoC5/SG90.c **** *
- 110:Generated_Source\PSoC5/SG90.c **** * \funcusage
- 111:Generated_Source\PSoC5/SG90.c **** *  \snippet SG90_SUT.c usage_SG90_Read  
- 112:Generated_Source\PSoC5/SG90.c **** *******************************************************************************/
- 113:Generated_Source\PSoC5/SG90.c **** uint8 SG90_Read(void)
- 114:Generated_Source\PSoC5/SG90.c **** {
-  91              		.loc 1 114 0
-  92              		.cfi_startproc
-  93              		@ args = 0, pretend = 0, frame = 0
-  94              		@ frame_needed = 0, uses_anonymous_args = 0
-  95              		@ link register save eliminated.
- 115:Generated_Source\PSoC5/SG90.c ****     return (SG90_PS & SG90_MASK) >> SG90_SHIFT;
-  96              		.loc 1 115 0
-  97 0000 024B     		ldr	r3, .L8
-  98 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 116:Generated_Source\PSoC5/SG90.c **** }
-  99              		.loc 1 116 0
- 100 0004 C0F38000 		ubfx	r0, r0, #2, #1
- 101 0008 7047     		bx	lr
- 102              	.L9:
- 103 000a 00BF     		.align	2
- 104              	.L8:
- 105 000c 01510040 		.word	1073762561
- 106              		.cfi_endproc
- 107              	.LFE2:
- 108              		.size	SG90_Read, .-SG90_Read
- 109              		.section	.text.SG90_ReadDataReg,"ax",%progbits
- 110              		.align	2
- 111              		.global	SG90_ReadDataReg
- 112              		.thumb
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccFvYrUr.s 			page 5
+ 172 0039 3B       		.uleb128 0x3b
+ 173 003a 05       		.uleb128 0x5
+ 174 003b 49       		.uleb128 0x49
+ 175 003c 13       		.uleb128 0x13
+ 176 003d 3F       		.uleb128 0x3f
+ 177 003e 19       		.uleb128 0x19
+ 178 003f 3C       		.uleb128 0x3c
+ 179 0040 19       		.uleb128 0x19
+ 180 0041 00       		.byte	0
+ 181 0042 00       		.byte	0
+ 182 0043 06       		.uleb128 0x6
+ 183 0044 35       		.uleb128 0x35
+ 184 0045 00       		.byte	0
+ 185 0046 49       		.uleb128 0x49
+ 186 0047 13       		.uleb128 0x13
+ 187 0048 00       		.byte	0
+ 188 0049 00       		.byte	0
+ 189 004a 00       		.byte	0
+ 190              		.section	.debug_aranges,"",%progbits
+ 191 0000 14000000 		.4byte	0x14
+ 192 0004 0200     		.2byte	0x2
+ 193 0006 00000000 		.4byte	.Ldebug_info0
+ 194 000a 04       		.byte	0x4
+ 195 000b 00       		.byte	0
+ 196 000c 0000     		.2byte	0
+ 197 000e 0000     		.2byte	0
+ 198 0010 00000000 		.4byte	0
+ 199 0014 00000000 		.4byte	0
+ 200              		.section	.debug_line,"",%progbits
+ 201              	.Ldebug_line0:
+ 202 0000 3B010000 		.section	.debug_str,"MS",%progbits,1
+ 202      02003501 
+ 202      00000201 
+ 202      FB0E0D00 
+ 202      01010101 
+ 203              	.LASF6:
+ 204 0000 6C6F6E67 		.ascii	"long long int\000"
+ 204      206C6F6E 
+ 204      6720696E 
+ 204      7400
+ 205              	.LASF3:
+ 206 000e 73686F72 		.ascii	"short unsigned int\000"
+ 206      7420756E 
+ 206      7369676E 
+ 206      65642069 
+ 206      6E7400
+ 207              	.LASF8:
+ 208 0021 756E7369 		.ascii	"unsigned int\000"
+ 208      676E6564 
+ 208      20696E74 
+ 208      00
+ 209              	.LASF16:
+ 210 002e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 210      43313120 
+ 210      352E342E 
+ 210      31203230 
+ 210      31363036 
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccBTc615.s 			page 5
 
 
- 113              		.thumb_func
- 114              		.type	SG90_ReadDataReg, %function
- 115              	SG90_ReadDataReg:
- 116              	.LFB3:
- 117:Generated_Source\PSoC5/SG90.c **** 
- 118:Generated_Source\PSoC5/SG90.c **** 
- 119:Generated_Source\PSoC5/SG90.c **** /*******************************************************************************
- 120:Generated_Source\PSoC5/SG90.c **** * Function Name: SG90_ReadDataReg
- 121:Generated_Source\PSoC5/SG90.c **** ****************************************************************************//**
- 122:Generated_Source\PSoC5/SG90.c **** *
- 123:Generated_Source\PSoC5/SG90.c **** * \brief Reads the associated physical port's data output register and masks 
- 124:Generated_Source\PSoC5/SG90.c **** *  the correct bits according to the width and bit position of the component 
- 125:Generated_Source\PSoC5/SG90.c **** *  instance. 
- 126:Generated_Source\PSoC5/SG90.c **** *
- 127:Generated_Source\PSoC5/SG90.c **** * The data output register controls the signal applied to the physical pin in 
- 128:Generated_Source\PSoC5/SG90.c **** * conjunction with the drive mode parameter. This is not the same as the 
- 129:Generated_Source\PSoC5/SG90.c **** * preferred SG90_Read() API because the 
- 130:Generated_Source\PSoC5/SG90.c **** * SG90_ReadDataReg() reads the data register instead of the status 
- 131:Generated_Source\PSoC5/SG90.c **** * register. For output pins this is a useful function to determine the value 
- 132:Generated_Source\PSoC5/SG90.c **** * just written to the pin.
- 133:Generated_Source\PSoC5/SG90.c **** *
- 134:Generated_Source\PSoC5/SG90.c **** * \return 
- 135:Generated_Source\PSoC5/SG90.c **** *  The current value of the data register masked and shifted into a right 
- 136:Generated_Source\PSoC5/SG90.c **** *  justified number for the component instance.
- 137:Generated_Source\PSoC5/SG90.c **** *
- 138:Generated_Source\PSoC5/SG90.c **** * \funcusage
- 139:Generated_Source\PSoC5/SG90.c **** *  \snippet SG90_SUT.c usage_SG90_ReadDataReg 
- 140:Generated_Source\PSoC5/SG90.c **** *******************************************************************************/
- 141:Generated_Source\PSoC5/SG90.c **** uint8 SG90_ReadDataReg(void)
- 142:Generated_Source\PSoC5/SG90.c **** {
- 117              		.loc 1 142 0
- 118              		.cfi_startproc
- 119              		@ args = 0, pretend = 0, frame = 0
- 120              		@ frame_needed = 0, uses_anonymous_args = 0
- 121              		@ link register save eliminated.
- 143:Generated_Source\PSoC5/SG90.c ****     return (SG90_DR & SG90_MASK) >> SG90_SHIFT;
- 122              		.loc 1 143 0
- 123 0000 024B     		ldr	r3, .L11
- 124 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 144:Generated_Source\PSoC5/SG90.c **** }
- 125              		.loc 1 144 0
- 126 0004 C0F38000 		ubfx	r0, r0, #2, #1
- 127 0008 7047     		bx	lr
- 128              	.L12:
- 129 000a 00BF     		.align	2
- 130              	.L11:
- 131 000c 00510040 		.word	1073762560
- 132              		.cfi_endproc
- 133              	.LFE3:
- 134              		.size	SG90_ReadDataReg, .-SG90_ReadDataReg
- 135              		.text
- 136              	.Letext0:
- 137              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
- 138              		.section	.debug_info,"",%progbits
- 139              	.Ldebug_info0:
- 140 0000 1B010000 		.4byte	0x11b
- 141 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccFvYrUr.s 			page 6
+ 211 0061 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 211      20726576 
+ 211      6973696F 
+ 211      6E203233 
+ 211      37373135 
+ 212 0094 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 212      66756E63 
+ 212      74696F6E 
+ 212      2D736563 
+ 212      74696F6E 
+ 213              	.LASF5:
+ 214 00bc 6C6F6E67 		.ascii	"long unsigned int\000"
+ 214      20756E73 
+ 214      69676E65 
+ 214      6420696E 
+ 214      7400
+ 215              	.LASF17:
+ 216 00ce 53473930 		.ascii	"SG90.c\000"
+ 216      2E6300
+ 217              	.LASF7:
+ 218 00d5 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 218      206C6F6E 
+ 218      6720756E 
+ 218      7369676E 
+ 218      65642069 
+ 219              	.LASF1:
+ 220 00ec 756E7369 		.ascii	"unsigned char\000"
+ 220      676E6564 
+ 220      20636861 
+ 220      7200
+ 221              	.LASF11:
+ 222 00fa 63686172 		.ascii	"char\000"
+ 222      00
+ 223              	.LASF18:
+ 224 00ff 433A5C55 		.ascii	"C:\\Users\\JamesH\\Desktop\\ECE4191-Team-13-PSoC\\P"
+ 224      73657273 
+ 224      5C4A616D 
+ 224      6573485C 
+ 224      4465736B 
+ 225 012d 536F4335 		.ascii	"SoC5_Team13Project.cydsn\000"
+ 225      5F546561 
+ 225      6D313350 
+ 225      726F6A65 
+ 225      63742E63 
+ 226              	.LASF4:
+ 227 0146 6C6F6E67 		.ascii	"long int\000"
+ 227      20696E74 
+ 227      00
+ 228              	.LASF15:
+ 229 014f 646F7562 		.ascii	"double\000"
+ 229      6C6500
+ 230              	.LASF19:
+ 231 0156 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 231      52784275 
+ 231      66666572 
+ 231      00
+ 232              	.LASF0:
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccBTc615.s 			page 6
 
 
- 142 0006 00000000 		.4byte	.Ldebug_abbrev0
- 143 000a 04       		.byte	0x4
- 144 000b 01       		.uleb128 0x1
- 145 000c 48000000 		.4byte	.LASF20
- 146 0010 0C       		.byte	0xc
- 147 0011 0A010000 		.4byte	.LASF21
- 148 0015 6B010000 		.4byte	.LASF22
- 149 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 150 001d 00000000 		.4byte	0
- 151 0021 00000000 		.4byte	.Ldebug_line0
- 152 0025 02       		.uleb128 0x2
- 153 0026 01       		.byte	0x1
- 154 0027 06       		.byte	0x6
- 155 0028 D6010000 		.4byte	.LASF0
- 156 002c 02       		.uleb128 0x2
- 157 002d 01       		.byte	0x1
- 158 002e 08       		.byte	0x8
- 159 002f 3A000000 		.4byte	.LASF1
- 160 0033 02       		.uleb128 0x2
- 161 0034 02       		.byte	0x2
- 162 0035 05       		.byte	0x5
- 163 0036 B2010000 		.4byte	.LASF2
- 164 003a 02       		.uleb128 0x2
- 165 003b 02       		.byte	0x2
- 166 003c 07       		.byte	0x7
- 167 003d F7000000 		.4byte	.LASF3
- 168 0041 02       		.uleb128 0x2
- 169 0042 04       		.byte	0x4
- 170 0043 05       		.byte	0x5
- 171 0044 CD010000 		.4byte	.LASF4
- 172 0048 02       		.uleb128 0x2
- 173 0049 04       		.byte	0x4
- 174 004a 07       		.byte	0x7
- 175 004b E5000000 		.4byte	.LASF5
- 176 004f 02       		.uleb128 0x2
- 177 0050 08       		.byte	0x8
- 178 0051 05       		.byte	0x5
- 179 0052 58010000 		.4byte	.LASF6
- 180 0056 02       		.uleb128 0x2
- 181 0057 08       		.byte	0x8
- 182 0058 07       		.byte	0x7
- 183 0059 3C010000 		.4byte	.LASF7
- 184 005d 03       		.uleb128 0x3
- 185 005e 04       		.byte	0x4
- 186 005f 05       		.byte	0x5
- 187 0060 696E7400 		.ascii	"int\000"
- 188 0064 02       		.uleb128 0x2
- 189 0065 04       		.byte	0x4
- 190 0066 07       		.byte	0x7
- 191 0067 2F010000 		.4byte	.LASF8
- 192 006b 04       		.uleb128 0x4
- 193 006c C7010000 		.4byte	.LASF12
- 194 0070 02       		.byte	0x2
- 195 0071 E801     		.2byte	0x1e8
- 196 0073 2C000000 		.4byte	0x2c
- 197 0077 02       		.uleb128 0x2
- 198 0078 04       		.byte	0x4
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccFvYrUr.s 			page 7
-
-
- 199 0079 04       		.byte	0x4
- 200 007a 23000000 		.4byte	.LASF9
- 201 007e 02       		.uleb128 0x2
- 202 007f 08       		.byte	0x8
- 203 0080 04       		.byte	0x4
- 204 0081 28010000 		.4byte	.LASF10
- 205 0085 02       		.uleb128 0x2
- 206 0086 01       		.byte	0x1
- 207 0087 08       		.byte	0x8
- 208 0088 66010000 		.4byte	.LASF11
- 209 008c 04       		.uleb128 0x4
- 210 008d D6000000 		.4byte	.LASF13
- 211 0091 02       		.byte	0x2
- 212 0092 9202     		.2byte	0x292
- 213 0094 98000000 		.4byte	0x98
- 214 0098 05       		.uleb128 0x5
- 215 0099 6B000000 		.4byte	0x6b
- 216 009d 06       		.uleb128 0x6
- 217 009e BC010000 		.4byte	.LASF14
- 218 00a2 01       		.byte	0x1
- 219 00a3 39       		.byte	0x39
- 220 00a4 00000000 		.4byte	.LFB0
- 221 00a8 18000000 		.4byte	.LFE0-.LFB0
- 222 00ac 01       		.uleb128 0x1
- 223 00ad 9C       		.byte	0x9c
- 224 00ae CF000000 		.4byte	0xcf
- 225 00b2 07       		.uleb128 0x7
- 226 00b3 12000000 		.4byte	.LASF16
- 227 00b7 01       		.byte	0x1
- 228 00b8 39       		.byte	0x39
- 229 00b9 6B000000 		.4byte	0x6b
- 230 00bd 00000000 		.4byte	.LLST0
- 231 00c1 08       		.uleb128 0x8
- 232 00c2 18000000 		.4byte	.LASF23
- 233 00c6 01       		.byte	0x1
- 234 00c7 3B       		.byte	0x3b
- 235 00c8 6B000000 		.4byte	0x6b
- 236 00cc 01       		.uleb128 0x1
- 237 00cd 53       		.byte	0x53
- 238 00ce 00       		.byte	0
- 239 00cf 06       		.uleb128 0x6
- 240 00d0 00000000 		.4byte	.LASF15
- 241 00d4 01       		.byte	0x1
- 242 00d5 5A       		.byte	0x5a
- 243 00d6 00000000 		.4byte	.LFB1
- 244 00da 18000000 		.4byte	.LFE1-.LFB1
- 245 00de 01       		.uleb128 0x1
- 246 00df 9C       		.byte	0x9c
- 247 00e0 F4000000 		.4byte	0xf4
- 248 00e4 07       		.uleb128 0x7
- 249 00e5 53010000 		.4byte	.LASF17
- 250 00e9 01       		.byte	0x1
- 251 00ea 5A       		.byte	0x5a
- 252 00eb 6B000000 		.4byte	0x6b
- 253 00ef 21000000 		.4byte	.LLST1
- 254 00f3 00       		.byte	0
- 255 00f4 09       		.uleb128 0x9
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccFvYrUr.s 			page 8
-
-
- 256 00f5 DB000000 		.4byte	.LASF18
- 257 00f9 01       		.byte	0x1
- 258 00fa 71       		.byte	0x71
- 259 00fb 6B000000 		.4byte	0x6b
- 260 00ff 00000000 		.4byte	.LFB2
- 261 0103 10000000 		.4byte	.LFE2-.LFB2
- 262 0107 01       		.uleb128 0x1
- 263 0108 9C       		.byte	0x9c
- 264 0109 09       		.uleb128 0x9
- 265 010a 29000000 		.4byte	.LASF19
- 266 010e 01       		.byte	0x1
- 267 010f 8D       		.byte	0x8d
- 268 0110 6B000000 		.4byte	0x6b
- 269 0114 00000000 		.4byte	.LFB3
- 270 0118 10000000 		.4byte	.LFE3-.LFB3
- 271 011c 01       		.uleb128 0x1
- 272 011d 9C       		.byte	0x9c
- 273 011e 00       		.byte	0
- 274              		.section	.debug_abbrev,"",%progbits
- 275              	.Ldebug_abbrev0:
- 276 0000 01       		.uleb128 0x1
- 277 0001 11       		.uleb128 0x11
- 278 0002 01       		.byte	0x1
- 279 0003 25       		.uleb128 0x25
- 280 0004 0E       		.uleb128 0xe
- 281 0005 13       		.uleb128 0x13
- 282 0006 0B       		.uleb128 0xb
- 283 0007 03       		.uleb128 0x3
- 284 0008 0E       		.uleb128 0xe
- 285 0009 1B       		.uleb128 0x1b
- 286 000a 0E       		.uleb128 0xe
- 287 000b 55       		.uleb128 0x55
- 288 000c 17       		.uleb128 0x17
- 289 000d 11       		.uleb128 0x11
- 290 000e 01       		.uleb128 0x1
- 291 000f 10       		.uleb128 0x10
- 292 0010 17       		.uleb128 0x17
- 293 0011 00       		.byte	0
- 294 0012 00       		.byte	0
- 295 0013 02       		.uleb128 0x2
- 296 0014 24       		.uleb128 0x24
- 297 0015 00       		.byte	0
- 298 0016 0B       		.uleb128 0xb
- 299 0017 0B       		.uleb128 0xb
- 300 0018 3E       		.uleb128 0x3e
- 301 0019 0B       		.uleb128 0xb
- 302 001a 03       		.uleb128 0x3
- 303 001b 0E       		.uleb128 0xe
- 304 001c 00       		.byte	0
- 305 001d 00       		.byte	0
- 306 001e 03       		.uleb128 0x3
- 307 001f 24       		.uleb128 0x24
- 308 0020 00       		.byte	0
- 309 0021 0B       		.uleb128 0xb
- 310 0022 0B       		.uleb128 0xb
- 311 0023 3E       		.uleb128 0x3e
- 312 0024 0B       		.uleb128 0xb
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccFvYrUr.s 			page 9
-
-
- 313 0025 03       		.uleb128 0x3
- 314 0026 08       		.uleb128 0x8
- 315 0027 00       		.byte	0
- 316 0028 00       		.byte	0
- 317 0029 04       		.uleb128 0x4
- 318 002a 16       		.uleb128 0x16
- 319 002b 00       		.byte	0
- 320 002c 03       		.uleb128 0x3
- 321 002d 0E       		.uleb128 0xe
- 322 002e 3A       		.uleb128 0x3a
- 323 002f 0B       		.uleb128 0xb
- 324 0030 3B       		.uleb128 0x3b
- 325 0031 05       		.uleb128 0x5
- 326 0032 49       		.uleb128 0x49
- 327 0033 13       		.uleb128 0x13
- 328 0034 00       		.byte	0
- 329 0035 00       		.byte	0
- 330 0036 05       		.uleb128 0x5
- 331 0037 35       		.uleb128 0x35
- 332 0038 00       		.byte	0
- 333 0039 49       		.uleb128 0x49
- 334 003a 13       		.uleb128 0x13
- 335 003b 00       		.byte	0
- 336 003c 00       		.byte	0
- 337 003d 06       		.uleb128 0x6
- 338 003e 2E       		.uleb128 0x2e
- 339 003f 01       		.byte	0x1
- 340 0040 3F       		.uleb128 0x3f
- 341 0041 19       		.uleb128 0x19
- 342 0042 03       		.uleb128 0x3
- 343 0043 0E       		.uleb128 0xe
- 344 0044 3A       		.uleb128 0x3a
- 345 0045 0B       		.uleb128 0xb
- 346 0046 3B       		.uleb128 0x3b
- 347 0047 0B       		.uleb128 0xb
- 348 0048 27       		.uleb128 0x27
- 349 0049 19       		.uleb128 0x19
- 350 004a 11       		.uleb128 0x11
- 351 004b 01       		.uleb128 0x1
- 352 004c 12       		.uleb128 0x12
- 353 004d 06       		.uleb128 0x6
- 354 004e 40       		.uleb128 0x40
- 355 004f 18       		.uleb128 0x18
- 356 0050 9742     		.uleb128 0x2117
- 357 0052 19       		.uleb128 0x19
- 358 0053 01       		.uleb128 0x1
- 359 0054 13       		.uleb128 0x13
- 360 0055 00       		.byte	0
- 361 0056 00       		.byte	0
- 362 0057 07       		.uleb128 0x7
- 363 0058 05       		.uleb128 0x5
- 364 0059 00       		.byte	0
- 365 005a 03       		.uleb128 0x3
- 366 005b 0E       		.uleb128 0xe
- 367 005c 3A       		.uleb128 0x3a
- 368 005d 0B       		.uleb128 0xb
- 369 005e 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccFvYrUr.s 			page 10
-
-
- 370 005f 0B       		.uleb128 0xb
- 371 0060 49       		.uleb128 0x49
- 372 0061 13       		.uleb128 0x13
- 373 0062 02       		.uleb128 0x2
- 374 0063 17       		.uleb128 0x17
- 375 0064 00       		.byte	0
- 376 0065 00       		.byte	0
- 377 0066 08       		.uleb128 0x8
- 378 0067 34       		.uleb128 0x34
- 379 0068 00       		.byte	0
- 380 0069 03       		.uleb128 0x3
- 381 006a 0E       		.uleb128 0xe
- 382 006b 3A       		.uleb128 0x3a
- 383 006c 0B       		.uleb128 0xb
- 384 006d 3B       		.uleb128 0x3b
- 385 006e 0B       		.uleb128 0xb
- 386 006f 49       		.uleb128 0x49
- 387 0070 13       		.uleb128 0x13
- 388 0071 02       		.uleb128 0x2
- 389 0072 18       		.uleb128 0x18
- 390 0073 00       		.byte	0
- 391 0074 00       		.byte	0
- 392 0075 09       		.uleb128 0x9
- 393 0076 2E       		.uleb128 0x2e
- 394 0077 00       		.byte	0
- 395 0078 3F       		.uleb128 0x3f
- 396 0079 19       		.uleb128 0x19
- 397 007a 03       		.uleb128 0x3
- 398 007b 0E       		.uleb128 0xe
- 399 007c 3A       		.uleb128 0x3a
- 400 007d 0B       		.uleb128 0xb
- 401 007e 3B       		.uleb128 0x3b
- 402 007f 0B       		.uleb128 0xb
- 403 0080 27       		.uleb128 0x27
- 404 0081 19       		.uleb128 0x19
- 405 0082 49       		.uleb128 0x49
- 406 0083 13       		.uleb128 0x13
- 407 0084 11       		.uleb128 0x11
- 408 0085 01       		.uleb128 0x1
- 409 0086 12       		.uleb128 0x12
- 410 0087 06       		.uleb128 0x6
- 411 0088 40       		.uleb128 0x40
- 412 0089 18       		.uleb128 0x18
- 413 008a 9742     		.uleb128 0x2117
- 414 008c 19       		.uleb128 0x19
- 415 008d 00       		.byte	0
- 416 008e 00       		.byte	0
- 417 008f 00       		.byte	0
- 418              		.section	.debug_loc,"",%progbits
- 419              	.Ldebug_loc0:
- 420              	.LLST0:
- 421 0000 00000000 		.4byte	.LVL0
- 422 0004 0A000000 		.4byte	.LVL2
- 423 0008 0100     		.2byte	0x1
- 424 000a 50       		.byte	0x50
- 425 000b 0A000000 		.4byte	.LVL2
- 426 000f 18000000 		.4byte	.LFE0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccFvYrUr.s 			page 11
-
-
- 427 0013 0400     		.2byte	0x4
- 428 0015 F3       		.byte	0xf3
- 429 0016 01       		.uleb128 0x1
- 430 0017 50       		.byte	0x50
- 431 0018 9F       		.byte	0x9f
- 432 0019 00000000 		.4byte	0
- 433 001d 00000000 		.4byte	0
- 434              	.LLST1:
- 435 0021 00000000 		.4byte	.LVL3
- 436 0025 0C000000 		.4byte	.LVL4
- 437 0029 0100     		.2byte	0x1
- 438 002b 50       		.byte	0x50
- 439 002c 0C000000 		.4byte	.LVL4
- 440 0030 18000000 		.4byte	.LFE1
- 441 0034 0400     		.2byte	0x4
- 442 0036 F3       		.byte	0xf3
- 443 0037 01       		.uleb128 0x1
- 444 0038 50       		.byte	0x50
- 445 0039 9F       		.byte	0x9f
- 446 003a 00000000 		.4byte	0
- 447 003e 00000000 		.4byte	0
- 448              		.section	.debug_aranges,"",%progbits
- 449 0000 34000000 		.4byte	0x34
- 450 0004 0200     		.2byte	0x2
- 451 0006 00000000 		.4byte	.Ldebug_info0
- 452 000a 04       		.byte	0x4
- 453 000b 00       		.byte	0
- 454 000c 0000     		.2byte	0
- 455 000e 0000     		.2byte	0
- 456 0010 00000000 		.4byte	.LFB0
- 457 0014 18000000 		.4byte	.LFE0-.LFB0
- 458 0018 00000000 		.4byte	.LFB1
- 459 001c 18000000 		.4byte	.LFE1-.LFB1
- 460 0020 00000000 		.4byte	.LFB2
- 461 0024 10000000 		.4byte	.LFE2-.LFB2
- 462 0028 00000000 		.4byte	.LFB3
- 463 002c 10000000 		.4byte	.LFE3-.LFB3
- 464 0030 00000000 		.4byte	0
- 465 0034 00000000 		.4byte	0
- 466              		.section	.debug_ranges,"",%progbits
- 467              	.Ldebug_ranges0:
- 468 0000 00000000 		.4byte	.LFB0
- 469 0004 18000000 		.4byte	.LFE0
- 470 0008 00000000 		.4byte	.LFB1
- 471 000c 18000000 		.4byte	.LFE1
- 472 0010 00000000 		.4byte	.LFB2
- 473 0014 10000000 		.4byte	.LFE2
- 474 0018 00000000 		.4byte	.LFB3
- 475 001c 10000000 		.4byte	.LFE3
- 476 0020 00000000 		.4byte	0
- 477 0024 00000000 		.4byte	0
- 478              		.section	.debug_line,"",%progbits
- 479              	.Ldebug_line0:
- 480 0000 8D000000 		.section	.debug_str,"MS",%progbits,1
- 480      02004100 
- 480      00000201 
- 480      FB0E0D00 
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccFvYrUr.s 			page 12
-
-
- 480      01010101 
- 481              	.LASF15:
- 482 0000 53473930 		.ascii	"SG90_SetDriveMode\000"
- 482      5F536574 
- 482      44726976 
- 482      654D6F64 
- 482      6500
- 483              	.LASF16:
- 484 0012 76616C75 		.ascii	"value\000"
- 484      6500
- 485              	.LASF23:
- 486 0018 73746174 		.ascii	"staticBits\000"
- 486      69634269 
- 486      747300
- 487              	.LASF9:
- 488 0023 666C6F61 		.ascii	"float\000"
- 488      7400
- 489              	.LASF19:
- 490 0029 53473930 		.ascii	"SG90_ReadDataReg\000"
- 490      5F526561 
- 490      64446174 
- 490      61526567 
- 490      00
- 491              	.LASF1:
- 492 003a 756E7369 		.ascii	"unsigned char\000"
- 492      676E6564 
- 492      20636861 
- 492      7200
- 493              	.LASF20:
- 494 0048 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 494      43313120 
- 494      352E342E 
- 494      31203230 
- 494      31363036 
- 495 007b 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 495      20726576 
- 495      6973696F 
- 495      6E203233 
- 495      37373135 
- 496 00ae 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 496      66756E63 
- 496      74696F6E 
- 496      2D736563 
- 496      74696F6E 
- 497              	.LASF13:
- 498 00d6 72656738 		.ascii	"reg8\000"
- 498      00
- 499              	.LASF18:
- 500 00db 53473930 		.ascii	"SG90_Read\000"
- 500      5F526561 
- 500      6400
- 501              	.LASF5:
- 502 00e5 6C6F6E67 		.ascii	"long unsigned int\000"
- 502      20756E73 
- 502      69676E65 
- 502      6420696E 
- 502      7400
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccFvYrUr.s 			page 13
-
-
- 503              	.LASF3:
- 504 00f7 73686F72 		.ascii	"short unsigned int\000"
- 504      7420756E 
- 504      7369676E 
- 504      65642069 
- 504      6E7400
- 505              	.LASF21:
- 506 010a 47656E65 		.ascii	"Generated_Source\\PSoC5\\SG90.c\000"
- 506      72617465 
- 506      645F536F 
- 506      75726365 
- 506      5C50536F 
- 507              	.LASF10:
- 508 0128 646F7562 		.ascii	"double\000"
- 508      6C6500
- 509              	.LASF8:
- 510 012f 756E7369 		.ascii	"unsigned int\000"
- 510      676E6564 
- 510      20696E74 
- 510      00
- 511              	.LASF7:
- 512 013c 6C6F6E67 		.ascii	"long long unsigned int\000"
- 512      206C6F6E 
- 512      6720756E 
- 512      7369676E 
- 512      65642069 
- 513              	.LASF17:
- 514 0153 6D6F6465 		.ascii	"mode\000"
- 514      00
- 515              	.LASF6:
- 516 0158 6C6F6E67 		.ascii	"long long int\000"
- 516      206C6F6E 
- 516      6720696E 
- 516      7400
- 517              	.LASF11:
- 518 0166 63686172 		.ascii	"char\000"
- 518      00
- 519              	.LASF22:
- 520 016b 433A5C55 		.ascii	"C:\\Users\\JamesH\\Desktop\\ECE4191-Team-13-PSoC\\P"
- 520      73657273 
- 520      5C4A616D 
- 520      6573485C 
- 520      4465736B 
- 521 0199 536F4335 		.ascii	"SoC5_Team13Project.cydsn\000"
- 521      5F546561 
- 521      6D313350 
- 521      726F6A65 
- 521      63742E63 
- 522              	.LASF2:
- 523 01b2 73686F72 		.ascii	"short int\000"
- 523      7420696E 
- 523      7400
- 524              	.LASF14:
- 525 01bc 53473930 		.ascii	"SG90_Write\000"
- 525      5F577269 
- 525      746500
- 526              	.LASF12:
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccFvYrUr.s 			page 14
-
-
- 527 01c7 75696E74 		.ascii	"uint8\000"
- 527      3800
- 528              	.LASF4:
- 529 01cd 6C6F6E67 		.ascii	"long int\000"
- 529      20696E74 
- 529      00
- 530              	.LASF0:
- 531 01d6 7369676E 		.ascii	"signed char\000"
- 531      65642063 
- 531      68617200 
- 532              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 233 0163 7369676E 		.ascii	"signed char\000"
+ 233      65642063 
+ 233      68617200 
+ 234              	.LASF9:
+ 235 016f 6C6F6E67 		.ascii	"long double\000"
+ 235      20646F75 
+ 235      626C6500 
+ 236              	.LASF12:
+ 237 017b 5F5F696E 		.ascii	"__int32_t\000"
+ 237      7433325F 
+ 237      7400
+ 238              	.LASF14:
+ 239 0185 666C6F61 		.ascii	"float\000"
+ 239      7400
+ 240              	.LASF2:
+ 241 018b 73686F72 		.ascii	"short int\000"
+ 241      7420696E 
+ 241      7400
+ 242              	.LASF13:
+ 243 0195 696E7433 		.ascii	"int32_t\000"
+ 243      325F7400 
+ 244              	.LASF10:
+ 245 019d 73697A65 		.ascii	"sizetype\000"
+ 245      74797065 
+ 245      00
+ 246              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

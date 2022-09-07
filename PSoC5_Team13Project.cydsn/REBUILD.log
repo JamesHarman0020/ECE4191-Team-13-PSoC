@@ -1,0 +1,17 @@
+--------------- Rebuild Started: 09/05/2022 11:35:31 Project: main.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
+main.c: In function 'main':
+main.c:65:5: warning: implicit declaration of function 'HCSR04_Begin' [-Wimplicit-function-declaration]
+     HCSR04_Begin();
+     ^
+main.c: In function 'readBuf':
+main.c:137:9: warning: implicit declaration of function 'fnSend' [-Wimplicit-function-declaration]
+         fnSend(90, &p1, &p2);
+         ^
+main.c:148:9: warning: implicit declaration of function 'fnCall' [-Wimplicit-function-declaration]
+         fnCall(fn,&prm1,&prm2);
+         ^
+main.c:111:9: warning: variable 'stopPres' set but not used [-Wunused-but-set-variable]
+     int stopPres = 0;
+         ^
+--------------- Rebuild Succeeded: 09/05/2022 11:35:31 ---------------

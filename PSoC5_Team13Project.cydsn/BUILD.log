@@ -1,252 +1,140 @@
---------------- Build Started: 09/02/2022 15:10:22 Project: PSoC5_Team13Project, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
-cydsfit.exe -.appdatapath "C:\Users\JamesH\AppData\Local\Cypress Semiconductor\PSoC Creator\4.4" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\PSoC5_Team13Project.cyprj -d CY8C5888LTI-LP097 -s C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
-Elaborating Design...
-HDL Generation...
-Synthesis...
-Tech Mapping...
-ADD: pft.M0040: information: The following 1 pin(s) will be assigned a location by the fitter: SG90(0)
-Analog Placement...
-Analog Routing...
-Analog Code Generation...
-Digital Placement...
-Digital Routing...
-Bitstream Generation...
-Bitstream Verification...
-Static timing analysis...
-API Generation...
-Dependency Generation...
-Cleanup...
+--------------- Build Started: 09/07/2022 15:43:09 Project: PSoC5_Team13Project, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
 main.c: In function 'main':
-main.c:65:5: warning: implicit declaration of function 'HCSR04_Begin' [-Wimplicit-function-declaration]
+main.c:68:5: warning: implicit declaration of function 'HCSR04_Begin' [-Wimplicit-function-declaration]
      HCSR04_Begin();
      ^
+main.c:90:15: warning: unused variable 'angle' [-Wunused-variable]
+         float angle = 45;
+               ^
 main.c: In function 'readBuf':
-main.c:136:9: warning: implicit declaration of function 'fnSend' [-Wimplicit-function-declaration]
-         fnSend(90, &p1, &p2);
-         ^
-main.c:147:9: warning: implicit declaration of function 'fnCall' [-Wimplicit-function-declaration]
-         fnCall(fn,&prm1,&prm2);
-         ^
-main.c:110:9: warning: variable 'stopPres' set but not used [-Wunused-but-set-variable]
-     int stopPres = 0;
-         ^
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/SBT0811.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c SBT0811.c -o .\CortexM3\ARM_GCC_541\Debug\SBT0811.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/IMU.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c IMU.c -o .\CortexM3\ARM_GCC_541\Debug\IMU.o
-IMU.c: In function 'LIS3MDL_ReadWhoAmIReg':
-IMU.c:47:35: warning: variable 'Err5' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5;
-                                   ^
-IMU.c:47:29: warning: unused variable 'Err4' [-Wunused-variable]
-     int32 Err1, Err2, Err3, Err4, Err5;
-                             ^
-IMU.c:47:23: warning: variable 'Err3' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5;
-                       ^
-IMU.c:47:17: warning: variable 'Err2' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5;
+main.c:163:31: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+             else if (stopPres == 0 & rxBuffer[i] == 0xff & i <= 12) { //Search for the start byte
+                               ^
+main.c:163:62: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+             else if (stopPres == 0 & rxBuffer[i] == 0xff & i <= 12) { //Search for the start byte
+                                                              ^
+main.c:179:13: warning: implicit declaration of function 'fnSend' [-Wimplicit-function-declaration]
+             fnSend(90, &p1, &p2);
+             ^
+main.c:191:24: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+             if (fn_old != fn | param1_old != prm1 | param2_old != prm2) {
+                        ^
+main.c:191:64: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+             if (fn_old != fn | param1_old != prm1 | param2_old != prm2) {
+                                                                ^
+main.c:192:17: warning: implicit declaration of function 'fnCall' [-Wimplicit-function-declaration]
+                 fnCall(fn,&prm1,&prm2);
                  ^
-IMU.c:47:11: warning: variable 'Err1' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5;
-           ^
-IMU.c: In function 'LIS3MDL_ReadAxisRaw':
-IMU.c:59:41: warning: variable 'Err6' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                                         ^
-IMU.c:59:35: warning: unused variable 'Err5' [-Wunused-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                                   ^
-IMU.c:59:29: warning: unused variable 'Err4' [-Wunused-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                             ^
-IMU.c:59:23: warning: variable 'Err3' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                       ^
-IMU.c:59:17: warning: variable 'Err2' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                 ^
-IMU.c:59:11: warning: variable 'Err1' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-           ^
-IMU.c: In function 'LIS3MDL_ReadAxisDeg':
-IMU.c:72:41: warning: variable 'Err6' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                                         ^
-IMU.c:72:35: warning: unused variable 'Err5' [-Wunused-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                                   ^
-IMU.c:72:29: warning: unused variable 'Err4' [-Wunused-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                             ^
-IMU.c:72:23: warning: variable 'Err3' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                       ^
-IMU.c:72:17: warning: variable 'Err2' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                 ^
-IMU.c:72:11: warning: variable 'Err1' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-           ^
-IMU.c: In function 'LSM6DS3_Begin':
-IMU.c:106:11: warning: unused variable 'rdBfr' [-Wunused-variable]
-     uint8 rdBfr;
-           ^
-IMU.c:105:35: warning: unused variable 'Err5' [-Wunused-variable]
-     int32 Err1, Err2, Err3, Err4, Err5;
-                                   ^
-IMU.c:105:29: warning: unused variable 'Err4' [-Wunused-variable]
-     int32 Err1, Err2, Err3, Err4, Err5;
-                             ^
-IMU.c:105:23: warning: unused variable 'Err3' [-Wunused-variable]
-     int32 Err1, Err2, Err3, Err4, Err5;
-                       ^
-IMU.c:105:17: warning: unused variable 'Err2' [-Wunused-variable]
-     int32 Err1, Err2, Err3, Err4, Err5;
-                 ^
-IMU.c:105:11: warning: unused variable 'Err1' [-Wunused-variable]
-     int32 Err1, Err2, Err3, Err4, Err5;
-           ^
-IMU.c: In function 'LSM6DS3_ReadAxisRaw':
-IMU.c:162:41: warning: variable 'Err6' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                                         ^
-IMU.c:162:35: warning: unused variable 'Err5' [-Wunused-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                                   ^
-IMU.c:162:29: warning: unused variable 'Err4' [-Wunused-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                             ^
-IMU.c:162:23: warning: variable 'Err3' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                       ^
-IMU.c:162:17: warning: variable 'Err2' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                 ^
-IMU.c:162:11: warning: variable 'Err1' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-           ^
-IMU.c: In function 'LSM6DS3_ReadAxisDeg':
-IMU.c:174:41: warning: variable 'Err6' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                                         ^
-IMU.c:174:35: warning: unused variable 'Err5' [-Wunused-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                                   ^
-IMU.c:174:29: warning: unused variable 'Err4' [-Wunused-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                             ^
-IMU.c:174:23: warning: variable 'Err3' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                       ^
-IMU.c:174:17: warning: variable 'Err2' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-                 ^
-IMU.c:174:11: warning: variable 'Err1' set but not used [-Wunused-but-set-variable]
-     int32 Err1, Err2, Err3, Err4, Err5, Err6;
-           ^
-IMU.c: In function 'LIS3MDL_ReadCtrlReg':
-IMU.c:99:22: warning: 'Err4' is used uninitialized in this function [-Wuninitialized]
-     char string[80]; sprintf(string, "Errors %ld %ld %ld %ld %ld %ld\t", Err1,Err2,Err3,Err4,Err5,Err6); UART_PutString(string); 
-                      ^
-IMU.c:99:22: warning: 'Err5' is used uninitialized in this function [-Wuninitialized]
-IMU.c: In function 'LSM6DS3_ReadWhoAmIReg':
-IMU.c:157:22: warning: 'Err4' is used uninitialized in this function [-Wuninitialized]
-     char string[80]; sprintf(string, "\nErrors %ld %ld %ld %ld %ld ", Err1,Err2,Err3,Err4,Err5); UART_PutString(string); 
-                      ^
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/SG90.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c SG90.c -o .\CortexM3\ARM_GCC_541\Debug\SG90.o
-SG90.c: In function 'SG90_ToAngle':
+main.c:154:13: warning: variable 'startPres' set but not used [-Wunused-but-set-variable]
+         int startPres = 0;
+             ^
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TB9051.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c TB9051.c -o .\CortexM3\ARM_GCC_541\Debug\TB9051.o
-SG90.c:28:15: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
-     if (angle >= -90 & angle <= 90) {
-               ^
 TB9051.c: In function 'TB9051_Forward':
-TB9051.c:59:15: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
-     if (speed >= QuadPWM_MIN_DUTY_CYCLE & speed <= QuadPWM_MAX_DUTY_CYCLE) {
-               ^
+TB9051.c:139:13: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+     if (PWM >= QuadPWM_MIN_DUTY_CYCLE & PWM <= QuadPWM_MAX_DUTY_CYCLE) {
+             ^
+TB9051.c:118:11: warning: unused variable 'velocity' [-Wunused-variable]
+     float velocity = *pvelocity;
+           ^
 TB9051.c: In function 'TB9051_Reverse':
-TB9051.c:75:15: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+TB9051.c:155:15: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
      if (speed >= QuadPWM_MIN_DUTY_CYCLE & speed <= QuadPWM_MAX_DUTY_CYCLE) {
                ^
 TB9051.c: In function 'TB9051_Brake':
-TB9051.c:91:28: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+TB9051.c:171:28: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
          if (QuadPWM_REG_D0 != 255 & QuadPWM_REG_D1 == 255){ // motor is moving forward
                             ^
-TB9051.c:95:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+TB9051.c:175:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
          else if (QuadPWM_REG_D0 == 255 & QuadPWM_REG_D1 != 255) // motor is moving backward
                                  ^
-TB9051.c:103:28: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+TB9051.c:183:28: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
          if (QuadPWM_REG_F0 != 255 & QuadPWM_REG_F1 == 255){ // motor is moving forward
                             ^
-TB9051.c:107:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+TB9051.c:187:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
          else if (QuadPWM_REG_F0 == 255 & QuadPWM_REG_F1 != 255) // motor is moving backward
                                  ^
 TB9051.c: In function 'TB9051_VehMoveTo':
-TB9051.c:129:19: warning: implicit declaration of function 'atan' [-Wimplicit-function-declaration]
-     float theta = atan(y/x);
-                   ^
-TB9051.c:129:19: warning: incompatible implicit declaration of built-in function 'atan'
-TB9051.c:129:19: note: include '<math.h>' or provide a declaration of 'atan'
-TB9051.c:130:16: warning: implicit declaration of function 'pow' [-Wimplicit-function-declaration]
-     float r = (pow(x,2)+pow(y,2))/(2*sqrt((pow(x,2)+pow(y,2)))*cos(theta)); //radien of mid point
-                ^
-TB9051.c:130:16: warning: incompatible implicit declaration of built-in function 'pow'
-TB9051.c:130:16: note: include '<math.h>' or provide a declaration of 'pow'
-TB9051.c:130:38: warning: implicit declaration of function 'sqrt' [-Wimplicit-function-declaration]
-     float r = (pow(x,2)+pow(y,2))/(2*sqrt((pow(x,2)+pow(y,2)))*cos(theta)); //radien of mid point
-                                      ^
-TB9051.c:130:38: warning: incompatible implicit declaration of built-in function 'sqrt'
-TB9051.c:130:38: note: include '<math.h>' or provide a declaration of 'sqrt'
-TB9051.c:130:64: warning: implicit declaration of function 'cos' [-Wimplicit-function-declaration]
-     float r = (pow(x,2)+pow(y,2))/(2*sqrt((pow(x,2)+pow(y,2)))*cos(theta)); //radien of mid point
-                                                                ^
-TB9051.c:130:64: warning: incompatible implicit declaration of built-in function 'cos'
-TB9051.c:130:64: note: include '<math.h>' or provide a declaration of 'cos'
-TB9051.c:137:23: warning: implicit declaration of function 'round' [-Wimplicit-function-declaration]
+TB9051.c:219:11: warning: unused variable 'vRel_right' [-Wunused-variable]
+     float vRel_right = round(v_right * 255);
+           ^
+TB9051.c:218:11: warning: unused variable 'vRel_left' [-Wunused-variable]
      float vRel_left = round(v_left * 255);    // REPLACE THESE
-                       ^
-TB9051.c:137:23: warning: incompatible implicit declaration of built-in function 'round'
-TB9051.c:137:23: note: include '<math.h>' or provide a declaration of 'round'
-TB9051.c:139:22: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-     char string[20]; sprintf(string, "R: %f. L: %f \n", vRel_right, vRel_left); UART_PutString(string);
-                      ^
-TB9051.c:139:22: warning: incompatible implicit declaration of built-in function 'sprintf'
-TB9051.c:139:22: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-TB9051.c:136:11: warning: unused variable 'w_l' [-Wunused-variable]
+           ^
+TB9051.c:217:11: warning: unused variable 'w_l' [-Wunused-variable]
      float w_l = v_left/r_wheel; // angular speed of left wheel
            ^
-TB9051.c:135:11: warning: unused variable 'w_r' [-Wunused-variable]
+TB9051.c:216:11: warning: unused variable 'w_r' [-Wunused-variable]
      float w_r = v_right/r_wheel; // angular speed of right wheel
            ^
-TB9051.c:127:11: warning: unused variable 't' [-Wunused-variable]
+TB9051.c:208:11: warning: unused variable 't' [-Wunused-variable]
      float t = 2; // time to reach the destination
            ^
+TB9051.c: At top level:
+TB9051.c:226:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ TB9051_VehMoveToBasic(float * pX, float * pY) { //TO-DO
+ ^
+TB9051.c: In function 'TB9051_VehMoveToBasic':
+TB9051.c:229:11: warning: unused variable 'theta' [-Wunused-variable]
+     float theta = atan(y/x);
+           ^
 TB9051.c: In function 'QD_Read':
-TB9051.c:161:5: warning: implicit declaration of function 'fnSend' [-Wimplicit-function-declaration]
-     fnSend(10, &w1_Vel, &w2_Vel);
-     ^
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/fnReceive.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c fnReceive.c -o .\CortexM3\ARM_GCC_541\Debug\fnReceive.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/HCSR04.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c HCSR04.c -o .\CortexM3\ARM_GCC_541\Debug\HCSR04.o
-HCSR04.c: In function 'distMeasure':
-HCSR04.c:55:9: warning: implicit declaration of function 'fnSend' [-Wimplicit-function-declaration]
-         fnSend(101, &distAvL ,&distAvR);
+TB9051.c:268:18: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+     if (vLin_Old != vLin | vAng_Old != vAng){ 
+                  ^
+TB9051.c:269:9: warning: implicit declaration of function 'fnSend' [-Wimplicit-function-declaration]
+         fnSend(8, &vLin, &vAng);
          ^
-HCSR04.c:53:15: warning: unused variable 'f2' [-Wunused-variable]
-         float f2 = 2.5;
+TB9051.c:252:11: warning: unused variable 'QD2_Ratio' [-Wunused-variable]
+     float QD2_Ratio = QD2_Delta / 34.014f; //Gear Ratio
+           ^
+TB9051.c:251:11: warning: unused variable 'QD1_Ratio' [-Wunused-variable]
+     float QD1_Ratio = QD1_Delta / 34.014f; //Gear Ratio
+           ^
+TB9051.c:239:11: warning: unused variable 'theta' [-Wunused-variable]
+     float theta = 360/48.0f;
+           ^
+TB9051.c: In function 'vehForwardDist':
+TB9051.c:341:18: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+     while (dispL < targetCount & dispR < targetCount); 
+                  ^
+TB9051.c: In function 'staticRotate':
+TB9051.c:363:15: warning: unused variable 'targetcountR' [-Wunused-variable]
+         float targetcountR = d * PI * (angle / 360) / (92E-6);
                ^
-HCSR04.c:52:15: warning: unused variable 'f1' [-Wunused-variable]
-         float f1 = 100.5;
-               ^
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/SG90.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\SG90.c -o .\CortexM3\ARM_GCC_541\Debug\SG90.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/US_Timer.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\US_Timer.c -o .\CortexM3\ARM_GCC_541\Debug\US_Timer.o
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/US_Timer_PM.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c Generated_Source\PSoC5\US_Timer_PM.c -o .\CortexM3\ARM_GCC_541\Debug\US_Timer_PM.o
-arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.a .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\StepperDriver.o .\CortexM3\ARM_GCC_541\Debug\StepperDriver_PM.o .\CortexM3\ARM_GCC_541\Debug\I2C_1.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_BOOT.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_INT.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_PM.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_SLAVE.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_MASTER.o .\CortexM3\ARM_GCC_541\Debug\PWM.o .\CortexM3\ARM_GCC_541\Debug\PWM_PM.o .\CortexM3\ARM_GCC_541\Debug\Clock_1.o .\CortexM3\ARM_GCC_541\Debug\TB9051_EN.o .\CortexM3\ARM_GCC_541\Debug\TB9051_EN_PM.o .\CortexM3\ARM_GCC_541\Debug\QuadPWM.o .\CortexM3\ARM_GCC_541\Debug\UART.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_BOOT.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_IntClock.o .\CortexM3\ARM_GCC_541\Debug\SCL_1.o .\CortexM3\ARM_GCC_541\Debug\SDA_1.o .\CortexM3\ARM_GCC_541\Debug\STP_0.o .\CortexM3\ARM_GCC_541\Debug\STP_1.o .\CortexM3\ARM_GCC_541\Debug\STP_2.o .\CortexM3\ARM_GCC_541\Debug\STP_3.o .\CortexM3\ARM_GCC_541\Debug\SG90.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM1.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM2.o .\CortexM3\ARM_GCC_541\Debug\TB_EN.o .\CortexM3\ARM_GCC_541\Debug\TB_ENB.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM3.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM4.o .\CortexM3\ARM_GCC_541\Debug\Trig_R.o .\CortexM3\ARM_GCC_541\Debug\Trig_L.o .\CortexM3\ARM_GCC_541\Debug\Echo_R.o .\CortexM3\ARM_GCC_541\Debug\Echo_L.o .\CortexM3\ARM_GCC_541\Debug\E_L.o .\CortexM3\ARM_GCC_541\Debug\E_R.o .\CortexM3\ARM_GCC_541\Debug\US_L.o .\CortexM3\ARM_GCC_541\Debug\US_L_PM.o .\CortexM3\ARM_GCC_541\Debug\US_R.o .\CortexM3\ARM_GCC_541\Debug\US_R_PM.o .\CortexM3\ARM_GCC_541\Debug\Timer_L.o .\CortexM3\ARM_GCC_541\Debug\Timer_L_PM.o .\CortexM3\ARM_GCC_541\Debug\Timer_R.o .\CortexM3\ARM_GCC_541\Debug\Timer_R_PM.o .\CortexM3\ARM_GCC_541\Debug\RXcmplt.o .\CortexM3\ARM_GCC_541\Debug\rxDMA_dma.o .\CortexM3\ARM_GCC_541\Debug\Clock_4.o .\CortexM3\ARM_GCC_541\Debug\US_Trig.o .\CortexM3\ARM_GCC_541\Debug\US_Timer.o .\CortexM3\ARM_GCC_541\Debug\US_Timer_PM.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1_PM.o .\CortexM3\ARM_GCC_541\Debug\Quad1A.o .\CortexM3\ARM_GCC_541\Debug\Quad1B.o .\CortexM3\ARM_GCC_541\Debug\QD1_Timer.o .\CortexM3\ARM_GCC_541\Debug\QD1_Timer_PM.o .\CortexM3\ARM_GCC_541\Debug\QD1_ISR.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2_PM.o .\CortexM3\ARM_GCC_541\Debug\Quad2A.o .\CortexM3\ARM_GCC_541\Debug\Quad2B.o .\CortexM3\ARM_GCC_541\Debug\Clock_5.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1_Cnt16.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1_Cnt16_PM.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2_Cnt16.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2_Cnt16_PM.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o .\CortexM3\ARM_GCC_541\Debug\UART_AsmGnu.o
+TB9051.c:355:25: warning: variable 'targetCountR' set but not used [-Wunused-but-set-variable]
+     float targetCountL, targetCountR; 
+                         ^
+TB9051.c:352:10: warning: variable 'dispR' set but not used [-Wunused-but-set-variable]
+     long dispR = 0;
+          ^
+TB9051.c: In function 'prelimPath_Avoid':
+TB9051.c:405:11: warning: unused variable 'angleAvoidL' [-Wunused-variable]
+     float angleAvoidL = 10;
+           ^
+TB9051.c:404:11: warning: unused variable 'angleAvoidR' [-Wunused-variable]
+     float angleAvoidR = -10;
+           ^
+TB9051.c:398:11: warning: unused variable 'wP1to2' [-Wunused-variable]
+     float wP1to2 = 0.6;
+           ^
+TB9051.c: In function 'TB9051_VehMoveToBasic':
+TB9051.c:231:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+TB9051.c: In function 'staticRotate':
+TB9051.c:376:5: warning: 'targetCountL' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     } while (dispL < targetCountL);// & dispR < targetCountR); 
+     ^
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.a .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\StepperDriver.o .\CortexM3\ARM_GCC_541\Debug\StepperDriver_PM.o .\CortexM3\ARM_GCC_541\Debug\I2C_1.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_BOOT.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_INT.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_PM.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_SLAVE.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_MASTER.o .\CortexM3\ARM_GCC_541\Debug\Clock_1.o .\CortexM3\ARM_GCC_541\Debug\TB9051_EN.o .\CortexM3\ARM_GCC_541\Debug\TB9051_EN_PM.o .\CortexM3\ARM_GCC_541\Debug\QuadPWM.o .\CortexM3\ARM_GCC_541\Debug\UART.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_BOOT.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_IntClock.o .\CortexM3\ARM_GCC_541\Debug\SCL_1.o .\CortexM3\ARM_GCC_541\Debug\SDA_1.o .\CortexM3\ARM_GCC_541\Debug\STP_0.o .\CortexM3\ARM_GCC_541\Debug\STP_1.o .\CortexM3\ARM_GCC_541\Debug\STP_2.o .\CortexM3\ARM_GCC_541\Debug\STP_3.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM1.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM2.o .\CortexM3\ARM_GCC_541\Debug\TB_EN.o .\CortexM3\ARM_GCC_541\Debug\TB_ENB.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM3.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM4.o .\CortexM3\ARM_GCC_541\Debug\Trig_R.o .\CortexM3\ARM_GCC_541\Debug\Trig_L.o .\CortexM3\ARM_GCC_541\Debug\Echo_R.o .\CortexM3\ARM_GCC_541\Debug\Echo_L.o .\CortexM3\ARM_GCC_541\Debug\E_L.o .\CortexM3\ARM_GCC_541\Debug\E_R.o .\CortexM3\ARM_GCC_541\Debug\US_L.o .\CortexM3\ARM_GCC_541\Debug\US_L_PM.o .\CortexM3\ARM_GCC_541\Debug\US_R.o .\CortexM3\ARM_GCC_541\Debug\US_R_PM.o .\CortexM3\ARM_GCC_541\Debug\Timer_L.o .\CortexM3\ARM_GCC_541\Debug\Timer_L_PM.o .\CortexM3\ARM_GCC_541\Debug\Timer_R.o .\CortexM3\ARM_GCC_541\Debug\Timer_R_PM.o .\CortexM3\ARM_GCC_541\Debug\RXcmplt.o .\CortexM3\ARM_GCC_541\Debug\rxDMA_dma.o .\CortexM3\ARM_GCC_541\Debug\Clock_4.o .\CortexM3\ARM_GCC_541\Debug\US_Trig.o .\CortexM3\ARM_GCC_541\Debug\US_Timer.o .\CortexM3\ARM_GCC_541\Debug\US_Timer_PM.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1_PM.o .\CortexM3\ARM_GCC_541\Debug\Quad1A.o .\CortexM3\ARM_GCC_541\Debug\Quad1B.o .\CortexM3\ARM_GCC_541\Debug\QD1_Timer.o .\CortexM3\ARM_GCC_541\Debug\QD1_Timer_PM.o .\CortexM3\ARM_GCC_541\Debug\QD1_ISR.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2_PM.o .\CortexM3\ARM_GCC_541\Debug\Quad2A.o .\CortexM3\ARM_GCC_541\Debug\Quad2B.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1_Cnt16.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1_Cnt16_PM.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2_Cnt16.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2_Cnt16_PM.o .\CortexM3\ARM_GCC_541\Debug\LED_R.o .\CortexM3\ARM_GCC_541\Debug\LED_L.o .\CortexM3\ARM_GCC_541\Debug\US_LED_R.o .\CortexM3\ARM_GCC_541\Debug\US_LED_R_PM.o .\CortexM3\ARM_GCC_541\Debug\US_LED_L.o .\CortexM3\ARM_GCC_541\Debug\US_LED_L_PM.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o .\CortexM3\ARM_GCC_541\Debug\UART_AsmGnu.o
 arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.a
-arm-none-eabi-gcc.exe -Wl,--start-group -o C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\SBT0811.o .\CortexM3\ARM_GCC_541\Debug\IMU.o .\CortexM3\ARM_GCC_541\Debug\SG90.o .\CortexM3\ARM_GCC_541\Debug\TB9051.o .\CortexM3\ARM_GCC_541\Debug\fnReceive.o .\CortexM3\ARM_GCC_541\Debug\HCSR04.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -l m -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/PSoC5_Team13Project.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -u _printf_float -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+arm-none-eabi-gcc.exe -Wl,--start-group -o C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\SBT0811.o .\CortexM3\ARM_GCC_541\Debug\IMU.o .\CortexM3\ARM_GCC_541\Debug\SG90.o .\CortexM3\ARM_GCC_541\Debug\TB9051.o .\CortexM3\ARM_GCC_541\Debug\fnReceive.o .\CortexM3\ARM_GCC_541\Debug\HCSR04.o .\CortexM3\ARM_GCC_541\Debug\pid.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -l m -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/PSoC5_Team13Project.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -u _printf_float -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
 cyelftool.exe -C C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
 No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.elf
-Flash used: 32994 of 262144 bytes (12.6%).
-SRAM used: 4873 of 65536 bytes (7.4%). Stack: 2048 bytes. Heap: 2048 bytes.
---------------- Build Succeeded: 09/02/2022 15:10:42 ---------------
+Flash used: 27948 of 262144 bytes (10.7%).
+SRAM used: 10273 of 65536 bytes (15.7%). Stack: 4608 bytes. Heap: 4608 bytes.
+--------------- Build Succeeded: 09/07/2022 15:43:10 ---------------

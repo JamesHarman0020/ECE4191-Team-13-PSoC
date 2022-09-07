@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: SG90.h  
+* File Name: LED_L.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_SG90_ALIASES_H) /* Pins SG90_ALIASES_H */
-#define CY_PINS_SG90_ALIASES_H
+#if !defined(CY_PINS_LED_L_ALIASES_H) /* Pins LED_L_ALIASES_H */
+#define CY_PINS_LED_L_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,12 +25,12 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define SG90_0			(SG90__0__PC)
-#define SG90_0_INTR	((uint16)((uint16)0x0001u << SG90__0__SHIFT))
+#define LED_L_0			(LED_L__0__PC)
+#define LED_L_0_INTR	((uint16)((uint16)0x0001u << LED_L__0__SHIFT))
 
-#define SG90_INTR_ALL	 ((uint16)(SG90_0_INTR))
+#define LED_L_INTR_ALL	 ((uint16)(LED_L_0_INTR))
 
-#endif /* End Pins SG90_ALIASES_H */
+#endif /* End Pins LED_L_ALIASES_H */
 
 
 /* [] END OF FILE */
