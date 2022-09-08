@@ -1,15 +1,12 @@
 /* ========================================
  *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
+ * All credit given to Phillip Salmony of Phil's Lab
  *
  * ========================================
 */
 #include "PID.h"
+
+///// To Implement /////
 
 void PIDController_Init(PIDController *pid) {
 

@@ -25,10 +25,11 @@ float w1_Vel;
 float w2_Vel;
 float vL,vR;
 float pidVelL, pidVelR;
-float d = 0.21; //distance between two wheels
+float d = 0.29; //distance between two wheels
 float r_wheel = 0.028; // radien of wheels
 //float theta = 360/48.0f;
 float angVelRotate = 1;
+float US_L, US_R; 
 
 // PID Controller Values
 #define PID_KP 5.0f
@@ -236,20 +237,19 @@ CY_ISR(QD_Read)
     int QD1_New = TB9051_QD1_GetCounter();
     int QD2_New = TB9051_QD2_GetCounter();
     
-    float theta = 360/48.0f;
     int QD1_Delta = QD1_New - QD1_Old; 
     int QD2_Delta = QD2_New - QD2_Old; 
-    float w1_Pos = QD1_Delta * (92E-6f); //found experimentally
-    float w2_Pos = QD2_Delta * (92E-6f);    
-    w1_Vel = w1_Pos / 0.020;
-    w2_Vel = w2_Pos / 0.020; 
+    float w1_Pos = QD1_Delta * (130E-6f); //found experimentally
+    float w2_Pos = QD2_Delta * (130E-6f);    
+    w1_Vel = w1_Pos / 0.050;                //TO-DO: Remove Magic Number
+    w2_Vel = w2_Pos / 0.050; 
     float w1_angVel = w1_Vel / r_wheel;
     float w2_angVel = w2_Vel / r_wheel;
     float vLin = r_wheel * (w1_angVel + w2_angVel) / 2.0f;
     float vAng = r_wheel * (w1_angVel - w2_angVel) / 2.0f;
     
-    float QD1_Ratio = QD1_Delta / 34.014f; //Gear Ratio
-    float QD2_Ratio = QD2_Delta / 34.014f; //Gear Ratio
+    //float QD1_Ratio = QD1_Delta / 34.014f; //Gear Ratio
+    //float QD2_Ratio = QD2_Delta / 34.014f; //Gear Ratio
     //float w1_Pos = QD1_Ratio * 2 * PI * r_wheel * theta / 360;
     //float w2_Pos = QD2_Ratio * 2 * PI * r_wheel * theta / 360;
 
@@ -277,8 +277,8 @@ CY_ISR(QD_Read)
 void linAngtoVel(float * pLinVel, float * pAngVel) {
     float angVel = *pAngVel;
     float linVel = *pLinVel;
-    float thetadotL = linVel / r_wheel - (d / 2) * angVel / r_wheel; // Rate of rtotation L
-    float thetadotR = linVel / r_wheel + (d / 2) * angVel / r_wheel; // Rate of rotation R
+    float thetadotL = linVel / r_wheel + (d / 2) * angVel / r_wheel; // Rate of rtotation L. + & - have been swapped
+    float thetadotR = linVel / r_wheel - (d / 2) * angVel / r_wheel; // Rate of rotation R
     vL = r_wheel * thetadotL; // m/s
     vR = r_wheel * thetadotR; // m/s
     //char string[20]; sprintf(string,"vL: %0.3f vR: %0.3f", vL, vR); UART_PutString(string);
@@ -354,16 +354,16 @@ void staticRotate(float * pAngle){ // in degrees
     long origPosR = TB9051_QD1_GetCounter();
     float targetCountL, targetCountR; 
     if (angle > 0) {
-        targetCountL = d * PI * (angle / 360) / (92E-6);
+        targetCountL = (d-0.07) * PI * (angle / 360) / (92E-6);
         targetCountR = -targetCountL;
-        QuadPWM_SetDutyCycle(2,200);
-        QuadPWM_SetDutyCycle(3,200);
+        QuadPWM_SetDutyCycle(2,100);
+        QuadPWM_SetDutyCycle(3,100);
     }
     if (angle < 0) {
-        float targetcountR = d * PI * (angle / 360) / (92E-6);
+        float targetcountR = (d-0.07) * PI * (angle / 360) / (92E-6);
         float targetCountL = -targetCountL;
-        QuadPWM_SetDutyCycle(1,200);
-        QuadPWM_SetDutyCycle(4,200);
+        QuadPWM_SetDutyCycle(1,100);
+        QuadPWM_SetDutyCycle(4,100);
     }
     
     do { 
@@ -383,7 +383,7 @@ void staticRotate(float * pAngle){ // in degrees
     TB9051_QD2_SetCounter(0); 
 }
 
-void prelimPath_NoAvoid() {
+void prelimPath() {
     float wP0to1 = 0.6;
     float wP1to2 = 0.6;
     float angle0to1 = 90.0;
@@ -400,15 +400,16 @@ void prelimPath_Avoid(){
     vehForwardDist(&wP0to1);
     staticRotate(&angle0to1);
     CyDelay(5000);
+    
     // Begin avoidance in the route
     float angleAvoidR = -10;
     float angleAvoidL = 10;
-    /*while (distAvL < 0.4 | distAvR < 0.4) {
-        if (distAvL < 0.2)
+    do {
+        if (US_L < 0.2)
             staticRotate(&angleAvoidL); 
-        else if (distAvR < 0.2)
+        else if (US_R < 0.2)
             staticRotate(&angleAvoidR);
-    }
-    */    
+    } while (US_L < 0.4 | US_R < 0.4);
+        
 }
 /* [] END OF FILE */

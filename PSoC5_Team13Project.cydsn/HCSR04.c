@@ -28,9 +28,10 @@ float distL[AV_Ln] = {0};
 float distAvL = 0;
 float distAvR = 0;
 float distR[AV_Ln] = {0};
+extern float US_L, US_R;
 
 void HCSR04_Begin(){
-    E_R_Start();
+    E_R_Start();                // Begin interrupts
     E_L_Start();
     E_R_ClearPending();
     E_R_StartEx(CaptureR);
@@ -39,7 +40,7 @@ void HCSR04_Begin(){
     US_Trig_Start();
     US_Trig_ClearPending();
     US_Trig_StartEx(Trigger);
-    Timer_R_Start();    
+    Timer_R_Start();            //Begin Timers
     Timer_L_Start();
     US_Timer_Start();
     initFlag = 1;
@@ -47,21 +48,18 @@ void HCSR04_Begin(){
 
 void distMeasure(){
     if (initFlag){
-        //compLFlag = 0; compRFlag = 0;
+        compLFlag = 0; compRFlag = 0;
         distMeasureL();
         distMeasureR();
-        CyDelay(10);
-        //int i = 0;
-        /*do {
+        CyDelay(5);            // TO-DO: Replace this with something more efficient
+        /*int i = 0;
+        do {
             CyDelayUs(10);
             i++;
-        } while((i < 1000) | (compLFlag == 0 & compRFlag == 0));
+        } while((i < 500) | (compLFlag == 0 & compRFlag == 0));
         */
         if (distAvL < 0.5 | distAvR < 0.5)
             fnSend(101, &distAvL ,&distAvR);
-            
-        //}
-            //compLFlag = 0; compRFlag = 0;
     }
     else HCSR04_Begin();
 }
@@ -81,22 +79,22 @@ void distMeasureR(){
 CY_ISR(CaptureR) //ISR3
 {
     uint32 clicks = Timer_R_ReadPeriod() - Timer_R_ReadCapture();
-    float pulseLength = clicks / (24E6);
-    distR[mCounterR] =  spSound * pulseLength / 2;//distance to an object = ((speed of sound in the air)*time)/2
+    float pulseLength = clicks / (24E6);            // Frequency  
+    distR[mCounterR] =  spSound * pulseLength / 2;  // distance to an object = ((speed of sound in the air)*time)/2
     mCounterR++;
     
-    if (mCounterR == 3) {
+    if (mCounterR == 3) {                           
         distAvR = (distR[0] + distR[1] + distR[2]) / AV_Ln;
         mCounterR = 0;
-        if (distAvR <= 0.2 & distAvR > 0) {
+        if (distAvR <= 0.2 & distAvR > 0) {         // LEDs to indicate obstacle present
             US_LED_R_Write(1);
         } 
         else {
             US_LED_R_Write(0);    
         }
     }
-    else distMeasureR();
-    compRFlag = 1;
+    else distMeasureR();                           // Want to take the average of three measurements
+    compRFlag = 1;  
 }
 
 
@@ -109,6 +107,8 @@ CY_ISR(CaptureL) //ISR3
     
     if (mCounterL == 3) {
         distAvL = (distL[0] + distL[1] + distL[2]) / AV_Ln;
+        US_L = distAvL;
+        US_R = distAvR;
         mCounterL = 0;
         if (distAvL <= 0.2 & distAvL > 0) {
             US_LED_L_Write(1);

@@ -25,13 +25,11 @@ void fnCall(int fn, float * para2, float * para3);
 void fnSend(int fn, float * para2, float * para3);
 void Uart_Resync(int n);
 
-void fnCall(int fn, float * pPrm1, float * pPrm2) {
+void fnCall(int fn, float * pPrm1, float * pPrm2) {             // run the function called by the RPi
     float para2 = *pPrm1;
     float para3 = *pPrm2;
-    //char string[20]; sprintf(string, "%i %.3f %.3f", fn, para2, para3); UART_PutString(string);
-    //CyExitCriticalSection(InterruptState);
     switch (fn) { 
-        case 0: TB9051_VehMoveTo(pPrm1,pPrm2);          break; // Motor Commands
+        case 0: TB9051_VehMoveTo(pPrm1,pPrm2);          break;  // Motor Commands
         case 1: TB9051_Begin();                         break;
         case 2: TB9051_Forward((int)para2,0,(int)para3);break;
         case 3: TB9051_Reverse((int)para2,(int)para3);  break;
@@ -40,17 +38,17 @@ void fnCall(int fn, float * pPrm1, float * pPrm2) {
         case 6: TB9051_VehReverse((int)para2);          break;
         case 7: TB9051_VehBrake();                      break;
         case 8: linAngtoVel(&para2, &para3);            break;
-        case 50: oneStepCCW((int)para2);                break; // Stepper Commands
+        case 50: oneStepCCW((int)para2);                break;  // Stepper Commands
         case 51: oneStepCW((int)para2);                 break;
         case 52: moveAngle(para2);                      break;
-        //case 60: SG90_Begin();                        break; // Servo Commands
+        //case 60: SG90_Begin();                        break;  // Servo Commands
         //case 61: SG90_ToAngle(para2);                 break;
-        case 90: Uart_Resync((int)para2);               break;
-        case 100: HCSR04_Begin();                       break;
-        case 101: distMeasure();                        break;
+        case 90: Uart_Resync((int)para2);               break;  // UART Commands
+        case 100: HCSR04_Begin();                       break;  // US Commands
+        case 101: distMeasure();                        break; 
         case 102: distMeasureL();                       break;
         case 103: distMeasureR();                       break;
-        case 200: LIS3MDL_Begin();                      break; // Accelerometer
+        case 200: LIS3MDL_Begin();                      break; // Accelerometer Commands
         case 201: LIS3MDL_MasterStatus();               break;
         case 202: LIS3MDL_TransferByte();               break;
         case 203: LIS3MDL_TransferMultipleBytes();      break;
@@ -67,10 +65,10 @@ void fnCall(int fn, float * pPrm1, float * pPrm2) {
     }
 }
 
-void fnSend(int fn, float * para2, float * para3){
-    uint8 txBuffer[15];// = {0x00, 0x65, 0x42, 0xc8, 0x00, 0x00, 0x42, 0xc8, 0x00};
+void fnSend(int fn, float * para2, float * para3){      // Send data PSoC -> RPi 
+    uint8 txBuffer[15];
     
-    union {
+    union {                                             // Save the float and 4 bytes in the same memory
         float a;
         unsigned char Ba[4];
     } BtoFa;
@@ -83,16 +81,16 @@ void fnSend(int fn, float * para2, float * para3){
     BtoFa.a = *para2;
     BtoFb.b = *para3;
     
-    for (int i = 0; i < 3; i++){
+    for (int i = 0; i < 3; i++){                        // Assign the 4 bytes of the union to an array
         txBuffer[i+4] = BtoFa.Ba[3-i];
         txBuffer[i+8] = BtoFb.Bb[3-i];
     }
     
-    txBuffer[0] = 0xff;
+    txBuffer[0] = 0xff;                                 // Pad with start bytes
     txBuffer[1] = 0xff;
     txBuffer[2] = 0xff;
-    txBuffer[3] = (unsigned char)fn;
-    txBuffer[12] = 0x55;
+    txBuffer[3] = (unsigned char)fn;                    // 1st byte is the function
+    txBuffer[12] = 0x55;                                // Pad with finish bytes
     txBuffer[13] = 0x55;
     txBuffer[14] = 0x55;
     
@@ -101,20 +99,17 @@ void fnSend(int fn, float * para2, float * para3){
     for (int i = 0; i < 15; i++) {
         char string[10]; sprintf(string, "%x ", txBuffer[i]); UART_PutString(string);
     }
+    char string[20]; sprintf(string, "T:%i,%0.2f,%0.2f\n", fn, *para2, *para3); UART_PutString(string);
     UART_PutCRLF(); */
     
-    UART_RPi_PutArray(txBuffer,15);
-    char string[20]; sprintf(string, "T:%i,%0.2f,%0.2f\n", fn, *para2, *para3); UART_PutString(string);
+    UART_RPi_PutArray(txBuffer,15);                     // Send the array to the software buffer
 }
 
-
-void Uart_Resync(int n){
+void Uart_Resync(int n){                        // If out of sync, send dummy characters to resync.
     UART_PutString("resync");
     uint8 resyncBuff[15] = {0};
     if (UART_RPi_GetTxBufferSize() == 0) {
         UART_RPi_PutArray(resyncBuff,n);
     }
 }
-
-
 /* [] END OF FILE */

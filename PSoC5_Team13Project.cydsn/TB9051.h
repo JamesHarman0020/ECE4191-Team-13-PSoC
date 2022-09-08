@@ -25,7 +25,8 @@ void linAngtoVel(float * pLinVel, float * pAngVel);
 void Veh_RotateTo(float * pTheta);
 void vehForwardDist(float * pDist);
 void staticRotate(float * angle);
-void prelimPath_noAvoid();
+void prelimPath();
+void prelimPath_Avoid();
 
 #endif
 
