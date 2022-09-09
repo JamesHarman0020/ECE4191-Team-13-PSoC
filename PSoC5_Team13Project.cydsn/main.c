@@ -95,10 +95,11 @@ int main(void)
     linAngtoVel(&vLin, &vAng);
     CyDelay(12500);
     TB9051_VehBrake(); */
-    //prelimPath();
+    prelimPath();
     
     for(;;)
     {
+        //prelimPath_NoAvoid();
         //float theta = 90.0;
         //CyDelay(2000);
         //staticRotate(&theta);

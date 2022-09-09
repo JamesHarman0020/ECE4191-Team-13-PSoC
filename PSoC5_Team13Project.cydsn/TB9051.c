@@ -265,7 +265,7 @@ CY_ISR(QD_Read)
     
     
     //char string[50]; sprintf(string, "accum: %ld %ld\n", accumL, accumR); UART_PutString(string);
-    if (vLin_Old != vLin | vAng_Old != vAng){ 
+    if (vLin_Old != vLin | vAng_Old != vAng | vAng == 0 | vLin == 0){ 
         fnSend(8, &vLin, &vAng);
     }   
         
@@ -384,12 +384,16 @@ void staticRotate(float * pAngle){ // in degrees
 }
 
 void prelimPath() {
-    float wP0to1 = 0.6;
+    float wP0to1 = 0.845;
     float wP1to2 = 0.6;
-    float angle0to1 = 90.0;
-    vehForwardDist(&wP0to1);
+    float angle0to1 = 45.0;
+    
+    float angle1to2 = 135.0;
+    
     staticRotate(&angle0to1);
+    vehForwardDist(&wP0to1);
     CyDelay(5000);
+    staticRotate(&angle1to2);
     vehForwardDist(&wP1to2);
 }
 

@@ -1,6 +1,6 @@
 // ======================================================================
 // PSoC5_Team13Project.v generated from TopDesign.cysch
-// 09/07/2022 at 15:53
+// 09/09/2022 at 09:25
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1484,6 +1484,8 @@ module top ;
           wire  Net_3;
           wire  Net_2;
           wire  Net_1;
+          wire  Net_178;
+          wire  Net_263;
           wire  Net_339;
           wire  Net_338;
           wire  Net_335;
@@ -1497,8 +1499,6 @@ module top ;
           wire  Net_10;
           wire  Net_266;
           wire  Net_173;
-          wire  Net_263;
-          wire  Net_178;
           wire  Net_244;
           wire  Net_192;
           wire  Net_223;

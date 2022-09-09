@@ -1,4 +1,4 @@
---------------- Build Started: 09/08/2022 22:22:58 Project: PSoC5_Team13Project, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 09/09/2022 10:19:48 Project: PSoC5_Team13Project, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
 main.c: In function 'main':
@@ -21,6 +21,97 @@ main.c:161:68: warning: suggest parentheses around comparison in operand of '&' 
 main.c:162:17: warning: implicit declaration of function 'fnCall' [-Wimplicit-function-declaration]
                  fnCall(fn,&prm1,&prm2);
                  ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/TB9051.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c TB9051.c -o .\CortexM3\ARM_GCC_541\Debug\TB9051.o
+TB9051.c: In function 'TB9051_Forward':
+TB9051.c:140:13: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+     if (PWM >= QuadPWM_MIN_DUTY_CYCLE & PWM <= QuadPWM_MAX_DUTY_CYCLE) {
+             ^
+TB9051.c:119:11: warning: unused variable 'velocity' [-Wunused-variable]
+     float velocity = *pvelocity;
+           ^
+TB9051.c: In function 'TB9051_Reverse':
+TB9051.c:156:15: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+     if (speed >= QuadPWM_MIN_DUTY_CYCLE & speed <= QuadPWM_MAX_DUTY_CYCLE) {
+               ^
+TB9051.c: In function 'TB9051_Brake':
+TB9051.c:172:28: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+         if (QuadPWM_REG_D0 != 255 & QuadPWM_REG_D1 == 255){ // motor is moving forward
+                            ^
+TB9051.c:176:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+         else if (QuadPWM_REG_D0 == 255 & QuadPWM_REG_D1 != 255) // motor is moving backward
+                                 ^
+TB9051.c:184:28: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+         if (QuadPWM_REG_F0 != 255 & QuadPWM_REG_F1 == 255){ // motor is moving forward
+                            ^
+TB9051.c:188:33: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+         else if (QuadPWM_REG_F0 == 255 & QuadPWM_REG_F1 != 255) // motor is moving backward
+                                 ^
+TB9051.c: In function 'TB9051_VehMoveTo':
+TB9051.c:220:11: warning: unused variable 'vRel_right' [-Wunused-variable]
+     float vRel_right = round(v_right * 255);
+           ^
+TB9051.c:219:11: warning: unused variable 'vRel_left' [-Wunused-variable]
+     float vRel_left = round(v_left * 255);    // REPLACE THESE
+           ^
+TB9051.c:218:11: warning: unused variable 'w_l' [-Wunused-variable]
+     float w_l = v_left/r_wheel; // angular speed of left wheel
+           ^
+TB9051.c:217:11: warning: unused variable 'w_r' [-Wunused-variable]
+     float w_r = v_right/r_wheel; // angular speed of right wheel
+           ^
+TB9051.c:209:11: warning: unused variable 't' [-Wunused-variable]
+     float t = 2; // time to reach the destination
+           ^
+TB9051.c: At top level:
+TB9051.c:227:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ TB9051_VehMoveToBasic(float * pX, float * pY) { //TO-DO
+ ^
+TB9051.c: In function 'TB9051_VehMoveToBasic':
+TB9051.c:230:11: warning: unused variable 'theta' [-Wunused-variable]
+     float theta = atan(y/x);
+           ^
+TB9051.c: In function 'QD_Read':
+TB9051.c:268:18: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+     if (vLin_Old != vLin | vAng_Old != vAng | vAng == 0 | vLin == 0){ 
+                  ^
+TB9051.c:268:52: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+     if (vLin_Old != vLin | vAng_Old != vAng | vAng == 0 | vLin == 0){ 
+                                                    ^
+TB9051.c:268:64: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+     if (vLin_Old != vLin | vAng_Old != vAng | vAng == 0 | vLin == 0){ 
+                                                                ^
+TB9051.c:269:9: warning: implicit declaration of function 'fnSend' [-Wimplicit-function-declaration]
+         fnSend(8, &vLin, &vAng);
+         ^
+TB9051.c: In function 'vehForwardDist':
+TB9051.c:341:18: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+     while (dispL < targetCount & dispR < targetCount); 
+                  ^
+TB9051.c: In function 'staticRotate':
+TB9051.c:363:15: warning: unused variable 'targetcountR' [-Wunused-variable]
+         float targetcountR = (d-0.07) * PI * (angle / 360) / (92E-6);
+               ^
+TB9051.c:355:25: warning: variable 'targetCountR' set but not used [-Wunused-but-set-variable]
+     float targetCountL, targetCountR; 
+                         ^
+TB9051.c:352:10: warning: variable 'dispR' set but not used [-Wunused-but-set-variable]
+     long dispR = 0;
+          ^
+TB9051.c: In function 'prelimPath_Avoid':
+TB9051.c:416:19: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+     } while (US_L < 0.4 | US_R < 0.4);
+                   ^
+TB9051.c:402:11: warning: unused variable 'wP1to2' [-Wunused-variable]
+     float wP1to2 = 0.6;
+           ^
+TB9051.c: In function 'TB9051_VehMoveToBasic':
+TB9051.c:232:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+TB9051.c: In function 'staticRotate':
+TB9051.c:376:5: warning: 'targetCountL' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     } while (dispL < targetCountL);// & dispR < targetCountR); 
+     ^
 arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.a .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\StepperDriver.o .\CortexM3\ARM_GCC_541\Debug\StepperDriver_PM.o .\CortexM3\ARM_GCC_541\Debug\I2C_1.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_BOOT.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_INT.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_PM.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_SLAVE.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_MASTER.o .\CortexM3\ARM_GCC_541\Debug\Clock_1.o .\CortexM3\ARM_GCC_541\Debug\TB9051_EN.o .\CortexM3\ARM_GCC_541\Debug\TB9051_EN_PM.o .\CortexM3\ARM_GCC_541\Debug\QuadPWM.o .\CortexM3\ARM_GCC_541\Debug\UART.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_BOOT.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_IntClock.o .\CortexM3\ARM_GCC_541\Debug\SCL_1.o .\CortexM3\ARM_GCC_541\Debug\SDA_1.o .\CortexM3\ARM_GCC_541\Debug\STP_0.o .\CortexM3\ARM_GCC_541\Debug\STP_1.o .\CortexM3\ARM_GCC_541\Debug\STP_2.o .\CortexM3\ARM_GCC_541\Debug\STP_3.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM1.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM2.o .\CortexM3\ARM_GCC_541\Debug\TB_EN.o .\CortexM3\ARM_GCC_541\Debug\TB_ENB.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM3.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM4.o .\CortexM3\ARM_GCC_541\Debug\Trig_R.o .\CortexM3\ARM_GCC_541\Debug\Trig_L.o .\CortexM3\ARM_GCC_541\Debug\Echo_R.o .\CortexM3\ARM_GCC_541\Debug\Echo_L.o .\CortexM3\ARM_GCC_541\Debug\E_L.o .\CortexM3\ARM_GCC_541\Debug\E_R.o .\CortexM3\ARM_GCC_541\Debug\US_L.o .\CortexM3\ARM_GCC_541\Debug\US_L_PM.o .\CortexM3\ARM_GCC_541\Debug\US_R.o .\CortexM3\ARM_GCC_541\Debug\US_R_PM.o .\CortexM3\ARM_GCC_541\Debug\Timer_L.o .\CortexM3\ARM_GCC_541\Debug\Timer_L_PM.o .\CortexM3\ARM_GCC_541\Debug\Timer_R.o .\CortexM3\ARM_GCC_541\Debug\Timer_R_PM.o .\CortexM3\ARM_GCC_541\Debug\RXcmplt.o .\CortexM3\ARM_GCC_541\Debug\rxDMA_dma.o .\CortexM3\ARM_GCC_541\Debug\Clock_4.o .\CortexM3\ARM_GCC_541\Debug\US_Trig.o .\CortexM3\ARM_GCC_541\Debug\US_Timer.o .\CortexM3\ARM_GCC_541\Debug\US_Timer_PM.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1_PM.o .\CortexM3\ARM_GCC_541\Debug\Quad1A.o .\CortexM3\ARM_GCC_541\Debug\Quad1B.o .\CortexM3\ARM_GCC_541\Debug\QD1_Timer.o .\CortexM3\ARM_GCC_541\Debug\QD1_Timer_PM.o .\CortexM3\ARM_GCC_541\Debug\QD1_ISR.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2_PM.o .\CortexM3\ARM_GCC_541\Debug\Quad2A.o .\CortexM3\ARM_GCC_541\Debug\Quad2B.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1_Cnt16.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1_Cnt16_PM.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2_Cnt16.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2_Cnt16_PM.o .\CortexM3\ARM_GCC_541\Debug\LED_R.o .\CortexM3\ARM_GCC_541\Debug\LED_L.o .\CortexM3\ARM_GCC_541\Debug\US_LED_R.o .\CortexM3\ARM_GCC_541\Debug\US_LED_R_PM.o .\CortexM3\ARM_GCC_541\Debug\US_LED_L.o .\CortexM3\ARM_GCC_541\Debug\US_LED_L_PM.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o .\CortexM3\ARM_GCC_541\Debug\UART_AsmGnu.o
 arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.a
 arm-none-eabi-gcc.exe -Wl,--start-group -o C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\SBT0811.o .\CortexM3\ARM_GCC_541\Debug\IMU.o .\CortexM3\ARM_GCC_541\Debug\SG90.o .\CortexM3\ARM_GCC_541\Debug\TB9051.o .\CortexM3\ARM_GCC_541\Debug\fnReceive.o .\CortexM3\ARM_GCC_541\Debug\HCSR04.o .\CortexM3\ARM_GCC_541\Debug\pid.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -l m -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/PSoC5_Team13Project.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -u _printf_float -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
@@ -29,6 +120,6 @@ No ELF section .cychecksum found, creating one
 Application checksum calculated and stored in ELF section .cychecksum
 Checksum calculated and stored in ELF section .cymeta
 cyelftool.exe -S C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.elf
-Flash used: 27884 of 262144 bytes (10.6%).
+Flash used: 28364 of 262144 bytes (10.8%).
 SRAM used: 10305 of 65536 bytes (15.7%). Stack: 4608 bytes. Heap: 4608 bytes.
---------------- Build Succeeded: 09/08/2022 22:22:59 ---------------
+--------------- Build Succeeded: 09/09/2022 10:19:50 ---------------
