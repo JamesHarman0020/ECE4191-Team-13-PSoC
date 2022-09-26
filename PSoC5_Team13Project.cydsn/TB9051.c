@@ -32,15 +32,15 @@ float angVelRotate = 1;
 float US_L, US_R; 
 
 // PID Controller Values
-#define PID_KP 5.0f
-#define PID_KI 2.5f
-#define PID_KD 0.25f
+#define PID_KP 10.0f
+#define PID_KI 20.0f
+#define PID_KD 0.0f
 #define PID_TAU 0.02f
-#define PID_LIM_MIN_INT -254.0f
+#define PID_LIM_MIN_INT 0.0f
 #define PID_LIM_MAX_INT 254.0f
 #define SAMPLE_TIME_S 1.0f
 #define SIMULATION_TIME_MAX 100f
-#define TOLERANCE 0.1f
+#define TOLERANCE 0.01f
 
 // Create PID Controller Struct - All Credit to Phillip Salmony
 PIDController pidL = { PID_KP, PID_KI, PID_KD,
@@ -53,6 +53,11 @@ PIDController pidR = { PID_KP, PID_KI, PID_KD,
                         PID_LIM_MIN_INT, PID_LIM_MAX_INT,
 		                PID_LIM_MIN_INT, PID_LIM_MAX_INT,
                         SAMPLE_TIME_S };
+PIDController pidV = { PID_KP, PID_KI, PID_KD,
+                        PID_TAU,
+                        PID_LIM_MIN_INT, PID_LIM_MAX_INT,
+		                PID_LIM_MIN_INT, PID_LIM_MAX_INT,
+                        SAMPLE_TIME_S };
     
 void TB9051_Begin()
 {
@@ -60,7 +65,7 @@ void TB9051_Begin()
     for (int i = 1; i <= 4; i++){ 
         QuadPWM_SetDutyCycle(i,0);  // Ensure all PWM signals start low
     }
-    TB9051_EN_Write(0x2);           // EN high ENB low
+    TB9051_EN_Write(0x1);           // EN high ENB low
     
     TB9051_QD1_Start();             //Enable Quad Dec. 
     TB9051_QD2_Start();
@@ -72,41 +77,31 @@ void TB9051_Begin()
     //PID
     PIDController_Init(&pidL);
     PIDController_Init(&pidR);
+    PIDController_Init(&pidV);
 }
 
-void TB9051_VehForward(float * pVelL, float * pVelR) {
-    pidVelL = *pVelL;
-    pidVelR = *pVelR;
-    
-    // PID Control
-    /*int i = 0;
+void TB9051_VehForward_PID(float *pVel) {
+    float vel = *pVel;
+    int i = 0;
     do {
         i++;
-        if (pidVelL > 0) {
-            PIDController_Update(&pidL, pidVelL, w1_Vel);
-            UART_PutString("F");
-            QuadPWM_SetDutyCycle(3,(int)pidL.out);
-        }
-        else{            
-            PIDController_Update(&pidL, -pidVelL, -w1_Vel);
-            QuadPWM_SetDutyCycle(4,(int)pidL.out);
-        }
-        if (pidVelR > 0){
-            PIDController_Update(&pidR, pidVelR, w2_Vel);
-            QuadPWM_SetDutyCycle(1,(int)pidR.out);
-        }
-        else {
-            PIDController_Update(&pidR, -pidVelR, -w2_Vel);
-            QuadPWM_SetDutyCycle(2,(int)pidR.out);
-        }
-        char string[60]; sprintf(string, "t: %0.3f %0.3f. pid: %d %d. vel, w1: %0.3f w2: %0.3f\n", pidVelL, pidVelR, (int)pidL.out, (int)pidR.out, w1_Vel,w2_Vel); UART_PutString(string);
-    } while ((i < 100) & (w1_Vel + TOLERANCE < pidVelL | w1_Vel - TOLERANCE > pidVelL | w2_Vel + TOLERANCE < pidVelR | w2_Vel - TOLERANCE > pidVelR));
-    */
-    }
+        PIDController_Update(&pidV, vel, w1_Vel);
+        QuadPWM_SetDutyCycle(1,(int)pidV.out);
+        QuadPWM_SetDutyCycle(3,(int)pidV.out);
+        char string[50]; sprintf(string, "Vel: %.3f, PID: %0.3f\n", w1_Vel, pidV.out);UART_PutString(string);
+    } while (!(i > 200 | (w1_Vel < vel + TOLERANCE & w1_Vel > vel - TOLERANCE)));
+}
 
-void TB9051_VehReverse(int speed) {
-    TB9051_Reverse(0,speed);
-    TB9051_Reverse(1,speed);
+void TB9051_VehReverse_PID(float *pVel) {
+    float vel = *pVel;
+    int i = 0;
+    do {
+        i++;      
+        PIDController_Update(&pidV, vel, -w1_Vel);
+        QuadPWM_SetDutyCycle(2,(int)pidV.out);
+        QuadPWM_SetDutyCycle(4,(int)pidV.out);
+        char string[40]; sprintf(string, "w1_Vel + vel: %0.3f, tol: %f, PID: %.3f\n", w1_Vel + vel, TOLERANCE, pidV.out);UART_PutString(string);
+    } while (!(i > 200 | (w1_Vel + vel < TOLERANCE & w1_Vel + vel > 0 - TOLERANCE)));
 }
 
 void TB9051_VehBrake() {
@@ -114,29 +109,8 @@ void TB9051_VehBrake() {
     TB9051_Brake(1);
 }
 
-void TB9051_Forward(int motor, float * pvelocity, int PWM)
-{ //Should be a controller based on feedback from motors
-    float velocity = *pvelocity;
-    
-    //TB9051_Brake(motor);
-    /*if (motor == 0) {    
-        do { 
-            PIDController_Update(&pidL, velocity, w1_Vel);
-            QuadPWM_SetDutyCycle(3,(int)pidL.out);
-            CyDelay(100);
-        }
-        while (w1_Vel + TOLERANCE < velocity | w1_Vel - TOLERANCE > velocity);
-    }
-    else if (motor == 1) {
-        do { 
-            PIDController_Update(&pidR, velocity, w2_Vel);
-            QuadPWM_SetDutyCycle(1,(int)pidR.out);
-            CyDelay(100);
-        }
-        while (w2_Vel + TOLERANCE < velocity | w2_Vel - TOLERANCE > velocity);
-    }*/
-    
-    
+void TB9051_Forward(int motor, int PWM)
+{ 
     if (PWM >= QuadPWM_MIN_DUTY_CYCLE & PWM <= QuadPWM_MAX_DUTY_CYCLE) {
     //PWM1 H, PWM2 L
     if (motor == 0) {
@@ -191,8 +165,8 @@ void TB9051_Brake(int motor)
             QuadPWM_SetDutyCycle(4,25);
         }
     }    
-    // TO-DO: ADD non-blocking delay here so that the short brake is applied for a suitable period of time (e.g. 100ms)
-    CyDelay(100);
+    // TO-DO: ADD non-blocking delay here so that the short brake is applied
+    CyDelay(20);
 }
 
 void TB9051_VehMoveTo(float * px, float * py){
@@ -205,7 +179,7 @@ void TB9051_VehMoveTo(float * px, float * py){
     // float fai = (S_r - S_l)/d;
     float x = *px; 
     float y = *py;
-    
+    /*
     float t = 2; // time to reach the destination
     //float a[2] = {0, 0},b[2] = {x, y}; //oringinal opint and destination point
     float theta = atan(y/x);
@@ -221,17 +195,15 @@ void TB9051_VehMoveTo(float * px, float * py){
     //char string[20]; sprintf(string, "R: %f. L: %f \n", vRel_right, vRel_left); UART_PutString(string);
     
     //TB9051_Forward(0, vRel_right);
-    //TB9051_Forward(1, vRel_left);
-}
-
-TB9051_VehMoveToBasic(float * pX, float * pY) { //TO-DO
-    float x = *pX;          
-    float y = *pY;
-    float theta = atan(y/x);
+    //TB9051_Forward(1, vRel_left);*/
     
+    ///// DAVID'S MATHS //////
+    float angV = 2*atan2(x,y);
+    float linV = (pow(x,2)/y + y)*(angV/2);
+    linAngtoVel(&angV, &linV);
 }
 
-CY_ISR(QD_Read)
+CY_ISR(QD_Read) //TO-DO: Resolve the overflow issue that will occur
 {
      // Get new positions
     int QD1_New = TB9051_QD1_GetCounter();
@@ -239,8 +211,8 @@ CY_ISR(QD_Read)
     
     int QD1_Delta = QD1_New - QD1_Old; 
     int QD2_Delta = QD2_New - QD2_Old; 
-    float w1_Pos = QD1_Delta * (130E-6f); //found experimentally
-    float w2_Pos = QD2_Delta * (130E-6f);    
+    float w1_Pos = QD1_Delta * (105E-6f); //found experimentally
+    float w2_Pos = QD2_Delta * (105E-6f);    
     w1_Vel = w1_Pos / 0.050;                //TO-DO: Remove Magic Number
     w2_Vel = w2_Pos / 0.050; 
     float w1_angVel = w1_Vel / r_wheel;
@@ -260,11 +232,6 @@ CY_ISR(QD_Read)
     QD1_Old = QD1_New;
     QD2_Old = QD2_New;
     
-    //TB9051_QD1_SetCounter(0);
-    //TB9051_QD2_SetCounter(0);
-    
-    
-    //char string[50]; sprintf(string, "accum: %ld %ld\n", accumL, accumR); UART_PutString(string);
     if (vLin_Old != vLin | vAng_Old != vAng | vAng == 0 | vLin == 0){ 
         fnSend(8, &vLin, &vAng);
     }   
@@ -274,42 +241,31 @@ CY_ISR(QD_Read)
 }
 
 
-void linAngtoVel(float * pLinVel, float * pAngVel) {
+void linAngToVel(float * pLinVel, float * pAngVel) {
     float angVel = *pAngVel;
     float linVel = *pLinVel;
-    float thetadotL = linVel / r_wheel + (d / 2) * angVel / r_wheel; // Rate of rtotation L. + & - have been swapped
+    float thetadotL = linVel / r_wheel + (d / 2) * angVel / r_wheel; // Rate of rtotation L. +/- Swapped
     float thetadotR = linVel / r_wheel - (d / 2) * angVel / r_wheel; // Rate of rotation R
     vL = r_wheel * thetadotL; // m/s
     vR = r_wheel * thetadotR; // m/s
-    //char string[20]; sprintf(string,"vL: %0.3f vR: %0.3f", vL, vR); UART_PutString(string);
-    pidVelL = vL;
-    pidVelR = vR;
     
     /* speed estimation - this can be finetuned */
-    float fullSpeedNoLoad = 0.2814784; // m/s
+    float fullSpeedNoLoad = 0.1425; // m/s
     float vL_PWM = round(vL / fullSpeedNoLoad * 255);
     float vR_PWM = round(vR / fullSpeedNoLoad * 255);
     
-    if (vL_PWM > 255) {
-        vL_PWM = 255;
-    }
-    else if (vL_PWM < -255) { 
-        vL_PWM = -255; 
-    }
-    if (vR_PWM > 255) {
-        vR_PWM = 255;
-    }
-    else if (vR_PWM < -255) { 
-        vR_PWM = -255; 
-    }
+    if (vL_PWM > 255) { vL_PWM = 255; }
+    else if (vL_PWM < -255) { vL_PWM = -255; }
+    if (vR_PWM > 255) { vR_PWM = 255; }
+    else if (vR_PWM < -255) { vR_PWM = -255; }
     
     if (vL_PWM > 0){ 
-        TB9051_Forward(0,0,vL_PWM); 
+        TB9051_Forward(0,vL_PWM); 
     }
     else TB9051_Reverse(0, (int)0-vL_PWM);
     
     if (vR_PWM > 0) {
-        TB9051_Forward(1,0,vR_PWM); 
+        TB9051_Forward(1,vR_PWM); 
     }
     else TB9051_Reverse(1, (int)0-vR_PWM);
     //string[20]; sprintf(string,"vL_PWM: %0.3f vR_PWM: %0.3f", vL_PWM, vR_PWM); UART_PutString(string);
@@ -317,33 +273,79 @@ void linAngtoVel(float * pLinVel, float * pAngVel) {
     //char string[40]; sprintf(string,"vL: %f, vR: %f\n",vL, vR); UART_PutString(string);
 }
 
-
-void LinAngtoPos(float * linVel, float * angVel, float * time)
-{ // 3 Parameters. Troubling.
-    // TO-DO  
+void linAngToVel_PID(float * pLinVel, float * pAngVel) {
+    float angVel = *pAngVel;
+    float linVel = *pLinVel;
+    float thetadotL = linVel / r_wheel + (d / 2) * angVel / r_wheel; // Rate of rtotation L. +/- Swapped
+    float thetadotR = linVel / r_wheel - (d / 2) * angVel / r_wheel; // Rate of rotation R
+    vL = r_wheel * thetadotL; // m/s
+    vR = r_wheel * thetadotR; // m/s
+    //char string[20]; sprintf(string,"vL: %0.3f vR: %0.3f", vL, vR); UART_PutString(string);
+    pidVelL = vL;
+    pidVelR = vR;
     
+    int i = 0;
+    if (vL >= 0 & vR >= 0) {
+        do {
+            i++;      
+            PIDController_Update(&pidL, pidVelL, w2_Vel);
+            PIDController_Update(&pidR, pidVelR, w1_Vel);
+            QuadPWM_SetDutyCycle(1,(int)pidL.out);
+            QuadPWM_SetDutyCycle(3,(int)pidR.out);
+            char string[50]; sprintf(string,"vL: %0.3f vR: %0.3f PIDL: %0.2f, PIDR: %0.2f\n", vL, vR, pidL.out, pidR.out); UART_PutString(string);
+        } while (!(i > 400));
+    }
+    else {
+        if (vL >= 0) { // vR must be less than zero   
+            do {
+                i++;
+                PIDController_Update(&pidL, pidVelL, w2_Vel);
+                PIDController_Update(&pidR, -pidVelR, -w1_Vel);
+                QuadPWM_SetDutyCycle(1,(int)pidL.out);
+                QuadPWM_SetDutyCycle(4,(int)pidR.out);
+            char string[50]; sprintf(string,"vL: %0.3f vR: %0.3f PIDL: %0.2f, PIDR: %0.2f\n", w2_Vel, w1_Vel, pidL.out, pidR.out); UART_PutString(string);
+            } while (!(i > 400));
+        }
+        else if (vR >= 0) { //vL must be less than zero
+           do {
+                PIDController_Update(&pidL, -pidVelL, -w2_Vel);
+                PIDController_Update(&pidR, pidVelR, w1_Vel);
+                QuadPWM_SetDutyCycle(2,(int)pidL.out);
+                QuadPWM_SetDutyCycle(3,(int)pidR.out);
+            char string[50]; sprintf(string,"vL: %0.3f vR: %0.3f PIDL: %0.2f, PIDR: %0.2f\n", vL, vR, pidL.out, pidR.out); UART_PutString(string);
+            } while (!(i > 400));
+        }
+        else { // vL & vR must be less than zero
+            do {
+                PIDController_Update(&pidL, -pidVelL, -w2_Vel);
+                PIDController_Update(&pidR, -pidVelR, -w1_Vel);
+                QuadPWM_SetDutyCycle(2,(int)pidL.out);
+                QuadPWM_SetDutyCycle(4,(int)pidR.out);
+            char string[50]; sprintf(string,"vL: %0.3f vR: %0.3f PIDL: %0.2f, PIDR: %0.2f\n", vL, vR, pidL.out, pidR.out); UART_PutString(string);
+            } while (!(i > 400));
+        }
+    }
 }
 
+    
 void vehForwardDist(float * pDist) { // This function is blocking
     float dist = *pDist;
-    float dispL = 0;
-    float dispR = 0;
-    float origPosL = TB9051_QD1_GetCounter();
-    float origPosR = TB9051_QD1_GetCounter();
-    QuadPWM_SetDutyCycle(3,200);
-    QuadPWM_SetDutyCycle(1,200);
-    float targetCount = dist / (92E-6f);
-    do { 
-        dispL = TB9051_QD1_GetCounter() - origPosL;
-        dispR = TB9051_QD2_GetCounter() - origPosR;
+    long initialL = accumL;
+    long initialR = accumR;
+    long targL = initialL + dist/(92E-6f);
+    long targR = initialR + dist/(92E-6f);
+    float linV = 0.1;
+    float linA = 0.0;
+    
+    linAngtoVel(&linV, &linA);
+    do {
+         
         //char string[80]; sprintf(string, "displacement: %0.3f %0.3f\n", dispL, dispR); UART_PutString(string);
     }
-    while (dispL < targetCount & dispR < targetCount); 
+    while (accumL < targL & accumR < targR); 
 
     QuadPWM_SetDutyCycle(3,0);    
     QuadPWM_SetDutyCycle(1,0);
-    TB9051_QD1_SetCounter(0); 
-    TB9051_QD2_SetCounter(0); 
 }
 
 void staticRotate(float * pAngle){ // in degrees

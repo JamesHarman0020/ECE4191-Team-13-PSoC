@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
   28:HCSR04.c      **** float distAvL = 0;
   29:HCSR04.c      **** float distAvR = 0;
   30:HCSR04.c      **** float distR[AV_Ln] = {0};
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 2
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 2
 
 
   31:HCSR04.c      **** extern float US_L, US_R;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
   44:HCSR04.c      ****     Timer_L_Start();
   69              		.loc 1 44 0
   70 0030 FFF7FEFF 		bl	Timer_L_Start
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 3
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 3
 
 
   71              	.LVL10:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  102 0000 08B5     		push	{r3, lr}
  103              		.cfi_def_cfa_offset 8
  104              		.cfi_offset 3, -8
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 4
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 4
 
 
  105              		.cfi_offset 14, -4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
   88:HCSR04.c      ****         mCounterR = 0;
   89:HCSR04.c      ****         if (distAvR <= 0.2 & distAvR > 0) {         // LEDs to indicate obstacle present
   90:HCSR04.c      ****             US_LED_R_Write(1);
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 5
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 5
 
 
   91:HCSR04.c      ****         } 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  106:HCSR04.c      ****     mCounterL++;
  178              		.loc 1 106 0
  179 003a 0134     		adds	r4, r4, #1
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 6
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 6
 
 
  180 003c 6C60     		str	r4, [r5, #4]
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  227 0094 3440     		ands	r4, r4, r6
  228 0096 14F0FF0F 		tst	r4, #255
  229 009a 03D0     		beq	.L11
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 7
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 7
 
 
  114:HCSR04.c      ****             US_LED_L_Write(1);
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  275              		.cfi_startproc
  276              		@ args = 0, pretend = 0, frame = 0
  277              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 8
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 8
 
 
  278 0000 08B5     		push	{r3, lr}
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
   52:HCSR04.c      ****         distMeasureR();
  326              		.loc 1 52 0
  327 0010 FFF7FEFF 		bl	distMeasureL
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 9
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 9
 
 
  328              	.LVL35:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  377              		.cfi_endproc
  378              	.LFE65:
  379              		.size	distMeasure, .-distMeasure
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 10
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 10
 
 
  380              		.section	.text.Trigger,"ax",%progbits
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
   82:HCSR04.c      ****     distR[mCounterR] =  spSound * pulseLength / 2;  // distance to an object = ((speed of sound in 
  427              		.loc 1 82 0
  428 000c 201A     		subs	r0, r4, r0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 11
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 11
 
 
  429              	.LVL45:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  477 0068 13A3     		adr	r3, .L35+8
  478 006a D3E90023 		ldrd	r2, [r3]
  479 006e FFF7FEFF 		bl	__aeabi_dcmple
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 12
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 12
 
 
  480              	.LVL55:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  530              		.global	distAvR
  531              		.global	distAvL
  532              		.global	distL
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 13
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 13
 
 
  533              		.global	compRFlag
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  584      00000000 
  584      00000000 
  585              		.text
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 14
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 14
 
 
  586              	.Letext0:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  640 004f F1000000 		.4byte	.LASF4
  641 0053 02       		.uleb128 0x2
  642 0054 04       		.byte	0x4
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 15
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 15
 
 
  643 0055 07       		.byte	0x7
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  697 00bf 01       		.uleb128 0x1
  698 00c0 9C       		.byte	0x9c
  699 00c1 5C010000 		.4byte	0x15c
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 16
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 16
 
 
  700 00c5 07       		.uleb128 0x7
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  754 0149 07       		.uleb128 0x7
  755 014a 34000000 		.4byte	.LVL10
  756 014e C9040000 		.4byte	0x4c9
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 17
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 17
 
 
  757 0152 07       		.uleb128 0x7
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  811 01c1 01       		.byte	0x1
  812 01c2 67       		.byte	0x67
  813 01c3 81000000 		.4byte	0x81
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 18
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 18
 
 
  814 01c7 00000000 		.4byte	.LLST0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  868 0242 31       		.byte	0x31
  869 0243 00       		.byte	0
  870 0244 08       		.uleb128 0x8
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 19
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 19
 
 
  871 0245 0E000000 		.4byte	.LVL33
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  925 02ae 14       		.sleb128 20
  926 02af 09       		.uleb128 0x9
  927 02b0 01       		.uleb128 0x1
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 20
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 20
 
 
  928 02b1 52       		.byte	0x52
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  982 0329 0C       		.uleb128 0xc
  983 032a 8C020000 		.4byte	.LASF20
  984 032e 01       		.byte	0x1
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 21
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 21
 
 
  985 032f 52       		.byte	0x52
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1039 03a8 03       		.byte	0x3
  1040 03a9 00000000 		.4byte	mCounterR
  1041 03ad 14       		.uleb128 0x14
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 22
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 22
 
 
  1042 03ae F3010000 		.4byte	.LASF29
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1096 0423 14       		.uleb128 0x14
  1097 0424 6C000000 		.4byte	.LASF35
  1098 0428 01       		.byte	0x1
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 23
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 23
 
 
  1099 0429 1D       		.byte	0x1d
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1153 049e 4A010000 		.4byte	.LASF45
  1154 04a2 4A010000 		.4byte	.LASF45
  1155 04a6 08       		.byte	0x8
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 24
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 24
 
 
  1156 04a7 17       		.byte	0x17
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1210 051f 0F       		.byte	0xf
  1211 0520 2F       		.byte	0x2f
  1212 0521 18       		.uleb128 0x18
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 25
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 25
 
 
  1213 0522 81000000 		.4byte	.LASF57
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1267 001b 0E       		.uleb128 0xe
  1268 001c 00       		.byte	0
  1269 001d 00       		.byte	0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 26
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 26
 
 
  1270 001e 03       		.uleb128 0x3
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1324 0054 9742     		.uleb128 0x2117
  1325 0056 19       		.uleb128 0x19
  1326 0057 01       		.uleb128 0x1
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 27
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 27
 
 
  1327 0058 13       		.uleb128 0x13
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1381 0097 11       		.uleb128 0x11
  1382 0098 01       		.uleb128 0x1
  1383 0099 12       		.uleb128 0x12
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 28
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 28
 
 
  1384 009a 06       		.uleb128 0x6
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1438 00d2 01       		.uleb128 0x1
  1439 00d3 13       		.uleb128 0x13
  1440 00d4 00       		.byte	0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 29
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 29
 
 
  1441 00d5 00       		.byte	0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1495 010c 0E       		.uleb128 0xe
  1496 010d 3A       		.uleb128 0x3a
  1497 010e 0B       		.uleb128 0xb
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 30
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 30
 
 
  1498 010f 3B       		.uleb128 0x3b
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1552 0145 00       		.byte	0
  1553 0146 03       		.uleb128 0x3
  1554 0147 0E       		.uleb128 0xe
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 31
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 31
 
 
  1555 0148 3A       		.uleb128 0x3a
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1609 0032 00000000 		.4byte	0
  1610              	.LLST2:
  1611 0036 0C000000 		.4byte	.LVL44
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 32
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 32
 
 
  1612 003a 0E000000 		.4byte	.LVL45
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1666 001c 16000000 		.4byte	.LFE67
  1667 0020 00000000 		.4byte	.LFB65
  1668 0024 6C000000 		.4byte	.LFE65
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 33
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 33
 
 
  1669 0028 00000000 		.4byte	.LFB70
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1697      00
  1698              	.LASF35:
  1699 006c 64697374 		.ascii	"distAvR\000"
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 34
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 34
 
 
  1699      41765200 
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1725      64696E67 
  1725      00
  1726              	.LASF47:
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 35
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 35
 
 
  1727 010b 55535F54 		.ascii	"US_Trig_StartEx\000"
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1749      676E6564 
  1749      20696E74 
  1749      00
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 36
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 36
 
 
  1750              	.LASF63:
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1776              	.LASF19:
  1777 0246 636C6963 		.ascii	"clicks\000"
  1777      6B7300
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 37
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 37
 
 
  1778              	.LASF54:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 1
  1803      43313120 
  1803      352E342E 
  1803      31203230 
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciO6HEJ.s 			page 38
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cciPIwly.s 			page 38
 
 
  1803      31363036 

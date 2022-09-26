@@ -1,5 +1,5 @@
 # PSoC5_Team13Project
-# 2022-09-08 23:25:08Z
+# 2022-09-20 23:33:27Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -7,28 +7,24 @@ dont_use_io iocell 1 0
 dont_use_io iocell 1 1
 # IO_3@[IOP=(1)][IoId=(3)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 3
-set_io "STP_0(0)" iocell 3 0
-set_io "STP_1(0)" iocell 3 1
-set_io "STP_2(0)" iocell 3 2
-set_io "STP_3(0)" iocell 3 3
-set_io "SCL_1(0)" iocell 12 4
-set_io "TB_PWM1(0)" iocell 2 0
-set_io "TB_PWM2(0)" iocell 2 1
+set_io "STP_0(0)" iocell 3 2
+set_io "STP_1(0)" iocell 3 3
+set_io "STP_2(0)" iocell 3 4
+set_io "STP_3(0)" iocell 3 5
+set_io "TB_PWM1(0)" iocell 2 6
+set_io "TB_PWM2(0)" iocell 2 7
 set_io "TB_EN(0)" iocell 12 3
-set_io "TB_ENB(0)" iocell 12 2
-set_io "TB_PWM3(0)" iocell 1 4
-set_io "TB_PWM4(0)" iocell 1 5
+set_io "TB_ENB(0)" iocell 12 4
+set_io "TB_PWM3(0)" iocell 2 4
+set_io "TB_PWM4(0)" iocell 2 5
 set_io "\UART:tx(0)\" iocell 12 7
 set_io "RPi_RX(0)" iocell 2 3
 set_io "RPi_Tx(0)" iocell 2 2
 set_io "Trig_R(0)" iocell 0 6
-set_io "Trig_L(0)" iocell 0 1
-set_io "Echo_R(0)" iocell 0 5
-set_io "Echo_L(0)" iocell 0 0
-set_io "SDA_1(0)" iocell 12 5
-set_io "Quad1A(0)" iocell 2 6
-set_io "Quad1B(0)" iocell 2 7
-set_io "Quad2A(0)" iocell 2 4
-set_io "Quad2B(0)" iocell 2 5
-set_io "LED_R(0)" iocell 3 5
-set_io "LED_L(0)" iocell 3 4
+set_io "Trig_L(0)" iocell 3 0
+set_io "Echo_R(0)" iocell 0 7
+set_io "Echo_L(0)" iocell 3 1
+set_io "Quad1A(0)" iocell 2 0
+set_io "Quad1B(0)" iocell 2 1
+set_io "Quad2A(0)" iocell 1 7
+set_io "Quad2B(0)" iocell 1 6

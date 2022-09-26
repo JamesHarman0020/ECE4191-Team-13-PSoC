@@ -31,7 +31,7 @@ void fnCall(int fn, float * pPrm1, float * pPrm2) {             // run the funct
     switch (fn) { 
         case 0: TB9051_VehMoveTo(pPrm1,pPrm2);          break;  // Motor Commands
         case 1: TB9051_Begin();                         break;
-        case 2: TB9051_Forward((int)para2,0,(int)para3);break;
+        //case 2: TB9051_Forward((int)para2,0,(int)para3);break;
         case 3: TB9051_Reverse((int)para2,(int)para3);  break;
         case 4: TB9051_Brake((int)para2);               break;
         case 5: TB9051_VehForward(0,pPrm1);             break;
@@ -98,10 +98,10 @@ void fnSend(int fn, float * para2, float * para3){      // Send data PSoC -> RPi
     UART_PutString("Send: ");
     for (int i = 0; i < 15; i++) {
         char string[10]; sprintf(string, "%x ", txBuffer[i]); UART_PutString(string);
+    } */
+    if (fn != 101) {
+    char string[20]; sprintf(string, "T:%i,%0.4f,%0.4f\n", fn, *para2, *para3); UART_PutString(string);
     }
-    char string[20]; sprintf(string, "T:%i,%0.2f,%0.2f\n", fn, *para2, *para3); UART_PutString(string);
-    UART_PutCRLF(); */
-    
     UART_RPi_PutArray(txBuffer,15);                     // Send the array to the software buffer
 }
 
