@@ -104,9 +104,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cycodeshareimport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cycodeshareexport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cycodeshareimport.scat</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\StepperDriver.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\StepperDriver.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\StepperDriver_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\I2C_1_BOOT.c</File>
@@ -233,24 +230,17 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Quad2B_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Quad2B.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Quad2B.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_5.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_5.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD1_Cnt16.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD1_Cnt16.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD1_Cnt16_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD2_Cnt16.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD2_Cnt16.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\TB9051_QD2_Cnt16_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_R_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_R.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_R.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_L_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_L.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_L.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\US_LED_R.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\US_LED_R.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\US_LED_R_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\US_LED_L.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\US_LED_L.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\US_LED_L_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Stepper_EN.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Stepper_EN.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Stepper_EN_PM.c</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\Export\ARM_GCC_Generic">

@@ -16,53 +16,28 @@
 #include <math.h>
 
 
-void oneStepCCW(int speed) // One step in the counterclockwise direction, multiplex motor inputs.
-{
-    StepperDriver_Write(0b1000); // TO-DO: Move this to interrupt based so that it isn't blocking.
-    CyDelay(speed);             
-    StepperDriver_Write(0b1100);
-    CyDelay(speed);
-    StepperDriver_Write(0b0100);
-    CyDelay(speed);
-    StepperDriver_Write(0b0110);
-    CyDelay(speed);
-    StepperDriver_Write(0b0010);
-    CyDelay(speed);
-    StepperDriver_Write(0b0011);
-    CyDelay(speed);
-    StepperDriver_Write(0b0001);
-    CyDelay(speed);
-    StepperDriver_Write(0b1001);
-    CyDelay(speed);
+void Stepper_On() {
+    Stepper_EN_Write(1);   
 }
 
-void oneStepCW(int speed) // One step in the clockwise direction
-{
-    StepperDriver_Write(0b1001); // TO-DO: Move this to interrupt based so that it isn't blocking.
-    CyDelay(speed);
-    StepperDriver_Write(0b0001);
-    CyDelay(speed);
-    StepperDriver_Write(0b0011);
-    CyDelay(speed);
-    StepperDriver_Write(0b0010);
-    CyDelay(speed);
-    StepperDriver_Write(0b0110);
-    CyDelay(speed);
-    StepperDriver_Write(0b0100);
-    CyDelay(speed);
-    StepperDriver_Write(0b1100);
-    CyDelay(speed);
-    StepperDriver_Write(0b1000);
-    CyDelay(speed);
+void Stepper_Off() {
+    Stepper_EN_Write(0);
+        
 }
 
-void moveAngle(float angle){ //angle taken in degrees
-    float steps = angle * STEPS_PER_REV / 360;
+void Stepper_OneRot(){
+    Stepper_On();
+    CyDelay(900);
+    Stepper_Off();
+}
+
+void moveAngle(float angle){ // TO-DO:
+   /* float steps = angle * STEPS_PER_REV / 360;
     int stepsRound = (int)steps; //number of steps to turn that number of degrees
     char string[40];
     sprintf(string, "steps = %d error = %f\n", stepsRound, (float)(steps-stepsRound));
     UART_PutString(string);
     for (int i = 0; i < stepsRound; i++) {
         oneStepCW(3);
-    }
+    }*/
 }

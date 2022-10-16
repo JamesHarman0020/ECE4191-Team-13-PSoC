@@ -1,13 +1,13 @@
 -- Project:   PSoC5_Team13Project
--- Generated: 09/21/2022 09:33:27
+-- Generated: 10/15/2022 19:17:58
 -- PSoC Creator  4.4
 
 ENTITY PSoC5_Team13Project IS
     PORT(
-        STP_0(0)_PAD : OUT std_ulogic;
-        STP_1(0)_PAD : OUT std_ulogic;
-        STP_2(0)_PAD : OUT std_ulogic;
         STP_3(0)_PAD : OUT std_ulogic;
+        STP_2(0)_PAD : OUT std_ulogic;
+        STP_1(0)_PAD : OUT std_ulogic;
+        STP_0(0)_PAD : OUT std_ulogic;
         SCL_1(0)_PAD : INOUT std_ulogic;
         TB_PWM1(0)_PAD : OUT std_ulogic;
         TB_PWM2(0)_PAD : OUT std_ulogic;
@@ -26,9 +26,7 @@ ENTITY PSoC5_Team13Project IS
         Quad1A(0)_PAD : IN std_ulogic;
         Quad1B(0)_PAD : IN std_ulogic;
         Quad2A(0)_PAD : IN std_ulogic;
-        Quad2B(0)_PAD : IN std_ulogic;
-        LED_R(0)_PAD : OUT std_ulogic;
-        LED_L(0)_PAD : OUT std_ulogic);
+        Quad2B(0)_PAD : IN std_ulogic);
     ATTRIBUTE voltage_VDDABUF OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDA OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VUSB OF __DEFAULT__ : ENTITY IS 5e0;
@@ -55,8 +53,6 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL ClockBlock_XTAL_32KHZ : bit;
     SIGNAL Echo_L(0)__PA : bit;
     SIGNAL Echo_R(0)__PA : bit;
-    SIGNAL LED_L(0)__PA : bit;
-    SIGNAL LED_R(0)__PA : bit;
     SIGNAL Net_137 : bit;
     ATTRIBUTE global_signal OF Net_137 : SIGNAL IS true;
     SIGNAL Net_137_local : bit;
@@ -66,7 +62,6 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL Net_218 : bit;
     SIGNAL Net_219 : bit;
     SIGNAL Net_223 : bit;
-    SIGNAL Net_23 : bit;
     SIGNAL Net_239 : bit;
     SIGNAL Net_240 : bit;
     SIGNAL Net_241 : bit;
@@ -82,19 +77,24 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL Net_335_local : bit;
     SIGNAL Net_338 : bit;
     SIGNAL Net_339 : bit;
-    SIGNAL Net_34 : bit;
-    SIGNAL Net_35 : bit;
-    SIGNAL Net_36 : bit;
     SIGNAL Net_366 : bit;
     SIGNAL Net_405 : bit;
-    SIGNAL Net_520 : bit;
-    SIGNAL Net_531 : bit;
     SIGNAL Net_592 : bit;
     SIGNAL Net_596 : bit;
     SIGNAL Net_599 : bit;
     SIGNAL Net_601 : bit;
     SIGNAL Net_636 : bit;
     SIGNAL Net_654 : bit;
+    SIGNAL Net_699 : bit;
+    ATTRIBUTE global_signal OF Net_699 : SIGNAL IS true;
+    SIGNAL Net_699_local : bit;
+    SIGNAL Net_714 : bit;
+    SIGNAL Net_716 : bit;
+    SIGNAL Net_718 : bit;
+    SIGNAL Net_720 : bit;
+    SIGNAL Net_740 : bit;
+    SIGNAL Net_741_0 : bit;
+    SIGNAL Net_741_1 : bit;
     SIGNAL Quad1A(0)__PA : bit;
     SIGNAL Quad1B(0)__PA : bit;
     SIGNAL Quad2A(0)__PA : bit;
@@ -140,10 +140,13 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL \QuadPWM:ff1\ : bit;
     SIGNAL \QuadPWM:toggle_0\ : bit;
     SIGNAL \QuadPWM:toggle_1\ : bit;
-    SIGNAL \StepperDriver:control_4\ : bit;
-    SIGNAL \StepperDriver:control_5\ : bit;
-    SIGNAL \StepperDriver:control_6\ : bit;
-    SIGNAL \StepperDriver:control_7\ : bit;
+    SIGNAL \Stepper_EN:control_1\ : bit;
+    SIGNAL \Stepper_EN:control_2\ : bit;
+    SIGNAL \Stepper_EN:control_3\ : bit;
+    SIGNAL \Stepper_EN:control_4\ : bit;
+    SIGNAL \Stepper_EN:control_5\ : bit;
+    SIGNAL \Stepper_EN:control_6\ : bit;
+    SIGNAL \Stepper_EN:control_7\ : bit;
     SIGNAL \TB9051_EN:control_2\ : bit;
     SIGNAL \TB9051_EN:control_3\ : bit;
     SIGNAL \TB9051_EN:control_4\ : bit;
@@ -315,20 +318,6 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL \US_L:control_5\ : bit;
     SIGNAL \US_L:control_6\ : bit;
     SIGNAL \US_L:control_7\ : bit;
-    SIGNAL \US_LED_L:control_1\ : bit;
-    SIGNAL \US_LED_L:control_2\ : bit;
-    SIGNAL \US_LED_L:control_3\ : bit;
-    SIGNAL \US_LED_L:control_4\ : bit;
-    SIGNAL \US_LED_L:control_5\ : bit;
-    SIGNAL \US_LED_L:control_6\ : bit;
-    SIGNAL \US_LED_L:control_7\ : bit;
-    SIGNAL \US_LED_R:control_1\ : bit;
-    SIGNAL \US_LED_R:control_2\ : bit;
-    SIGNAL \US_LED_R:control_3\ : bit;
-    SIGNAL \US_LED_R:control_4\ : bit;
-    SIGNAL \US_LED_R:control_5\ : bit;
-    SIGNAL \US_LED_R:control_6\ : bit;
-    SIGNAL \US_LED_R:control_7\ : bit;
     SIGNAL \US_R:control_1\ : bit;
     SIGNAL \US_R:control_2\ : bit;
     SIGNAL \US_R:control_3\ : bit;
@@ -354,8 +343,8 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
     SIGNAL __ZERO__ : bit;
     ATTRIBUTE GROUND OF __ZERO__ : SIGNAL IS true;
-    SIGNAL tmpOE__STP_0_net_0 : bit;
-    ATTRIBUTE POWER OF tmpOE__STP_0_net_0 : SIGNAL IS true;
+    SIGNAL tmpOE__STP_3_net_0 : bit;
+    ATTRIBUTE POWER OF tmpOE__STP_3_net_0 : SIGNAL IS true;
     SIGNAL zero : bit;
     ATTRIBUTE GROUND OF zero : SIGNAL IS true;
     SIGNAL \ClockBlock.clk_bus_glb_ff__sig\ : bit;
@@ -480,14 +469,14 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0.cfbo__sig\ : bit;
     SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u1.sor__sig\ : bit;
     SIGNAL \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u1.cmsbo__sig\ : bit;
-    ATTRIBUTE lib_model OF STP_0(0) : LABEL IS "iocell1";
-    ATTRIBUTE Location OF STP_0(0) : LABEL IS "P3[2]";
-    ATTRIBUTE lib_model OF STP_1(0) : LABEL IS "iocell2";
-    ATTRIBUTE Location OF STP_1(0) : LABEL IS "P3[3]";
-    ATTRIBUTE lib_model OF STP_2(0) : LABEL IS "iocell3";
-    ATTRIBUTE Location OF STP_2(0) : LABEL IS "P3[4]";
-    ATTRIBUTE lib_model OF STP_3(0) : LABEL IS "iocell4";
+    ATTRIBUTE lib_model OF STP_3(0) : LABEL IS "iocell1";
     ATTRIBUTE Location OF STP_3(0) : LABEL IS "P3[5]";
+    ATTRIBUTE lib_model OF STP_2(0) : LABEL IS "iocell2";
+    ATTRIBUTE Location OF STP_2(0) : LABEL IS "P3[4]";
+    ATTRIBUTE lib_model OF STP_1(0) : LABEL IS "iocell3";
+    ATTRIBUTE Location OF STP_1(0) : LABEL IS "P3[3]";
+    ATTRIBUTE lib_model OF STP_0(0) : LABEL IS "iocell4";
+    ATTRIBUTE Location OF STP_0(0) : LABEL IS "P3[2]";
     ATTRIBUTE lib_model OF SCL_1(0) : LABEL IS "iocell_ireg";
     ATTRIBUTE lib_model OF TB_PWM1(0) : LABEL IS "iocell5";
     ATTRIBUTE Location OF TB_PWM1(0) : LABEL IS "P2[6]";
@@ -553,120 +542,124 @@ ARCHITECTURE __DEFAULT__ OF PSoC5_Team13Project IS
     ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:count_enable\ : LABEL IS "macrocell27";
     ATTRIBUTE lib_model OF \TB9051_QD2:Net_530\ : LABEL IS "macrocell28";
     ATTRIBUTE lib_model OF \TB9051_QD2:Net_611\ : LABEL IS "macrocell29";
-    ATTRIBUTE lib_model OF \StepperDriver:Sync:ctrl_reg\ : LABEL IS "controlcell1";
-    ATTRIBUTE lib_model OF \TB9051_EN:Sync:ctrl_reg\ : LABEL IS "controlcell2";
+    ATTRIBUTE lib_model OF Net_714 : LABEL IS "macrocell30";
+    ATTRIBUTE lib_model OF Net_716 : LABEL IS "macrocell31";
+    ATTRIBUTE lib_model OF Net_718 : LABEL IS "macrocell32";
+    ATTRIBUTE lib_model OF Net_720 : LABEL IS "macrocell33";
+    ATTRIBUTE lib_model OF \TB9051_EN:Sync:ctrl_reg\ : LABEL IS "controlcell1";
     ATTRIBUTE lib_model OF \QuadPWM:PwmDatapath:u0\ : LABEL IS "datapathcell1";
-    ATTRIBUTE lib_model OF \US_L:Sync:ctrl_reg\ : LABEL IS "controlcell3";
+    ATTRIBUTE lib_model OF \US_L:Sync:ctrl_reg\ : LABEL IS "controlcell2";
     ATTRIBUTE lib_model OF rxDMA : LABEL IS "drqcell1";
-    ATTRIBUTE lib_model OF \Timer_L:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell4";
+    ATTRIBUTE lib_model OF \Timer_L:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell3";
     ATTRIBUTE lib_model OF \Timer_L:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell1";
     ATTRIBUTE lib_model OF \Timer_L:TimerUDB:sT24:timerdp:u0\ : LABEL IS "datapathcell2";
     ATTRIBUTE lib_model OF \Timer_L:TimerUDB:sT24:timerdp:u1\ : LABEL IS "datapathcell3";
     ATTRIBUTE lib_model OF \Timer_L:TimerUDB:sT24:timerdp:u2\ : LABEL IS "datapathcell4";
-    ATTRIBUTE lib_model OF \Timer_R:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell5";
+    ATTRIBUTE lib_model OF \Timer_R:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell4";
     ATTRIBUTE lib_model OF \Timer_R:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell2";
     ATTRIBUTE lib_model OF \Timer_R:TimerUDB:sT24:timerdp:u0\ : LABEL IS "datapathcell5";
     ATTRIBUTE lib_model OF \Timer_R:TimerUDB:sT24:timerdp:u1\ : LABEL IS "datapathcell6";
     ATTRIBUTE lib_model OF \Timer_R:TimerUDB:sT24:timerdp:u2\ : LABEL IS "datapathcell7";
-    ATTRIBUTE lib_model OF \US_R:Sync:ctrl_reg\ : LABEL IS "controlcell6";
+    ATTRIBUTE lib_model OF \US_R:Sync:ctrl_reg\ : LABEL IS "controlcell5";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:sTX:TxShifter:u0\ : LABEL IS "datapathcell8";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:sTX:sCLOCK:TxBitClkGen\ : LABEL IS "datapathcell9";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:sTX:TxSts\ : LABEL IS "statusicell3";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:sRX:RxShifter:u0\ : LABEL IS "datapathcell10";
     ATTRIBUTE lib_model OF \UART_RPi:BUART:sRX:RxSts\ : LABEL IS "statusicell4";
-    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:sCTRLReg:ctrlreg\ : LABEL IS "controlcell7";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:sCTRLReg:ctrlreg\ : LABEL IS "controlcell6";
     ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:sSTSReg:stsreg\ : LABEL IS "statusicell5";
     ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u0\ : LABEL IS "datapathcell11";
     ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:sC16:counterdp:u1\ : LABEL IS "datapathcell12";
-    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_A_delayed_0\ : LABEL IS "macrocell30";
-    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_A_delayed_1\ : LABEL IS "macrocell31";
-    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_A_delayed_2\ : LABEL IS "macrocell32";
-    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_B_delayed_0\ : LABEL IS "macrocell33";
-    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_B_delayed_1\ : LABEL IS "macrocell34";
-    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_B_delayed_2\ : LABEL IS "macrocell35";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_A_delayed_0\ : LABEL IS "macrocell34";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_A_delayed_1\ : LABEL IS "macrocell35";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_A_delayed_2\ : LABEL IS "macrocell36";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_B_delayed_0\ : LABEL IS "macrocell37";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_B_delayed_1\ : LABEL IS "macrocell38";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_B_delayed_2\ : LABEL IS "macrocell39";
     ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:Stsreg\ : LABEL IS "statusicell6";
-    ATTRIBUTE lib_model OF \QD1_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell8";
+    ATTRIBUTE lib_model OF \QD1_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell7";
     ATTRIBUTE lib_model OF \QD1_Timer:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell7";
     ATTRIBUTE lib_model OF \QD1_Timer:TimerUDB:sT24:timerdp:u0\ : LABEL IS "datapathcell13";
     ATTRIBUTE lib_model OF \QD1_Timer:TimerUDB:sT24:timerdp:u1\ : LABEL IS "datapathcell14";
     ATTRIBUTE lib_model OF \QD1_Timer:TimerUDB:sT24:timerdp:u2\ : LABEL IS "datapathcell15";
-    ATTRIBUTE lib_model OF \US_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell9";
+    ATTRIBUTE lib_model OF \US_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell8";
     ATTRIBUTE lib_model OF \US_Timer:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell8";
     ATTRIBUTE lib_model OF \US_Timer:TimerUDB:sT24:timerdp:u0\ : LABEL IS "datapathcell16";
     ATTRIBUTE lib_model OF \US_Timer:TimerUDB:sT24:timerdp:u1\ : LABEL IS "datapathcell17";
     ATTRIBUTE lib_model OF \US_Timer:TimerUDB:sT24:timerdp:u2\ : LABEL IS "datapathcell18";
-    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:sCTRLReg:ctrlreg\ : LABEL IS "controlcell10";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:sCTRLReg:ctrlreg\ : LABEL IS "controlcell9";
     ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:sSTSReg:stsreg\ : LABEL IS "statusicell9";
     ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u0\ : LABEL IS "datapathcell19";
     ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:sC16:counterdp:u1\ : LABEL IS "datapathcell20";
-    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_A_delayed_0\ : LABEL IS "macrocell36";
-    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_A_delayed_1\ : LABEL IS "macrocell37";
-    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_A_delayed_2\ : LABEL IS "macrocell38";
-    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_B_delayed_0\ : LABEL IS "macrocell39";
-    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_B_delayed_1\ : LABEL IS "macrocell40";
-    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_B_delayed_2\ : LABEL IS "macrocell41";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_A_delayed_0\ : LABEL IS "macrocell40";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_A_delayed_1\ : LABEL IS "macrocell41";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_A_delayed_2\ : LABEL IS "macrocell42";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_B_delayed_0\ : LABEL IS "macrocell43";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_B_delayed_1\ : LABEL IS "macrocell44";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_B_delayed_2\ : LABEL IS "macrocell45";
     ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:Stsreg\ : LABEL IS "statusicell10";
-    ATTRIBUTE lib_model OF \US_LED_R:Sync:ctrl_reg\ : LABEL IS "controlcell11";
-    ATTRIBUTE lib_model OF \US_LED_L:Sync:ctrl_reg\ : LABEL IS "controlcell12";
-    ATTRIBUTE lib_model OF Net_239 : LABEL IS "macrocell42";
-    ATTRIBUTE lib_model OF Net_240 : LABEL IS "macrocell43";
-    ATTRIBUTE lib_model OF \QuadPWM:toggle_1\ : LABEL IS "macrocell44";
-    ATTRIBUTE lib_model OF \QuadPWM:toggle_0\ : LABEL IS "macrocell45";
-    ATTRIBUTE lib_model OF Net_282 : LABEL IS "macrocell46";
-    ATTRIBUTE lib_model OF Net_283 : LABEL IS "macrocell47";
-    ATTRIBUTE lib_model OF \Timer_L:TimerUDB:capture_last\ : LABEL IS "macrocell48";
-    ATTRIBUTE lib_model OF Net_188 : LABEL IS "macrocell49";
-    ATTRIBUTE lib_model OF \Timer_R:TimerUDB:capture_last\ : LABEL IS "macrocell50";
-    ATTRIBUTE lib_model OF Net_219 : LABEL IS "macrocell51";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:txn\ : LABEL IS "macrocell52";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_1\ : LABEL IS "macrocell53";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_0\ : LABEL IS "macrocell54";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_2\ : LABEL IS "macrocell55";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_bitclk\ : LABEL IS "macrocell56";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell57";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_parity_bit\ : LABEL IS "macrocell58";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_0\ : LABEL IS "macrocell59";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_load_fifo\ : LABEL IS "macrocell60";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_3\ : LABEL IS "macrocell61";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_2\ : LABEL IS "macrocell62";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_count7_bit8_wire\ : LABEL IS "macrocell63";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_bitclk_enable\ : LABEL IS "macrocell64";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell65";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_status_2\ : LABEL IS "macrocell66";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_status_3\ : LABEL IS "macrocell67";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_parity_error_pre\ : LABEL IS "macrocell68";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_last\ : LABEL IS "macrocell69";
-    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_parity_bit\ : LABEL IS "macrocell70";
-    ATTRIBUTE lib_model OF \TB9051_QD1:Net_1251\ : LABEL IS "macrocell71";
-    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell72";
-    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:underflow_reg_i\ : LABEL IS "macrocell73";
-    ATTRIBUTE lib_model OF \TB9051_QD1:Net_1275\ : LABEL IS "macrocell74";
-    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:prevCompare\ : LABEL IS "macrocell75";
-    ATTRIBUTE lib_model OF \TB9051_QD1:Net_1251_split\ : LABEL IS "macrocell76";
-    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:count_stored_i\ : LABEL IS "macrocell77";
-    ATTRIBUTE lib_model OF \TB9051_QD1:Net_1203\ : LABEL IS "macrocell78";
-    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_A_filt\ : LABEL IS "macrocell79";
-    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_B_filt\ : LABEL IS "macrocell80";
-    ATTRIBUTE lib_model OF \TB9051_QD1:Net_1260\ : LABEL IS "macrocell81";
-    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:error\ : LABEL IS "macrocell82";
-    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:state_1\ : LABEL IS "macrocell83";
-    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:state_0\ : LABEL IS "macrocell84";
-    ATTRIBUTE lib_model OF Net_315 : LABEL IS "macrocell85";
-    ATTRIBUTE lib_model OF Net_304 : LABEL IS "macrocell86";
-    ATTRIBUTE lib_model OF \TB9051_QD2:Net_1251\ : LABEL IS "macrocell87";
-    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell88";
-    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:underflow_reg_i\ : LABEL IS "macrocell89";
-    ATTRIBUTE lib_model OF \TB9051_QD2:Net_1275\ : LABEL IS "macrocell90";
-    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:prevCompare\ : LABEL IS "macrocell91";
-    ATTRIBUTE lib_model OF \TB9051_QD2:Net_1251_split\ : LABEL IS "macrocell92";
-    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:count_stored_i\ : LABEL IS "macrocell93";
-    ATTRIBUTE lib_model OF \TB9051_QD2:Net_1203\ : LABEL IS "macrocell94";
-    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_A_filt\ : LABEL IS "macrocell95";
-    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_B_filt\ : LABEL IS "macrocell96";
-    ATTRIBUTE lib_model OF \TB9051_QD2:Net_1260\ : LABEL IS "macrocell97";
-    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:error\ : LABEL IS "macrocell98";
-    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:state_1\ : LABEL IS "macrocell99";
-    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:state_0\ : LABEL IS "macrocell100";
+    ATTRIBUTE lib_model OF \Stepper_EN:Sync:ctrl_reg\ : LABEL IS "controlcell10";
+    ATTRIBUTE lib_model OF Net_239 : LABEL IS "macrocell46";
+    ATTRIBUTE lib_model OF Net_240 : LABEL IS "macrocell47";
+    ATTRIBUTE lib_model OF \QuadPWM:toggle_1\ : LABEL IS "macrocell48";
+    ATTRIBUTE lib_model OF \QuadPWM:toggle_0\ : LABEL IS "macrocell49";
+    ATTRIBUTE lib_model OF Net_282 : LABEL IS "macrocell50";
+    ATTRIBUTE lib_model OF Net_283 : LABEL IS "macrocell51";
+    ATTRIBUTE lib_model OF \Timer_L:TimerUDB:capture_last\ : LABEL IS "macrocell52";
+    ATTRIBUTE lib_model OF Net_188 : LABEL IS "macrocell53";
+    ATTRIBUTE lib_model OF \Timer_R:TimerUDB:capture_last\ : LABEL IS "macrocell54";
+    ATTRIBUTE lib_model OF Net_219 : LABEL IS "macrocell55";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:txn\ : LABEL IS "macrocell56";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_1\ : LABEL IS "macrocell57";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_0\ : LABEL IS "macrocell58";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_state_2\ : LABEL IS "macrocell59";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_bitclk\ : LABEL IS "macrocell60";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_ctrl_mark_last\ : LABEL IS "macrocell61";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:tx_parity_bit\ : LABEL IS "macrocell62";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_0\ : LABEL IS "macrocell63";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_load_fifo\ : LABEL IS "macrocell64";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_3\ : LABEL IS "macrocell65";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_2\ : LABEL IS "macrocell66";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_count7_bit8_wire\ : LABEL IS "macrocell67";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_bitclk_enable\ : LABEL IS "macrocell68";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_state_stop1_reg\ : LABEL IS "macrocell69";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_status_2\ : LABEL IS "macrocell70";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_status_3\ : LABEL IS "macrocell71";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_parity_error_pre\ : LABEL IS "macrocell72";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_last\ : LABEL IS "macrocell73";
+    ATTRIBUTE lib_model OF \UART_RPi:BUART:rx_parity_bit\ : LABEL IS "macrocell74";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Net_1251\ : LABEL IS "macrocell75";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell76";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:underflow_reg_i\ : LABEL IS "macrocell77";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Net_1275\ : LABEL IS "macrocell78";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:prevCompare\ : LABEL IS "macrocell79";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Net_1251_split\ : LABEL IS "macrocell80";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Cnt16:CounterUDB:count_stored_i\ : LABEL IS "macrocell81";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Net_1203\ : LABEL IS "macrocell82";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_A_filt\ : LABEL IS "macrocell83";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:quad_B_filt\ : LABEL IS "macrocell84";
+    ATTRIBUTE lib_model OF \TB9051_QD1:Net_1260\ : LABEL IS "macrocell85";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:error\ : LABEL IS "macrocell86";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:state_1\ : LABEL IS "macrocell87";
+    ATTRIBUTE lib_model OF \TB9051_QD1:bQuadDec:state_0\ : LABEL IS "macrocell88";
+    ATTRIBUTE lib_model OF Net_315 : LABEL IS "macrocell89";
+    ATTRIBUTE lib_model OF Net_304 : LABEL IS "macrocell90";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Net_1251\ : LABEL IS "macrocell91";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell92";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:underflow_reg_i\ : LABEL IS "macrocell93";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Net_1275\ : LABEL IS "macrocell94";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:prevCompare\ : LABEL IS "macrocell95";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Net_1251_split\ : LABEL IS "macrocell96";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Cnt16:CounterUDB:count_stored_i\ : LABEL IS "macrocell97";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Net_1203\ : LABEL IS "macrocell98";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_A_filt\ : LABEL IS "macrocell99";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:quad_B_filt\ : LABEL IS "macrocell100";
+    ATTRIBUTE lib_model OF \TB9051_QD2:Net_1260\ : LABEL IS "macrocell101";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:error\ : LABEL IS "macrocell102";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:state_1\ : LABEL IS "macrocell103";
+    ATTRIBUTE lib_model OF \TB9051_QD2:bQuadDec:state_0\ : LABEL IS "macrocell104";
+    ATTRIBUTE lib_model OF Net_741_1 : LABEL IS "macrocell105";
+    ATTRIBUTE lib_model OF Net_741_0 : LABEL IS "macrocell106";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -1031,13 +1024,15 @@ BEGIN
             dclk_1 => Net_335_local,
             dclk_glb_2 => Net_137,
             dclk_2 => Net_137_local,
+            dclk_glb_3 => Net_699,
+            dclk_3 => Net_699_local,
             clk_bus_glb_ff => \ClockBlock.clk_bus_glb_ff__sig\);
 
-    STP_0:logicalport
+    STP_3:logicalport
         GENERIC MAP(
             drive_mode => "110",
             ibuf_enabled => "1",
-            id => "e851a3b9-efb8-48be-bbb8-b303b216c393",
+            id => "0a3978cb-991f-451e-9e21-328f01749f6b",
             init_dr_st => "0",
             input_buffer_sel => "00",
             input_clk_en => 0,
@@ -1104,112 +1099,20 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    STP_0(0):iocell
+    STP_3(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "STP_0",
+            logicalport => "STP_3",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
         PORT MAP(
-            pa_out => STP_0(0)__PA,
+            pa_out => STP_3(0)__PA,
             oe => open,
-            pin_input => Net_23,
-            pad_out => STP_0(0)_PAD,
-            pad_in => STP_0(0)_PAD,
-            in_clock => open,
-            in_clock_en => '1',
-            in_reset => '0',
-            out_clock => open,
-            out_clock_en => '1',
-            out_reset => '0');
-
-    STP_1:logicalport
-        GENERIC MAP(
-            drive_mode => "110",
-            ibuf_enabled => "1",
-            id => "b7051a42-c861-4cf9-8745-69b6883a60e9",
-            init_dr_st => "0",
-            input_buffer_sel => "00",
-            input_clk_en => 0,
-            input_sync => "1",
-            input_sync_mode => "0",
-            intr_mode => "00",
-            invert_in_clock => 0,
-            invert_in_clock_en => 0,
-            invert_in_reset => 0,
-            invert_out_clock => 0,
-            invert_out_clock_en => 0,
-            invert_out_reset => 0,
-            io_voltage => "",
-            layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
-            oe_reset => 0,
-            oe_sync => "0",
-            output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "1",
-            output_mode => "0",
-            output_reset => 0,
-            output_sync => "0",
-            ovt_hyst_trim => "0",
-            ovt_needed => "0",
-            ovt_slew_control => "00",
-            pa_in_clock => -1,
-            pa_in_clock_en => -1,
-            pa_in_reset => -1,
-            pa_out_clock => -1,
-            pa_out_clock_en => -1,
-            pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "O",
-            por_state => 4,
-            port_alias_group => "",
-            port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "00000000",
-            sio_hyst => "1",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vohsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
-            spanning => 0,
-            sw_only => 0,
-            use_annotation => "0",
-            vtrip => "10",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0)
-        PORT MAP(
-            in_clock_en => open,
-            in_reset => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    STP_1(0):iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "STP_1",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
-        PORT MAP(
-            pa_out => STP_1(0)__PA,
-            oe => open,
-            pin_input => Net_34,
-            pad_out => STP_1(0)_PAD,
-            pad_in => STP_1(0)_PAD,
+            pin_input => Net_720,
+            pad_out => STP_3(0)_PAD,
+            pad_in => STP_3(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -1299,7 +1202,7 @@ BEGIN
         PORT MAP(
             pa_out => STP_2(0)__PA,
             oe => open,
-            pin_input => Net_35,
+            pin_input => Net_718,
             pad_out => STP_2(0)_PAD,
             pad_in => STP_2(0)_PAD,
             in_clock => open,
@@ -1309,11 +1212,11 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    STP_3:logicalport
+    STP_1:logicalport
         GENERIC MAP(
             drive_mode => "110",
             ibuf_enabled => "1",
-            id => "0a3978cb-991f-451e-9e21-328f01749f6b",
+            id => "b7051a42-c861-4cf9-8745-69b6883a60e9",
             init_dr_st => "0",
             input_buffer_sel => "00",
             input_clk_en => 0,
@@ -1380,20 +1283,112 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    STP_3(0):iocell
+    STP_1(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "STP_3",
+            logicalport => "STP_1",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
         PORT MAP(
-            pa_out => STP_3(0)__PA,
+            pa_out => STP_1(0)__PA,
             oe => open,
-            pin_input => Net_36,
-            pad_out => STP_3(0)_PAD,
-            pad_in => STP_3(0)_PAD,
+            pin_input => Net_716,
+            pad_out => STP_1(0)_PAD,
+            pad_in => STP_1(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    STP_0:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "e851a3b9-efb8-48be-bbb8-b303b216c393",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    STP_0(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "STP_0",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => STP_0(0)__PA,
+            oe => open,
+            pin_input => Net_714,
+            pad_out => STP_0(0)_PAD,
+            pad_in => STP_0(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',
@@ -3145,190 +3140,6 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    LED_R:logicalport
-        GENERIC MAP(
-            drive_mode => "110",
-            ibuf_enabled => "1",
-            id => "82b66666-a61f-4753-adc2-65e07484efa5",
-            init_dr_st => "0",
-            input_buffer_sel => "00",
-            input_clk_en => 0,
-            input_sync => "1",
-            input_sync_mode => "0",
-            intr_mode => "00",
-            invert_in_clock => 0,
-            invert_in_clock_en => 0,
-            invert_in_reset => 0,
-            invert_out_clock => 0,
-            invert_out_clock_en => 0,
-            invert_out_reset => 0,
-            io_voltage => "",
-            layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
-            oe_reset => 0,
-            oe_sync => "0",
-            output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "1",
-            output_mode => "0",
-            output_reset => 0,
-            output_sync => "0",
-            ovt_hyst_trim => "0",
-            ovt_needed => "0",
-            ovt_slew_control => "00",
-            pa_in_clock => -1,
-            pa_in_clock_en => -1,
-            pa_in_reset => -1,
-            pa_out_clock => -1,
-            pa_out_clock_en => -1,
-            pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "O",
-            por_state => 4,
-            port_alias_group => "",
-            port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "00000000",
-            sio_hyst => "1",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vohsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
-            spanning => 0,
-            sw_only => 0,
-            use_annotation => "0",
-            vtrip => "10",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0)
-        PORT MAP(
-            in_clock_en => open,
-            in_reset => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    LED_R(0):iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "LED_R",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
-        PORT MAP(
-            pa_out => LED_R(0)__PA,
-            oe => open,
-            pin_input => Net_520,
-            pad_out => LED_R(0)_PAD,
-            pad_in => LED_R(0)_PAD,
-            in_clock => open,
-            in_clock_en => '1',
-            in_reset => '0',
-            out_clock => open,
-            out_clock_en => '1',
-            out_reset => '0');
-
-    LED_L:logicalport
-        GENERIC MAP(
-            drive_mode => "110",
-            ibuf_enabled => "1",
-            id => "85032be1-037a-4332-b64a-7a5a9c669b6c",
-            init_dr_st => "0",
-            input_buffer_sel => "00",
-            input_clk_en => 0,
-            input_sync => "1",
-            input_sync_mode => "0",
-            intr_mode => "00",
-            invert_in_clock => 0,
-            invert_in_clock_en => 0,
-            invert_in_reset => 0,
-            invert_out_clock => 0,
-            invert_out_clock_en => 0,
-            invert_out_reset => 0,
-            io_voltage => "",
-            layout_mode => "CONTIGUOUS",
-            oe_conn => "0",
-            oe_reset => 0,
-            oe_sync => "0",
-            output_clk_en => 0,
-            output_clock_mode => "0",
-            output_conn => "1",
-            output_mode => "0",
-            output_reset => 0,
-            output_sync => "0",
-            ovt_hyst_trim => "0",
-            ovt_needed => "0",
-            ovt_slew_control => "00",
-            pa_in_clock => -1,
-            pa_in_clock_en => -1,
-            pa_in_reset => -1,
-            pa_out_clock => -1,
-            pa_out_clock_en => -1,
-            pa_out_reset => -1,
-            pin_aliases => "",
-            pin_mode => "O",
-            por_state => 4,
-            port_alias_group => "",
-            port_alias_required => 0,
-            sio_group_cnt => 0,
-            sio_hifreq => "00000000",
-            sio_hyst => "1",
-            sio_ibuf => "00000000",
-            sio_info => "00",
-            sio_obuf => "00000000",
-            sio_refsel => "00000000",
-            sio_vohsel => "00000000",
-            sio_vtrip => "00000000",
-            slew_rate => "0",
-            spanning => 0,
-            sw_only => 0,
-            use_annotation => "0",
-            vtrip => "10",
-            width => 1,
-            in_clk_inv => 0,
-            in_clken_inv => 0,
-            in_clken_mode => 1,
-            in_rst_inv => 0,
-            out_clk_inv => 0,
-            out_clken_inv => 0,
-            out_clken_mode => 1,
-            out_rst_inv => 0)
-        PORT MAP(
-            in_clock_en => open,
-            in_reset => open,
-            out_clock_en => open,
-            out_reset => open);
-
-    LED_L(0):iocell
-        GENERIC MAP(
-            in_sync_mode => 0,
-            out_sync_mode => 0,
-            oe_sync_mode => 0,
-            logicalport => "LED_L",
-            logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
-        PORT MAP(
-            pa_out => LED_L(0)__PA,
-            oe => open,
-            pin_input => Net_531,
-            pad_out => LED_L(0)_PAD,
-            pad_in => LED_L(0)_PAD,
-            in_clock => open,
-            in_clock_en => '1',
-            in_reset => '0',
-            out_clock => open,
-            out_clock_en => '1',
-            out_reset => '0');
-
     \Timer_L:TimerUDB:capt_fifo_load\:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1 * main_2)",
@@ -3632,24 +3443,47 @@ BEGIN
             main_1 => \TB9051_QD2:Net_1251\,
             main_2 => \TB9051_QD2:Cnt16:CounterUDB:prevCompare\);
 
-    \StepperDriver:Sync:ctrl_reg\:controlcell
+    Net_714:macrocell
         GENERIC MAP(
-            cy_ctrl_mode_0 => "00000000",
-            cy_ctrl_mode_1 => "00000000",
-            cy_ext_reset => 0,
-            cy_force_order => 1,
-            cy_init_value => "00000000",
+            eqn_main => "(!main_0 * main_1 * !main_2) + (main_0 * main_1 * main_2)",
+            regmode => 0,
             clken_mode => 1)
         PORT MAP(
-            control_7 => \StepperDriver:control_7\,
-            control_6 => \StepperDriver:control_6\,
-            control_5 => \StepperDriver:control_5\,
-            control_4 => \StepperDriver:control_4\,
-            control_3 => Net_36,
-            control_2 => Net_35,
-            control_1 => Net_34,
-            control_0 => Net_23,
-            busclk => ClockBlock_BUS_CLK);
+            q => Net_714,
+            main_0 => Net_741_1,
+            main_1 => Net_740,
+            main_2 => Net_741_0);
+
+    Net_716:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_716,
+            main_0 => Net_741_1,
+            main_1 => Net_740);
+
+    Net_718:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0 * main_1 * main_2) + (main_0 * main_1 * !main_2)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_718,
+            main_0 => Net_741_1,
+            main_1 => Net_740,
+            main_2 => Net_741_0);
+
+    Net_720:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_720,
+            main_0 => Net_741_1,
+            main_1 => Net_740);
 
     \TB9051_EN:Sync:ctrl_reg\:controlcell
         GENERIC MAP(
@@ -5242,7 +5076,7 @@ BEGIN
             status_1 => \TB9051_QD2:Net_611\,
             status_0 => \TB9051_QD2:Net_530\);
 
-    \US_LED_R:Sync:ctrl_reg\:controlcell
+    \Stepper_EN:Sync:ctrl_reg\:controlcell
         GENERIC MAP(
             cy_ctrl_mode_0 => "00000000",
             cy_ctrl_mode_1 => "00000000",
@@ -5251,33 +5085,14 @@ BEGIN
             cy_init_value => "00000000",
             clken_mode => 1)
         PORT MAP(
-            control_7 => \US_LED_R:control_7\,
-            control_6 => \US_LED_R:control_6\,
-            control_5 => \US_LED_R:control_5\,
-            control_4 => \US_LED_R:control_4\,
-            control_3 => \US_LED_R:control_3\,
-            control_2 => \US_LED_R:control_2\,
-            control_1 => \US_LED_R:control_1\,
-            control_0 => Net_520,
-            busclk => ClockBlock_BUS_CLK);
-
-    \US_LED_L:Sync:ctrl_reg\:controlcell
-        GENERIC MAP(
-            cy_ctrl_mode_0 => "00000000",
-            cy_ctrl_mode_1 => "00000000",
-            cy_ext_reset => 0,
-            cy_force_order => 1,
-            cy_init_value => "00000000",
-            clken_mode => 1)
-        PORT MAP(
-            control_7 => \US_LED_L:control_7\,
-            control_6 => \US_LED_L:control_6\,
-            control_5 => \US_LED_L:control_5\,
-            control_4 => \US_LED_L:control_4\,
-            control_3 => \US_LED_L:control_3\,
-            control_2 => \US_LED_L:control_2\,
-            control_1 => \US_LED_L:control_1\,
-            control_0 => Net_531,
+            control_7 => \Stepper_EN:control_7\,
+            control_6 => \Stepper_EN:control_6\,
+            control_5 => \Stepper_EN:control_5\,
+            control_4 => \Stepper_EN:control_4\,
+            control_3 => \Stepper_EN:control_3\,
+            control_2 => \Stepper_EN:control_2\,
+            control_1 => \Stepper_EN:control_1\,
+            control_0 => Net_740,
             busclk => ClockBlock_BUS_CLK);
 
     Net_239:macrocell
@@ -6121,5 +5936,28 @@ BEGIN
             main_3 => \TB9051_QD2:bQuadDec:error\,
             main_4 => \TB9051_QD2:bQuadDec:state_1\,
             main_5 => \TB9051_QD2:bQuadDec:state_0\);
+
+    Net_741_1:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0 * main_1)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_741_1,
+            clock_0 => Net_699,
+            main_0 => Net_740,
+            main_1 => Net_741_0);
+
+    Net_741_0:macrocell
+        GENERIC MAP(
+            eqn_main => "(main_0)",
+            regmode => 2,
+            clk_inv => '0',
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_741_0,
+            clock_0 => Net_699,
+            main_0 => Net_740);
 
 END __DEFAULT__;

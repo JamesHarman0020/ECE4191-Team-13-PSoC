@@ -34,13 +34,18 @@ void fnCall(int fn, float * pPrm1, float * pPrm2) {             // run the funct
         //case 2: TB9051_Forward((int)para2,0,(int)para3);break;
         case 3: TB9051_Reverse((int)para2,(int)para3);  break;
         case 4: TB9051_Brake((int)para2);               break;
-        case 5: TB9051_VehForward(0,pPrm1);             break;
-        case 6: TB9051_VehReverse((int)para2);          break;
+        //case 5: TB9051_VehForward(0,pPrm1);           break;
+        //case 6: TB9051_VehReverse((int)para2);        break;
         case 7: TB9051_VehBrake();                      break;
-        case 8: linAngtoVel(&para2, &para3);            break;
-        case 50: oneStepCCW((int)para2);                break;  // Stepper Commands
-        case 51: oneStepCW((int)para2);                 break;
-        case 52: moveAngle(para2);                      break;
+        case 8: linAngToVel(&para2, &para3);            break;
+        case 9: TB9051_VehMoveTo(&para2, &para3);       break;
+        case 11: TB9051_VehForward_PID(&para2);         break;
+        case 12: TB9051_VehReverse_PID(&para3);         break;
+        case 13: linAngToVel_PID(&para2, &para3);       break;
+        case 50: Stepper_On();                          break;  // Stepper Commands
+        case 51: Stepper_Off();                         break;
+        case 52: Stepper_OneRot();                      break;
+        case 53: moveAngle(para2);                      break;
         //case 60: SG90_Begin();                        break;  // Servo Commands
         //case 61: SG90_ToAngle(para2);                 break;
         case 90: Uart_Resync((int)para2);               break;  // UART Commands
@@ -99,9 +104,7 @@ void fnSend(int fn, float * para2, float * para3){      // Send data PSoC -> RPi
     for (int i = 0; i < 15; i++) {
         char string[10]; sprintf(string, "%x ", txBuffer[i]); UART_PutString(string);
     } */
-    if (fn != 101) {
-    char string[20]; sprintf(string, "T:%i,%0.4f,%0.4f\n", fn, *para2, *para3); UART_PutString(string);
-    }
+    //char string[20]; sprintf(string, "T:%i,%0.4f,%0.4f\n", fn, *para2, *para3); UART_PutString(string);
     UART_RPi_PutArray(txBuffer,15);                     // Send the array to the software buffer
 }
 

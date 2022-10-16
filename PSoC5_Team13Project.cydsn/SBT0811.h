@@ -14,8 +14,9 @@
 
 #define STEPS_PER_REV 512
 
-void oneStepCCW(int speed);
-void oneStepCW(int speed);
+void Stepper_On();
+void Stepper_Off();
+void Stepper_OneRot();
 extern void moveAngle(float angle);
 
 #endif    

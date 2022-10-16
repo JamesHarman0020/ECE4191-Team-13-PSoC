@@ -13,10 +13,9 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\PSoC5_Team13Project\Source Files\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Workspace01</v>
-<v>Workspace01\DesignAttempt01</v>
 <v>Workspace01\PSoC5_Team13Project</v>
 <v>Workspace01\PSoC5_Team13Project\TopDesign</v>
 <v>Workspace01\PSoC5_Team13Project\PSoC5_Team13Project.cydwr</v>
@@ -53,7 +52,6 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Workspace01</v>
-<v>Workspace01\DesignAttempt01</v>
 <v>Workspace01\PSoC5_Team13Project</v>
 <v>Workspace01\PSoC5_Team13Project\TopDesign</v>
 <v>Workspace01\PSoC5_Team13Project\PSoC5_Team13Project.cydwr</v>
@@ -65,19 +63,38 @@
 <v>Workspace01\PSoC5_Team13Project\PSoC5_Team13Project.cydwr\System</v>
 <v>Workspace01\PSoC5_Team13Project\PSoC5_Team13Project.cydwr\Directives</v>
 <v>Workspace01\PSoC5_Team13Project\PSoC5_Team13Project.cydwr\Flash Security</v>
+<v>Workspace01\PSoC5_Team13Project\PSoC5_Team13Project.cydwr\EEPROM</v>
+<v>Workspace01\PSoC5_Team13Project\Header Files</v>
+<v>Workspace01\PSoC5_Team13Project\Header Files\Header Files</v>
+<v>Workspace01\PSoC5_Team13Project\Header Files\Header Files\cyapicallbacks.h</v>
+<v>Workspace01\PSoC5_Team13Project\Header Files\Header Files\HCSR04.h</v>
+<v>Workspace01\PSoC5_Team13Project\Header Files\Header Files\IMU.h</v>
+<v>Workspace01\PSoC5_Team13Project\Header Files\Header Files\pid.h</v>
+<v>Workspace01\PSoC5_Team13Project\Header Files\Header Files\SBT0811.h</v>
+<v>Workspace01\PSoC5_Team13Project\Header Files\Header Files\SG90.h</v>
+<v>Workspace01\PSoC5_Team13Project\Header Files\Header Files\TB9051.h</v>
+<v>Workspace01\PSoC5_Team13Project\Source Files</v>
+<v>Workspace01\PSoC5_Team13Project\Source Files\Source Files</v>
+<v>Workspace01\PSoC5_Team13Project\Source Files\Source Files\fnReceive.c</v>
+<v>Workspace01\PSoC5_Team13Project\Source Files\Source Files\HCSR04.c</v>
+<v>Workspace01\PSoC5_Team13Project\Source Files\Source Files\IMU.c</v>
+<v>Workspace01\PSoC5_Team13Project\Source Files\Source Files\main.c</v>
+<v>Workspace01\PSoC5_Team13Project\Source Files\Source Files\pid.c</v>
+<v>Workspace01\PSoC5_Team13Project\Source Files\Source Files\SBT0811.c</v>
+<v>Workspace01\PSoC5_Team13Project\Source Files\Source Files\SG90.c</v>
+<v>Workspace01\PSoC5_Team13Project\Source Files\Source Files\TB9051.c</v>
+<v>Workspace01\PSoC5_Team13Project\Generated_Source</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Workspace01</v>
-<v>Workspace01\DesignAttempt01</v>
 <v>Workspace01\PSoC5_Team13Project</v>
 <v>Workspace01\PSoC5_Team13Project\TopDesign</v>
 <v>Workspace01\PSoC5_Team13Project\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Workspace01</v>
-<v>Workspace01\DesignAttempt01</v>
 <v>Workspace01\PSoC5_Team13Project</v>
 <v>Workspace01\PSoC5_Team13Project\TopDesign</v>
 <v>Workspace01\PSoC5_Team13Project\TopDesign\TopDesign.cysch</v>
@@ -86,7 +103,6 @@
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Workspace01</v>
-<v>Workspace01\DesignAttempt01</v>
 <v>Workspace01\PSoC5_Team13Project</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541</v>
@@ -94,6 +110,7 @@
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_4.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_5.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
@@ -118,8 +135,6 @@
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_PM.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_SLAVE.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\IMU.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_L.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\LED_R.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\pid.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\QD1_ISR.lst</v>
@@ -136,8 +151,8 @@
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL_1.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA_1.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\SG90.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\StepperDriver.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\StepperDriver_PM.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Stepper_EN.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Stepper_EN_PM.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\STP_0.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\STP_1.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\STP_2.lst</v>
@@ -174,10 +189,6 @@
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_RPi_PM.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_L.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_L_PM.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_LED_L.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_LED_L_PM.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_LED_R.lst</v>
-<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_LED_R_PM.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_R.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_R_PM.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\US_Timer.lst</v>
@@ -192,7 +203,6 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Workspace01</v>
-<v>Workspace01\DesignAttempt01</v>
 <v>Workspace01\PSoC5_Team13Project</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541</v>
@@ -200,10 +210,33 @@
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_4.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_5.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\E_L.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\E_R.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_L.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_R.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\fnReceive.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\HCSR04.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_BOOT.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_INT.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_MASTER.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_PM.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_1_SLAVE.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\IMU.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace01\PSoC5_Team13Project\CortexM3\ARM_GCC_541\Debug\Listing Files\pid.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -219,8 +252,10 @@
 <v>Workspace01\PSoC5_Team13Project\CY8C58LP Family Datasheet</v>
 <v>Workspace01\PSoC5_Team13Project\System Reference Guides</v>
 <v>Workspace01\PSoC5_Team13Project\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\PSoC5_Team13Project\BasicCounter_v1_0.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\cy_clock_v2_20</v>
 <v>Workspace01\PSoC5_Team13Project\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\cy_constant_v1_0.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\cy_dma_v1_70.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\cy_isr_v1_70</v>
 <v>Workspace01\PSoC5_Team13Project\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
@@ -228,9 +263,12 @@
 <v>Workspace01\PSoC5_Team13Project\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\CyControlReg_v1_80</v>
 <v>Workspace01\PSoC5_Team13Project\CyControlReg_v1_80\CyControlReg_v1_80.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\demux_v1_10.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\I2C_v3_50.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\not_v1_0</v>
 <v>Workspace01\PSoC5_Team13Project\not_v1_0\not_v1_0.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\or_v1_0</v>
+<v>Workspace01\PSoC5_Team13Project\or_v1_0\or_v1_0.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\QuadDec_v3_0</v>
 <v>Workspace01\PSoC5_Team13Project\QuadDec_v3_0\QuadDec_v3_0.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\QuadPWM_v1_0.pdf</v>
@@ -246,13 +284,30 @@
 <v>Workspace01\PSoC5_Team13Project\CY8C58LP Family Datasheet</v>
 <v>Workspace01\PSoC5_Team13Project\System Reference Guides</v>
 <v>Workspace01\PSoC5_Team13Project\System Reference Guides\cy_boot_v6_0</v>
+<v>Workspace01\PSoC5_Team13Project\BasicCounter_v1_0.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\cy_clock_v2_20</v>
 <v>Workspace01\PSoC5_Team13Project\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\cy_constant_v1_0.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\cy_dma_v1_70.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\cy_isr_v1_70</v>
 <v>Workspace01\PSoC5_Team13Project\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>Workspace01\PSoC5_Team13Project\cy_pins_v2_20</v>
 <v>Workspace01\PSoC5_Team13Project\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\CyControlReg_v1_80</v>
+<v>Workspace01\PSoC5_Team13Project\CyControlReg_v1_80\CyControlReg_v1_80.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\demux_v1_10.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\I2C_v3_50.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\not_v1_0</v>
+<v>Workspace01\PSoC5_Team13Project\not_v1_0\not_v1_0.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\or_v1_0</v>
+<v>Workspace01\PSoC5_Team13Project\or_v1_0\or_v1_0.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\QuadDec_v3_0</v>
+<v>Workspace01\PSoC5_Team13Project\QuadDec_v3_0\QuadDec_v3_0.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\QuadPWM_v1_0.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\SW_Tx_UART_v1_50.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\Timer_v2_80</v>
+<v>Workspace01\PSoC5_Team13Project\Timer_v2_80\Timer_v2_80.pdf</v>
+<v>Workspace01\PSoC5_Team13Project\UART_v2_50.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -275,19 +330,16 @@
 </dataGuid>
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
-<Unloaded>
-<project v=".\DesignAttempt01.cydsn\DesignAttempt01.cyprj" />
-</Unloaded>
+<Unloaded />
 <OpenDocs>
-<name v=".\PSoC5_Team13Project.cydsn\TB9051.c" />
-<name v=".\PSoC5_Team13Project.cydsn\TB9051.h" />
-<name v=".\PSoC5_Team13Project.cydsn\main.c" />
-<name v=".\PSoC5_Team13Project.cydsn\PSoC5_Team13Project.cydwr" />
-<name v=".\PSoC5_Team13Project.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\PSoC5_Team13Project.cydsn\HCSR04.c" />
-<name v=".\PSoC5_Team13Project.cydsn\pid.h" />
-<name v=".\PSoC5_Team13Project.cydsn\pid.c" />
 <name v=".\PSoC5_Team13Project.cydsn\fnReceive.c" />
+<name v=".\PSoC5_Team13Project.cydsn\TB9051.c" />
+<name v=".\PSoC5_Team13Project.cydsn\main.c" />
+<name v=".\PSoC5_Team13Project.cydsn\SBT0811.h" />
+<name v=".\PSoC5_Team13Project.cydsn\HCSR04.c" />
+<name v=".\PSoC5_Team13Project.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\PSoC5_Team13Project.cydsn\HCSR04.h" />
+<name v=".\PSoC5_Team13Project.cydsn\PSoC5_Team13Project.cydwr" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -295,7 +347,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1279, 487" SelectedTabbedMdiWindow="deb62d44-67cf-4703-aa46-b44bbd8a4193"><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\TB9051.c" Guid="efed25a1-654a-4918-8c65-3f924d773dfd" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\TB9051.h" Guid="1c305b67-5b51-4347-a311-4aaa4d26f643" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\main.c" Guid="deb62d44-67cf-4703-aa46-b44bbd8a4193" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\PSoC5_Team13Project.cydwr" Guid="10899ad2-cfbb-4fbc-af68-cfd2deac613f" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\TopDesign\TopDesign.cysch" Guid="5028d5bb-2c90-44df-a005-a10ba21fcb53" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\HCSR04.c" Guid="f7f42389-754e-44a2-be73-cef3f233462a" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="444932ab-19a8-4908-bc87-a1702d023f26" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\pid.h" Guid="bbb46f4c-3e31-4bf9-8264-33d7a6d09a86" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\pid.c" Guid="0de59877-3beb-467f-abbd-6e32a20f1571" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\fnReceive.c" Guid="24a67939-279b-4f9b-a252-1ac68462d85a" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Vertical"><TabbedMdiContainer Size="1279, 487" SelectedTabbedMdiWindow="5d632013-f659-4b56-b5ac-ac5ab517e3db"><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\fnReceive.c" Guid="24a67939-279b-4f9b-a252-1ac68462d85a" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\TB9051.c" Guid="a450fcf4-2e82-4a8e-b364-4f5cad8b1eef" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\main.c" Guid="5d632013-f659-4b56-b5ac-ac5ab517e3db" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\SBT0811.h" Guid="9cf01106-0b1b-43b7-b3fb-2d22dbc9290d" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\HCSR04.c" Guid="e535abf9-44ea-4df5-aebb-c8278ef0d877" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\TopDesign\TopDesign.cysch" Guid="47017ad4-7496-4522-a1de-9ee5e129e35c" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\HCSR04.h" Guid="4d704f50-c35f-43ce-9759-dc0b2e0fbe95" /><DocumentWindow Key="C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\PSoC5_Team13Project.cydwr" Guid="7d06a5ee-6ce8-49db-b2c5-d33cb92f415f" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="444932ab-19a8-4908-bc87-a1702d023f26" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

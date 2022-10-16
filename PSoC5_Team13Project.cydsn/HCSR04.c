@@ -14,7 +14,7 @@
 #include "stdio.h"
 #include <stdlib.h>
 #include "HCSR04.h"
-#define AV_Ln 3
+#define AV_Ln 5
 
 float spSound = 331.5;
 CY_ISR(Capture2);
@@ -29,6 +29,7 @@ float distAvL = 0;
 float distAvR = 0;
 float distR[AV_Ln] = {0};
 extern float US_L, US_R;
+int lockoutCount = 0;
 
 void HCSR04_Begin(){
     E_R_Start();                // Begin interrupts
@@ -51,15 +52,25 @@ void distMeasure(){
         compLFlag = 0; compRFlag = 0;
         distMeasureL();
         distMeasureR();
-        CyDelay(5);            // TO-DO: Replace this with something more efficient
-        /*int i = 0;
+        //CyDelay(5);            // TO-DO: Replace this with something more efficient
+        int i = 0;
         do {
             CyDelayUs(10);
             i++;
-        } while((i < 500) | (compLFlag == 0 & compRFlag == 0));
-        */
+        } while((i < 500) & (compLFlag == 0 & compRFlag == 0));
+        
+        if (distAvL < 0.04 | distAvR < 0.04) {
+            lockoutCount++;
+            if (lockoutCount == 3) {
+                MotorStop();
+            }
+        }
+            
+            
         if (distAvL < 0.5 | distAvR < 0.5)
             fnSend(101, &distAvL ,&distAvR);
+            
+            
     }
     else HCSR04_Begin();
 }
@@ -86,12 +97,6 @@ CY_ISR(CaptureR) //ISR3
     if (mCounterR == 3) {                           
         distAvR = (distR[0] + distR[1] + distR[2]) / AV_Ln;
         mCounterR = 0;
-        if (distAvR <= 0.2 & distAvR > 0) {         // LEDs to indicate obstacle present
-            US_LED_R_Write(1);
-        } 
-        else {
-            US_LED_R_Write(0);    
-        }
     }
     else distMeasureR();                           // Want to take the average of three measurements
     compRFlag = 1;  
@@ -110,12 +115,6 @@ CY_ISR(CaptureL) //ISR3
         US_L = distAvL;
         US_R = distAvR;
         mCounterL = 0;
-        if (distAvL <= 0.2 & distAvL > 0) {
-            US_LED_L_Write(1);
-        } 
-        else {
-            US_LED_L_Write(0);    
-        }
     }
     else distMeasureL();
     compLFlag = 1;
@@ -125,5 +124,19 @@ CY_ISR(Trigger)
 {
     distMeasure();
 }
+
+void MotorStop()
+{
+    uint8 j;
+    UART_PutString("\n\n\nLOCKOUT TRIGGERED\n\n\n"); 
+    /*j = CyEnterCriticalSection();
+    for (int i = 0; i < 4; i++) {
+        QuadPWM_SetDutyCycle(i,0);
+    }
+    CyDelay(10000);
+    CyExitCriticalSection(j);*/
+    
+}
+
 
 /* [] END OF FILE */

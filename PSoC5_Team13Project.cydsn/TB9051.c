@@ -25,7 +25,7 @@ float w1_Vel;
 float w2_Vel;
 float vL,vR;
 float pidVelL, pidVelR;
-float d = 0.29; //distance between two wheels
+float d = 0.217; //distance between two wheels
 float r_wheel = 0.028; // radien of wheels
 //float theta = 360/48.0f;
 float angVelRotate = 1;
@@ -124,18 +124,18 @@ void TB9051_Forward(int motor, int PWM)
     }
 }
 
-void TB9051_Reverse(int motor, int speed)
+void TB9051_Reverse(int motor, int PWM)
 { 
     TB9051_Brake(motor);
-    if (speed >= QuadPWM_MIN_DUTY_CYCLE & speed <= QuadPWM_MAX_DUTY_CYCLE) {
+    if (PWM >= QuadPWM_MIN_DUTY_CYCLE & PWM <= QuadPWM_MAX_DUTY_CYCLE) {
         //PWM1 L, PWM2 H
         if (motor == 0) {
             QuadPWM_SetDutyCycle(1,0);
-            QuadPWM_SetDutyCycle(2,speed);
+            QuadPWM_SetDutyCycle(2,PWM);
         }
         else {
             QuadPWM_SetDutyCycle(3,0);
-            QuadPWM_SetDutyCycle(4,speed);       
+            QuadPWM_SetDutyCycle(4,PWM);       
         }
     }
 }
@@ -200,44 +200,7 @@ void TB9051_VehMoveTo(float * px, float * py){
     ///// DAVID'S MATHS //////
     float angV = 2*atan2(x,y);
     float linV = (pow(x,2)/y + y)*(angV/2);
-    linAngtoVel(&angV, &linV);
-}
-
-CY_ISR(QD_Read) //TO-DO: Resolve the overflow issue that will occur
-{
-     // Get new positions
-    int QD1_New = TB9051_QD1_GetCounter();
-    int QD2_New = TB9051_QD2_GetCounter();
-    
-    int QD1_Delta = QD1_New - QD1_Old; 
-    int QD2_Delta = QD2_New - QD2_Old; 
-    float w1_Pos = QD1_Delta * (105E-6f); //found experimentally
-    float w2_Pos = QD2_Delta * (105E-6f);    
-    w1_Vel = w1_Pos / 0.050;                //TO-DO: Remove Magic Number
-    w2_Vel = w2_Pos / 0.050; 
-    float w1_angVel = w1_Vel / r_wheel;
-    float w2_angVel = w2_Vel / r_wheel;
-    float vLin = r_wheel * (w1_angVel + w2_angVel) / 2.0f;
-    float vAng = r_wheel * (w1_angVel - w2_angVel) / 2.0f;
-    
-    //float QD1_Ratio = QD1_Delta / 34.014f; //Gear Ratio
-    //float QD2_Ratio = QD2_Delta / 34.014f; //Gear Ratio
-    //float w1_Pos = QD1_Ratio * 2 * PI * r_wheel * theta / 360;
-    //float w2_Pos = QD2_Ratio * 2 * PI * r_wheel * theta / 360;
-
-    
-    // Keep old positions
-    accumL += QD1_Delta;
-    accumR += QD2_Delta;
-    QD1_Old = QD1_New;
-    QD2_Old = QD2_New;
-    
-    if (vLin_Old != vLin | vAng_Old != vAng | vAng == 0 | vLin == 0){ 
-        fnSend(8, &vLin, &vAng);
-    }   
-        
-    vLin_Old = vLin;
-    vAng_Old = vAng;
+    linAngToVel(&angV, &linV);
 }
 
 
@@ -250,7 +213,7 @@ void linAngToVel(float * pLinVel, float * pAngVel) {
     vR = r_wheel * thetadotR; // m/s
     
     /* speed estimation - this can be finetuned */
-    float fullSpeedNoLoad = 0.1425; // m/s
+    float fullSpeedNoLoad = 0.2025; // m/s
     float vL_PWM = round(vL / fullSpeedNoLoad * 255);
     float vR_PWM = round(vR / fullSpeedNoLoad * 255);
     
@@ -399,23 +362,40 @@ void prelimPath() {
     vehForwardDist(&wP1to2);
 }
 
-void prelimPath_Avoid(){
-    float wP0to1 = 0.6;
-    float wP1to2 = 0.6;
-    float angle0to1 = 90.0;
-    vehForwardDist(&wP0to1);
-    staticRotate(&angle0to1);
-    CyDelay(5000);
+CY_ISR(QD_Read) //TO-DO: Resolve the overflow issue that will occur
+{
+     // Get new positions
+    int QD1_New = TB9051_QD1_GetCounter();
+    int QD2_New = TB9051_QD2_GetCounter();
     
-    // Begin avoidance in the route
-    float angleAvoidR = -10;
-    float angleAvoidL = 10;
-    do {
-        if (US_L < 0.2)
-            staticRotate(&angleAvoidL); 
-        else if (US_R < 0.2)
-            staticRotate(&angleAvoidR);
-    } while (US_L < 0.4 | US_R < 0.4);
+    int QD1_Delta = QD1_New - QD1_Old; 
+    int QD2_Delta = QD2_New - QD2_Old; 
+    float w1_Pos = QD1_Delta * (105E-6f);   //found experimentally
+    float w2_Pos = QD2_Delta * (105E-6f);    
+    w1_Vel = w1_Pos / 0.050;                //TO-DO: Remove Magic Number
+    w2_Vel = w2_Pos / 0.050;                //Divide by amount of time elapsed
+    float w1_angVel = w1_Vel / r_wheel;
+    float w2_angVel = w2_Vel / r_wheel;
+    float vLin = r_wheel * (w1_angVel + w2_angVel) / 2.0f;
+    float vAng = r_wheel * (w1_angVel - w2_angVel) / d;
+    
+    //float QD1_Ratio = QD1_Delta / 34.014f; //Gear Ratio
+    //float QD2_Ratio = QD2_Delta / 34.014f; //Gear Ratio
+    //float w1_Pos = QD1_Ratio * 2 * PI * r_wheel * theta / 360;
+    //float w2_Pos = QD2_Ratio * 2 * PI * r_wheel * theta / 360;
+
+    
+    // Keep old positions
+    accumL += QD1_Delta;
+    accumR += QD2_Delta;
+    QD1_Old = QD1_New;
+    QD2_Old = QD2_New;
+    
+    if (vLin_Old != vLin | vAng_Old != vAng | vAng == 0 | vLin == 0){ 
+        fnSend(8, &vLin, &vAng);
+    }   
         
+    vLin_Old = vLin;
+    vAng_Old = vAng;
 }
 /* [] END OF FILE */

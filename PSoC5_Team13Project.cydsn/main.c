@@ -20,8 +20,7 @@
 #include "IMU.h"
 #include "SG90.h"
 #include "TB9051.h"
-//#include "HCSR04.h"
-//#include "pid.h"
+#include "HCSR04.h"
 
 // Global Variables
 float fullSpeedNoLoad = 0.2814784; // m/s
@@ -66,7 +65,6 @@ int main(void)
     B1 = (unsigned char *)&prm1;    // Setup the floats for serial receive
     B2 = (unsigned char *)&prm2;    // by putting data at the address of the floats
     
-    
     RXcmplt_Start();                 // Setup interrupts
     RXcmplt_ClearPending();
     RXcmplt_StartEx(readBuf);
@@ -75,18 +73,9 @@ int main(void)
     for (int i = 0; i < 8; i++)
         UART_RPi_PutChar('c');
     */ 
-    
     for(;;)
-    {
-        
-        CyDelay(1000);
-        float linV = 0.1;
-        float angV = 0.3;
-        linAngToVel(&linV, &angV);
-        CyDelay(1000);
-        TB9051_VehBrake();
-        CyDelay(5000);
-    }
+    {  
+    }    
 }
 
 // User Functions
@@ -98,7 +87,7 @@ CY_ISR(readBuf){ // Read Incoming serial data
             diffFlag = 1;    
         }
     }
-    if (0) { // CODE BLOCKER
+    if (diffFlag) { // CODE BLOCKER
         // A packet should arrive within a matter of us -> could be used as an error check
         stopPos = 0;
         startPres = 0;
@@ -115,13 +104,6 @@ CY_ISR(readBuf){ // Read Incoming serial data
             deSyncFlg = 1;
             float p1 = 14 - startPos;                                   // This requires fine tuning
             float p2 = 0;
-             // DEBUG
-            /*UART_PutString("Frame Error: ");
-            for (int i = 0; i < 15; i++) { 
-                UART_PutHexByte(rxBuffer[i]);
-            }
-            char string[20]; sprintf(string, "start: %d", startPos); UART_PutString(string);
-            UART_PutCRLF();*/
             fnSend(90, &p1, &p2);                                       // Request resync byte
         }
         
@@ -135,12 +117,11 @@ CY_ISR(readBuf){ // Read Incoming serial data
             // DEBUG FOR INCOMING SERIAL
             //UART_PutArray(rxBuffer, 15);
             //UART_PutCRLF();
-            //sprintf(string,". sP = %d, R:%i %0.3f %0.3f \n",startPos,fn,prm1,prm2); UART_PutString(string);
+            sprintf(string,"R:%i %0.3f %0.3f \n",fn,prm1,prm2); UART_PutString(string);
             
             if (prm1 < 10000 & prm2 < 10000 & prm1 > -10000 & prm2 > -10000) {
                 fnCall(fn,&prm1,&prm2);
             }
-            
         }
     }
     memcpy(&rxBufferOld, &rxBuffer, 15);
