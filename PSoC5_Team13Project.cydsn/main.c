@@ -74,7 +74,7 @@ int main(void)
         UART_RPi_PutChar('c');
     */ 
     for(;;)
-    {  
+    {         
     }    
 }
 
@@ -115,9 +115,7 @@ CY_ISR(readBuf){ // Read Incoming serial data
             }
             
             // DEBUG FOR INCOMING SERIAL
-            //UART_PutArray(rxBuffer, 15);
-            //UART_PutCRLF();
-            sprintf(string,"R:%i %0.3f %0.3f \n",fn,prm1,prm2); UART_PutString(string);
+            printf(string,"R:%i %0.3f %0.3f \n",fn,prm1,prm2); UART_PutString(string);
             
             if (prm1 < 10000 & prm2 < 10000 & prm1 > -10000 & prm2 > -10000) {
                 fnCall(fn,&prm1,&prm2);

@@ -1,5 +1,30 @@
---------------- Build Started: 10/16/2022 11:23:52 Project: PSoC5_Team13Project, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 10/21/2022 10:40:34 Project: PSoC5_Team13Project, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
-The compile step is up to date, no work needs to be done.
-The link step is up to date, no work needs to be done.
---------------- Build Succeeded: 10/16/2022 11:23:53 ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
+main.c: In function 'readBuf':
+main.c:107:13: warning: implicit declaration of function 'fnSend' [-Wimplicit-function-declaration]
+             fnSend(90, &p1, &p2);                                       // Request resync byte
+             ^
+main.c:120:22: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+             if (prm1 < 10000 & prm2 < 10000 & prm1 > -10000 & prm2 > -10000) {
+                      ^
+main.c:120:52: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+             if (prm1 < 10000 & prm2 < 10000 & prm1 > -10000 & prm2 > -10000) {
+                                                    ^
+main.c:120:68: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+             if (prm1 < 10000 & prm2 < 10000 & prm1 > -10000 & prm2 > -10000) {
+                                                                    ^
+main.c:121:17: warning: implicit declaration of function 'fnCall' [-Wimplicit-function-declaration]
+                 fnCall(fn,&prm1,&prm2);
+                 ^
+arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.a .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\I2C_1.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_BOOT.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_INT.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_PM.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_SLAVE.o .\CortexM3\ARM_GCC_541\Debug\I2C_1_MASTER.o .\CortexM3\ARM_GCC_541\Debug\Clock_1.o .\CortexM3\ARM_GCC_541\Debug\TB9051_EN.o .\CortexM3\ARM_GCC_541\Debug\TB9051_EN_PM.o .\CortexM3\ARM_GCC_541\Debug\QuadPWM.o .\CortexM3\ARM_GCC_541\Debug\UART.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_PM.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_INT.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_BOOT.o .\CortexM3\ARM_GCC_541\Debug\UART_RPi_IntClock.o .\CortexM3\ARM_GCC_541\Debug\SCL_1.o .\CortexM3\ARM_GCC_541\Debug\SDA_1.o .\CortexM3\ARM_GCC_541\Debug\STP_0.o .\CortexM3\ARM_GCC_541\Debug\STP_1.o .\CortexM3\ARM_GCC_541\Debug\STP_2.o .\CortexM3\ARM_GCC_541\Debug\STP_3.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM1.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM2.o .\CortexM3\ARM_GCC_541\Debug\TB_EN.o .\CortexM3\ARM_GCC_541\Debug\TB_ENB.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM3.o .\CortexM3\ARM_GCC_541\Debug\TB_PWM4.o .\CortexM3\ARM_GCC_541\Debug\Trig_R.o .\CortexM3\ARM_GCC_541\Debug\Trig_L.o .\CortexM3\ARM_GCC_541\Debug\Echo_R.o .\CortexM3\ARM_GCC_541\Debug\Echo_L.o .\CortexM3\ARM_GCC_541\Debug\E_L.o .\CortexM3\ARM_GCC_541\Debug\E_R.o .\CortexM3\ARM_GCC_541\Debug\US_L.o .\CortexM3\ARM_GCC_541\Debug\US_L_PM.o .\CortexM3\ARM_GCC_541\Debug\US_R.o .\CortexM3\ARM_GCC_541\Debug\US_R_PM.o .\CortexM3\ARM_GCC_541\Debug\Timer_L.o .\CortexM3\ARM_GCC_541\Debug\Timer_L_PM.o .\CortexM3\ARM_GCC_541\Debug\Timer_R.o .\CortexM3\ARM_GCC_541\Debug\Timer_R_PM.o .\CortexM3\ARM_GCC_541\Debug\RXcmplt.o .\CortexM3\ARM_GCC_541\Debug\rxDMA_dma.o .\CortexM3\ARM_GCC_541\Debug\Clock_4.o .\CortexM3\ARM_GCC_541\Debug\US_Trig.o .\CortexM3\ARM_GCC_541\Debug\US_Timer.o .\CortexM3\ARM_GCC_541\Debug\US_Timer_PM.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1_PM.o .\CortexM3\ARM_GCC_541\Debug\Quad1A.o .\CortexM3\ARM_GCC_541\Debug\Quad1B.o .\CortexM3\ARM_GCC_541\Debug\QD1_Timer.o .\CortexM3\ARM_GCC_541\Debug\QD1_Timer_PM.o .\CortexM3\ARM_GCC_541\Debug\QD1_ISR.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2_PM.o .\CortexM3\ARM_GCC_541\Debug\Quad2A.o .\CortexM3\ARM_GCC_541\Debug\Quad2B.o .\CortexM3\ARM_GCC_541\Debug\Clock_5.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1_Cnt16.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD1_Cnt16_PM.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2_Cnt16.o .\CortexM3\ARM_GCC_541\Debug\TB9051_QD2_Cnt16_PM.o .\CortexM3\ARM_GCC_541\Debug\Stepper_EN.o .\CortexM3\ARM_GCC_541\Debug\Stepper_EN_PM.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o .\CortexM3\ARM_GCC_541\Debug\UART_AsmGnu.o
+arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\SBT0811.o .\CortexM3\ARM_GCC_541\Debug\IMU.o .\CortexM3\ARM_GCC_541\Debug\SG90.o .\CortexM3\ARM_GCC_541\Debug\TB9051.o .\CortexM3\ARM_GCC_541\Debug\fnReceive.o .\CortexM3\ARM_GCC_541\Debug\HCSR04.o .\CortexM3\ARM_GCC_541\Debug\pid.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -l m -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/PSoC5_Team13Project.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -u _printf_float -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
+No ELF section .cychecksum found, creating one
+Application checksum calculated and stored in ELF section .cychecksum
+Checksum calculated and stored in ELF section .cymeta
+cyelftool.exe -S C:\Users\JamesH\Desktop\ECE4191-Team-13-PSoC\PSoC5_Team13Project.cydsn\CortexM3\ARM_GCC_541\Debug\PSoC5_Team13Project.elf
+Flash used: 33868 of 262144 bytes (12.9%).
+SRAM used: 10417 of 65536 bytes (15.9%). Stack: 4608 bytes. Heap: 4608 bytes.
+--------------- Build Succeeded: 10/21/2022 10:40:38 ---------------

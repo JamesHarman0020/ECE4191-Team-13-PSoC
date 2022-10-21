@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
   24:main.c        **** 
   25:main.c        **** // Global Variables
   26:main.c        **** float fullSpeedNoLoad = 0.2814784; // m/s
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 2
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 2
 
 
   27:main.c        **** char rxString[30] = {0};
@@ -111,14 +111,14 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
   74:main.c        ****         UART_RPi_PutChar('c');
   75:main.c        ****     */ 
   76:main.c        ****     for(;;)
-  77:main.c        ****     {  
+  77:main.c        ****     {         
   78:main.c        ****     }    
   79:main.c        **** }
   80:main.c        **** 
   81:main.c        **** // User Functions
   82:main.c        **** 
   83:main.c        **** CY_ISR(readBuf){ // Read Incoming serial data
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 3
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 3
 
 
   32              		.loc 1 83 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
   77 0026 4F4B     		ldr	r3, .L17
   78              	.LVL3:
   79 0028 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 4
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 4
 
 
   80 002a 002B     		cmp	r3, #0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  119              	.LVL7:
  120 0056 186A     		ldr	r0, [r3, #32]
  121 0058 0328     		cmp	r0, #3
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 5
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 5
 
 
  122 005a 0FDD     		ble	.L9
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  166 0098 1468     		ldr	r4, [r2]
  167 009a 3248     		ldr	r0, .L17
  168 009c 026A     		ldr	r2, [r0, #32]
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 6
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 6
 
 
  169 009e 1A44     		add	r2, r2, r3
@@ -328,10 +328,8 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  115:main.c        ****             }
  116:main.c        ****             
  117:main.c        ****             // DEBUG FOR INCOMING SERIAL
- 118:main.c        ****             //UART_PutArray(rxBuffer, 15);
- 119:main.c        ****             //UART_PutCRLF();
- 120:main.c        ****             sprintf(string,"R:%i %0.3f %0.3f \n",fn,prm1,prm2); UART_PutString(string);
- 190              		.loc 1 120 0 is_stmt 1
+ 118:main.c        ****             printf(string,"R:%i %0.3f %0.3f \n",fn,prm1,prm2); UART_PutString(string);
+ 190              		.loc 1 118 0 is_stmt 1
  191 00bc 2B4B     		ldr	r3, .L17+8
  192              	.LVL13:
  193 00be 1F68     		ldr	r7, [r3]
@@ -349,20 +347,20 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  205 00da 3A46     		mov	r2, r7
  206 00dc 2949     		ldr	r1, .L17+32
  207 00de 3046     		mov	r0, r6
- 208 00e0 FFF7FEFF 		bl	sprintf
+ 208 00e0 FFF7FEFF 		bl	printf
  209              	.LVL16:
  210 00e4 3046     		mov	r0, r6
  211 00e6 FFF7FEFF 		bl	UART_PutString
  212              	.LVL17:
- 121:main.c        ****             
- 122:main.c        ****             if (prm1 < 10000 & prm2 < 10000 & prm1 > -10000 & prm2 > -10000) {
- 213              		.loc 1 122 0
+ 119:main.c        ****             
+ 120:main.c        ****             if (prm1 < 10000 & prm2 < 10000 & prm1 > -10000 & prm2 > -10000) {
+ 213              		.loc 1 120 0
  214 00ea 2E68     		ldr	r6, [r5]	@ float
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 7
-
-
  215 00ec 2768     		ldr	r7, [r4]	@ float
  216 00ee 4FF00105 		mov	r5, #1
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 7
+
+
  217 00f2 2549     		ldr	r1, .L17+36
  218 00f4 3046     		mov	r0, r6
  219 00f6 FFF7FEFF 		bl	__aeabi_fcmplt
@@ -402,8 +400,8 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  253 0140 06D0     		beq	.L5
  254 0142 2EB1     		cbz	r6, .L5
  255              	.LBB6:
- 123:main.c        ****                 fnCall(fn,&prm1,&prm2);
- 256              		.loc 1 123 0
+ 121:main.c        ****                 fnCall(fn,&prm1,&prm2);
+ 256              		.loc 1 121 0
  257 0144 0D4A     		ldr	r2, .L17+24
  258 0146 0E49     		ldr	r1, .L17+28
  259 0148 084B     		ldr	r3, .L17+8
@@ -412,23 +410,23 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  262              	.LVL22:
  263              	.L5:
  264              	.LBE6:
- 124:main.c        ****             }
- 125:main.c        ****         }
- 126:main.c        ****     }
- 127:main.c        ****     memcpy(&rxBufferOld, &rxBuffer, 15);
- 265              		.loc 1 127 0
+ 122:main.c        ****             }
+ 123:main.c        ****         }
+ 124:main.c        ****     }
+ 125:main.c        ****     memcpy(&rxBufferOld, &rxBuffer, 15);
+ 265              		.loc 1 125 0
  266 0150 054B     		ldr	r3, .L17+4
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 8
-
-
  267 0152 0F4C     		ldr	r4, .L17+44
  268 0154 0FCB     		ldmia	r3, {r0, r1, r2, r3}
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 8
+
+
  269 0156 07C4     		stmia	r4!, {r0, r1, r2}
  270 0158 24F8023B 		strh	r3, [r4], #2	@ movhi
  271 015c 1B0C     		lsrs	r3, r3, #16
  272 015e 2370     		strb	r3, [r4]
- 128:main.c        **** }
- 273              		.loc 1 128 0
+ 126:main.c        **** }
+ 273              		.loc 1 126 0
  274 0160 07B0     		add	sp, sp, #28
  275              		.cfi_def_cfa_offset 20
  276              		@ sp needed
@@ -459,10 +457,10 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  301              		.type	DMA_Config, %function
  302              	DMA_Config:
  303              	.LFB66:
- 129:main.c        **** 
- 130:main.c        **** 
- 131:main.c        **** void DMA_Config() {
- 304              		.loc 1 131 0
+ 127:main.c        **** 
+ 128:main.c        **** 
+ 129:main.c        **** void DMA_Config() {
+ 304              		.loc 1 129 0
  305              		.cfi_startproc
  306              		@ args = 0, pretend = 0, frame = 0
  307              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -472,23 +470,23 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  311              		.cfi_offset 4, -12
  312              		.cfi_offset 5, -8
  313              		.cfi_offset 14, -4
- 132:main.c        ****     /* Defines for rxDMA */
- 133:main.c        ****     #define rxDMA_BYTES_PER_BURST 1
- 134:main.c        ****     #define rxDMA_REQUEST_PER_BURST 1
- 135:main.c        ****     #define rxDMA_SRC_BASE (CYDEV_PERIPH_BASE)
- 136:main.c        ****     #define rxDMA_DST_BASE (CYDEV_SRAM_BASE)
- 137:main.c        **** 
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 9
+ 130:main.c        ****     /* Defines for rxDMA */
+ 131:main.c        ****     #define rxDMA_BYTES_PER_BURST 1
+ 132:main.c        ****     #define rxDMA_REQUEST_PER_BURST 1
+ 133:main.c        ****     #define rxDMA_SRC_BASE (CYDEV_PERIPH_BASE)
+ 134:main.c        ****     #define rxDMA_DST_BASE (CYDEV_SRAM_BASE)
+ 135:main.c        **** 
+ 136:main.c        ****     /* Variable declarations for rxDMA */
+ 137:main.c        ****     /* Move these variable declarations to the top of the function */
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 9
 
 
- 138:main.c        ****     /* Variable declarations for rxDMA */
- 139:main.c        ****     /* Move these variable declarations to the top of the function */
- 140:main.c        ****     uint8 rxDMA_Chan;
- 141:main.c        ****     uint8 rxDMA_TD[1];
- 142:main.c        **** 
- 143:main.c        ****     /* DMA Configuration for rxDMA */
- 144:main.c        ****     rxDMA_Chan = rxDMA_DmaInitialize(rxDMA_BYTES_PER_BURST, rxDMA_REQUEST_PER_BURST, 
- 314              		.loc 1 144 0
+ 138:main.c        ****     uint8 rxDMA_Chan;
+ 139:main.c        ****     uint8 rxDMA_TD[1];
+ 140:main.c        **** 
+ 141:main.c        ****     /* DMA Configuration for rxDMA */
+ 142:main.c        ****     rxDMA_Chan = rxDMA_DmaInitialize(rxDMA_BYTES_PER_BURST, rxDMA_REQUEST_PER_BURST, 
+ 314              		.loc 1 142 0
  315 0002 41F6FF73 		movw	r3, #8191
  316 0006 4FF48042 		mov	r2, #16384
  317 000a 0121     		movs	r1, #1
@@ -497,35 +495,35 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  320              	.LVL23:
  321 0012 0546     		mov	r5, r0
  322              	.LVL24:
- 145:main.c        ****         HI16(rxDMA_SRC_BASE), HI16(rxDMA_DST_BASE));
- 146:main.c        ****     rxDMA_TD[0] = CyDmaTdAllocate();
- 323              		.loc 1 146 0
+ 143:main.c        ****         HI16(rxDMA_SRC_BASE), HI16(rxDMA_DST_BASE));
+ 144:main.c        ****     rxDMA_TD[0] = CyDmaTdAllocate();
+ 323              		.loc 1 144 0
  324 0014 FFF7FEFF 		bl	CyDmaTdAllocate
  325              	.LVL25:
  326 0018 0446     		mov	r4, r0
- 147:main.c        ****     CyDmaTdSetConfiguration(rxDMA_TD[0], 15, rxDMA_TD[0], rxDMA__TD_TERMOUT_EN | CY_DMA_TD_TERMIN_E
- 327              		.loc 1 147 0
+ 145:main.c        ****     CyDmaTdSetConfiguration(rxDMA_TD[0], 15, rxDMA_TD[0], rxDMA__TD_TERMOUT_EN | CY_DMA_TD_TERMIN_E
+ 327              		.loc 1 145 0
  328 001a 1623     		movs	r3, #22
  329 001c 0246     		mov	r2, r0
  330 001e 0F21     		movs	r1, #15
  331 0020 FFF7FEFF 		bl	CyDmaTdSetConfiguration
  332              	.LVL26:
- 148:main.c        ****     CyDmaTdSetAddress(rxDMA_TD[0], LO16((uint32)UART_RPi_RXDATA_PTR), LO16((uint32)rxBuffer));
- 333              		.loc 1 148 0
+ 146:main.c        ****     CyDmaTdSetAddress(rxDMA_TD[0], LO16((uint32)UART_RPi_RXDATA_PTR), LO16((uint32)rxBuffer));
+ 333              		.loc 1 146 0
  334 0024 074A     		ldr	r2, .L21
  335 0026 92B2     		uxth	r2, r2
  336 0028 46F24F41 		movw	r1, #25679
  337 002c 2046     		mov	r0, r4
  338 002e FFF7FEFF 		bl	CyDmaTdSetAddress
  339              	.LVL27:
- 149:main.c        ****     CyDmaChSetInitialTd(rxDMA_Chan, rxDMA_TD[0]);
- 340              		.loc 1 149 0
+ 147:main.c        ****     CyDmaChSetInitialTd(rxDMA_Chan, rxDMA_TD[0]);
+ 340              		.loc 1 147 0
  341 0032 2146     		mov	r1, r4
  342 0034 2846     		mov	r0, r5
  343 0036 FFF7FEFF 		bl	CyDmaChSetInitialTd
  344              	.LVL28:
- 150:main.c        ****     CyDmaChEnable(rxDMA_Chan, 1);
- 345              		.loc 1 150 0
+ 148:main.c        ****     CyDmaChEnable(rxDMA_Chan, 1);
+ 345              		.loc 1 148 0
  346 003a 0121     		movs	r1, #1
  347 003c 2846     		mov	r0, r5
  348 003e FFF7FEFF 		bl	CyDmaChEnable
@@ -538,11 +536,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  355 0044 00000000 		.word	.LANCHOR1
  356              		.cfi_endproc
  357              	.LFE66:
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 10
-
-
  358              		.size	DMA_Config, .-DMA_Config
  359              		.section	.text.main,"ax",%progbits
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 10
+
+
  360              		.align	2
  361              		.global	main
  362              		.thumb
@@ -598,11 +596,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  403 001e 074A     		ldr	r2, .L26+8
  404 0020 074B     		ldr	r3, .L26+12
  405 0022 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 11
-
-
   68:main.c        ****     RXcmplt_ClearPending();
  406              		.loc 1 68 0
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 11
+
+
  407 0024 FFF7FEFF 		bl	RXcmplt_Start
  408              	.LVL36:
   69:main.c        ****     RXcmplt_StartEx(readBuf);
@@ -658,11 +656,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  457              	diffFlag:
  458 0000 01000000 		.word	1
  459 0004 00000000 		.space	12
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 12
-
-
  459      00000000 
  459      00000000 
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 12
+
+
  460              		.type	rxBufferOld, %object
  461              		.size	rxBufferOld, 15
  462              	rxBufferOld:
@@ -718,11 +716,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  502              		.type	startFlag, %object
  503              		.size	startFlag, 4
  504              	startFlag:
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 13
-
-
  505 001c 00000000 		.space	4
  506              		.type	comString, %object
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 13
+
+
  507              		.size	comString, 30
  508              	comString:
  509 0020 00000000 		.space	30
@@ -764,34 +762,34 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  537 0006 00000000 		.4byte	.Ldebug_abbrev0
  538 000a 04       		.byte	0x4
  539 000b 01       		.uleb128 0x1
- 540 000c F5020000 		.4byte	.LASF59
+ 540 000c F4020000 		.4byte	.LASF59
  541 0010 0C       		.byte	0xc
- 542 0011 53020000 		.4byte	.LASF60
- 543 0015 78020000 		.4byte	.LASF61
+ 542 0011 52020000 		.4byte	.LASF60
+ 543 0015 77020000 		.4byte	.LASF61
  544 0019 00000000 		.4byte	.Ldebug_ranges0+0
  545 001d 00000000 		.4byte	0
  546 0021 00000000 		.4byte	.Ldebug_line0
  547 0025 02       		.uleb128 0x2
  548 0026 01       		.byte	0x1
  549 0027 06       		.byte	0x6
- 550 0028 A8010000 		.4byte	.LASF0
+ 550 0028 A7010000 		.4byte	.LASF0
  551 002c 02       		.uleb128 0x2
  552 002d 01       		.byte	0x1
  553 002e 08       		.byte	0x8
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 14
-
-
- 554 002f 6D010000 		.4byte	.LASF1
+ 554 002f 74010000 		.4byte	.LASF1
  555 0033 02       		.uleb128 0x2
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 14
+
+
  556 0034 02       		.byte	0x2
  557 0035 05       		.byte	0x5
  558 0036 AA000000 		.4byte	.LASF2
  559 003a 02       		.uleb128 0x2
  560 003b 02       		.byte	0x2
  561 003c 07       		.byte	0x7
- 562 003d FC010000 		.4byte	.LASF3
+ 562 003d FB010000 		.4byte	.LASF3
  563 0041 03       		.uleb128 0x3
- 564 0042 CE020000 		.4byte	.LASF9
+ 564 0042 CD020000 		.4byte	.LASF9
  565 0046 02       		.byte	0x2
  566 0047 3F       		.byte	0x3f
  567 0048 4C000000 		.4byte	0x4c
@@ -802,7 +800,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  572 0053 02       		.uleb128 0x2
  573 0054 04       		.byte	0x4
  574 0055 07       		.byte	0x7
- 575 0056 5F020000 		.4byte	.LASF5
+ 575 0056 5E020000 		.4byte	.LASF5
  576 005a 02       		.uleb128 0x2
  577 005b 08       		.byte	0x8
  578 005c 05       		.byte	0x5
@@ -810,7 +808,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  580 0061 02       		.uleb128 0x2
  581 0062 08       		.byte	0x8
  582 0063 07       		.byte	0x7
- 583 0064 B4010000 		.4byte	.LASF7
+ 583 0064 B3010000 		.4byte	.LASF7
  584 0068 04       		.uleb128 0x4
  585 0069 04       		.byte	0x4
  586 006a 05       		.byte	0x5
@@ -818,9 +816,9 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  588 006f 02       		.uleb128 0x2
  589 0070 04       		.byte	0x4
  590 0071 07       		.byte	0x7
- 591 0072 CB010000 		.4byte	.LASF8
+ 591 0072 CA010000 		.4byte	.LASF8
  592 0076 03       		.uleb128 0x3
- 593 0077 1F020000 		.4byte	.LASF10
+ 593 0077 1E020000 		.4byte	.LASF10
  594 007b 03       		.byte	0x3
  595 007c 2C       		.byte	0x2c
  596 007d 41000000 		.4byte	0x41
@@ -835,27 +833,27 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  605 0093 E901     		.2byte	0x1e9
  606 0095 3A000000 		.4byte	0x3a
  607 0099 05       		.uleb128 0x5
- 608 009a 4C020000 		.4byte	.LASF13
+ 608 009a 4B020000 		.4byte	.LASF13
  609 009e 04       		.byte	0x4
  610 009f EA01     		.2byte	0x1ea
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 15
-
-
  611 00a1 53000000 		.4byte	0x53
  612 00a5 02       		.uleb128 0x2
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 15
+
+
  613 00a6 04       		.byte	0x4
  614 00a7 04       		.byte	0x4
  615 00a8 0B010000 		.4byte	.LASF14
  616 00ac 02       		.uleb128 0x2
  617 00ad 08       		.byte	0x8
  618 00ae 04       		.byte	0x4
- 619 00af 71020000 		.4byte	.LASF15
+ 619 00af 70020000 		.4byte	.LASF15
  620 00b3 02       		.uleb128 0x2
  621 00b4 01       		.byte	0x1
  622 00b5 08       		.byte	0x8
- 623 00b6 0F020000 		.4byte	.LASF16
+ 623 00b6 0E020000 		.4byte	.LASF16
  624 00ba 05       		.uleb128 0x5
- 625 00bb 5A020000 		.4byte	.LASF17
+ 625 00bb 59020000 		.4byte	.LASF17
  626 00bf 04       		.byte	0x4
  627 00c0 9202     		.2byte	0x292
  628 00c2 C6000000 		.4byte	0xc6
@@ -864,7 +862,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  631 00cb 02       		.uleb128 0x2
  632 00cc 08       		.byte	0x8
  633 00cd 04       		.byte	0x4
- 634 00ce 61010000 		.4byte	.LASF18
+ 634 00ce 68010000 		.4byte	.LASF18
  635 00d2 02       		.uleb128 0x2
  636 00d3 04       		.byte	0x4
  637 00d4 07       		.byte	0x7
@@ -898,11 +896,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  665 0119 01       		.byte	0x1
  666 011a 61       		.byte	0x61
  667 011b 68000000 		.4byte	0x68
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 16
-
-
  668 011f 1F000000 		.4byte	.LLST1
  669 0123 00       		.byte	0
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 16
+
+
  670 0124 08       		.uleb128 0x8
  671 0125 5C000000 		.4byte	.LBB4
  672 0129 20000000 		.4byte	.LBE4-.LBB4
@@ -958,11 +956,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  722 017a 92000000 		.4byte	.LBB5
  723 017e 2A000000 		.4byte	.LBE5-.LBB5
  724 0182 94010000 		.4byte	0x194
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 17
-
-
  725 0186 09       		.uleb128 0x9
  726 0187 6900     		.ascii	"i\000"
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 17
+
+
  727 0189 01       		.byte	0x1
  728 018a 70       		.byte	0x70
  729 018b 68000000 		.4byte	0x68
@@ -973,9 +971,9 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  734 0199 0C000000 		.4byte	.LBE6-.LBB6
  735 019d CF010000 		.4byte	0x1cf
  736 01a1 0B       		.uleb128 0xb
- 737 01a2 D8010000 		.4byte	.LASF21
+ 737 01a2 D7010000 		.4byte	.LASF21
  738 01a6 01       		.byte	0x1
- 739 01a7 7B       		.byte	0x7b
+ 739 01a7 79       		.byte	0x79
  740 01a8 68000000 		.4byte	0x68
  741 01ac B2010000 		.4byte	0x1b2
  742 01b0 0C       		.uleb128 0xc
@@ -1018,11 +1016,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  779 01ed 52       		.byte	0x52
  780 01ee 02       		.uleb128 0x2
  781 01ef 77       		.byte	0x77
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 18
-
-
  782 01f0 00       		.sleb128 0
  783 01f1 00       		.byte	0
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 18
+
+
  784 01f2 0D       		.uleb128 0xd
  785 01f3 EA000000 		.4byte	.LVL17
  786 01f7 31050000 		.4byte	0x531
@@ -1037,22 +1035,22 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  795 0203 10       		.uleb128 0x10
  796 0204 F5000000 		.4byte	.LASF63
  797 0208 01       		.byte	0x1
- 798 0209 83       		.byte	0x83
+ 798 0209 81       		.byte	0x81
  799 020a 00000000 		.4byte	.LFB66
  800 020e 48000000 		.4byte	.LFE66-.LFB66
  801 0212 01       		.uleb128 0x1
  802 0213 9C       		.byte	0x9c
  803 0214 D9020000 		.4byte	0x2d9
  804 0218 11       		.uleb128 0x11
- 805 0219 8E030000 		.4byte	.LASF22
+ 805 0219 8D030000 		.4byte	.LASF22
  806 021d 01       		.byte	0x1
- 807 021e 8C       		.byte	0x8c
+ 807 021e 8A       		.byte	0x8a
  808 021f 81000000 		.4byte	0x81
  809 0223 5D000000 		.4byte	.LLST3
  810 0227 12       		.uleb128 0x12
  811 0228 3A000000 		.4byte	.LASF64
  812 022c 01       		.byte	0x1
- 813 022d 8D       		.byte	0x8d
+ 813 022d 8B       		.byte	0x8b
  814 022e D9020000 		.4byte	0x2d9
  815 0232 0F       		.uleb128 0xf
  816 0233 12000000 		.4byte	.LVL23
@@ -1078,11 +1076,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  836 0251 01       		.uleb128 0x1
  837 0252 53       		.byte	0x53
  838 0253 03       		.uleb128 0x3
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 19
-
-
  839 0254 0A       		.byte	0xa
  840 0255 FF1F     		.2byte	0x1fff
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 19
+
+
  841 0257 00       		.byte	0
  842 0258 13       		.uleb128 0x13
  843 0259 18000000 		.4byte	.LVL25
@@ -1138,11 +1136,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  893 02a4 00000000 		.4byte	.LANCHOR1
  894 02a8 00       		.byte	0
  895 02a9 0F       		.uleb128 0xf
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 20
-
-
  896 02aa 3A000000 		.4byte	.LVL28
  897 02ae 68050000 		.4byte	0x568
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 20
+
+
  898 02b2 C3020000 		.4byte	0x2c3
  899 02b6 0E       		.uleb128 0xe
  900 02b7 01       		.uleb128 0x1
@@ -1198,11 +1196,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  950 0310 89050000 		.4byte	0x589
  951 0314 13       		.uleb128 0x13
  952 0315 10000000 		.4byte	.LVL33
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 21
-
-
  953 0319 94050000 		.4byte	0x594
  954 031d 13       		.uleb128 0x13
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 21
+
+
  955 031e 14000000 		.4byte	.LVL34
  956 0322 9F050000 		.4byte	0x59f
  957 0326 13       		.uleb128 0x13
@@ -1226,14 +1224,14 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  975 0353 00       		.byte	0
  976 0354 00       		.byte	0
  977 0355 17       		.uleb128 0x17
- 978 0356 E8020000 		.4byte	.LASF23
+ 978 0356 E7020000 		.4byte	.LASF23
  979 035a 05       		.byte	0x5
  980 035b 1207     		.2byte	0x712
  981 035d 61030000 		.4byte	0x361
  982 0361 06       		.uleb128 0x6
  983 0362 76000000 		.4byte	0x76
  984 0366 18       		.uleb128 0x18
- 985 0367 D8020000 		.4byte	.LASF24
+ 985 0367 D7020000 		.4byte	.LASF24
  986 036b 01       		.byte	0x1
  987 036c 1A       		.byte	0x1a
  988 036d A5000000 		.4byte	0xa5
@@ -1248,7 +1246,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  997 0385 1D       		.byte	0x1d
  998 0386 00       		.byte	0
  999 0387 18       		.uleb128 0x18
- 1000 0388 27020000 		.4byte	.LASF25
+ 1000 0388 26020000 		.4byte	.LASF25
  1001 038c 01       		.byte	0x1
  1002 038d 1B       		.byte	0x1b
  1003 038e 77030000 		.4byte	0x377
@@ -1258,11 +1256,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1007 0398 18       		.uleb128 0x18
  1008 0399 56000000 		.4byte	.LASF26
  1009 039d 01       		.byte	0x1
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 22
-
-
  1010 039e 1C       		.byte	0x1c
  1011 039f 68000000 		.4byte	0x68
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 22
+
+
  1012 03a3 05       		.uleb128 0x5
  1013 03a4 03       		.byte	0x3
  1014 03a5 00000000 		.4byte	rxCount
@@ -1283,7 +1281,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1029 03c5 03       		.byte	0x3
  1030 03c6 00000000 		.4byte	fn
  1031 03ca 18       		.uleb128 0x18
- 1032 03cb BF020000 		.4byte	.LASF28
+ 1032 03cb BE020000 		.4byte	.LASF28
  1033 03cf 01       		.byte	0x1
  1034 03d0 1F       		.byte	0x1f
  1035 03d1 A5000000 		.4byte	0xa5
@@ -1291,7 +1289,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1037 03d6 03       		.byte	0x3
  1038 03d7 00000000 		.4byte	prm1
  1039 03db 18       		.uleb128 0x18
- 1040 03dc C4020000 		.4byte	.LASF29
+ 1040 03dc C3020000 		.4byte	.LASF29
  1041 03e0 01       		.byte	0x1
  1042 03e1 1F       		.byte	0x1f
  1043 03e2 A5000000 		.4byte	0xa5
@@ -1318,18 +1316,18 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1064 040d 03       		.byte	0x3
  1065 040e 00000000 		.4byte	B2
  1066 0412 18       		.uleb128 0x18
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 23
-
-
- 1067 0413 C9020000 		.4byte	.LASF30
+ 1067 0413 C8020000 		.4byte	.LASF30
  1068 0417 01       		.byte	0x1
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 23
+
+
  1069 0418 21       		.byte	0x21
  1070 0419 68000000 		.4byte	0x68
  1071 041d 05       		.uleb128 0x5
  1072 041e 03       		.byte	0x3
  1073 041f 00000000 		.4byte	mask
  1074 0423 18       		.uleb128 0x18
- 1075 0424 DF010000 		.4byte	.LASF31
+ 1075 0424 DE010000 		.4byte	.LASF31
  1076 0428 01       		.byte	0x1
  1077 0429 22       		.byte	0x22
  1078 042a 68000000 		.4byte	0x68
@@ -1337,7 +1335,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1080 042f 03       		.byte	0x3
  1081 0430 00000000 		.4byte	startFlag
  1082 0434 18       		.uleb128 0x18
- 1083 0435 E9010000 		.4byte	.LASF32
+ 1083 0435 E8010000 		.4byte	.LASF32
  1084 0439 01       		.byte	0x1
  1085 043a 23       		.byte	0x23
  1086 043b 8D000000 		.4byte	0x8d
@@ -1368,7 +1366,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1111 0472 03       		.byte	0x3
  1112 0473 00000000 		.4byte	rxBuffer
  1113 0477 18       		.uleb128 0x18
- 1114 0478 F0010000 		.4byte	.LASF35
+ 1114 0478 EF010000 		.4byte	.LASF35
  1115 047c 01       		.byte	0x1
  1116 047d 26       		.byte	0x26
  1117 047e 56040000 		.4byte	0x456
@@ -1376,18 +1374,18 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1119 0483 03       		.byte	0x3
  1120 0484 00000000 		.4byte	rxBufferOld
  1121 0488 18       		.uleb128 0x18
- 1122 0489 30020000 		.4byte	.LASF36
+ 1122 0489 2F020000 		.4byte	.LASF36
  1123 048d 01       		.byte	0x1
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 24
-
-
  1124 048e 27       		.byte	0x27
  1125 048f 68000000 		.4byte	0x68
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 24
+
+
  1126 0493 05       		.uleb128 0x5
  1127 0494 03       		.byte	0x3
  1128 0495 00000000 		.4byte	fn_old
  1129 0499 18       		.uleb128 0x18
- 1130 049a 83030000 		.4byte	.LASF37
+ 1130 049a 82030000 		.4byte	.LASF37
  1131 049e 01       		.byte	0x1
  1132 049f 27       		.byte	0x27
  1133 04a0 68000000 		.4byte	0x68
@@ -1403,7 +1401,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1143 04b6 03       		.byte	0x3
  1144 04b7 00000000 		.4byte	param2_old
  1145 04bb 18       		.uleb128 0x18
- 1146 04bc 38010000 		.4byte	.LASF39
+ 1146 04bc 3F010000 		.4byte	.LASF39
  1147 04c0 01       		.byte	0x1
  1148 04c1 28       		.byte	0x28
  1149 04c2 68000000 		.4byte	0x68
@@ -1427,7 +1425,7 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1167 04e9 03       		.byte	0x3
  1168 04ea 00000000 		.4byte	startPos
  1169 04ee 18       		.uleb128 0x18
- 1170 04ef 7B010000 		.4byte	.LASF42
+ 1170 04ef 82010000 		.4byte	.LASF42
  1171 04f3 01       		.byte	0x1
  1172 04f4 2B       		.byte	0x2b
  1173 04f5 68000000 		.4byte	0x68
@@ -1438,11 +1436,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1178 0500 1F000000 		.4byte	.LASF43
  1179 0504 01       		.byte	0x1
  1180 0505 2C       		.byte	0x2c
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 25
-
-
  1181 0506 68000000 		.4byte	0x68
  1182 050a 05       		.uleb128 0x5
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 25
+
+
  1183 050b 03       		.byte	0x3
  1184 050c 00000000 		.4byte	diffFlag
  1185 0510 1B       		.uleb128 0x1b
@@ -1451,23 +1449,23 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1188 0519 01       		.byte	0x1
  1189 051a 6B       		.byte	0x6b
  1190 051b 1B       		.uleb128 0x1b
- 1191 051c D8010000 		.4byte	.LASF21
- 1192 0520 D8010000 		.4byte	.LASF21
+ 1191 051c D7010000 		.4byte	.LASF21
+ 1192 0520 D7010000 		.4byte	.LASF21
  1193 0524 01       		.byte	0x1
- 1194 0525 7B       		.byte	0x7b
+ 1194 0525 79       		.byte	0x79
  1195 0526 1B       		.uleb128 0x1b
- 1196 0527 92010000 		.4byte	.LASF44
- 1197 052b 92010000 		.4byte	.LASF44
+ 1196 0527 38010000 		.4byte	.LASF44
+ 1197 052b 38010000 		.4byte	.LASF44
  1198 052f 06       		.byte	0x6
- 1199 0530 E7       		.byte	0xe7
+ 1199 0530 BB       		.byte	0xbb
  1200 0531 1B       		.uleb128 0x1b
  1201 0532 B4000000 		.4byte	.LASF45
  1202 0536 B4000000 		.4byte	.LASF45
  1203 053a 07       		.byte	0x7
  1204 053b 26       		.byte	0x26
  1205 053c 1B       		.uleb128 0x1b
- 1206 053d 4D010000 		.4byte	.LASF46
- 1207 0541 4D010000 		.4byte	.LASF46
+ 1206 053d 54010000 		.4byte	.LASF46
+ 1207 0541 54010000 		.4byte	.LASF46
  1208 0545 08       		.byte	0x8
  1209 0546 1E       		.byte	0x1e
  1210 0547 1B       		.uleb128 0x1b
@@ -1496,36 +1494,36 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1233 057c 09       		.byte	0x9
  1234 057d 29       		.byte	0x29
  1235 057e 1B       		.uleb128 0x1b
- 1236 057f 14020000 		.4byte	.LASF52
- 1237 0583 14020000 		.4byte	.LASF52
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 26
-
-
+ 1236 057f 13020000 		.4byte	.LASF52
+ 1237 0583 13020000 		.4byte	.LASF52
  1238 0587 07       		.byte	0x7
  1239 0588 1F       		.byte	0x1f
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 26
+
+
  1240 0589 1B       		.uleb128 0x1b
  1241 058a 10000000 		.4byte	.LASF53
  1242 058e 10000000 		.4byte	.LASF53
  1243 0592 0A       		.byte	0xa
  1244 0593 54       		.byte	0x54
  1245 0594 1B       		.uleb128 0x1b
- 1246 0595 40010000 		.4byte	.LASF54
- 1247 0599 40010000 		.4byte	.LASF54
+ 1246 0595 47010000 		.4byte	.LASF54
+ 1247 0599 47010000 		.4byte	.LASF54
  1248 059d 0B       		.byte	0xb
  1249 059e 0F       		.byte	0xf
  1250 059f 1B       		.uleb128 0x1b
- 1251 05a0 85010000 		.4byte	.LASF55
- 1252 05a4 85010000 		.4byte	.LASF55
+ 1251 05a0 8C010000 		.4byte	.LASF55
+ 1252 05a4 8C010000 		.4byte	.LASF55
  1253 05a8 0C       		.byte	0xc
  1254 05a9 0F       		.byte	0xf
  1255 05aa 1B       		.uleb128 0x1b
- 1256 05ab 9A010000 		.4byte	.LASF56
- 1257 05af 9A010000 		.4byte	.LASF56
+ 1256 05ab 99010000 		.4byte	.LASF56
+ 1257 05af 99010000 		.4byte	.LASF56
  1258 05b3 0D       		.byte	0xd
  1259 05b4 17       		.byte	0x17
  1260 05b5 1B       		.uleb128 0x1b
- 1261 05b6 37020000 		.4byte	.LASF57
- 1262 05ba 37020000 		.4byte	.LASF57
+ 1261 05b6 36020000 		.4byte	.LASF57
+ 1262 05ba 36020000 		.4byte	.LASF57
  1263 05be 0D       		.byte	0xd
  1264 05bf 28       		.byte	0x28
  1265 05c0 1B       		.uleb128 0x1b
@@ -1558,11 +1556,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1292 0013 02       		.uleb128 0x2
  1293 0014 24       		.uleb128 0x24
  1294 0015 00       		.byte	0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 27
-
-
  1295 0016 0B       		.uleb128 0xb
  1296 0017 0B       		.uleb128 0xb
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 27
+
+
  1297 0018 3E       		.uleb128 0x3e
  1298 0019 0B       		.uleb128 0xb
  1299 001a 03       		.uleb128 0x3
@@ -1618,11 +1616,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1349 004c 01       		.byte	0x1
  1350 004d 3F       		.uleb128 0x3f
  1351 004e 19       		.uleb128 0x19
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 28
-
-
  1352 004f 03       		.uleb128 0x3
  1353 0050 0E       		.uleb128 0xe
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 28
+
+
  1354 0051 3A       		.uleb128 0x3a
  1355 0052 0B       		.uleb128 0xb
  1356 0053 3B       		.uleb128 0x3b
@@ -1678,11 +1676,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1406 0086 0B       		.uleb128 0xb
  1407 0087 49       		.uleb128 0x49
  1408 0088 13       		.uleb128 0x13
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 29
-
-
  1409 0089 02       		.uleb128 0x2
  1410 008a 18       		.uleb128 0x18
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 29
+
+
  1411 008b 00       		.byte	0
  1412 008c 00       		.byte	0
  1413 008d 0B       		.uleb128 0xb
@@ -1738,11 +1736,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1463 00c6 13       		.uleb128 0x13
  1464 00c7 00       		.byte	0
  1465 00c8 00       		.byte	0
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 30
-
-
  1466 00c9 10       		.uleb128 0x10
  1467 00ca 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 30
+
+
  1468 00cb 01       		.byte	0x1
  1469 00cc 3F       		.uleb128 0x3f
  1470 00cd 19       		.uleb128 0x19
@@ -1798,11 +1796,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1520 0102 11       		.uleb128 0x11
  1521 0103 01       		.uleb128 0x1
  1522 0104 31       		.uleb128 0x31
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 31
-
-
  1523 0105 13       		.uleb128 0x13
  1524 0106 00       		.byte	0
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 31
+
+
  1525 0107 00       		.byte	0
  1526 0108 14       		.uleb128 0x14
  1527 0109 01       		.uleb128 0x1
@@ -1858,11 +1856,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1577 013d 0E       		.uleb128 0xe
  1578 013e 3A       		.uleb128 0x3a
  1579 013f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 32
-
-
  1580 0140 3B       		.uleb128 0x3b
  1581 0141 05       		.uleb128 0x5
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 32
+
+
  1582 0142 49       		.uleb128 0x49
  1583 0143 13       		.uleb128 0x13
  1584 0144 3F       		.uleb128 0x3f
@@ -1918,11 +1916,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1634 0176 2E       		.uleb128 0x2e
  1635 0177 00       		.byte	0
  1636 0178 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 33
-
-
  1637 0179 19       		.uleb128 0x19
  1638 017a 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 33
+
+
  1639 017b 19       		.uleb128 0x19
  1640 017c 6E       		.uleb128 0x6e
  1641 017d 0E       		.uleb128 0xe
@@ -1978,11 +1976,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1691 0061 44000000 		.4byte	.LVL30
  1692 0065 0100     		.2byte	0x1
  1693 0067 55       		.byte	0x55
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 34
-
-
  1694 0068 00000000 		.4byte	0
  1695 006c 00000000 		.4byte	0
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 34
+
+
  1696              		.section	.debug_aranges,"",%progbits
  1697 0000 2C000000 		.4byte	0x2c
  1698 0004 0200     		.2byte	0x2
@@ -2038,11 +2036,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1732      7300
  1733              	.LASF64:
  1734 003a 7278444D 		.ascii	"rxDMA_TD\000"
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 35
-
-
  1734      415F5444 
  1734      00
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 35
+
+
  1735              	.LASF34:
  1736 0043 72784275 		.ascii	"rxBuffer\000"
  1736      66666572 
@@ -2098,11 +2096,11 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1759              	.LASF12:
  1760 00d7 75696E74 		.ascii	"uint16\000"
  1760      313600
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 36
-
-
  1761              	.LASF27:
  1762 00de 636F6D53 		.ascii	"comString\000"
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 36
+
+
  1762      7472696E 
  1762      6700
  1763              	.LASF11:
@@ -2138,187 +2136,187 @@ ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 1
  1779              	.LASF33:
  1780 0131 73747269 		.ascii	"string\000"
  1780      6E6700
- 1781              	.LASF39:
- 1782 0138 73746F70 		.ascii	"stopPos\000"
- 1782      506F7300 
- 1783              	.LASF54:
- 1784 0140 54423930 		.ascii	"TB9051_Begin\000"
- 1784      35315F42 
- 1784      6567696E 
- 1784      00
- 1785              	.LASF46:
- 1786 014d 7278444D 		.ascii	"rxDMA_DmaInitialize\000"
- 1786      415F446D 
- 1786      61496E69 
- 1786      7469616C 
- 1786      697A6500 
- 1787              	.LASF18:
- 1788 0161 6C6F6E67 		.ascii	"long double\000"
- 1788      20646F75 
- 1788      626C6500 
- 1789              	.LASF1:
- 1790 016d 756E7369 		.ascii	"unsigned char\000"
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 37
+ 1781              	.LASF44:
+ 1782 0138 7072696E 		.ascii	"printf\000"
+ 1782      746600
+ 1783              	.LASF39:
+ 1784 013f 73746F70 		.ascii	"stopPos\000"
+ 1784      506F7300 
+ 1785              	.LASF54:
+ 1786 0147 54423930 		.ascii	"TB9051_Begin\000"
+ 1786      35315F42 
+ 1786      6567696E 
+ 1786      00
+ 1787              	.LASF46:
+ 1788 0154 7278444D 		.ascii	"rxDMA_DmaInitialize\000"
+ 1788      415F446D 
+ 1788      61496E69 
+ 1788      7469616C 
+ 1788      697A6500 
+ 1789              	.LASF18:
+ 1790 0168 6C6F6E67 		.ascii	"long double\000"
+ 1790      20646F75 
+ 1790      626C6500 
+ 1791              	.LASF1:
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 37
 
 
- 1790      676E6564 
- 1790      20636861 
- 1790      7200
- 1791              	.LASF42:
- 1792 017b 64655379 		.ascii	"deSyncFlg\000"
- 1792      6E63466C 
- 1792      6700
- 1793              	.LASF55:
- 1794 0185 48435352 		.ascii	"HCSR04_Begin\000"
- 1794      30345F42 
- 1794      6567696E 
- 1794      00
- 1795              	.LASF44:
- 1796 0192 73707269 		.ascii	"sprintf\000"
- 1796      6E746600 
+ 1792 0174 756E7369 		.ascii	"unsigned char\000"
+ 1792      676E6564 
+ 1792      20636861 
+ 1792      7200
+ 1793              	.LASF42:
+ 1794 0182 64655379 		.ascii	"deSyncFlg\000"
+ 1794      6E63466C 
+ 1794      6700
+ 1795              	.LASF55:
+ 1796 018c 48435352 		.ascii	"HCSR04_Begin\000"
+ 1796      30345F42 
+ 1796      6567696E 
+ 1796      00
  1797              	.LASF56:
- 1798 019a 5258636D 		.ascii	"RXcmplt_Start\000"
+ 1798 0199 5258636D 		.ascii	"RXcmplt_Start\000"
  1798      706C745F 
  1798      53746172 
  1798      7400
  1799              	.LASF0:
- 1800 01a8 7369676E 		.ascii	"signed char\000"
+ 1800 01a7 7369676E 		.ascii	"signed char\000"
  1800      65642063 
  1800      68617200 
  1801              	.LASF7:
- 1802 01b4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1802 01b3 6C6F6E67 		.ascii	"long long unsigned int\000"
  1802      206C6F6E 
  1802      6720756E 
  1802      7369676E 
  1802      65642069 
  1803              	.LASF8:
- 1804 01cb 756E7369 		.ascii	"unsigned int\000"
+ 1804 01ca 756E7369 		.ascii	"unsigned int\000"
  1804      676E6564 
  1804      20696E74 
  1804      00
  1805              	.LASF21:
- 1806 01d8 666E4361 		.ascii	"fnCall\000"
+ 1806 01d7 666E4361 		.ascii	"fnCall\000"
  1806      6C6C00
  1807              	.LASF31:
- 1808 01df 73746172 		.ascii	"startFlag\000"
+ 1808 01de 73746172 		.ascii	"startFlag\000"
  1808      74466C61 
  1808      6700
  1809              	.LASF32:
- 1810 01e9 72784279 		.ascii	"rxByte\000"
+ 1810 01e8 72784279 		.ascii	"rxByte\000"
  1810      746500
  1811              	.LASF35:
- 1812 01f0 72784275 		.ascii	"rxBufferOld\000"
+ 1812 01ef 72784275 		.ascii	"rxBufferOld\000"
  1812      66666572 
  1812      4F6C6400 
  1813              	.LASF3:
- 1814 01fc 73686F72 		.ascii	"short unsigned int\000"
+ 1814 01fb 73686F72 		.ascii	"short unsigned int\000"
  1814      7420756E 
  1814      7369676E 
  1814      65642069 
  1814      6E7400
  1815              	.LASF16:
- 1816 020f 63686172 		.ascii	"char\000"
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 38
-
-
+ 1816 020e 63686172 		.ascii	"char\000"
  1816      00
  1817              	.LASF52:
- 1818 0214 55415254 		.ascii	"UART_Start\000"
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 38
+
+
+ 1818 0213 55415254 		.ascii	"UART_Start\000"
  1818      5F537461 
  1818      727400
  1819              	.LASF10:
- 1820 021f 696E7433 		.ascii	"int32_t\000"
+ 1820 021e 696E7433 		.ascii	"int32_t\000"
  1820      325F7400 
  1821              	.LASF25:
- 1822 0227 72785374 		.ascii	"rxString\000"
+ 1822 0226 72785374 		.ascii	"rxString\000"
  1822      72696E67 
  1822      00
  1823              	.LASF36:
- 1824 0230 666E5F6F 		.ascii	"fn_old\000"
+ 1824 022f 666E5F6F 		.ascii	"fn_old\000"
  1824      6C6400
  1825              	.LASF57:
- 1826 0237 5258636D 		.ascii	"RXcmplt_ClearPending\000"
+ 1826 0236 5258636D 		.ascii	"RXcmplt_ClearPending\000"
  1826      706C745F 
  1826      436C6561 
  1826      7250656E 
  1826      64696E67 
  1827              	.LASF13:
- 1828 024c 75696E74 		.ascii	"uint32\000"
+ 1828 024b 75696E74 		.ascii	"uint32\000"
  1828      333200
  1829              	.LASF60:
- 1830 0253 6D61696E 		.ascii	"main.c\000"
+ 1830 0252 6D61696E 		.ascii	"main.c\000"
  1830      2E6300
  1831              	.LASF17:
- 1832 025a 72656738 		.ascii	"reg8\000"
+ 1832 0259 72656738 		.ascii	"reg8\000"
  1832      00
  1833              	.LASF5:
- 1834 025f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1834 025e 6C6F6E67 		.ascii	"long unsigned int\000"
  1834      20756E73 
  1834      69676E65 
  1834      6420696E 
  1834      7400
  1835              	.LASF15:
- 1836 0271 646F7562 		.ascii	"double\000"
+ 1836 0270 646F7562 		.ascii	"double\000"
  1836      6C6500
  1837              	.LASF61:
- 1838 0278 433A5C55 		.ascii	"C:\\Users\\JamesH\\Desktop\\ECE4191-Team-13-PSoC\\P"
+ 1838 0277 433A5C55 		.ascii	"C:\\Users\\JamesH\\Desktop\\ECE4191-Team-13-PSoC\\P"
  1838      73657273 
  1838      5C4A616D 
  1838      6573485C 
  1838      4465736B 
- 1839 02a6 536F4335 		.ascii	"SoC5_Team13Project.cydsn\000"
+ 1839 02a5 536F4335 		.ascii	"SoC5_Team13Project.cydsn\000"
  1839      5F546561 
  1839      6D313350 
  1839      726F6A65 
  1839      63742E63 
  1840              	.LASF28:
- 1841 02bf 70726D31 		.ascii	"prm1\000"
+ 1841 02be 70726D31 		.ascii	"prm1\000"
  1841      00
  1842              	.LASF29:
- 1843 02c4 70726D32 		.ascii	"prm2\000"
+ 1843 02c3 70726D32 		.ascii	"prm2\000"
  1843      00
  1844              	.LASF30:
-ARM GAS  C:\Users\JamesH\AppData\Local\Temp\ccXmLder.s 			page 39
-
-
- 1845 02c9 6D61736B 		.ascii	"mask\000"
+ 1845 02c8 6D61736B 		.ascii	"mask\000"
  1845      00
+ARM GAS  C:\Users\JamesH\AppData\Local\Temp\cczDibXX.s 			page 39
+
+
  1846              	.LASF9:
- 1847 02ce 5F5F696E 		.ascii	"__int32_t\000"
+ 1847 02cd 5F5F696E 		.ascii	"__int32_t\000"
  1847      7433325F 
  1847      7400
  1848              	.LASF24:
- 1849 02d8 66756C6C 		.ascii	"fullSpeedNoLoad\000"
+ 1849 02d7 66756C6C 		.ascii	"fullSpeedNoLoad\000"
  1849      53706565 
  1849      644E6F4C 
  1849      6F616400 
  1850              	.LASF23:
- 1851 02e8 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1851 02e7 49544D5F 		.ascii	"ITM_RxBuffer\000"
  1851      52784275 
  1851      66666572 
  1851      00
  1852              	.LASF59:
- 1853 02f5 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1853 02f4 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  1853      43313120 
  1853      352E342E 
  1853      31203230 
  1853      31363036 
- 1854 0328 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1854 0327 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
  1854      20726576 
  1854      6973696F 
  1854      6E203233 
  1854      37373135 
- 1855 035b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1855 035a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  1855      66756E63 
  1855      74696F6E 
  1855      2D736563 
  1855      74696F6E 
  1856              	.LASF37:
- 1857 0383 70617261 		.ascii	"param1_old\000"
+ 1857 0382 70617261 		.ascii	"param1_old\000"
  1857      6D315F6F 
  1857      6C6400
  1858              	.LASF22:
- 1859 038e 7278444D 		.ascii	"rxDMA_Chan\000"
+ 1859 038d 7278444D 		.ascii	"rxDMA_Chan\000"
  1859      415F4368 
  1859      616E00
  1860              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

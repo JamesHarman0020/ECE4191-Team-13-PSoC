@@ -16,7 +16,7 @@ extern void HCSR04_Begin();
 extern void distMeasure();
 extern void distMeasureL();
 extern void distMeasureR();
-extern void MotorStop();
+extern void MotorStop(int us);
 
 CY_ISR(CaptureL);
 CY_ISR(CaptureR);

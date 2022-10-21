@@ -42,6 +42,7 @@ void fnCall(int fn, float * pPrm1, float * pPrm2) {             // run the funct
         case 11: TB9051_VehForward_PID(&para2);         break;
         case 12: TB9051_VehReverse_PID(&para3);         break;
         case 13: linAngToVel_PID(&para2, &para3);       break;
+        case 14: staticRotate(&para2);                  break;
         case 50: Stepper_On();                          break;  // Stepper Commands
         case 51: Stepper_Off();                         break;
         case 52: Stepper_OneRot();                      break;
@@ -104,7 +105,7 @@ void fnSend(int fn, float * para2, float * para3){      // Send data PSoC -> RPi
     for (int i = 0; i < 15; i++) {
         char string[10]; sprintf(string, "%x ", txBuffer[i]); UART_PutString(string);
     } */
-    //char string[20]; sprintf(string, "T:%i,%0.4f,%0.4f\n", fn, *para2, *para3); UART_PutString(string);
+    char string[20]; sprintf(string, "T:%i,%0.4f,%0.4f\n", fn, *para2, *para3); UART_PutString(string);
     UART_RPi_PutArray(txBuffer,15);                     // Send the array to the software buffer
 }
 

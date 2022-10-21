@@ -52,17 +52,19 @@ void distMeasure(){
         compLFlag = 0; compRFlag = 0;
         distMeasureL();
         distMeasureR();
-        //CyDelay(5);            // TO-DO: Replace this with something more efficient
         int i = 0;
         do {
             CyDelayUs(10);
             i++;
         } while((i < 500) & (compLFlag == 0 & compRFlag == 0));
-        
-        if (distAvL < 0.04 | distAvR < 0.04) {
+        if (distAvL < 0.1 | distAvR < 0.1) {
             lockoutCount++;
             if (lockoutCount == 3) {
-                MotorStop();
+                if (distAvL < distAvR)
+                    MotorStop(0);
+                else
+                    MotorStop(1);  
+            lockoutCount = 0;
             }
         }
             
@@ -125,17 +127,43 @@ CY_ISR(Trigger)
     distMeasure();
 }
 
-void MotorStop()
+void MotorStop(int us)
 {
-    uint8 j;
-    UART_PutString("\n\n\nLOCKOUT TRIGGERED\n\n\n"); 
-    /*j = CyEnterCriticalSection();
-    for (int i = 0; i < 4; i++) {
-        QuadPWM_SetDutyCycle(i,0);
+   UART_PutString("\n\n\nLOCKOUT TRIGGERED\n\n\n");
+   uint8 j = CyEnterCriticalSection();
+     
+    if (us == 1) { //Obstacle was on the left
+        QuadPWM_SetDutyCycle(1,00); //Reverse
+        QuadPWM_SetDutyCycle(2,100);
+        QuadPWM_SetDutyCycle(3,00);
+        QuadPWM_SetDutyCycle(4, 100);
+        CyDelay(500);
+        
+        QuadPWM_SetDutyCycle(1,00); //Turn
+        QuadPWM_SetDutyCycle(2,100);
+        QuadPWM_SetDutyCycle(3,100);
+        QuadPWM_SetDutyCycle(4,00);
+        CyDelay(2000);
+        QuadPWM_SetDutyCycle(2,00); 
+        QuadPWM_SetDutyCycle(3,00);   
     }
-    CyDelay(10000);
-    CyExitCriticalSection(j);*/
     
+    else { // Obstacle was on the right
+        QuadPWM_SetDutyCycle(1,00); //Reverse
+        QuadPWM_SetDutyCycle(2,100);
+        QuadPWM_SetDutyCycle(3,00);
+        QuadPWM_SetDutyCycle(4, 100);
+        CyDelay(500);
+        
+        QuadPWM_SetDutyCycle(1,100); //Turn
+        QuadPWM_SetDutyCycle(2,00);
+        QuadPWM_SetDutyCycle(3,00);
+        QuadPWM_SetDutyCycle(4,100);
+        CyDelay(2000);
+        QuadPWM_SetDutyCycle(1,00);
+        QuadPWM_SetDutyCycle(4,00);
+    }
+    CyExitCriticalSection(j);
 }
 
 

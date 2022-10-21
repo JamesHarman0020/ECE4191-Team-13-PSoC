@@ -1,6 +1,6 @@
 // ======================================================================
 // PSoC5_Team13Project.v generated from TopDesign.cysch
-// 10/15/2022 at 19:17
+// 10/19/2022 at 18:41
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1518,7 +1518,7 @@ module top ;
           wire  Net_774;
           wire  Net_697;
           wire  Net_742;
-          wire  Net_771;
+          wire  Net_780;
           wire  Net_405;
           wire  Net_601;
           wire  Net_636;
@@ -1781,7 +1781,7 @@ module top ;
 		#(.id("6987fb41-99dd-4d8d-8e47-a5269baa704c"),
 		  .source_clock_id(""),
 		  .divisor(0),
-		  .period("16666666666666.7"),
+		  .period("33333333333333.3"),
 		  .is_direct(0),
 		  .is_digital(1))
 		Clock_5
@@ -3543,7 +3543,7 @@ module top ;
     defparam BasicCounter_1.Width = 2;
 
 
-    assign Net_714 = Net_697 | Net_771;
+    assign Net_714 = Net_697 | Net_780;
 
 
     assign Net_716 = Net_697 | Net_742;
@@ -3552,7 +3552,7 @@ module top ;
     assign Net_718 = Net_742 | Net_774;
 
 
-    assign Net_720 = Net_774 | Net_771;
+    assign Net_720 = Net_774 | Net_780;
 
     assign Net_698 = 1'h0;
 
@@ -3599,7 +3599,7 @@ module top ;
         assign Net_697 = tmp__demux_1_0_reg;
         assign Net_742 = tmp__demux_1_1_reg;
         assign Net_774 = tmp__demux_1_2_reg;
-        assign Net_771 = tmp__demux_1_3_reg;
+        assign Net_780 = tmp__demux_1_3_reg;
     end
     // -- De Mux end --
 

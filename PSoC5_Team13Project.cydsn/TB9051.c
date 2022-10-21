@@ -21,8 +21,8 @@ CY_ISR(QD_Read);
 unsigned int QD1_Old = 0;
 unsigned int QD2_Old = 0;
 float vLin_Old, vAng_Old;
-float w1_Vel;
-float w2_Vel;
+float accumLPos, accumRPos;
+float w1_Vel, w2_Vel;
 float vL,vR;
 float pidVelL, pidVelR;
 float d = 0.217; //distance between two wheels
@@ -34,7 +34,7 @@ float US_L, US_R;
 // PID Controller Values
 #define PID_KP 10.0f
 #define PID_KI 20.0f
-#define PID_KD 0.0f
+#define PID_KD 1.5f
 #define PID_TAU 0.02f
 #define PID_LIM_MIN_INT 0.0f
 #define PID_LIM_MAX_INT 254.0f
@@ -88,7 +88,7 @@ void TB9051_VehForward_PID(float *pVel) {
         PIDController_Update(&pidV, vel, w1_Vel);
         QuadPWM_SetDutyCycle(1,(int)pidV.out);
         QuadPWM_SetDutyCycle(3,(int)pidV.out);
-        char string[50]; sprintf(string, "Vel: %.3f, PID: %0.3f\n", w1_Vel, pidV.out);UART_PutString(string);
+        char string[50]; sprintf(string, "%d. Vel: %.3f, PID: %0.3f\n", i, w1_Vel, pidV.out);UART_PutString(string);
     } while (!(i > 200 | (w1_Vel < vel + TOLERANCE & w1_Vel > vel - TOLERANCE)));
 }
 
@@ -100,7 +100,7 @@ void TB9051_VehReverse_PID(float *pVel) {
         PIDController_Update(&pidV, vel, -w1_Vel);
         QuadPWM_SetDutyCycle(2,(int)pidV.out);
         QuadPWM_SetDutyCycle(4,(int)pidV.out);
-        char string[40]; sprintf(string, "w1_Vel + vel: %0.3f, tol: %f, PID: %.3f\n", w1_Vel + vel, TOLERANCE, pidV.out);UART_PutString(string);
+        char string[40]; sprintf(string, "%d. w1_Vel + vel: %0.3f, tol: %f, PID: %.3f\n", i, w1_Vel + vel, TOLERANCE, pidV.out);UART_PutString(string);
     } while (!(i > 200 | (w1_Vel + vel < TOLERANCE & w1_Vel + vel > 0 - TOLERANCE)));
 }
 
@@ -170,37 +170,13 @@ void TB9051_Brake(int motor)
 }
 
 void TB9051_VehMoveTo(float * px, float * py){
-    ///// JINGWEI NAVIGATION /////
-    // float r,d，v,w;
-    // int ticks_per_rev, ticks_l, ticks_r;
-    // float S_l = 2*PI*r*ticks_l/ticks_per_rev;
-    // float S_r = 2*PI*r*ticks_r/ticks_per_rev;
-
-    // float fai = (S_r - S_l)/d;
     float x = *px; 
     float y = *py;
-    /*
-    float t = 2; // time to reach the destination
-    //float a[2] = {0, 0},b[2] = {x, y}; //oringinal opint and destination point
-    float theta = atan(y/x);
-    float r = (pow(x,2)+pow(y,2))/(2*sqrt((pow(x,2)+pow(y,2)))*cos(theta)); //radien of mid point
-    float r_right = r - d/2;
-    float r_left = r + d/2;
-    float v_right = theta*2*PI*r_right/(360*theta); // linear speed of right wheel
-    float v_left = theta*2*PI*r_left/(360*theta); // linear speed of left wheel
-    float w_r = v_right/r_wheel; // angular speed of right wheel
-    float w_l = v_left/r_wheel; // angular speed of left wheel
-    float vRel_left = round(v_left * 255);    // REPLACE THESE
-    float vRel_right = round(v_right * 255);
-    //char string[20]; sprintf(string, "R: %f. L: %f \n", vRel_right, vRel_left); UART_PutString(string);
-    
-    //TB9051_Forward(0, vRel_right);
-    //TB9051_Forward(1, vRel_left);*/
     
     ///// DAVID'S MATHS //////
-    float angV = 2*atan2(x,y);
-    float linV = (pow(x,2)/y + y)*(angV/2);
-    linAngToVel(&angV, &linV);
+    float angV = 0.1f * 2.0f*atan2(x,y);
+    float linV = 0.1f * sqrt(pow(x,2) + pow(y,2));
+    linAngToVel(&linV, &angV);
 }
 
 
@@ -255,7 +231,7 @@ void linAngToVel_PID(float * pLinVel, float * pAngVel) {
             PIDController_Update(&pidR, pidVelR, w1_Vel);
             QuadPWM_SetDutyCycle(1,(int)pidL.out);
             QuadPWM_SetDutyCycle(3,(int)pidR.out);
-            char string[50]; sprintf(string,"vL: %0.3f vR: %0.3f PIDL: %0.2f, PIDR: %0.2f\n", vL, vR, pidL.out, pidR.out); UART_PutString(string);
+            char string[50]; sprintf(string,"%d. vL: %0.3f vR: %0.3f PIDL: %0.2f, PIDR: %0.2f\n", i, vL, vR, pidL.out, pidR.out); UART_PutString(string);
         } while (!(i > 400));
     }
     else {
@@ -266,7 +242,7 @@ void linAngToVel_PID(float * pLinVel, float * pAngVel) {
                 PIDController_Update(&pidR, -pidVelR, -w1_Vel);
                 QuadPWM_SetDutyCycle(1,(int)pidL.out);
                 QuadPWM_SetDutyCycle(4,(int)pidR.out);
-            char string[50]; sprintf(string,"vL: %0.3f vR: %0.3f PIDL: %0.2f, PIDR: %0.2f\n", w2_Vel, w1_Vel, pidL.out, pidR.out); UART_PutString(string);
+            char string[50]; sprintf(string,"%d. vL: %0.3f vR: %0.3f PIDL: %0.2f, PIDR: %0.2f\n", i, w2_Vel, w1_Vel, pidL.out, pidR.out); UART_PutString(string);
             } while (!(i > 400));
         }
         else if (vR >= 0) { //vL must be less than zero
@@ -302,7 +278,6 @@ void vehForwardDist(float * pDist) { // This function is blocking
     
     linAngtoVel(&linV, &linA);
     do {
-         
         //char string[80]; sprintf(string, "displacement: %0.3f %0.3f\n", dispL, dispR); UART_PutString(string);
     }
     while (accumL < targL & accumR < targR); 
@@ -319,13 +294,13 @@ void staticRotate(float * pAngle){ // in degrees
     long origPosR = TB9051_QD1_GetCounter();
     float targetCountL, targetCountR; 
     if (angle > 0) {
-        targetCountL = (d-0.07) * PI * (angle / 360) / (92E-6);
+        targetCountL = (d-0.07) * PI * (angle / 360) / (105E-6f);
         targetCountR = -targetCountL;
         QuadPWM_SetDutyCycle(2,100);
         QuadPWM_SetDutyCycle(3,100);
     }
     if (angle < 0) {
-        float targetcountR = (d-0.07) * PI * (angle / 360) / (92E-6);
+        float targetcountR = (d-0.07) * PI * (angle / 360) / (105E-6f);
         float targetCountL = -targetCountL;
         QuadPWM_SetDutyCycle(1,100);
         QuadPWM_SetDutyCycle(4,100);
@@ -379,20 +354,17 @@ CY_ISR(QD_Read) //TO-DO: Resolve the overflow issue that will occur
     float vLin = r_wheel * (w1_angVel + w2_angVel) / 2.0f;
     float vAng = r_wheel * (w1_angVel - w2_angVel) / d;
     
-    //float QD1_Ratio = QD1_Delta / 34.014f; //Gear Ratio
-    //float QD2_Ratio = QD2_Delta / 34.014f; //Gear Ratio
-    //float w1_Pos = QD1_Ratio * 2 * PI * r_wheel * theta / 360;
-    //float w2_Pos = QD2_Ratio * 2 * PI * r_wheel * theta / 360;
-
-    
     // Keep old positions
     accumL += QD1_Delta;
     accumR += QD2_Delta;
+    accumLPos += w1_Pos;
+    accumRPos += w2_Pos;
     QD1_Old = QD1_New;
     QD2_Old = QD2_New;
     
     if (vLin_Old != vLin | vAng_Old != vAng | vAng == 0 | vLin == 0){ 
         fnSend(8, &vLin, &vAng);
+        //fnSend(14, &accumLPos, &accumRPos); //Send the accumulated position in meters
     }   
         
     vLin_Old = vLin;
